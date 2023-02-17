@@ -1,0 +1,29 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_modify_storage_timeout.html 
+keywords:  
+summary: Aunque los backups se ejecuten correctamente en el pasado, es posible que se inicien un error cuando el plugin de SnapCenter para VMware vSphere deba esperar a que el sistema de almacenamiento supere el tiempo de espera configurado. Si se produce esta condición, es posible aumentar el tiempo de espera configurado. 
+---
+= Modifique el tiempo de espera del almacenamiento configurado
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Aunque los backups se ejecuten correctamente en el pasado, es posible que se inicien un error cuando el plugin de SnapCenter para VMware vSphere deba esperar a que el sistema de almacenamiento supere el tiempo de espera configurado. Si se produce esta condición, es posible aumentar el tiempo de espera configurado.
+
+Puede encontrar el error `Unable to discover resources on SCV: Unable to get storage details for datastore <xxx>…`
+
+.Pasos
+. En el cliente VMware vSphere, haga clic en *Storage Systems*.
+. En la página Storage Systems (sistemas de almacenamiento), seleccione el sistema de almacenamiento que desea modificar y haga clic en *Edit* (Editar).
+. En el campo tiempo de espera, aumente el número de segundos.
++
+
+TIP: se recomiendan 180 segundos para entornos grandes.
+
+

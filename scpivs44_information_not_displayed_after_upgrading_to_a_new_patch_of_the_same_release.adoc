@@ -1,0 +1,61 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_information_not_displayed_after_upgrading_to_a_new_patch_of_the_same_release.html 
+keywords:  
+summary: Después de actualizar el plugin de SnapCenter para VMware vSphere a un nuevo parche de la misma versión, es posible que los trabajos recientes u otra información no se muestren en el monitor de trabajos y de consola. 
+---
+= La información no se muestra después de actualizar a un nuevo parche de la misma versión
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Después de actualizar el plugin de SnapCenter para VMware vSphere a un nuevo parche de la misma versión, es posible que los trabajos recientes u otra información no se muestren en el monitor de trabajos y de consola.
+
+Si va a actualizar a una nueva revisión de la misma versión, debe borrar la caché del plugin de SnapCenter para VMware vSphere en vCenter Web Server y reiniciar el servidor antes de la actualización o el registro.
+
+Si no se borra la caché del plugin, en las siguientes situaciones no se muestran los trabajos recientes en la consola ni en el monitor de trabajos:
+
+* El plugin de SnapCenter para VMware vSphere se puso en marcha con vCenter y, posteriormente, se actualizó con una revisión en la misma versión.
+* El dispositivo virtual de VMware de SnapCenter se puso en marcha en vCenter 1. Más tarde, este complemento de VMware de SnapCenter fue registrado en un nuevo vCenter2. Una nueva instancia del complemento VMware de SnapCenter se crea con un parche y se registra en vCenter1. Sin embargo, como vCenter1 aún tiene el plugin en caché del primer complemento VMware SnapCenter sin el parche, la caché debe borrarse.
+
+
+La caché se encuentra en las siguientes ubicaciones, según el tipo de sistema operativo de servidor:
+
+* Dispositivo vCenter Server Linux
++
+`/etc/vmware/vsphere-client/vc-packages/vsphere-client-serenity/`
+
+* Sistema operativo Windows
++
+`%PROGRAMFILES%/VMware/vSphere client/vc-packages/vsphere-client-serenity/`
+
+
+
+
+
+== Solución alternativa si ya ha actualizado antes de borrar la caché
+
+. Inicie sesión en la interfaz gráfica de usuario de gestión de plugins de VMware de SnapCenter.
++
+La IP se muestra cuando se implementa el plugin de VMware de SnapCenter.
+
+. Haga clic en *Configuración* en el panel de navegación de la izquierda y, a continuación, haga clic en la opción Servicio de la sección *Detalles del complemento* para desactivar el plugin.
++
+Se deshabilita el servicio de plugin de VMware de SnapCenter, y la extensión se cancela el registro en vCenter.
+
+. Localice el `vsphere-client-serenity` a continuación, busque la `com.netapp.scv.client-<release-number>` y elimínelo.
++
+El nombre de la carpeta cambia para cada versión.
+
+. Reinicie vCenter Server.
+. Inicie sesión en VMware vSphere Client.
+. Haga clic en *Configuración* en el panel de navegación de la izquierda y, a continuación, haga clic en la opción Servicio de la sección *Detalles del plug-in* para activar el plug-in.
++
+El servicio del complemento VMware de SnapCenter está habilitado, y la extensión se registra en vCenter.
+
+

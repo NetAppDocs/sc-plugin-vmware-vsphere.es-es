@@ -1,0 +1,60 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_rest_api_workflows__mount_and_unmount_datastores.html 
+keywords:  
+summary: Para realizar operaciones de montaje y desmontaje para backups de almacén de datos con las API DE REST del plugin de SnapCenter para VMware vSphere, debe seguir la secuencia prescrita de llamadas de API de REST. 
+---
+= Flujos de trabajo de la API DE REST para montar y desmontar almacenes de datos
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Para realizar operaciones de montaje y desmontaje para backups de almacén de datos con las API DE REST del plugin de SnapCenter para VMware vSphere, debe seguir la secuencia prescrita de llamadas de API de REST.
+
+Para cada API REST, añada `https://<server>:<port>` En la parte frontal de la API DE REST para formar un extremo completo.
+
+
+
+== Para montar almacenes de datos, siga este flujo de trabajo:
+
+|===
+| Paso | API REST | Comentarios 
+
+
+| 1 | Vaya a. `http://<vCenter-IP>/mob` | Busque el archivo moref del almacén de datos en la URL de VMware Managed Objects. Observe *moref* para el almacén de datos que desea montar. 
+
+
+| 2 | `/4.1/datastores/{moref}/
+backups` | `Get the list of backups for a datastore` obtiene una lista de backups para el almacén de datos especificado. Pase el *moref* desde el Paso 1. Tenga en cuenta *BackupId* que desea montar. 
+
+
+| 3 | `/4.1/datastores/backups/
+{backupId}/snapshotlocators` | `Get the list of Snapshot Locations` obtiene detalles acerca de la ubicación de la copia de seguridad especificada. Pase el *BackupId* del paso 2. Observe *datastore* y la ubicación de la lista *snapshotLocationsList*. 
+
+
+| 4 | `/4.1/datastores/{moref}/
+availableEsxHosts` | `Get the list of Available Esxi Hosts` Obtiene la lista de los hosts ESXi que están disponibles para las operaciones de montaje. Pase el *moref* desde el Paso 1. Tenga en cuenta la información *availableEsxHostsList*. 
+
+
+| 5 | `/4.1/datastores/backups/
+{backupId}/mount` | `Mount datastores for a backup` monta el backup del almacén de datos especificado. Pase el *BackupId* del paso 2. En los atributos *datastore* y *ubicación*, pase la información de `snapshotLocationsList` En el paso 3. En el atributo *esxHostName*, pase la información de *availableEsxHostsList* en el Paso 4. 
+|===
+
+
+== Para desmontar los almacenes de datos, siga este flujo de trabajo:
+
+|===
+| Paso | API REST | Comentarios 
+
+
+| 1 | `/4.1/datastores/backups/
+{backupId}/mounted` | `Get the list of mounted datastores`. Observe el almacén de datos *moref*(s) que desea desmontar. 
+
+
+| 2 | `/4.1/datastores/unmount` | `UnMount datastores for a backup` desmonta el backup de almacén de datos especificado. Pase el almacén de datos *moref*(s) desde el Paso 1. 
+|===

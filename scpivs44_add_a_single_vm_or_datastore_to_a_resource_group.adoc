@@ -1,0 +1,35 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_add_a_single_vm_or_datastore_to_a_resource_group.html 
+keywords:  
+summary: Puede añadir rápidamente una sola máquina virtual o un almacén de datos a cualquier grupo de recursos existente gestionado por el plugin de SnapCenter para VMware vSphere. 
+---
+= Añadir una sola máquina virtual o un almacén de datos a un grupo de recursos
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Puede añadir rápidamente una sola máquina virtual o un almacén de datos a cualquier grupo de recursos existente gestionado por el plugin de SnapCenter para VMware vSphere.
+
+.Acerca de esta tarea
+Puede añadir almacenes de datos SAN y NAS, pero no VSAN o VVOL.
+
+.Pasos
+. En la interfaz gráfica de usuario del cliente de VMware vSphere, haga clic en *Menú* en la barra de herramientas y desplácese hasta la máquina virtual o el almacén de datos que desee añadir.
+. En el panel de navegación izquierdo, haga clic con el botón derecho en la máquina virtual o el almacén de datos, seleccione *SnapCenter* de NetApp en la lista desplegable y, a continuación, seleccione *Agregar a grupo de recursos* en la lista desplegable secundaria.
++
+En primer lugar, el sistema comprueba que SnapCenter gestiona y es compatible con el sistema de almacenamiento en el que se encuentra la VM seleccionada y, a continuación, muestra la página *Agregar al grupo de recursos*. Si el mensaje `SnapCenter Compatibility Error` Se muestra, la máquina virtual seleccionada no es compatible con SnapCenter y, primero, debe añadir la máquina virtual de almacenamiento adecuada a SnapCenter.
+
+. En la página *Agregar a grupo de recursos*, seleccione un grupo de recursos y, a continuación, haga clic en *Aceptar*.
++
+Al hacer clic en *Aceptar*, el sistema comprueba primero que SnapCenter gestiona y es compatible con el almacenamiento en el que se encuentran las VM o los almacenes de datos seleccionados.
+
++
+Si el mensaje `Selected <resource-name> is not SnapCenter compatible` Cuando se muestre, la máquina virtual o el almacén de datos seleccionados no es compatible con SnapCenter. Consulte link:scpivs44_create_resource_groups_for_vms_and_datastores.html#manage-compatibility-check-failures["Gestione los fallos de comprobación de compatibilidad"] si quiere más información.
+
+

@@ -1,0 +1,42 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_ontap_rbac_features_in_snapcenter.html 
+keywords:  
+summary: 'El plugin de VMware de SnapCenter funciona con el control de acceso basado en roles de vCenter Server, de SnapCenter (cuando es necesario admitir operaciones basadas en aplicaciones) y de ONTAP para determinar qué tareas de SnapCenter puede ejecutar un usuario específico en objetos en un sistema de almacenamiento específico.' 
+---
+= Funciones de control de acceso basado en roles de ONTAP del plugin de SnapCenter para VMware vSphere
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+
+NOTE: El control de acceso basado en roles de ONTAP se aplica únicamente a trabajos coherentes con las aplicaciones del servidor de SnapCenter (aplicación a través de VMDK).
+
+[role="lead"]
+El control de acceso basado en roles de ONTAP permite controlar el acceso a sistemas de almacenamiento específicos, además de las acciones que un usuario puede ejecutar en esos sistemas de almacenamiento. El plugin de VMware de SnapCenter funciona con el control de acceso basado en roles de vCenter Server, de SnapCenter (cuando es necesario admitir operaciones basadas en aplicaciones) y de ONTAP para determinar qué tareas de SnapCenter puede ejecutar un usuario específico en objetos en un sistema de almacenamiento específico.
+
+SnapCenter usa las credenciales configuradas (nombre de usuario y contraseña) para autenticar cada sistema de almacenamiento y determinar qué operaciones se pueden ejecutar en ese sistema de almacenamiento. El plugin de VMware de SnapCenter usa un conjunto de credenciales para cada sistema de almacenamiento. Estas credenciales determinan todas las tareas que se pueden ejecutar en ese sistema de almacenamiento, es decir, las credenciales se aplican a SnapCenter, no a un usuario individual de SnapCenter.
+
+El control de acceso basado en roles de ONTAP se aplica únicamente al acceso a sistemas de almacenamiento y a la ejecución de tareas de SnapCenter vinculadas con el almacenamiento, como el backup de máquinas virtuales. Si no se cuenta con los privilegios de control de acceso basado en roles de ONTAP correspondientes a un sistema de almacenamiento específico, no es posible ejecutar ninguna tarea en un objeto de vSphere alojado en ese sistema de almacenamiento.
+
+Cada sistema de almacenamiento está asociado con un conjunto de privilegios de ONTAP.
+
+Usar el control de acceso basado en roles de ONTAP y de vCenter Server ofrece los siguientes beneficios:
+
+* Seguridad
++
+El administrador puede controlar qué usuarios pueden realizar qué tareas tanto a nivel de objeto de vCenter Server específico como a nivel de sistema de almacenamiento.
+
+* Información de auditoría
++
+En muchos casos, SnapCenter ofrece un seguimiento de auditoría del sistema de almacenamiento que permite asociar los eventos con el usuario de vCenter que aplicó el cambio en el almacenamiento.
+
+* Facilidad de uso
++
+Es posible conservar las credenciales de la controladora en un mismo lugar.
+
+

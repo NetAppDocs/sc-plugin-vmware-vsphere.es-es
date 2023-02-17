@@ -1,0 +1,66 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_access_reports.html 
+keywords:  
+summary: Es posible solicitar informes de uno o varios trabajos de en la consola. 
+---
+= Acceder a informes
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Es posible solicitar informes de uno o varios trabajos de en la consola.
+
+La pestaña Reports contiene información sobre los trabajos seleccionados en la página Jobs de la consola. Si no se selecciona ningún trabajo, la ficha Informes estará en blanco.
+
+.Pasos
+. En el panel de navegación izquierdo del cliente de vSphere, haga clic en *Dashboard*, seleccione una instancia de vCenter Server y, a continuación, haga clic en la pestaña *Reports*.
+. En los informes de backup, es posible hacer lo siguiente:
++
+.. Modifique el informe
++
+Haga clic en la image:scpivs44_image41.png["Error: Falta la imagen gráfica"] icono de filtro para modificar el intervalo de tiempo, el tipo de estado del trabajo, los grupos de recursos y las políticas que deben incluirse en el informe.
+
+.. Generar un informe detallado
++
+Haga doble clic en cualquier trabajo para generar un informe detallado para ese trabajo.
+
+
+
+. Opcional: En la ficha Reports, haga clic en *Download* y seleccione el formato (HTML o CSV).
++
+También puede hacer clic en el image:scpivs44_image37.png["Error: Falta la imagen gráfica"] el icono de descarga para descargar registros de plugins.
+
+
+
+
+
+== Tipos de informes desde VMware vSphere Client
+
+El cliente de VMware vSphere para SnapCenter ofrece opciones de informes personalizables para obtener detalles sobre el estado de los trabajos de protección de datos y los recursos del plugin. Solo puede generar informes para la protección principal.
+
+
+NOTE: Las programaciones de backup se ejecutan en la zona horaria en la que se implementó el plugin de VMware de SnapCenter. VCenter informa de los datos en la zona horaria en la que se encuentra la instancia de vCenter. Por lo tanto, si el plugin de VMware de SnapCenter y vCenter se encuentran en zonas horarias diferentes, es posible que los datos de la consola del cliente de VMware vSphere no sean los mismos que los datos de los informes.
+
+La consola muestra información sobre los backups migrados únicamente después de realizar los backups posteriores a la migración.
+
+|===
+| Tipo de informe | Descripción 
+
+
+| Informe de copia de seguridad | Muestra datos de información general sobre los trabajos de backup. Haga clic en una sección/estado del gráfico para ver una lista de los trabajos con ese estado en la ficha *Informes*. En cada trabajo, el informe detalla el identificador del trabajo, el grupo de recursos correspondiente, la política de backup, la hora de inicio y duración, el estado y los detalles del trabajo, incluidos el nombre del trabajo (nombre de la copia de Snapshot) si el trabajo se completó y todos los mensajes de advertencia o error. Puede descargar la tabla Report en formato HTML o CSV. También es posible descargar los registros de trabajos Job Monitor para todos los trabajos (no solo los trabajos del informe). Los backups eliminados no se incluyen en el informe. 
+
+
+| Informe de montaje | Muestra datos generales sobre trabajos de montaje. Haga clic en una sección o estado del gráfico para ver una lista de trabajos con ese estado en la ficha Reports. Para cada trabajo, el informe enumera el ID del trabajo, el estado del trabajo, el nombre del trabajo y las horas de inicio y finalización del trabajo. El nombre del trabajo incluye el nombre de la copia de Snapshot. Por ejemplo: `Mount Backup <snapshot-copy-name>`Puede descargar la tabla Report en formato HTML o CSV. También es posible descargar los registros de trabajos Job Monitor para todos los trabajos (no solo los trabajos del informe). 
+
+
+| Restaurar informe | Muestra información de estado de información general sobre los trabajos de restauración. Haga clic en una sección o estado del gráfico para ver una lista de trabajos con ese estado en la ficha Reports. Para cada trabajo, el informe enumera el ID del trabajo, el estado del trabajo, el nombre del trabajo y las horas de inicio y finalización del trabajo. El nombre del trabajo incluye el nombre de la copia de Snapshot. Por ejemplo: `Restore Backup <snapshot-copy-name>`Puede descargar la tabla Report en formato HTML o CSV. También es posible descargar los registros de trabajos Job Monitor para todos los trabajos (no solo los trabajos del informe). 
+
+
+| Último informe de estado de protección de máquinas virtuales o almacenes de datos | Muestra información general sobre el estado de protección, durante la cantidad de días configurados, para máquinas virtuales y almacenes de datos gestionados por el plugin de VMware de SnapCenter. El valor predeterminado es 7 días. Para modificar el valor del archivo de propiedades, consulte link:scpivs44_modify_configuration_default_values["Modifique los valores predeterminados de la configuración"]. Haga clic en una sección/estado en el gráfico de protección principal para ver una lista de máquinas virtuales o almacenes de datos con ese estado en la ficha *Informes*. VM o datastores Protection Status Report for protected VMs y almacenes de datos muestran los nombres de las máquinas virtuales o los almacenes de datos que se han realizado backups durante la cantidad de días configurada, el nombre de la copia de Snapshot más reciente, y las horas de inicio y de finalización para el último backup ejecutado. VM o datastores Protection Status Report for unprotected VMs o almacenes de datos muestran los nombres de las máquinas virtuales o los almacenes de datos que no tienen backups realizados correctamente durante la cantidad de días configurada. Puede descargar la tabla Report en formato HTML o CSV. También es posible descargar los registros de trabajos Job Monitor para todos los trabajos (no solo los trabajos del informe). Este informe se actualiza cada hora cuando se actualiza la caché del plugin. Por lo tanto, es posible que el informe no muestre las máquinas virtuales o los almacenes de datos de los que se realizó un backup recientemente. 
+|===

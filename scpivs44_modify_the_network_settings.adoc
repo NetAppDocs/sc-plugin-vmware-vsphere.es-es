@@ -1,0 +1,48 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_modify_the_network_settings.html 
+keywords:  
+summary: Es posible modificar los ajustes de red configurados en el plugin de SnapCenter para VMware vSphere. El plugin utiliza estos ajustes para acceder a vCenter. 
+---
+= Modifique los ajustes de red
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Es posible modificar los ajustes de red configurados en el plugin de SnapCenter para VMware vSphere. El plugin utiliza estos ajustes para acceder a vCenter.
+
+.Antes de empezar
+Debe conocer la dirección IP y las credenciales de inicio de sesión de la interfaz gráfica de usuario de gestión del plugin de SnapCenter para VMware vSphere.
+
+* La dirección IP se muestra cuando se implementó el plugin de VMware de SnapCenter.
+* Use las credenciales de registro proporcionadas durante la implementación del plugin de VMware de SnapCenter o como se modificó más adelante.
+
+
+.Pasos
+. Inicie sesión en la interfaz gráfica de usuario de gestión de plugins de VMware de SnapCenter.
++
+Utilice el formato `https://<appliance-IP-address>:8080`
+
+. Haga clic en el icono Configuración de la barra de herramientas superior.
++
+image:scpivs44_image31.png["Error: Falta la imagen gráfica"]
+
+. En la página *Configuración*, en la sección *Configuración de red*, haga clic en *IPv4* o *IPv6* y, a continuación, haga clic en *Editar*.
++
+Introduzca la nueva información y haga clic en *Guardar*.
+
+. Si va a eliminar una configuración de red, haga lo siguiente:
++
+** IPv4: En el campo *Dirección IP*, introduzca `0.0.0.0` Y, a continuación, haga clic en *Guardar*.
+** IPv6: En el campo *Dirección IP*: Introduzca `: :0` Y, a continuación, haga clic en *Guardar*.
+
+
+
+
+
+NOTE: Si utiliza IPv4 e IPv6, no puede eliminar ambas opciones de red. La red restante debe especificar los campos servidores DNS y Dominios de búsqueda.

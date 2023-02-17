@@ -1,0 +1,75 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_manage_resource_groups.html 
+keywords:  
+summary: Es posible crear, modificar y eliminar grupos de recursos de backup, así como realizar operaciones de backup en grupos de recursos. 
+---
+= Gestione grupos de recursos
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Es posible crear, modificar y eliminar grupos de recursos de backup, así como realizar operaciones de backup en grupos de recursos.
+
+
+NOTE: Los grupos de recursos se denominan trabajos de backup en VSC.
+
+
+
+== Suspender y reanudar las operaciones en grupos de recursos
+
+Es posible deshabilitar temporalmente el inicio de las operaciones programadas en un grupo de recursos. Más tarde, si se desea, se pueden habilitar las operaciones.
+
+.Pasos
+. En el panel de navegación izquierdo del plugin de SCV, haga clic en *grupos de recursos*, luego haga clic con el botón derecho en un grupo de recursos y haga clic en *Suspender* (o haga clic en *Reanudar*).
+. En el cuadro de confirmación, haga clic en *Aceptar* para confirmar.
+
+
+.Después de terminar
+En la página Resource Groups, el estado del trabajo correspondiente al recurso suspendido es `Under_Maintenance`. Puede desplazarse hacia la derecha de la tabla para ver la columna Job Status.
+
+Después de reanudar las operaciones de backup, el estado del trabajo cambia a. `Production`.
+
+
+
+== Modificar grupos de recursos
+
+Puede quitar o añadir recursos a grupos de recursos en vCenter, desvincular o asociar políticas, y modificar programaciones u otras opciones de grupos de recursos.
+
+.Acerca de esta tarea
+Si desea modificar el nombre de un grupo de recursos, no utilice los siguientes caracteres especiales en nombres de máquinas virtuales, almacenes de datos, políticas, backups o grupos de recursos:
+
+% & * $ # @ ! \ / : * ? " < > - | ; ' , .
+
+Se permite el carácter de guion bajo (_).
+
+.Pasos
+. En el panel de navegación izquierdo del plugin de SCV, haga clic en *Resource Groups*, después seleccione un grupo de recursos y haga clic en *Edit*.
+. En la lista de la izquierda del asistente *Editar grupo de recursos*, haga clic en la categoría que desee modificar e introduzca los cambios.
++
+Puede realizar cambios en varias categorías.
+
+. Haga clic en *Siguiente* hasta que aparezca la página Resumen y, a continuación, haga clic en *Finalizar*.
+
+
+
+
+== Eliminar grupos de recursos
+
+Es posible eliminar un grupo de recursos en vCenter si ya no es necesario proteger los recursos del grupo. Debe asegurarse de que todos los grupos de recursos se eliminen antes de poder quitar el plugin de SnapCenter para VMware vSphere de vCenter.
+
+.Acerca de esta tarea
+Todas las operaciones de eliminación de grupos de recursos se realizan como eliminaciones forzadas. La operación de eliminación desvincula todas las políticas del grupo de recursos de vCenter, elimina el grupo de recursos del plugin de SnapCenter para VMware vSphere y, además, borra todos los backups y las copias de Snapshot del grupo de recursos.
+
+
+NOTE: En una relación de SnapVault, no se puede eliminar la última copia de Snapshot; por lo tanto, el grupo de recursos tampoco se puede eliminar. Antes de eliminar un grupo de recursos que forma parte de una relación de SnapVault, tiene que usar System Manager de OnCommand o la interfaz de línea de comandos de ONTAP para quitar la relación de SnapVault. A continuación, debe eliminar la última copia de Snapshot.
+
+.Pasos
+. En el panel de navegación izquierdo del plugin de SCV, haga clic en *Resource Groups*, después seleccione un grupo de recursos y haga clic en *Delete*.
+. En el cuadro de confirmación *Eliminar grupo de recursos*, haga clic en *Aceptar* para confirmar.
+

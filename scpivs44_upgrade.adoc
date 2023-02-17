@@ -1,0 +1,68 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_upgrade.html 
+keywords:  
+summary: Si utiliza el dispositivo virtual del plugin de SnapCenter para VMware vSphere, puede actualizar a una versión más reciente. 
+---
+= Actualice desde una versión anterior del plugin de SnapCenter para VMware vSphere
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+
+NOTE: La actualización a SCV 4.8 solo es compatible en VMware vCenter Server 7 update 1 y versiones posteriores, para VMware vCenter Server antes de la versión 7 update 1, debe continuar usando SCV 4.7. La actualización no provoca interrupciones en versiones no compatibles de VMware vCenter Server.
+
+Si utiliza el dispositivo virtual del plugin de SnapCenter para VMware vSphere, puede actualizar a una versión más reciente. El proceso de actualización cancela el registro del plugin existente e implementa un plugin que solo es compatible con vSphere 7.0U1 y versiones posteriores.
+
+Consulte link:scpivs44_release_notes.html["Notas de la versión del plugin de SnapCenter para VMware vSphere"] para obtener información sobre las rutas de actualización admitidas.
+
+
+TIP: Realice un backup del OVA del plugin de SnapCenter para VMware vSphere antes de iniciar una actualización.
+
+
+NOTE: No se admite el cambio de la configuración de red de estática a DHCP.
+
+.Pasos
+. Para preparar la actualización, deshabilite el plugin de SnapCenter para VMware vSphere.
++
+.. Inicie sesión en la interfaz gráfica de usuario de gestión del plugin de SnapCenter para VMware vSphere. La IP se muestra cuando se implementa el plugin de VMware de SnapCenter.
+.. Haga clic en *Configuración* en el panel de navegación de la izquierda y, a continuación, haga clic en la opción *Servicio* de la sección Detalles del complemento para desactivar el plugin.
+
+
+. Descargue la actualización `.iso` archivo.
++
+.. Inicie sesión en el sitio de soporte de NetApp (https://mysupport.netapp.com/products/index.html)[].
+.. En la lista de productos, seleccione *complemento SnapCenter para VMware vSphere* y, a continuación, haga clic en el botón *DESCARGAR LA ÚLTIMA VERSIÓN*.
+.. Descargue la actualización del plugin de SnapCenter para VMware vSphere `.iso` archivar en cualquier ubicación.
+
+
+. Instale la actualización.
++
+.. En el explorador, desplácese hasta VMware vSphere vCenter.
+.. En la interfaz gráfica de usuario de vCenter, haga clic en *vSphere Client (HTML)*.
+.. Inicie sesión en la página *VMware vCenter Single Sign-On*.
+.. En el panel de navegación, haga clic en la máquina virtual que desee actualizar y, a continuación, haga clic en la ficha *Resumen*.
+.. En el panel *objetos relacionados*, haga clic en cualquier almacén de datos de la lista y, a continuación, haga clic en la ficha *Resumen*.
+.. En la ficha *Archivos* del almacén de datos seleccionado, haga clic en cualquier carpeta de la lista y, a continuación, haga clic en *cargar archivos*.
+.. En la pantalla emergente de carga, desplácese hasta la ubicación en la que ha descargado el `.iso` haga clic en el archivo `.iso` Imagen de archivo y, a continuación, haga clic en *Abrir*. El archivo se carga en el almacén de datos.
+.. Vuelva a la máquina virtual que desee actualizar y haga clic en la ficha *Resumen*. En el panel *VM hardware*, en el campo CD/DVD, el valor debe estar “desconectado”.
+.. Haga clic en el icono de conexión en el campo CD/DVD y seleccione *conectar a imagen CD/DVD en un almacén de datos*.
++
+image:scpivs44_image42.png["Error: Falta la imagen gráfica"]
+
+.. En el asistente, haga lo siguiente:
++
+... En la columna datastores, seleccione el almacén de datos en el que cargó el `.iso` archivo.
+... En la columna Contenido, desplácese hasta la `.iso` Archivo que ha cargado, asegúrese de que “imagen ISO” está seleccionada en el campo Tipo de archivo y, a continuación, haga clic en *Aceptar*. Espere hasta que el campo muestre el estado "conectado".
+
+
+.. Inicie sesión en la consola de mantenimiento accediendo a la ficha *Resumen* del dispositivo virtual y, a continuación, haga clic en la flecha verde de ejecución para iniciar la consola de mantenimiento.
+.. Introduzca *2* para la configuración del sistema y, a continuación, introduzca *8* para la actualización.
+.. Introduzca *y* para continuar e iniciar la actualización.
+
+
+

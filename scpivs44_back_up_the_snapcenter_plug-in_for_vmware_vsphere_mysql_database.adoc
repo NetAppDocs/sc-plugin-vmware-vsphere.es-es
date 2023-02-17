@@ -1,0 +1,41 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_back_up_the_snapcenter_plug-in_for_vmware_vsphere_mysql_database.html 
+keywords:  
+summary: 'El plugin de VMware de SnapCenter incluye una base de datos de MySQL (también denominada base de datos NSM) que contiene los metadatos para todos los trabajos realizados por el plugin. Debe realizar el backup de este repositorio de forma regular.' 
+---
+= Realice el backup de la base de datos MySQL del plugin de SnapCenter para VMware vSphere
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+El plugin de VMware de SnapCenter incluye una base de datos de MySQL (también denominada base de datos NSM) que contiene los metadatos para todos los trabajos realizados por el plugin. Debe realizar el backup de este repositorio de forma regular.
+
+También debe realizar una copia de seguridad del repositorio antes de realizar migraciones o actualizaciones.
+
+.Antes de empezar
+No inicie una tarea para realizar un backup de la base de datos MySQL cuando ya se está ejecutando un trabajo de backup bajo demanda.
+
+.Pasos
+. En el cliente VMware vSphere, seleccione la máquina virtual donde esté ubicado el plugin de VMware de SnapCenter.
+. Haga clic con el botón derecho del ratón en el equipo virtual y, a continuación, en la ficha *Resumen* del dispositivo virtual, haga clic en *Iniciar consola remota* * o Iniciar Web Console* para abrir una ventana de la consola de mantenimiento.
++
+image:scpivs44_image21.png["Error: Falta la imagen gráfica"]
+
+. En el menú principal, introduzca la opción *1) Configuración de la aplicación.*
+. En el menú Configuración de la aplicación, introduzca la opción *6) copia de seguridad y restauración de MySQL.*
+. En el menú Configuración de copia de seguridad y restauración de MySQL, introduzca la opción *1) Configurar copia de seguridad de MySQL*.
+. En el aviso, introduzca la ubicación de la copia de seguridad del repositorio, la cantidad de copias de seguridad que se conservarán y la hora en que se debe iniciar la copia de seguridad.
++
+Todas las entradas se guardan al introducirlas. Cuando se alcanza el número de retención de backups, se eliminan backups más antiguos cuando se realizan backups nuevos.
+
++
+
+TIP: Los backups de repositorios se denominan "backup-<date>". Dado que la función de restauración del repositorio busca el prefijo "backup", no debe cambiarlo.
+
+

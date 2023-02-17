@@ -1,0 +1,74 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_view_status_information.html 
+keywords:  
+summary: La información de estado se puede ver en la consola de cliente de vSphere. La información de estado se actualiza una vez por hora. 
+---
+= Ver información de estado
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+La información de estado se puede ver en la consola de cliente de vSphere. La información de estado se actualiza una vez por hora.
+
+.Pasos
+. En el panel de navegación izquierdo del cliente de vSphere, haga clic en *Dashboard*, seleccione una instancia de vCenter Server y, a continuación, haga clic en la pestaña *Status* del panel de consola.
+. Vea la información sobre el estado de la información general o haga clic en un enlace para obtener más detalles, como se indica en la siguiente tabla.
++
+|===
+| Este mosaico del tablero de a bordo… | Muestra la siguiente información… 
+
+
+ a| 
+Actividades laborales recientes
+ a| 
+Las tres o cinco tareas más recientes de backup, restauración y montaje.
+
+** Haga clic en un ID de trabajo para ver más detalles acerca de ese trabajo.
+** Haga clic en *Ver todo* para ir a la ficha Monitor de trabajo para obtener más detalles sobre todos los trabajos.
+
+
+
+
+ a| 
+Trabajos
+ a| 
+Un recuento de cada tipo de trabajo (backup, restauración y montaje) realizado en la ventana de tiempo seleccionada. Pase el cursor por encima de una sección del gráfico para ver más detalles de esa categoría.
+
+
+
+ a| 
+Último resumen sobre protección
+ a| 
+Resúmenes del estado de la protección de datos de equipos virtuales primarios y secundarios o almacenes de datos dentro de la ventana de tiempo seleccionada.
+
+** Haga clic en el menú desplegable para seleccionar *VMs* o *datastores*.
+** Para almacenamiento secundario, seleccione *SnapVault* o *SnapMirror*.
+** Pase el cursor por una sección de un gráfico para ver el número de máquinas virtuales o almacenes de datos de esa categoría. En la categoría correctos, se incluye el backup más reciente de cada recurso.
+** Puede cambiar la ventana de tiempo editando el archivo de configuración. El valor predeterminado es 7 días. Para obtener más información, consulte link:scpivs44_customize_your_configuration.html["Personalice la configuración"].
+** Los contadores internos se actualizan después de cada backup primario o secundario. El icono de la consola se actualiza cada seis horas. No se puede cambiar la hora de actualización. Nota: Si utiliza una política de protección de reflejo-almacén, los contadores para el resumen de protección se muestran en el gráfico resumido SnapVault, no en el gráfico de SnapMirror.
+
+
+
+
+ a| 
+Configuración
+ a| 
+La cantidad total de cada tipo de objeto gestionado por el plugin de SnapCenter para VMware vSphere.
+
+
+
+ a| 
+Reducida
+ a| 
+El número total de copias Snapshot, SnapVault y copias Snapshot de SnapMirror, generadas y la cantidad de almacenamiento usado para copias Snapshot principales y secundarias. El gráfico de líneas traza por separado el consumo de almacenamiento primario y secundario día a día durante un período de 90 días rotativas. La información de almacenamiento se actualiza una vez cada 24 horas a la 1:08 A.M. El ahorro en almacenamiento es la proporción de la capacidad lógica (ahorros en copias Snapshot más el almacenamiento consumido) con la capacidad física del almacenamiento primario. El gráfico de barras ilustra el ahorro en almacenamiento.
+
+Pase el cursor por una línea del gráfico para ver los resultados detallados día a día.
+
+|===
+

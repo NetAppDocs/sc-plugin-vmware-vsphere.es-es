@@ -1,0 +1,61 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_manage_storage_systems.html 
+keywords:  
+summary: Para poder realizar un backup de las máquinas virtuales o los almacenes de datos mediante el cliente VMware vSphere, debe añadir el almacenamiento. 
+---
+= Gestionar los sistemas de almacenamiento
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Para poder realizar un backup de las máquinas virtuales o los almacenes de datos mediante el cliente VMware vSphere, debe añadir el almacenamiento.
+
+
+
+== Modificación de las máquinas virtuales de almacenamiento
+
+Es posible usar el cliente de VMware vSphere para modificar las configuraciones de los clústeres y las máquinas virtuales de almacenamiento que están registradas en el plugin de SnapCenter para VMware vSphere y que se usan para operaciones de protección de datos de máquinas virtuales.
+
+Si modifica una máquina virtual de almacenamiento que se agregó automáticamente como parte de un clúster (lo que a veces se denomina equipo virtual de almacenamiento implícito), entonces ese equipo virtual de almacenamiento cambia a un equipo virtual de almacenamiento explícito y se puede eliminar por separado sin cambiar el resto de los equipos virtuales de almacenamiento de ese clúster. En la página Storage Systems, el nombre de usuario se muestra como N/A cuando el método de autenticación se realiza a través del certificado; los nombres de usuario solo se muestran para las máquinas virtuales de almacenamiento explícitas en la lista de clústeres y tienen el indicador ExplicitSVM establecido en true. Todas las máquinas virtuales de almacenamiento siempre se enumeran en el clúster asociado.
+
+
+IMPORTANT: Si añadió máquinas virtuales de almacenamiento para operaciones de protección de datos basadas en aplicaciones mediante la interfaz gráfica de usuario de SnapCenter, tendrá que usar la misma interfaz gráfica de usuario para modificar dichas máquinas virtuales de almacenamiento.
+
+.Pasos
+. En el panel de navegación izquierdo del plugin de SCV, haga clic en *sistemas de almacenamiento*.
+. En la página *Storage Systems*, seleccione el equipo virtual de almacenamiento que desea modificar y, a continuación, haga clic en image:scpivs44_image25.png["Error: Falta la imagen gráfica"] *Edición*.
+. En la ventana *Editar sistema de almacenamiento*, introduzca los nuevos valores y, a continuación, haga clic en *Actualizar* para aplicar los cambios.
++
+image:scpivs44_image43.png["Error: Falta la imagen gráfica"]
+
+
+
+
+
+== Quitar las máquinas virtuales de almacenamiento
+
+Se puede usar el cliente de VMware vSphere para quitar máquinas virtuales de almacenamiento del inventario en vCenter.
+
+
+NOTE: Si añadió máquinas virtuales de almacenamiento para operaciones de protección de datos basadas en aplicaciones mediante la interfaz gráfica de usuario de SnapCenter, tendrá que usar la misma interfaz gráfica de usuario para modificar dichas máquinas virtuales de almacenamiento.
+
+.Antes de empezar
+Es necesario desmontar todos los almacenes de datos que haya en la máquina virtual de almacenamiento antes de quitarla.
+
+.Acerca de esta tarea
+Si un grupo de recursos tiene backups que residen en una máquina virtual de almacenamiento que se quita, los intentos posteriores de realizar backups de ese grupo de recursos generarán errores.
+
+.Pasos
+. En el panel de navegación izquierdo del plugin de SCV, haga clic en *sistemas de almacenamiento*.
+. En la página *sistemas de almacenamiento*, seleccione el equipo virtual de almacenamiento que desea eliminar y, a continuación, haga clic en *Eliminar*.
+. En la casilla de confirmación *Remove Storage System*, active la casilla de verificación *Delete Storage system(s)* y, a continuación, haga clic en *Yes* para confirmar. *Nota:* sólo se admiten las versiones ESXi 7.0U1 y posteriores.
++
+link:scpivs44_manage_the_vmware_vsphere_web_client_service.html["Reinicie el servicio del cliente de VMware vSphere"].
+
+

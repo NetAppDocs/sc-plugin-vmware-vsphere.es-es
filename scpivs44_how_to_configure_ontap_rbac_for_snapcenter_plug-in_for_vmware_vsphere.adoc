@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_how_to_configure_ontap_rbac_for_snapcenter_plug-in_for_vmware_vsphere.html 
+keywords:  
+summary: 'El control de acceso basado en roles de ONTAP se aplica únicamente a trabajos coherentes con las aplicaciones del servidor de SnapCenter (aplicación a través de VMDK).' 
+---
+= Cómo configurar el control de acceso basado en roles de ONTAP para el plugin de SnapCenter para VMware vSphere
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+El control de acceso basado en roles de ONTAP se aplica únicamente a trabajos coherentes con las aplicaciones del servidor de SnapCenter (aplicación a través de VMDK).
+
+Es necesario configurar RBAC de ONTAP en el sistema de almacenamiento para poder usarlo con el plugin de VMware de SnapCenter. En ONTAP, se deben ejecutar las siguientes tareas.
+
+* Crear un rol único.
++
+http://docs.netapp.com/ontap-9/index.jsp?topic=%2Fcom.netapp.doc.pow-adm-auth-rbac%2Fhome.html["Guía completa de autenticación de administrador y RBAC de ONTAP 9"^]
+
+* Crear un nombre de usuario y una contraseña (credenciales del sistema de almacenamiento) en ONTAP para el rol.
++
+Estas credenciales del sistema de almacenamiento son necesarias para configurar los sistemas de almacenamiento para el plugin de VMware de SnapCenter. Para hacerlo, se deben introducir las credenciales en el plugin. Cada vez que se inicia sesión en un sistema de almacenamiento con estas credenciales, se muestra el conjunto de funciones de SnapCenter que se configuran en ONTAP al crear las credenciales.
+
+
+
+Es posible usar el inicio de sesión de administrador o de raíz para acceder a todas las tareas de SnapCenter; sin embargo, es recomendable usar la función de RBAC proporcionada por ONTAP para crear una o varias cuentas personalizadas con privilegios de acceso limitados.
+
+Para obtener más información, consulte link:scpivs44_minimum_ontap_privileges_required.html["Privilegios mínimos requeridos de ONTAP"^].

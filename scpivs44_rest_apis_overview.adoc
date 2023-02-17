@@ -1,0 +1,61 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_rest_apis_overview.html 
+keywords:  
+summary: Es posible usar las API DE REST del plugin de SnapCenter para VMware vSphere para realizar operaciones de protección de datos comunes. El plugin tiene páginas web de Swagger diferentes de las páginas web de Windows SnapCenter Swagger. 
+---
+= Descripción general
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Es posible usar las API DE REST del plugin de SnapCenter para VMware vSphere para realizar operaciones de protección de datos comunes. El plugin tiene páginas web de Swagger diferentes de las páginas web de Windows SnapCenter Swagger.
+
+* Los flujos de trabajo de la API DE REST se documentan para las siguientes operaciones en máquinas virtuales y almacenes de datos usando las API DE REST para VMware vSphere:
++
+** Añadir, modificar y eliminar máquinas virtuales de almacenamiento y clústeres
+** Crear, modificar y eliminar grupos de recursos
+** Backup de máquinas virtuales, programadas y bajo demanda
+** Restaurar máquinas virtuales existentes y eliminadas
+** Restaurar VMDK
+** Asocie y desconecte VMDK
+** Montar y desmontar almacenes de datos
+** Descargar trabajos y generar informes
+** Modifique las programaciones integradas
+
+
+* Operaciones que no son compatibles con las API de REST para VMware vSphere
++
+** Restauración de archivos invitados
+** Instalación y configuración del complemento VMware de SnapCenter
+** Asigne roles de RBAC o acceso a los usuarios
+
+
+* `uri` parámetro
++
+La `uri` el parámetro siempre devuelve un valor "null".
+
+* Tiempo de espera de conexión
++
+El tiempo de espera predeterminado es de 120 minutos (2 horas). Puede configurar otro valor de tiempo de espera en la configuración de vCenter.
+
+* Gestión de tokens
++
+Por motivos de seguridad, las API DE REST utilizan un token obligatorio que se pasa con cada solicitud y se usa en todas las llamadas API para la validación de clientes. Las API DE REST para VMware vSphere utilizan la API de autenticación de VMware para obtener el token. VMware proporciona la gestión de tokens.
+
++
+Para obtener el token, utilice `/4.1/auth/login` REST de la API y proporcione las credenciales de vCenter.
+
+* Designaciones de versiones de API
++
+Cada nombre de API DE REST incluye el número de versión de SnapCenter en la que se lanzó por primera vez la API DE REST. Por ejemplo, la API REST `/4.1/datastores/{moref}/backups` Fue lanzado por primera vez en SnapCenter 4.1.
+
++
+Las API DE REST en próximas versiones suelen ser compatibles con versiones anteriores y se modificarán para incluir nuevas funciones, según sea necesario.
+
+

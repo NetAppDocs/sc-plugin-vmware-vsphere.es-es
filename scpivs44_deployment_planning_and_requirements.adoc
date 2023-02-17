@@ -1,0 +1,213 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_deployment_planning_and_requirements.html 
+keywords:  
+summary: Debe conocer los requisitos de puesta en marcha antes de poner en marcha el dispositivo virtual. 
+---
+= Planificación y requisitos de la puesta en marcha
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Debe conocer los requisitos de puesta en marcha antes de poner en marcha el dispositivo virtual. Los requisitos de implementación se enumeran en las cinco tablas siguientes.
+
+
+
+== Requisitos del host
+
+Antes de iniciar la implementación del plugin de SnapCenter para VMware vSphere, debe estar familiarizado con los requisitos del host.
+
+* El plugin de VMware de SnapCenter se implementa como máquina virtual de Linux, independientemente de si utiliza el plugin para proteger datos en sistemas Windows o sistemas Linux.
+* Debe implementar el plugin de VMware de SnapCenter en vCenter Server.
++
+Las programaciones de backup se ejecutan en la zona horaria en la que se implementó el plugin de VMware de SnapCenter. VCenter informa de los datos en la zona horaria en la que se encuentra la instancia de vCenter. Por lo tanto, si el plugin de VMware de SnapCenter y vCenter están en zonas horarias diferentes, es posible que los datos de la consola del plugin de VMware de SnapCenter no sean los mismos que los datos de los informes.
+
+* No debe implementar el plugin de VMware de SnapCenter en una carpeta cuyo nombre contenga caracteres especiales.
++
+El nombre de la carpeta no debe contener los siguientes caracteres especiales: $!@#%&()_+{}';.,*?"<>|
+
+* Es necesario poner en marcha y registrar una instancia única e independiente del plugin de VMware de SnapCenter para cada servidor de vCenter.
++
+** Cada instancia de vCenter Server, ya esté en modo vinculado o no, debe emparejarse con una instancia independiente del plugin de VMware de SnapCenter.
+** Cada instancia del plugin de VMware de SnapCenter se debe poner en marcha como una máquina virtual de Linux independiente.
++
+Por ejemplo, si desea realizar backups de seis instancias diferentes de vCenter Server, debe implementar el plugin de VMware de SnapCenter en seis hosts y cada instancia de vCenter Server se debe emparejar con una instancia única del plugin de VMware de SnapCenter.
+
+
+
+* Para proteger las máquinas virtuales de VVol (VM en almacenes de datos de VVol de VMware), primero se deben implementar herramientas de ONTAP para VMware vSphere. Las herramientas de ONTAP aprovisiona y configura el almacenamiento para vVols en ONTAP y en el cliente web de VMware.
++
+Para obtener más información, consulte https://docs.netapp.com/us-en/ontap-tools-vmware-vsphere/index.html["Herramientas de ONTAP para VMware vSphere"^]
+
++
+Para obtener la información más reciente sobre las versiones compatibles de herramientas de ONTAP, consulte https://imt.netapp.com/matrix/imt.jsp?components=108380;&solution=1257&isHWU&src=IMT["Herramienta de matriz de interoperabilidad de NetApp"^].
+
+* El complemento VMware de SnapCenter ofrece compatibilidad limitada con dispositivos PCI o PCIe compartidos (por ejemplo, NVIDIA Grid GPU) debido a una limitación de las máquinas virtuales en el soporte de Storage vMotion. Para obtener más información, consulte el documento del proveedor Guía de puesta en marcha de VMware.
++
+** Qué se admite:
++
+Crear grupos de recursos
+
++
+Creación de backups sin consistencia de máquina virtual
+
++
+Restaurar una máquina virtual completa cuando todos los VMDK están en un almacén de datos NFS y el plugin no necesita utilizar Storage vMotion
+
++
+Asociar y desasociar VMDK
+
++
+Montar y desmontar almacenes de datos
+
++
+Restauraciones de archivos invitados
+
+** Qué no se admite:
++
+Creación de backups con consistencia de máquinas virtuales
+
++
+Restaurar una máquina virtual completa cuando uno o más VMDK están en un almacén de datos VMFS.
+
+
+
+* Para obtener una lista detallada de las limitaciones del complemento VMware de SnapCenter, consulte link:scpivs44_release_notes.html["Notas de la versión del plugin de SnapCenter para VMware vSphere"^].
+
+
+
+
+== Requisitos de licencia
+
+|===
+| Debe proporcionar licencias para… | Requisito de licencia 
+
+
+| ONTAP | Uno de estos: SnapMirror o SnapVault (para la protección de datos secundarios independientemente del tipo de relación) 
+
+
+| Productos adicionales | Se requiere una licencia de vSphere Standard, Enterprise o Enterprise Plus para ejecutar operaciones de restauración, que utilizan Storage vMotion. Las licencias vSphere Essentials o Essentials Plus no incluyen Storage vMotion. 
+
+
+| Destinos primarios | SnapCenter Standard: Se requiere para realizar una protección basada en aplicaciones en VMware SnapRestore: Se necesita para realizar operaciones de restauración solo de máquinas virtuales y almacenes de datos de VMware FlexClone: Se utiliza únicamente para operaciones de montaje y conexión en máquinas virtuales y almacenes de datos de VMware 
+
+
+| Destinos secundarios | Estándar SnapCenter: Utilizado para operaciones de conmutación por error para la protección basada en aplicaciones en FlexClone de VMware: Utilizado para operaciones de montaje y conexión solo en máquinas virtuales y almacenes de datos de VMware 
+|===
+
+
+== Soporte de software
+
+|===
+| Elemento | Versiones compatibles 
+
+
+| VSphere | 7.0U1 y superior 
+
+
+| ESXi | 7.0U1 y superior 
+
+
+| Direcciones IP | IPv4, IPv6 
+
+
+| TLS de VMware | 1.2, 1.3 
+
+
+| TLS en el servidor SnapCenter | 1.2 de febrero de 1.3, el servidor SnapCenter lo utiliza para comunicarse con el plugin de VMware de SnapCenter para aplicaciones a través de operaciones de protección de datos de VMDK. 
+
+
+| Aplicación VMware vStorage API para integración de cabinas (VAAI) | El plugin de SnapCenter para VMware vSphere utiliza esta característica para mejorar el rendimiento de las operaciones de restauración. También mejora el rendimiento en entornos NFS. 
+
+
+| Herramientas de ONTAP para VMware | El plugin de SnapCenter para VMware vSphere utiliza esto para gestionar almacenes de datos de VVol (volúmenes virtuales de VMware). Para conocer las versiones compatibles, consulte https://imt.netapp.com/matrix/imt.jsp?components=108380;&solution=1257&isHWU&src=IMT["Herramienta de matriz de interoperabilidad de NetApp"^]. 
+|===
+Para obtener la información más reciente sobre las versiones compatibles, consulte https://imt.netapp.com/matrix/imt.jsp?components=108380;&solution=1257&isHWU&src=IMT["Herramienta de matriz de interoperabilidad de NetApp"^].
+
+
+
+== Requisitos de espacio y de tamaño
+
+|===
+| Elemento | Requisitos 
+
+
+| De NetApp | Linux 
+
+
+| Recuento de CPU mínimo | 4 núcleos 
+
+
+| RAM mínimo | Mínimo: Se recomiendan 12 GB: 16 GB 
+
+
+| Espacio en disco duro mínimo para el plugin de SnapCenter para VMware vSphere, registros y base de datos MySQL | 100 GB 
+|===
+
+
+== Requisitos de conexión y puerto
+
+|===
+| Tipo de puerto | Puerto preconfigurado 
+
+
+| Puerto de VMware ESXi Server | 443 (HTTPS), la función bidireccional de restauración de archivos invitados utiliza este puerto. 
+
+
+| Puerto del plugin de SnapCenter para VMware vSphere  a| 
+8144 (HTTPS), bidireccional que el puerto se utiliza para las comunicaciones desde el cliente VMware vSphere y desde el servidor SnapCenter. 8080 bidireccional este puerto se utiliza para gestionar el dispositivo virtual.
+
+Nota: No puede modificar la configuración de puertos.
+
+
+
+| Puerto de VMware vSphere vCenter Server | Se debe usar el puerto 443 si se protegen las máquinas virtuales de VVol. 
+
+
+| Puerto del clúster de almacenamiento o de la máquina virtual de almacenamiento | 443 (HTTPS), bidireccional 80 (HTTP), el puerto bidireccional que se utiliza para la comunicación entre el dispositivo virtual y la máquina virtual de almacenamiento, o el clúster que contiene la máquina virtual de almacenamiento. 
+|===
+
+
+== Configuraciones compatibles
+
+Cada instancia de plugin solo admite una instancia de vCenter Server. Se admiten las instancias de vCenter en el modo vinculado. Varias instancias de complementos pueden admitir el mismo servidor SnapCenter como se muestra en la siguiente figura.
+
+image:scpivs44_image4.png["Error: Falta la imagen gráfica"]
+
+
+
+== Se requieren privilegios de RBAC
+
+La cuenta de administrador de vCenter debe tener los privilegios de vCenter requeridos, como se muestra en la siguiente tabla.
+
+|===
+| Para realizar esta operación… | Debe tener estos privilegios de vCenter... 
+
+
+| Implemente y registre el plugin de SnapCenter para VMware vSphere en vCenter | Extensión: Extensión de registro 
+
+
+| Actualice o quite el plugin de SnapCenter para VMware vSphere  a| 
+Extensión
+
+* Actualizar extensión
+* Cancele el registro de la extensión
+
+
+
+
+| Permita que la cuenta de usuario de vCenter Credential registrada en SnapCenter valide el acceso de usuario al plugin de SnapCenter para VMware vSphere | sessions.validate.session 
+
+
+| Permita que los usuarios accedan al plugin de SnapCenter para VMware vSphere | SCV Administrator SCV Backup SCV Guest File Restore SCV Restore SCV View el privilegio debe asignarse en la raíz de vCenter. 
+|===
+
+
+== AutoSupport
+
+El plugin de SnapCenter para VMware vSphere ofrece un mínimo de información para realizar un seguimiento del uso, incluida la URL del plugin. AutoSupport incluye una tabla de plugins instalados que muestra el visor de AutoSupport.

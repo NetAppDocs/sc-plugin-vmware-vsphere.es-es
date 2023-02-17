@@ -1,0 +1,49 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_rest_api_workflow__restore_vms.html 
+keywords:  
+summary: Para realizar operaciones de restauración de backups de máquinas virtuales mediante las API DE REST del plugin de SnapCenter para VMware vSphere, debe seguir la secuencia prescrita de las llamadas de API de REST. 
+---
+= Flujo de trabajo de la API de REST para restaurar máquinas virtuales
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Para realizar operaciones de restauración de backups de máquinas virtuales mediante las API DE REST del plugin de SnapCenter para VMware vSphere, debe seguir la secuencia prescrita de las llamadas de API de REST.
+
+Para cada API REST, añada `https://<server>:<port>` En la parte frontal de la API DE REST para formar un extremo completo.
+
+|===
+| Paso | API REST | Comentarios 
+
+
+| 1 | Vaya a. `http://<vCenter-IP>/mob` | Busque el archivo VM en la URL de VMware Managed Objects. Tenga en cuenta el *moref* para el equipo virtual que desea restaurar. 
+
+
+| 2 | `/4.1/vm/{moref}/backups` | `Get VM Backups` Obtiene una lista de backups para la máquina virtual especificada. Pase el *moref* desde el Paso 1. Tenga en cuenta *BackupId* de la copia de seguridad que desea restaurar. 
+
+
+| 3 | `/4.1/vm/backups/{backupId}/
+snapshotlocations` | `Get snapshot locations` Obtiene la ubicación de la copia Snapshot del backup especificado. Pase el *BackupId* del paso 2. Tenga en cuenta la información *snapshotLocationsList*. 
+
+
+| 4 | `/4.1/vm/{moref}/backups/
+availableesxhosts` | `Get available ESX Hosts` obtiene la información del host en el que se almacena el backup. Tenga en cuenta la información *availableEsxHostsList*. 
+
+
+| 5 | `/4.1/vm/{moref}/backups/
+{backupId}/restore`  a| 
+`Restore a VM from a backup` restaura el backup especificado. Pase la información de los pasos 3 y 4 del atributo *restoreLocations*.
+
+
+NOTE: Si el backup de la máquina virtual es un backup parcial, configure el `restartVM` parámetro a "false".
+
+
+NOTE: No puede restaurar un equipo virtual que sea una plantilla.
+
+|===

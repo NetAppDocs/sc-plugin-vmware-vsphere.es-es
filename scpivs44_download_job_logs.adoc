@@ -1,0 +1,38 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_download_job_logs.html 
+keywords:  
+summary: Puede descargar los registros de los trabajos en la pestaña Job Monitor en la consola del cliente VMware vSphere de SnapCenter. 
+---
+= Descargar registros de trabajos
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Puede descargar los registros de los trabajos en la pestaña Job Monitor en la consola del cliente VMware vSphere de SnapCenter.
+
+Si encuentra un comportamiento inesperado durante el uso del cliente VMware vSphere, puede usar los archivos de registro para identificar la causa del problema y resolverlo.
+
+
+NOTE: El valor predeterminado para retener registros de trabajos es de 30 días; el valor predeterminado para retener trabajos es de 90 días. Los registros de trabajos y los trabajos más antiguos que la retención configurada se purgan cada seis horas. Puede utilizar la configuración `jobs/cleanup` Las API DE REST para modificar el tiempo que se retienen los trabajos y los registros de trabajos. No puede modificar la programación de purgado.
+
+.Pasos
+. En el panel de navegación izquierdo del cliente de vSphere, haga clic en *Dashboard*, seleccione una instancia de vCenter Server y, a continuación, haga clic en la pestaña *Job Monitor* del panel Dashboard.
+. Haga clic en la image:scpivs44_image37.png["Error: Falta la imagen gráfica"] El icono de descarga de la barra de título Job Monitor.
++
+Es posible que deba desplazarse a la derecha para ver el icono.
+
++
+También puede hacer doble clic en un trabajo para acceder a la ventana Detalles del trabajo y, a continuación, hacer clic en *Descargar registros de trabajos*.
+
+
+
+.Resultado
+Los registros de trabajos se colocan en el host de máquina virtual Linux donde se implementó el plugin de VMware de SnapCenter. La ubicación predeterminada del registro de trabajos es `/var/log/netapp`.
+
+Si intentó descargar los registros de trabajos pero se eliminó el archivo de registro denominado en el mensaje de error, es posible que aparezca el siguiente error: `HTTP ERROR 500 Problem accessing /export-scv-logs`. Para corregir este error, compruebe el estado de acceso al archivo y los permisos del archivo nombrado en el mensaje de error y corrija el problema de acceso.

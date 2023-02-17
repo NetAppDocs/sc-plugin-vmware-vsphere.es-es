@@ -1,0 +1,57 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_rest_apis__download_jobs_and_generate_reports.html 
+keywords:  
+summary: Para generar informes y descargar registros para trabajos de cliente de VMware vSphere mediante la API DE REST del plugin de SnapCenter para VMware vSphere, debe usar las llamadas de API de REST para VMware vSphere. 
+---
+= API DE REST para descargar trabajos y generar informes
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Para generar informes y descargar registros para trabajos de cliente de VMware vSphere mediante la API DE REST del plugin de SnapCenter para VMware vSphere, debe usar las llamadas de API de REST para VMware vSphere.
+
+Para cada API REST, añada `https://<server>:<port>` En la parte frontal de la API DE REST para formar un extremo completo.
+
+
+
+== Use las siguientes API DE REST en la sección Jobs para obtener información detallada sobre los trabajos:
+
+|===
+| API REST | Comentarios 
+
+
+| `/4.1/jobs` | `Get all jobs` obtiene los detalles del trabajo de varios trabajos. Puede restringir el ámbito de la solicitud especificando un tipo de trabajo, como `backup`, `mountBackup`, o. `restore`. 
+
+
+| `/4.1/jobs/{id}` | `Get job details` obtiene información detallada del trabajo especificado. 
+|===
+
+
+== Use la siguiente API DE REST en la sección Jobs para descargar registros de trabajos:
+
+|===
+| API REST | Comentarios 
+
+
+| `/4.1/jobs/{id}/logs` | `getJobLogsById` descarga los registros del trabajo especificado. 
+|===
+
+
+== Utilice las siguientes API DE REST de la sección Reports para generar informes:
+
+|===
+| API REST | Comentarios 
+
+
+| `4.1/reports/protectedVM` | `Get Protected VM List` Obtiene una lista de las máquinas virtuales protegidas durante los últimos siete días. 
+
+
+| `/4.1/reports/
+unProtectedVM` | `Get Unprotected VM List` Obtiene una lista de las máquinas virtuales no protegidas durante los últimos siete días. 
+|===

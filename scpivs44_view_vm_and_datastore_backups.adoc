@@ -1,0 +1,28 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_view_vm_and_datastore_backups.html 
+keywords:  
+summary: Cuando se está preparando para realizar un backup de una máquina virtual o un almacén de datos, puede ver todos los backups disponibles para ese recurso y los detalles de dichos backups. 
+---
+= Ver backups de máquinas virtuales y almacenes de datos
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cuando se está preparando para realizar un backup de una máquina virtual o un almacén de datos, puede ver todos los backups disponibles para ese recurso y los detalles de dichos backups.
+
+.Acerca de esta tarea
+Explorar las carpetas de archivos de gran tamaño, por ejemplo, las carpetas de archivos de 10K, puede tardar uno o más minutos la primera vez. Las siguientes sesiones de exploración requieren menos tiempo.
+
+.Pasos
+. Haga clic en *Menú* y seleccione la opción de menú *hosts y clústeres*, a continuación, seleccione una máquina virtual, seleccione la ficha *Configurar* y, a continuación, haga clic en *copias de seguridad* en la sección *SnapCenter Plug-in for VMware vSphere*.
++
+image:scpivs44_image14.png["Error: Falta la imagen gráfica"]
+
+. Haga clic en el backup que desea ver.
+

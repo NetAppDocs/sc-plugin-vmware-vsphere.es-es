@@ -1,0 +1,31 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_enable_ssh.html 
+keywords:  
+summary: Cuando se implementa el plugin de VMware de SnapCenter, SSH está deshabilitado de forma predeterminada. 
+---
+= Habilite SSH para el plugin de SnapCenter para VMware vSphere
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cuando se implementa el plugin de VMware de SnapCenter, SSH está deshabilitado de forma predeterminada.
+
+.Pasos
+. En el cliente VMware vSphere, seleccione la máquina virtual donde esté ubicado el plugin de VMware de SnapCenter.
+. Haga clic con el botón derecho del ratón en el equipo virtual y, a continuación, en la ficha *Resumen* del dispositivo virtual, haga clic en *Iniciar consola remota* para abrir una ventana de la consola de mantenimiento y, a continuación, inicie sesión.
++
+Para obtener información sobre el acceso a la consola de mantenimiento y el inicio de sesión, consulte link:scpivs44_access_the_maintenance_console.html["Acceda a la Consola de mantenimiento"^].
+
++
+image:scpivs44_image11.png["Error: Falta la imagen gráfica"]
+
+. En el menú principal, seleccione la opción de menú *2) Configuración del sistema*.
+. En el menú Configuración del sistema, seleccione la opción de menú *6) Activar acceso SSH* y, a continuación, introduzca “*y*” en el indicador de confirmación.
+. Espere a que aparezca el mensaje “activación del acceso SSH…” A continuación, pulse *Intro* para continuar y, a continuación, introduzca *X* en el símbolo del sistema para salir del modo de mantenimiento.
+

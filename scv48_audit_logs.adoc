@@ -1,0 +1,146 @@
+---
+sidebar: sidebar 
+permalink: scv48_audit_logs.html 
+keywords:  
+summary: El registro de auditoría permite realizar un seguimiento de quién realizó qué y cuándo. El registro de auditoría es una colección de eventos en un orden cronológico y se escribe en un archivo dentro del dispositivo. 
+---
+= Registros de auditoría
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+El registro de auditoría es una colección de eventos en un orden cronológico, que se escribe en un archivo dentro del dispositivo. El archivo de registro de auditoría se genera en `/var/log/netapp/audit` la ubicación y los nombres de los archivos siguen una de las siguientes convenciones de nomenclatura:
+
+* Audit.log: Archivo de registro de auditoría activo que está en uso.
+* Auditoría-%d{aaaa-MM-dd-HH-mm-ss}.log.gz: Archivo de registro de auditoría. La fecha y la hora en el nombre del archivo indican cuándo se creó el archivo, por ejemplo: Audit-2022-12-15-16-28-01.log.gz.
+
+
+En la interfaz de usuario del complemento SCV, puede ver y exportar los detalles del registro de auditoría desde la ficha *Panel* > *Configuración* > *registros de auditoría* puede ver la auditoría de operaciones en los registros de auditoría. Los registros de auditoría se descargan con el bundle de soporte.
+
+Si la configuración de correo electrónico está configurada, SCV envía una notificación de correo electrónico en caso de que se produzca un fallo en la verificación de integridad del registro de auditoría. Se puede producir un error de verificación de integridad del registro de auditoría cuando se elimina o se altera uno de los archivos.
+
+Las configuraciones predeterminadas de los archivos de auditoría son:
+
+* El archivo de registro de auditoría en uso puede aumentar hasta un máximo de 10 MB
+* Se conserva un máximo de 10 archivos de registro de auditoría
+
+
+Para modificar las configuraciones predeterminadas, añada un par de valores clave en /opt/netapp/svservice/autónoma_aegis/etc/scbr/scbr.properties y reinicie el servicio scvservice.
+
+Las configuraciones para los archivos del registro de auditoría son:
+
+* AudiMaxROFiles=<xx>, donde xx es el número máximo de archivos de registro de auditoría acumulados, por ejemplo: AudiMaxROFiles=15.
+* AudiLogSize=<XX> TMP, donde xx es el tamaño del archivo en MB, por ejemplo: AudiLogSize=15MB.
+
+
+La integridad de los registros de auditoría acumulados se verifica periódicamente. SCV proporciona API de REST para ver registros y verificar su integridad. Una programación integrada activa y asigna uno de los siguientes Estados de integridad.
+
+|===
+
+
+| Estado | Descripción 
+
+
+| MANIPULADO | El contenido del archivo de registro de auditoría se modifica 
+
+
+| NORMAL | El archivo de registro de auditoría no está modificado 
+
+
+| ELIMINACIÓN DINÁMICA | * El archivo de registro de auditoría se elimina según la retención * de forma predeterminada, sólo se conservan 10 archivos 
+
+
+| ELIMINACIÓN INESPERADA | Se elimina el archivo de registro de auditoría 
+
+
+| ACTIVO | * El archivo de registro de auditoría está en uso * sólo aplicable a audit.log 
+|===
+Los eventos se clasifican en tres categorías principales:
+
+* Eventos de protección de datos
+* Eventos de la consola de mantenimiento
+* Eventos de la consola de administración
+
+
+
+
+== Eventos de protección de datos
+
+Los recursos de SCV son:
+
+* Sistema de almacenamiento
+* Grupo de recursos
+* Política
+* Backup
+
+
+En la siguiente tabla, se enumeran las operaciones que se pueden realizar en cada recurso:
+
+|===
+
+
+| Recursos | Operaciones 
+
+
+| Sistema de almacenamiento | Creado, modificado, eliminado 
+
+
+| Grupo de recursos | Creado, modificado, eliminado, suspendido, reanudado 
+
+
+| Política | Creado, modificado, eliminado 
+
+
+| Backup | Creado, cambiado el nombre, eliminado, montado, desmontado, VMDK restaurado, máquina virtual restaurada, Attach VMDK, Detach VMDK, Guest File Restore 
+|===
+
+
+== Eventos de la consola de mantenimiento
+
+Las operaciones administrativas de la consola de mantenimiento se auditan. Las opciones de la consola de mantenimiento disponibles son:
+
+. Iniciar/Detener servicios
+. Cambiar nombre de usuario y contraseña
+. Cambie la contraseña de MySQL
+. Configure MySQL Backup
+. Restaure MySQL Backup
+. Cambiar la contraseña de usuario "mant"
+. Cambiar zona horaria
+. Cambie el servidor NTP
+. Deshabilite el acceso SSH
+. Aumente el tamaño de los discos de cárcel
+. Renovar
+. Instalar herramientas de VMware (estamos trabajando para sustituirla por herramientas de Open-vm)
+. Cambiar la configuración de la dirección IP
+. Cambiar la configuración de búsqueda de nombres de dominio
+. Cambiar rutas estáticas
+. Acceder al shell de diagnóstico
+. Active el acceso de diagnóstico remoto
+
+
+
+
+== Eventos de la consola de administración
+
+Se auditan las siguientes operaciones en la interfaz de usuario de la Consola de administración:
+
+* Configuración
++
+** Cambie las credenciales de administrador
+** Cambie la zona horaria
+** Cambie el servidor NTP
+** Cambie la configuración de IPv4/IPv6
+
+
+* Configuración
++
+** Cambie las credenciales de vCenter
+** Activación/desactivación del plug-in
+
+
+

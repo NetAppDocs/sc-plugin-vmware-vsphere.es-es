@@ -1,0 +1,55 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_mount_a_backup.html 
+keywords:  
+summary: Es posible montar un almacén de datos tradicional desde un backup si se desea tener acceso a los archivos del backup. Es posible montar el backup en el mismo host ESXi donde se creó el backup o en un host ESXi alternativo que tenga el mismo tipo de configuración de máquina virtual y de host. Un almacén de datos puede montarse varias veces en un host. 
+---
+= Montar un backup
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Es posible montar un almacén de datos tradicional desde un backup si se desea tener acceso a los archivos del backup. Es posible montar el backup en el mismo host ESXi donde se creó el backup o en un host ESXi alternativo que tenga el mismo tipo de configuración de máquina virtual y de host. Un almacén de datos puede montarse varias veces en un host.
+
+No se puede montar un almacén de datos de VVol.
+
+.Antes de empezar
+* Asegúrese de que un host ESXi alternativo pueda conectarse al almacenamiento
++
+Si desea montarlo en un host ESXi alternativo, debe asegurarse de que dicho host ESXi se pueda conectar al almacenamiento y que tenga lo siguiente: ** El mismo UID y GID que el host original ** el mismo dispositivo virtual para la versión del plugin de SnapCenter para VMware vSphere que el host original
+
+* Asigne los iniciadores de almacenamiento a ESXi
++
+Asegúrese de que los iniciadores del sistema de almacenamiento estén asignados a ESXi.
+
+* Borre las LUN obsoletas
++
+Como ESXi solo puede detectar un LUN único por almacén de datos, se producirá un error en la operación si encuentra más de uno. Esto puede ocurrir si inicia una operación de montaje antes de finalizar una operación de montaje anterior, o si clona LUN manualmente, o si no se eliminan del almacenamiento durante una operación de desmontaje. Para evitar la detección de varios clones, debe borrar todas las LUN obsoletas del almacenamiento.
+
+
+
+.Acerca de esta tarea
+La operación de montaje puede fallar si no está disponible el nivel de almacenamiento de FabricPool donde se encuentra el almacén de datos.
+
+.Pasos
+. En VMware vSphere Client, haga clic en *Menú* en la barra de herramientas y, a continuación, seleccione *Storage* en la lista desplegable.
+. Haga clic con el botón derecho en un almacén de datos, seleccione *SnapCenter* de NetApp en la lista desplegable y, a continuación, seleccione *Mount Backup* en la lista desplegable secundaria.
+. En la página *Mount Datastore*, seleccione una copia de seguridad y una ubicación de copia de seguridad (primaria o secundaria) y, a continuación, haga clic en *Finish*.
+. Opcional: Para verificar si se montó el almacén de datos, haga lo siguiente:
++
+.. Haga clic en *Menú* en la barra de herramientas y, a continuación, seleccione *almacenamiento* en la lista desplegable.
+.. En el panel de navegación de la izquierda, el almacén de datos que montó aparecerá en la parte superior de la lista.
++
+Si ejecuta una operación de asociación o montaje en un volumen de destino de SnapVault que está protegido por programaciones de SnapVault y que funciona con ONTAP 8.3, puede ver una copia de Snapshot adicional en la pantalla de diálogo de la asociación o el montaje. Esto ocurre porque la operación de asociación o montaje clona el volumen de destino de SnapVault y ONTAP actualiza el volumen creando una nueva copia de Snapshot.
+
++
+Para evitar que se creen nuevas copias Snapshot al clonar el volumen, apague la programación ONTAP para el volumen SnapVault. Las copias de Snapshot que existían previamente no se eliminan.
+
+
+
+

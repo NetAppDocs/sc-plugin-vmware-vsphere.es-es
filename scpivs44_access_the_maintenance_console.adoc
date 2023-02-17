@@ -1,0 +1,59 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_access_the_maintenance_console.html 
+keywords:  
+summary: Puede gestionar las configuraciones de aplicaciones, sistema y red mediante la consola de mantenimiento del plugin de SnapCenter para VMware vSphere. Puede cambiar la contraseña de administrador, la contraseña de mantenimiento, generar paquetes de soporte e iniciar diagnósticos remotos. 
+---
+= Acceda a la consola de mantenimiento
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Puede gestionar las configuraciones de aplicaciones, sistema y red mediante la consola de mantenimiento del plugin de SnapCenter para VMware vSphere. Puede cambiar la contraseña de administrador, la contraseña de mantenimiento, generar paquetes de soporte e iniciar diagnósticos remotos.
+
+.Antes de empezar
+Antes de detener y reiniciar el servicio del plugin de SnapCenter para VMware vSphere, debe suspender todas las programaciones.
+
+.Acerca de esta tarea
+* En el plugin de SnapCenter para VMware vSphere 4.6P1, debe especificar una contraseña al instalar por primera vez el plugin de SnapCenter para VMware vSphere. Si actualiza de la versión 4.6 o anterior a la versión 4.6P1 o posterior, se aceptará la contraseña predeterminada anterior.
+* Debe establecer una contraseña para el usuario “diag” mientras habilita el diagnóstico remoto.
++
+Para obtener el permiso del usuario raíz para ejecutar el comando, use la sudo <command>.
+
+
+
+.Pasos
+. En el cliente VMware vSphere, seleccione la máquina virtual donde esté ubicado el plugin de VMware de SnapCenter.
+. Haga clic con el botón derecho del ratón en el equipo virtual y, a continuación, en la ficha *Resumen* del dispositivo virtual, haga clic en *Iniciar consola remota* para abrir una ventana de la consola de mantenimiento.
++
+Inicie sesión con el nombre de usuario predeterminado de la consola de mantenimiento `maint` y la contraseña que ha establecido en el momento de la instalación.
+
++
+image:scpivs44_image11.png["Error: Falta la imagen gráfica"]
+
+. Es posible realizar las siguientes operaciones:
++
+** Opción 1: Configuración de la aplicación
++
+Mostrar un resumen de SnapCenter complemento VMware Start o stop SnapCenter plugin service Change login nombre de usuario o contraseña para el plugin de SnapCenter cambiar contraseña de MySQL Backup y restauración de MySQL, configurar y enumerar backups de MySQL
+
+** Opción 2: Configuración del sistema
++
+Reiniciar o apagar máquina virtual Cambiar "mantenimiento" contraseña de usuario Cambiar zona horaria Cambiar servidor NTP Habilitar/deshabilitar acceso SSH aumentar el tamaño de la cárcel del disco (/cárcel) Actualizar instalar herramientas de VMware
+
+** Opción 3: Configuración de red
++
+Mostrar o cambiar la configuración de la dirección IP Mostrar o cambiar la configuración de búsqueda de nombres de dominio Mostrar o cambiar las rutas estáticas realizar cambios ping a un host
+
+** Opción 4: Soporte y diagnóstico
++
+Genere un shell de diagnóstico de acceso al bundle de soporte Habilitar el acceso remoto a diagnóstico genere un paquete de volcado de memoria
+
+
+
+

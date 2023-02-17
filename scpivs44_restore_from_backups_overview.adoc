@@ -1,0 +1,47 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_restore_from_backups_overview.html 
+keywords:  
+summary: Es posible restaurar máquinas virtuales, VMDK, archivos y carpetas desde backups primarios o secundarios. 
+---
+= Información general de Restore
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Es posible restaurar máquinas virtuales, VMDK, archivos y carpetas desde backups primarios o secundarios.
+
+* Destinos de restauración de máquinas virtuales
++
+Es posible restaurar máquinas virtuales tradicionales en el host original, o en un host alternativo en la misma instancia de vCenter Server, o en un host ESXi alternativo gestionado por la misma instancia de vCenter o cualquier instancia de vCenter en modo vinculado.
+
++
+Es posible restaurar máquinas virtuales de VVol en el host original.
+
+* Destinos de restauración VMDK
++
+Es posible restaurar los VMDK de las máquinas virtuales tradicionales en el almacén de datos original o en otro alternativo.
+
++
+Es posible restaurar VMDK en máquinas virtuales de VVol en el almacén de datos original.
+
+
+
+También es posible restaurar archivos y carpetas individuales en una sesión de restauración de archivos de invitado, que conecta una copia de backup de un disco virtual y luego restaura los archivos y las carpetas que se seleccionan.
+
+No puede restaurar lo siguiente:
+
+* Almacenes de datos
++
+No es posible usar el plugin de SnapCenter para VMware vSphere para restaurar un almacén de datos, ya que solo se aplica a las máquinas virtuales individuales del almacén de datos.
+
+* Backups de máquinas virtuales eliminadas
++
+No es posible restaurar backups de máquinas virtuales de almacenamiento que se quitaron. Por ejemplo, si agrega una máquina virtual de almacenamiento mediante la LIF de gestión y, a continuación, crea un backup y luego elimina esa máquina virtual de almacenamiento y añade un clúster que contiene esa misma máquina virtual de almacenamiento, se producirá un error en la operación de restauración para el backup.
+
+

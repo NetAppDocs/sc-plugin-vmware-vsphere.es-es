@@ -1,0 +1,172 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_restore_guest_files_and_folders_from_vmdks.html 
+keywords:  
+summary: Puede restaurar uno o más archivos o carpetas desde un VMDK en un sistema operativo invitado Windows. 
+---
+= Restaure archivos y carpetas invitados desde VMDK
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Puede restaurar uno o más archivos o carpetas desde un VMDK en un sistema operativo invitado Windows.
+
+.Acerca de esta tarea
+De forma predeterminada, el disco virtual asociado permanece disponible durante 24 horas y después se desvincula automáticamente. En el asistente, puede elegir que la sesión se elimine automáticamente cuando finalice la operación de restauración o eliminar manualmente la sesión de restauración de archivos invitados en cualquier momento. También puede ampliar el tiempo en la página *Configuración de invitado*.
+
+El rendimiento de las operaciones de restauración de archivos o carpetas invitados depende de dos factores: El tamaño de los archivos o carpetas que se van a restaurar y el número de archivos o carpetas que se van a restaurar. La restauración de un gran número de archivos de pequeño tamaño puede llevar más tiempo que el previsto, en comparación con la restauración de un número reducido de archivos de gran tamaño, siempre que los datos establecidos para restaurar sean del mismo tamaño.
+
+
+IMPORTANT: No se puede ejecutar más de una operación de asociación o restauración a la vez en una máquina virtual. No es posible ejecutar operaciones de asociación o restauración en paralelo dentro de la misma máquina virtual.
+
+
+IMPORTANT: La función de restauración de archivos invitados permite visualizar y restaurar archivos de sistema y ocultos, así como también visualizar archivos cifrados. No intente sobrescribir un archivo de sistema existente ni restaurar archivos cifrados en una carpeta cifrada. Durante la operación de restauración, el archivo restaurado no conserva los atributos ocultos, de cifrado y sistema de los archivos invitados. Ver o explorar particiones reservadas puede provocar un error.
+
+.Pasos
+. Haga clic en *Menú* y seleccione la opción de menú *hosts y clústeres*, a continuación, seleccione una máquina virtual, seleccione *SnapCenter* de NetApp y, a continuación, haga clic en *Restauración de archivos invitados*.
+. En el cliente VMware vSphere, haga clic en *Guest File Restore* en la lista desplegable secundaria para iniciar el asistente.
+. En la página *Restore Scope*, especifique la copia de seguridad que contiene el disco virtual que desea asociar haciendo lo siguiente:
++
+.. En la tabla *Nombre de copia de seguridad*, seleccione la copia de seguridad que contiene el disco virtual que desea asociar.
+.. En la tabla *VMDK*, seleccione el disco virtual que contiene los archivos o carpetas que desea restaurar.
+.. En la tabla *Ubicaciones*, seleccione la ubicación, primaria o secundaria, del disco virtual que desea asociar.
+
+
+. En la página *Detalles del invitado*, haga lo siguiente.
++
+.. Elija dónde asociar el disco virtual:
++
+|===
+| Seleccione esta opción… | Si… 
+
+
+| Utilice la máquina virtual invitada  a| 
+Desea asociar el disco virtual a la máquina virtual sobre la que hizo clic con el botón derecho antes de abrir el asistente; después seleccione la credencial de la máquina virtual sobre la que hizo clic con el botón derecho.
+
+
+NOTE: Las credenciales ya se deben crear para la máquina virtual.
+
+
+
+| Utilice la máquina virtual proxy de restauración de archivos invitados  a| 
+Desea asociar el disco virtual a una máquina virtual proxy y, a continuación, seleccionar la máquina virtual proxy.
+
+
+NOTE: La máquina virtual proxy debe configurarse antes de que comience la operación de asociación y restauración.
+
+|===
+.. Seleccione la opción *Enviar notificación por correo electrónico*.
++
+Esta opción es requerida si desea que se le notifique cuando concluya la operación de asociación y el disco virtual esté disponible. El mensaje de correo electrónico de notificación incluye el nombre del disco virtual, el nombre de la máquina virtual y la letra de la unidad recién asignada al VMDK.
+
++
+
+TIP: Habilite esta opción porque una restauración de archivos invitados es una operación asíncrona y puede haber una latencia hasta que se establezca una sesión de invitado para usted.
+
++
+Esta opción utiliza los ajustes de configuración del correo electrónico que se definen al configurar VMware vSphere Client en vCenter.
+
+
+
+. Revise el resumen y, a continuación, haga clic en *Finalizar*.
++
+Antes de hacer clic en *Finalizar*, puede volver a cualquier página del asistente y cambiar la información.
+
+. Espere hasta que concluya la operación de asociación.
++
+Puede ver el progreso de la operación en el supervisor de trabajos de la consola. También puede esperar a recibir la notificación por correo electrónico.
+
+. Para encontrar los archivos que desea restaurar desde el disco virtual asociado, haga clic en *Menú > complemento de SnapCenter para VMware vSphere*; a continuación, en el panel de navegación de la izquierda, haga clic en *Restauración de archivos invitados* y seleccione la ficha *Configuración de invitados*.
++
+En la tabla Guest Session Monitor, puede ver información adicional de la sesión si hace clic en *... *en la columna derecha.
+
+. Seleccione la sesión de restauración de archivos invitados para el disco virtual que se indicó en el correo electrónico de notificación.
++
+Se asigna una letra a todas las particiones, incluidas las particiones reservadas del sistema. Si un VMDK tiene varias particiones, para seleccionar una unidad específica puede elegir la unidad en la lista desplegable del campo de unidad ubicado en la parte superior de la página Guest File Browse.
+
+. Haga clic en el icono *examinar archivos* para ver una lista de archivos y carpetas en el disco virtual.
++
+Al hacer doble clic en una carpeta para examinar su contenido y seleccionar archivos individuales, es posible que haya cierta latencia mientras se accede a la lista de archivos, dado que la operación de acceso se realiza en el tiempo de ejecución.
+
++
+Para facilitar la búsqueda, puede aplicar filtros en la cadena de búsqueda. Los filtros distinguen mayúsculas de minúsculas y usan expresiones Perl sin espacios. La cadena de búsqueda predeterminada es `.`*. La siguiente tabla presenta varios ejemplos de expresiones de búsqueda Perl.
+
++
+|===
+| Esta expresión… | Busca… 
+
+
+| . | Cualquier carácter salvo un carácter de salto de línea. 
+
+
+| .* | Cualquier cadena. Este es el valor predeterminado. 
+
+
+| a. | El carácter a. 
+
+
+| ab | La cadena ab. 
+
+
+| a [barra vertical] b | El carácter a o b. 
+
+
+| r* | Cero o más instancias del carácter a. 
+
+
+| a+ | Una o más instancias del carácter a. 
+
+
+| a? | Cero o una instancia del carácter a. 
+
+
+| a{x} | Exactamente x instancias del carácter a. 
+
+
+| a{x,} | Al menos x instancias del carácter a. 
+
+
+| a{x,y} | Al menos x instancias del carácter a y como máximo y instancias. 
+
+
+| \ | Escapa un carácter especial. 
+|===
++
+La página Guest File Browse muestra todos los archivos y las carpetas ocultos, además de todos los demás archivos y carpetas.
+
+. Seleccione uno o más archivos o carpetas que desee restaurar y, a continuación, haga clic en *Seleccionar ubicación de restauración*.
++
+Los archivos y las carpetas que se van a restaurar se enumeran en la tabla Selected File(s).
+
+. En la página *Seleccionar ubicación de restauración*, especifique lo siguiente:
++
+|===
+| Opción | Descripción 
+
+
+| Restaurar en ruta | Introduzca la ruta de uso compartido UNC que permite acceder al elemento invitado donde se restaurarán los archivos seleccionados. Ejemplo de IPv4: `\\10.60.136.65\c$`Ejemplo de IPv6: `\\fd20-8b1e-b255-832e--61.ipv6-literal.net\C\restore` 
+
+
+| Si existen archivos originales  a| 
+Seleccione la acción que se debe realizar si el archivo o la carpeta que se va a restaurar ya existe en el destino de la restauración: Siempre sobrescriba o siempre omita.
+
+
+NOTE: Si la carpeta ya existe, el contenido de esa carpeta se fusiona con la carpeta ya existente.
+
+
+
+| Desconecte la sesión de invitado después de que la restauración se haya realizado correctamente | Seleccione esta opción si desea que la sesión de restauración de archivos invitados se elimine al concluir la operación de restauración. 
+|===
+. Haga clic en *Restaurar*.
++
+Puede ver el progreso de la operación de restauración en Dashboard Job Monitor, o puede esperar a recibir la notificación por correo electrónico. El tiempo que tardará en enviarse la notificación por correo electrónico depende de la duración de la operación de restauración.
+
++
+El mensaje de correo electrónico de notificación contiene un archivo adjunto con el resultado de la operación de restauración. Si la operación de restauración falla, abra el archivo adjunto para ver información adicional.
+
+

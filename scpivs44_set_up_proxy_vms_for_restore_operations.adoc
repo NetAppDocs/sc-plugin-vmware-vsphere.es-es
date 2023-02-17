@@ -1,0 +1,46 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_set_up_proxy_vms_for_restore_operations.html 
+keywords:  
+summary: Si desea utilizar una máquina virtual proxy para asociar un disco virtual para operaciones de restauración de archivos invitados, antes de iniciar la operación de restauración debe configurar la máquina virtual proxy. Aunque una máquina virtual proxy se puede configurar en cualquier momento, probablemente sea más práctico hacerlo en cuanto concluya la implementación del plugin. 
+---
+= Configure máquinas virtuales proxy para operaciones de restauración
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Si desea utilizar una máquina virtual proxy para asociar un disco virtual para operaciones de restauración de archivos invitados, antes de iniciar la operación de restauración debe configurar la máquina virtual proxy. Aunque una máquina virtual proxy se puede configurar en cualquier momento, probablemente sea más práctico hacerlo en cuanto concluya la implementación del plugin.
+
+.Pasos
+. En VMware vSphere Client, haga clic en *Guest File Restore*.
+. En la sección *Ejecutar como credenciales*, siga uno de estos procedimientos:
++
+|===
+| Para hacer esto… | Haga esto… 
+
+
+| Utilizar credenciales existentes | Seleccione cualquiera de las credenciales configuradas. 
+
+
+| Añadir nuevas credenciales  a| 
+.. Haga clic en image:scpivs44_image6.png["Error: Falta la imagen gráfica"] *Agregar*.
+.. En el cuadro de diálogo *credenciales Run as*, introduzca las credenciales.
+.. Haga clic en *Seleccionar VM* y, a continuación, seleccione una VM en el cuadro de diálogo *Proxy VM*. Haga clic en *Guardar* para volver al cuadro de diálogo *Ejecutar como credenciales*.
+.. Introduzca las credenciales. En Nombre de usuario, debe introducir “Administrador”.
+
+
+|===
++
+El plugin de VMware de SnapCenter utiliza las credenciales seleccionadas para iniciar sesión en la máquina virtual proxy seleccionada.
+
++
+Las credenciales Run as deben ser del administrador de dominio predeterminado que proporciona Windows o el administrador local integrado. Los usuarios de grupo de trabajo pueden utilizar la cuenta de administrador local integrada.
+
+. En la sección *credenciales de proxy*, haga clic en *Agregar* para agregar una VM que se utilizará como proxy.
+. En el cuadro de diálogo *Proxy VM*, complete la información y, a continuación, haga clic en *Guardar*.
+

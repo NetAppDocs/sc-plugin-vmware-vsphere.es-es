@@ -1,0 +1,49 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_guest_file_restore_scenarios_you_might_encounter.html 
+keywords:  
+summary: Al intentar restaurar un archivo invitado, puede encontrar situaciones en las que la sesión de restauración de archivos invitados está vacía, falla en la operación de asociación de disco para restauración de archivos invitados, o los backups no se desvinculan después de abandonar la sesión de restauración de archivos invitados. 
+---
+= Situaciones en las que se puede encontrar la restauración de archivos invitados
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Al intentar restaurar un archivo invitado, es posible que aparezca cualquiera de las siguientes situaciones.
+
+
+
+== La sesión de restauración de archivos invitados está vacía
+
+Este problema se produce cuando se crea una sesión de restauración de archivos invitados y mientras la sesión estuvo activa, el sistema operativo invitado se reinicia. Cuando ocurre esto, los VMDK en el sistema operativo invitado pueden permanecer sin conexión. Por lo tanto, cuando intenta buscar la sesión de restauración de archivos invitados, la lista aparece vacía.
+
+Para corregir el problema, vuelva a conectar manualmente los VMDK en el sistema operativo invitado. Cuando los VMDK estén en línea, la sesión de restauración de archivos invitados mostrará el contenido correcto.
+
+
+
+== Error en la operación para asociar el disco de restauración de archivos invitados
+
+Este problema se produce cuando se inicia una operación de restauración de archivos invitados, pero se produce un error en la operación para asociar el disco aunque VMware Tools esté en ejecución y las credenciales del sistema operativo invitado sean correctas. Si esto ocurre, se devuelve el siguiente error:
+
+`Error while validating guest credentials, failed to access guest system using specified credentials: Verify VMWare tools is running properly on system and account used is Administrator account, Error is SystemError vix error codes = (3016, 0).`
+
+Para corregir el problema, reinicie el servicio de Windows de VMware Tools en el sistema operativo invitado y, a continuación, vuelva a intentar la operación de restauración de archivos invitados.
+
+
+
+== El correo electrónico de los huéspedes muestra ?????? en lugar del nombre del archivo
+
+Este problema se produce cuando se utiliza la función de restauración de archivos invitados para restaurar archivos o carpetas con caracteres en los nombres que no son propios del inglés y la notificación por correo electrónico muestra "?????????? " para los nombres de archivo restaurados. El elemento adjunto del correo electrónico indica correctamente los nombres de los archivos y las carpetas restaurados.
+
+
+
+== Los backups no se desvinculan después de abandonar la sesión de restauración de archivos invitados
+
+Este problema se produce cuando se ejecuta una operación de restauración de archivos invitados desde un backup coherente con la máquina virtual. Mientras la sesión de restauración de archivos invitados está activa, se ejecuta otro backup coherente con la máquina virtual para la misma máquina virtual. Cuando se desconecta la sesión de restauración de archivos invitados, ya sea manualmente o de forma automática al transcurrir 24 horas, los backups correspondientes a la sesión no se desvinculan.
+
+Para corregir el problema, desvincule manualmente los VMDK que se asociaron a partir de la sesión activa de restauración de archivos invitados.

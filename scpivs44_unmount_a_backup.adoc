@@ -1,0 +1,31 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_unmount_a_backup.html 
+keywords:  
+summary: Una vez que ya no se necesita el acceso a los archivos del almacén de datos, es posible desmontar un backup. 
+---
+= Desmontar un backup
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Una vez que ya no se necesita el acceso a los archivos del almacén de datos, es posible desmontar un backup.
+
+Si un backup se muestra como montado en la interfaz gráfica de usuario del cliente de VMware vSphere, pero no aparece en la pantalla de desmontaje de backup, se debe usar la API DE REST `/backup/{backup-Id}/cleanup` para limpiar los almacenes de datos desvinculados y luego vuelva a intentar realizar el procedimiento de desmontaje.
+
+Si se intenta montar una copia de backup de un almacén de datos NFS en una máquina virtual de almacenamiento (SVM) con el volumen raíz en una relación de reflejo de distribución de cargas, es posible que se encuentre con el error `You may have reached the maximum number of NFS volumes configured in the vCenter. Check the vSphere Client for any error messages.` Para evitar este problema, cambie la configuración del número máximo de volúmenes. Para ello, vaya a *ESX* > *Manage* > *Settings* > *Advance System Settings* y cambie el valor NFS.MaxVolumes. El valor máximo es 256.
+
+.Pasos
+. En VMware vSphere Client, haga clic en *Menú* en la barra de herramientas y, a continuación, seleccione *Storage* en la lista desplegable.
+. En el panel de navegación de la izquierda, haga clic con el botón derecho en un almacén de datos y seleccione *NetApp SnapCenter* en la lista desplegable; a continuación, seleccione Unmount en la lista desplegable secundaria.
++
+
+IMPORTANT: Asegúrese de haber seleccionado el almacén de datos correcto para desmontar. De lo contrario, podría afectar al trabajo de producción.
+
+. En el cuadro de diálogo *Unmount Cloned Datastore*, seleccione un almacén de datos, seleccione la casilla de verificación *Unmount the cloned datastore* y, a continuación, haga clic en *Unmount*.
+

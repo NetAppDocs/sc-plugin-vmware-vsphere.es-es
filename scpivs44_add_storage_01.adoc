@@ -1,0 +1,110 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_add_storage_01.html 
+keywords:  
+summary: Añadir almacenamiento permite que el plugin de SnapCenter para VMware vSphere reconozca y gestione operaciones de backup y restauración en vCenter. 
+---
+= Añada almacenamiento
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Para poder restaurar máquinas virtuales o realizar un backup, es necesario añadir clústeres de almacenamiento o máquinas virtuales de almacenamiento. Añadir almacenamiento permite que el plugin de SnapCenter para VMware vSphere reconozca y gestione operaciones de backup y restauración en vCenter.
+
+* Qué interfaz gráfica de usuario usar
++
+Use VMware vSphere Client para añadir almacenamiento.
+
+* Grandes LUN
++
+El complemento SnapCenter para VMware vSphere 4.5 y versiones posteriores admiten almacenes de datos en LUN de gran tamaño de hasta 128 TB en agregados de ASA. Para los LUN de gran tamaño, SnapCenter solo admite LUN aprovisionados con thick provisioning para evitar la latencia.
+
+* Volúmenes virtuales de VMware (vVols)
++
+En primer lugar, debe añadir el sistema de almacenamiento vVols a las herramientas de ONTAP para VMware vSphere y, a continuación, añadir el sistema de almacenamiento vVols al plugin de SnapCenter para VMware vSphere.
+
++
+Para obtener más información, consulte https://docs.netapp.com/vapp-98/index.jsp["Herramientas de ONTAP para VMware vSphere"^]
+
+
+
+.Antes de empezar
+El servidor ESXi, el complemento VMware de SnapCenter y cada instancia de vCenter se deben sincronizar a la misma hora. Si intenta añadir almacenamiento, pero la configuración de hora de vCenter no está sincronizada, es posible que la operación produzca un error de certificado Java.
+
+.Acerca de esta tarea
+El complemento VMware de SnapCenter realiza operaciones de backup y restauración en máquinas virtuales de almacenamiento de conexión directa y en máquinas virtuales de almacenamiento de un clúster de almacenamiento.
+
+
+NOTE: Si utiliza el plugin de VMware de SnapCenter para admitir backups basados en aplicaciones en VMDK, debe utilizar la interfaz gráfica de usuario de SnapCenter para introducir detalles de autenticación de almacenamiento y registrar sistemas de almacenamiento.
+
+* Para vCenter en el modo vinculado, debe añadir sistemas de almacenamiento por separado a cada instancia de vCenter.
+* Los nombres de las máquinas virtuales de almacenamiento deben resolver las LIF de administración.
++
+Si se añadieron entradas de host etc para los nombres de máquinas virtuales de almacenamiento en SnapCenter, debe verificar que también se puedan resolver del dispositivo virtual.
+
++
+Si añade una máquina virtual de almacenamiento con un nombre que no puede resolver a la LIF de gestión, se producen errores en los trabajos de backup programados porque el plugin no puede detectar ningún almacén de datos o volúmenes en esa máquina virtual de almacenamiento. Si esto sucede, puede agregar la máquina virtual de almacenamiento a SnapCenter y especificar la LIF de gestión o agregar un clúster que contenga la máquina virtual de almacenamiento y especificar la LIF de gestión del clúster.
+
+* Los detalles de autenticación del almacenamiento no se comparten entre varias instancias del plugin de VMware de SnapCenter o entre Windows SnapCenter Server y el plugin de SnapCenter en vCenter.
+
+
+.Pasos
+. En el panel de navegación izquierdo del cliente de vSphere, haga clic en *Storage Systems*.
+. En la página Storage Systems, haga clic en image:scpivs44_image6.png["Error: Falta la imagen gráfica"] *Agregar*.
+. En el asistente *Add Storage System*, introduzca la información básica del clúster o VM de almacenamiento como se indica en la siguiente tabla:
++
+|===
+| Para este campo… | Haga esto… 
+
+
+| Sistema de almacenamiento | Introduzca la dirección IP o FQDN de un clúster de almacenamiento o una máquina virtual de almacenamiento. El plugin de VMware de SnapCenter no admite varios sistemas de almacenamiento con el mismo nombre en clústeres diferentes. Cada uno de los sistemas de almacenamiento que admite SnapCenter debe tener una dirección IP de LIF de datos única. 
+
+
+| Plataforma | Seleccione la plataforma. 
+
+
+| Método de autenticación | Seleccione Credentials o Certificate. Se admiten dos tipos de certificados: - https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_configure_a_CA_signed_certificate_for_storage_system_authentication_with_SCV["Certificado firmado por CA"^]- https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_configure_a_self-signed_certificate_for_storage_system_authentication_with_SCV["Certificado autofirmado"^] 
+
+
+| Nombre de usuario | Este campo aparece cuando selecciona credenciales como método de autenticación. Introduzca el nombre de usuario de ONTAP que se utilizará para iniciar sesión en la máquina virtual de almacenamiento. 
+
+
+| Contraseña | Este campo aparece cuando selecciona credenciales como método de autenticación. Introduzca la contraseña de inicio de sesión de la máquina virtual de almacenamiento. 
+
+
+| Certificado | Este campo aparece cuando selecciona Certificado como método de autenticación. Desplácese para seleccionar el archivo de certificado. 
+
+
+| Clave privada | Este campo aparece cuando selecciona Certificado como método de autenticación. Busque para seleccionar el archivo de clave privada. 
+
+
+| Protocolo | Seleccione el protocolo de almacenamiento. 
+
+
+| Puerto | Seleccione el puerto 443 (predeterminado) o el puerto 80 para comunicarse con vCenter. El puerto 443 se usa para establecer la comunicación entre el host de la máquina virtual de almacenamiento para el plugin de SnapCenter para VMware vSphere y vCenter al ejecutar operaciones de backup y restauración de máquinas virtuales y almacenes de datos. Debe seleccionar el puerto predeterminado 443 si planea proteger las máquinas virtuales de VVol. 
+
+
+| Tiempo de espera | Especifique el número de segundos que vCenter debería esperar antes de que se agote el tiempo de la operación. El valor predeterminado es 60 segundos. 
+
+
+| IP preferida | Si la máquina virtual de almacenamiento tiene más de una dirección IP de gestión, marque esta casilla e introduzca la dirección IP que desee que utilice SnapCenter. *Nota:* no utilice corchetes ([]) al introducir la dirección IP. 
+
+
+| Configuración de sistema de gestión de eventos (EMS) y AutoSupport | Si desea enviar mensajes de EMS al syslog del sistema de almacenamiento, o si desea que se envíen mensajes de AutoSupport al sistema de almacenamiento cuando se aplica la protección, se completan correctamente operaciones de restauración o se producen errores en las operaciones, seleccione la casilla de comprobación correspondiente. Active la casilla de verificación *Enviar notificación AutoSupport para operaciones con errores al sistema de almacenamiento* y la casilla de verificación *Registrar eventos del servidor SnapCenter a syslog* para activar las notificaciones AutoSupport. 
+
+
+| Registre los eventos del servidor SnapCenter en syslog | Seleccione la casilla para registrar eventos del plugin de VMware de SnapCenter. 
+
+
+| Envíe una notificación de AutoSupport sobre el fallo de la operación al sistema de almacenamiento | Marque la casilla si desea recibir una notificación de AutoSupport para los trabajos de protección de datos con errores. También tendrá que habilitar AutoSupport en la máquina virtual de almacenamiento y configurar los ajustes de correo electrónico de AutoSupport. 
+|===
+. Haga clic en *Agregar*.
++
+Si añadió un clúster de almacenamiento, todas las máquinas virtuales de almacenamiento de ese clúster se añadirán automáticamente. Los equipos virtuales de almacenamiento agregados automáticamente (a veces llamados "equipos virtuales de almacenamiento implícitos") se muestran en la página de resumen del clúster con un guión (-) en lugar de un nombre de usuario. Los nombres de usuario sólo se muestran para entidades de almacenamiento explícitas.
+
+

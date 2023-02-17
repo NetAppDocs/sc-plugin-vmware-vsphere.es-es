@@ -1,0 +1,28 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_rest_apis_fail_stuck_jobs.html 
+keywords:  
+summary: Para buscar ID de trabajos para trabajos de cliente de VMware vSphere mediante las API DE REST del plugin de SnapCenter para VMware vSphere, debe usar las llamadas de API DE REST para VMware vSphere. 
+---
+= API REST para marcar los trabajos bloqueados como errores
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Para buscar ID de trabajos para trabajos de cliente de VMware vSphere mediante las API DE REST del plugin de SnapCenter para VMware vSphere, debe usar las llamadas de API DE REST para VMware vSphere. Estas API DE REST se han añadido al plugin de SnapCenter para VMware vSphere 4.4.
+
+Para cada API REST, añada `https://<server>:<port>` En la parte frontal de la API DE REST para formar un extremo completo.
+
+Utilice la siguiente API DE REST en la sección Jobs para cambiar los trabajos que se atascan en un estado en ejecución a un estado con errores:
+
+|===
+| API REST | Comentarios 
+
+
+| `/4.1/jobs/{id}/failJobs` | Cuando se pasan los identificadores de los trabajos que se encuentran bloqueados en un estado en ejecución, `failJobs` marca esos trabajos como fallidos. Para identificar trabajos que están bloqueados en un estado en ejecución, use la GUI de monitor de trabajos para ver el estado de cada trabajo y su ID. 
+|===

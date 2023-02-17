@@ -1,0 +1,66 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_minimum_vcenter_privileges_required.html 
+keywords:  
+summary: Antes de iniciar la implementación del plugin de SnapCenter para VMware vSphere, debe asegurarse de contar con los privilegios mínimos de vCenter requeridos. 
+---
+= Privilegios mínimos requeridos de vCenter
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Antes de iniciar la implementación del plugin de SnapCenter para VMware vSphere, debe asegurarse de contar con los privilegios mínimos de vCenter requeridos.
+
+
+
+== Privilegios requeridos para la función de administrador de vCenter
+
+System.Anónimo System.View System.Read Datastore.Rename Datastore.move Datastore.Delete Datastore.Browse Datastore.FileManagement Datastore.AllocateSpace Network.Assign Host.Config.Storage Host.Config.AdvancedFromConfig.VirtualMachine.VirtualMachine.VirtualVirtualMachine.VirtualVirtualSystem.VirtualVirtualVirtualMachine.Machine.Machine.tarea_DespecupereDespesDespesDespesDespesDespesDespes.archivo.Machine.Machine.Machine.VirtualDespeseraVirtual.Machine.Machine.Operaciones_DespesDespeseraVirtual.Machine.Machine.VirtualDespesereDespeseraVirtual.Machine.Machine.Machine.Machine.F_F_DespesereDespesereDespeseraVirtual.Machine.Machine.Auto.F_DespeseraDeDespeseraVirtual.Machine.Machine.Machine.Machine.F_DespeseraDeDespeseraDeDespeseraDeDespeseraDeDespeseraVirtual.Auto.F_DespeseraVirtual.Machine.Machine.Auto
+
+
+
+== Privilegios requeridos específicos del plugin de SnapCenter para VMware vCenter
+
+|===
+
+
+| *Privilegios* | *Etiqueta* 
+
+
+| NetappSCV.Guest.RestoreFile | Restauración de archivos invitados 
+
+
+| NetappSCV.Recovery.MountUnMount | Montar/desmontar 
+
+
+| NetappSCV.Backup.DeleteBackupJob | Eliminar grupo de recursos/copia de seguridad 
+
+
+| NetappSCV.Configure.ConfigureStorageSystems.Delete | Quitar sistemas de almacenamiento 
+
+
+| NetappSCV.View | Ver 
+
+
+| NetappSCV.Recovery.RecoverVM | Recuperar la máquina virtual 
+
+
+| NetappSCV.Configure.ConfigureStorageSystems.AddUpdate | Añadir/modificar sistemas de almacenamiento 
+
+
+| NetappSCV.Backup.BackupNow | Realice su backup ahora 
+
+
+| NetappSCV.Guest.Configure | Configuración de invitado 
+
+
+| NetappSCV.Configure.ConfigureSnapCenter Server | Configure el servidor SnapCenter 
+
+
+| NetappSCV.Backup.BackupExeted | Crear grupo de recursos 
+|===

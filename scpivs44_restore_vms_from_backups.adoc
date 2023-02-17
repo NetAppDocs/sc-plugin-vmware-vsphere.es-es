@@ -1,0 +1,137 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_restore_vms_from_backups.html 
+keywords:  
+summary: Al restaurar una máquina virtual, es posible sobrescribir el contenido existente con la copia de backup que seleccione, o bien realizar una copia de ella. 
+---
+= Restaurar máquinas virtuales desde backups
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Al restaurar una máquina virtual, es posible sobrescribir el contenido existente con la copia de backup que seleccione, o bien realizar una copia de ella.
+
+Es posible restaurar máquinas virtuales en las siguientes ubicaciones:
+
+* Restaurar a la ubicación original
++
+** En el almacén de datos original montado en el host ESXi original (esto sobrescribe la máquina virtual original)
+
+
+* Restauración para cambio de ubicación
++
+** En un almacén de datos diferente montado en el host ESXi original
+** En el almacén de datos original montado en un host ESXi diferente gestionado por la misma instancia de vCenter
+** En un almacén de datos diferente montado en un host ESXi diferente gestionado por la misma instancia de vCenter
+** En un almacén de datos diferente montado en un host ESXi diferente gestionado por una instancia diferente de vCenter en modo vinculado
+
+
+
+
+
+NOTE: No es posible restaurar máquinas virtuales de VVol en un host alternativo.
+
+
+NOTE: No se admite el siguiente flujo de trabajo de restauración: Añada una máquina virtual de almacenamiento, luego realice un backup de esa máquina virtual, elimine la máquina virtual de almacenamiento y añada un clúster que incluya la misma máquina virtual de almacenamiento y, a continuación, intente restaurar el backup original.
+
+
+TIP: Para mejorar el rendimiento de las operaciones de restauración en entornos NFS, habilite la aplicación VMware vStorage API for Array Integration (VAAI).
+
+.Antes de empezar
+* Debe existir un backup.
++
+Debe haber creado un backup de la máquina virtual con el plugin de VMware de SnapCenter para poder restaurar la máquina virtual.
+
++
+
+NOTE: Las operaciones de restauración no pueden completarse correctamente si hay copias Snapshot de la máquina virtual realizadas por software distinto al plugin de SnapCenter para VMware vSphere.
+
+* El almacén de datos de destino debe estar listo.
++
+** El almacén de datos de destino para la operación de restauración debe tener espacio suficiente para acomodar una copia de todos los archivos de equipo virtual (por ejemplo, vmdk, vmx, vmsd).
+** El almacén de datos de destino no debe contener archivos de máquinas virtuales obsoletos de errores anteriores de la operación de restauración. Los archivos obsoletos tienen el formato del nombre `restore_xxx_xxxxxx_<filename>`.
+
+
+* La máquina virtual no debe estar en tránsito.
++
+La máquina virtual que se desea restaurar no debe estar en el estado de vMotion ni de Storage vMotion.
+
+* Errores de configuración de ALTA DISPONIBILIDAD
++
+Compruebe que no se muestren errores de configuración de alta disponibilidad en la pantalla vCenter ESXi Host Summary antes de restaurar los backups a una ubicación diferente.
+
+* Restauración a ubicaciones diferentes
++
+** Cuando se restaura a una ubicación diferente, el plugin de SnapCenter para VMware vSphere debe ejecutarse en la instancia de vCenter que es el destino de la operación de restauración. El almacén de datos de destino debe tener suficiente espacio.
+** La instancia de destino de vCenter en el campo Restore to alternate Location debe ser DNS resoluble.
+
+
+
+
+.Acerca de esta tarea
+* Se cancela el registro de la máquina virtual y se vuelve a registrar
++
+La operación de restauración de máquinas virtuales cancela el registro de la máquina virtual original, restaura la máquina virtual desde una copia de Snapshot de un backup y registra la máquina virtual restaurada con el mismo nombre y la misma configuración en el mismo servidor ESXi. Debe añadir manualmente las máquinas virtuales a grupos de recursos después de la restauración.
+
+* Restauración de almacenes de datos
++
+No es posible restaurar un almacén de datos, pero sí es posible restaurar cualquier máquina virtual incluida en ese almacén de datos.
+
+* Restauración de máquinas virtuales VVol
++
+** No se admiten almacenes de datos de VVol que abarquen máquinas virtuales. Como no se realiza backup de los VMDK conectados en un almacén de datos VVol que abarca máquinas virtuales, las máquinas virtuales restauradas solo contendrá VMDK parciales.
+** No es posible restaurar un VVol en un host alternativo.
+** No se admite el reequilibrio automático de VVol.
+
+
+* Fallos de snapshots de consistencia de VMware para una máquina virtual
++
+Aunque una snapshot de consistencia de VMware arroje un fallo para una máquina virtual, el backup de la máquina virtual se efectúa de todas formas. Puede visualizar las entidades incluidas en la copia de backup por medio del asistente Restore y usarlo para operaciones de restauración.
+
+* La operación de restauración puede fallar si no está disponible el nivel de almacenamiento de FabricPool donde se encuentra la máquina virtual.
+
+
+.Pasos
+. En la interfaz gráfica de usuario del cliente de VMware vSphere, haga clic en *Menú* en la barra de herramientas y, a continuación, seleccione *VMs and Templates* en la lista desplegable.
++
+
+NOTE: Si va a restaurar una máquina virtual eliminada, deben ser las credenciales de máquina virtual de almacenamiento que se añadieron al plugin de VMware de SnapCenter `vsadmin` o una cuenta de usuario que tenga todos los mismos privilegios que `vsadmin`. El host debe estar ubicado en un sistema de almacenamiento que funcione con ONTAP 8.2.2 o una versión posterior.
+
+. En el panel de navegación de la izquierda, haga clic con el botón derecho en una máquina virtual y seleccione *SnapCenter* de NetApp en la lista desplegable; a continuación, seleccione *Restaurar* en la lista desplegable secundaria para iniciar el asistente.
+. En el asistente *Restaurar*, en la página *Seleccionar copia de seguridad*, seleccione la copia Snapshot de copia de seguridad que desea restaurar.
++
+Puede buscar por un nombre de backup específico o un nombre de backup parcial y también puede filtrar la lista de backups haciendo clic en el icono de filtro y seleccionando un intervalo de fechas y horas. Además, debe seleccionar si desea backups que contengan snapshots de VMware, si desea visualizar backups montados y la ubicación. Haga clic en *Aceptar* para volver al asistente.
+
+. En la página *Select Scope*, seleccione *máquina virtual completa* en el campo *Restore scope*, a continuación, seleccione la ubicación de restauración y, a continuación, introduzca la información de destino donde debe montarse la copia de seguridad.
++
+En el campo *VM name*, si existe el mismo nombre de VM, entonces el nuevo formato de nombre de VM es `<vm_name>_<timestamp>`.
+
++
+Al restaurar copias de seguridad parciales, la operación de restauración omite la página *Select Scope*.
+
+. En la página *Seleccionar ubicación*, seleccione la ubicación del almacén de datos restaurado.
++
+En el plugin de SnapCenter para VMware vSphere 4.5 y versiones posteriores, puede seleccionar el almacenamiento secundario para volúmenes de FlexGroup.
+
+. Revise la página Resumen y, a continuación, haga clic en *Finalizar*.
+. Opcional: Supervise el progreso de la operación haciendo clic en *tareas recientes* en la parte inferior de la pantalla.
++
+Actualice la pantalla para que muestre información actualizada.
+
+
+
+.Después de terminar
+* Cambiar la dirección IP
++
+Si se restaura a una ubicación diferente, debe cambiar la dirección IP de la máquina virtual recién creada para evitar un conflicto de direcciones IP cuando se hayan configurado direcciones IP estáticas.
+
+* Añadir máquinas virtuales restauradas a grupos de recursos
++
+Aunque las máquinas virtuales se restauran, no se agregan automáticamente a sus grupos de recursos anteriores. Por lo tanto, debe añadir manualmente las máquinas virtuales restauradas a los grupos de recursos apropiados.
+
+

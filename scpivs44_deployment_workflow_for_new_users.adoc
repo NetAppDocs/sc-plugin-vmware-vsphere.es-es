@@ -1,0 +1,19 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_deployment_workflow_for_new_users.html 
+keywords:  
+summary: Puede usar este flujo de trabajo si no utilizó SnapCenter antes y no posee backups de SnapCenter. 
+---
+= Flujo de trabajo de puesta en marcha para nuevos usuarios
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Si no ha usado SnapCenter antes y no tiene ningún backup de SnapCenter, use el siguiente flujo de trabajo para comenzar.
+
+image:scpivs44_image2.png["Error: Falta la imagen gráfica"]

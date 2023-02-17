@@ -1,0 +1,63 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_restore_vmdks_from_backups.html 
+keywords:  
+summary: Puede restaurar VMDK existentes, eliminados o desvinculados desde un backup primario o secundario de máquinas virtuales tradicionales o de VVol. 
+---
+= Restaurar VMDK desde backups
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Puede restaurar VMDK existentes, eliminados o desvinculados desde un backup primario o secundario de máquinas virtuales tradicionales o de VVol.
+
+Puede restaurar uno o más discos de máquinas virtuales (VMDK) en una máquina virtual para el mismo almacén de datos.
+
+
+TIP: Para mejorar el rendimiento de las operaciones de restauración en entornos NFS, habilite la aplicación VMware vStorage API for Array Integration (VAAI).
+
+.Antes de empezar
+* Debe existir un backup.
++
+Debe haber creado un backup de la máquina virtual con el plugin de SnapCenter para VMware vSphere.
+
+* La máquina virtual no debe estar en tránsito.
++
+La máquina virtual que se desea restaurar no debe estar en el estado de vMotion ni de Storage vMotion.
+
+
+
+.Acerca de esta tarea
+* Si el VMDK se elimina o se desvincula de la máquina virtual, la operación de restauración asocia el VMDK a la máquina virtual.
+* La operación de restauración puede fallar si no está disponible el nivel de almacenamiento de FabricPool donde se encuentra la máquina virtual.
+* Las operaciones de asociación y restauración conectan VMDK mediante la controladora SCSI predeterminada. Se realizan backups de los VMDK que se asocian a una máquina virtual con una controladora NVMe, pero para las operaciones de asociación y restauración, los VMDK se vuelven a asociar con una controladora iSCSI.
+
+
+.Pasos
+. En la interfaz gráfica de usuario del cliente de VMware vSphere, haga clic en *Menú* en la barra de herramientas y, a continuación, seleccione *VMs and Templates* en la lista desplegable.
+. En el panel de navegación de la izquierda, haga clic con el botón derecho en una máquina virtual y seleccione *SnapCenter* de NetApp en la lista desplegable; a continuación, seleccione *Restaurar* en la lista desplegable secundaria.
+. En el asistente *Restaurar*, en la página Seleccionar copia de seguridad, seleccione la copia de seguridad desde la que desea restaurar.
++
+Puede buscar por un nombre de backup específico o un nombre de backup parcial y también puede filtrar la lista de backups haciendo clic en el icono de filtro y seleccionando un intervalo de fechas y horas. Además, debe seleccionar si desea backups que contengan snapshots de VMware, si desea visualizar backups montados, y la ubicación primaria o secundaria. Haga clic en *Aceptar* para volver al asistente.
+
+. En la página *Select Scope*, seleccione el destino de la restauración.
++
+|===
+| Para restaurar en… | Especificar el destino de la restauración… 
+
+
+| El almacén de datos original | Seleccione *disco particular* en la lista desplegable y, a continuación, haga clic en *Siguiente*. En la tabla de selección de Datastore, puede seleccionar o anular la selección de cualquier VMDK. 
+
+
+| Un almacén de datos alternativo en una ubicación alternativa | Haga clic en el almacén de datos de destino y seleccione un almacén de datos distinto de la lista. 
+|===
+. En la página *Seleccionar ubicación*, seleccione la copia de Snapshot que desea restaurar (primaria o secundaria).
+. Revise la página Resumen y, a continuación, haga clic en *Finalizar*.
+. Opcional: Supervise el progreso de la operación haciendo clic en *tareas recientes* en la parte inferior de la pantalla.
+. Actualice la pantalla para que muestre información actualizada.
+

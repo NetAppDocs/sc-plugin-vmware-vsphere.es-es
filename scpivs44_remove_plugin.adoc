@@ -1,0 +1,38 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_remove_plugin.html 
+keywords:  
+summary: Si ya no es necesario usar las funciones de protección de datos de SnapCenter, debe deshabilitar el plugin de VMware de SnapCenter para cancelar el registro de vCenter, quitar el plugin de VMware de SnapCenter de vCenter y, a continuación, eliminar manualmente los archivos restantes. 
+---
+= Quite el plugin de SnapCenter para VMware vSphere
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Si ya no es necesario usar las funciones de protección de datos de SnapCenter, debe deshabilitar el plugin de VMware de SnapCenter para cancelar el registro de vCenter, quitar el plugin de VMware de SnapCenter de vCenter y, a continuación, eliminar manualmente los archivos restantes.
+
+.Antes de empezar
+* Debe tener privilegios de administrador.
+* Asegúrese de que no hay trabajos SnapCenter en ejecución.
+
+
+.Pasos
+. Inicie sesión en la interfaz gráfica de usuario de la gestión del plugin de VMware de SnapCenter con el formato `https://<OVA-IP-address>:8080`.
++
+La IP del plugin de VMware de SnapCenter se muestra cuando implementa el plugin.
+
+. Haga clic en *Configuración* en el panel de navegación izquierdo y, a continuación, anule la selección de la opción Servicio en la sección *Detalles del complemento* para desactivar el plugin.
+. Inicie sesión en VMware vSphere.
+. En la pantalla de navegación de la izquierda, haga clic con el botón derecho en la instancia del complemento de VMware de SnapCenter (el nombre de la `.tar` Archivo que se utilizó cuando se implementó el dispositivo virtual) y seleccione *Eliminar del disco*.
+. Si utilizó el plugin de VMware de SnapCenter para admitir otros plugins de SnapCenter para backups consistentes con las aplicaciones, inicie sesión en SnapCenter y quite el host de vSphere.
+
+
+.Después de terminar
+El dispositivo virtual sigue en marcha, pero se elimina el complemento VMware de SnapCenter.
+
+Después de quitar la máquina virtual del host del plugin de VMware de SnapCenter, es posible que el plugin permanezca en vCenter hasta que se actualice la caché local de vCenter. Sin embargo, como se eliminó el plugin, no es posible realizar ninguna operación de SnapCenter VMware vSphere en ese host. Si desea actualizar la caché local de vCenter, primero asegúrese de que el dispositivo esté en estado deshabilitado en la página SnapCenter VMware Plug-in Configuration y, a continuación, reinicie el servicio de cliente web de vCenter.

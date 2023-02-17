@@ -1,0 +1,71 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_minimum_ontap_privileges_required.html 
+keywords:  
+summary: Los privilegios mínimos requeridos de ONTAP varían en función de los plugins de SnapCenter que utilice para la protección de datos. 
+---
+= Se requieren privilegios de ONTAP
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Los privilegios mínimos requeridos de ONTAP varían en función de los plugins de SnapCenter que utilice para la protección de datos.
+
+
+
+== Privilegios mínimos requeridos de ONTAP
+
+Todos los plugins de SnapCenter requieren los siguientes privilegios mínimos.
+
+|===
+| Comandos de acceso total: Privilegios mínimos requeridos para ONTAP 8.3 y versiones posteriores 
+
+
+| event generate-autosupport-log 
+
+
+| el historial del trabajo muestra la detención del trabajo 
+
+
+| lun lun lun create lun delete lun igroup add lun igroup create lun igroup delete lun igroup rename lun igroup show lun mapping add-reporting-nodes lun mapping create lun mapping delete lun mapping remove-reporting-nodes mapa de lun show lun modify lun move-in-volume lun offline lun online lun persistent-reservation clear lun redimensione lun serial lun muestra de lun 
+
+
+| lista de destinos de snapmirror política de snapmirror complemento regla de snapmirror política de modificación-regla de snapmirror política de eliminación regla de snapmirror política de snapmirror mostrar snapmirror restaurar snapmirror mostrar el historial de snapmirror actualización de snapmirror conjunto de complementos de snapmirror 
+
+
+| Versión 
+
+
+| clon de volumen crear clon de volumen mostrar clon de división de volumen iniciar división de clon de volumen detener creación de volumen destruir volumen archivo de volumen crear archivo de volumen mostrar uso de disco volumen sin conexión volumen en línea modificar volumen qtree crear volumen qtree eliminar qtree delete volume qtree modificar volumen qtree show volumen restringir volumen mostrar volumen crear copia de snapshot de volumen copias de snapshot de volumen eliminar copias de snapshot de volumen modificar copias de snapshot de volumen cambiar nombre de volumen restaurar copias de snapshot de volumen restaurar-volumen copia de snapshot de volumen mostrar volumen desmontar 
+
+
+| vserver cifs share crea vserver cifs share delete vserver cifs shadowcopy show vserver cifs share show vserver cifs share show vserver show vserver vserver show vserver vserver export-policy vserver export-policy vserver create vserver export-policy create vserver export-policy delete vserver export-policy create vserver export-policy policy create vserver export-policy show vserver iscsi connection show vserver show vserver show network interface interfaz de red: grupos de recuperación tras fallos de la interfaz de red se muestra 
+|===
+|===
+| Comandos de solo lectura: Privilegios mínimos requeridos para ONTAP 8.3 y versiones posteriores 
+
+
+| vserver peer 
+|===
+
+NOTE: Puede ignorar los mensajes de advertencia sobre los comandos Vserver no compatibles.
+
+
+
+== Información adicional sobre ONTAP
+
+* Si utiliza ONTAP 8.2.x:
++
+Debe iniciar sesión como `vsadmin` En la máquina virtual de almacenamiento con los privilegios adecuados para las operaciones del plugin de SnapCenter para VMware vSphere.
+
+* Si utiliza ONTAP 8.3 y versiones posteriores:
++
+Debe iniciar sesión como `vsadmin` o con un rol que tenga los privilegios mínimos indicados en las tablas anteriores.
+
+* Debe ser el administrador del clúster para crear y gestionar los roles de usuario. Puede asociar los usuarios con la máquina virtual de almacenamiento del clúster o con la máquina virtual de almacenamiento.
+

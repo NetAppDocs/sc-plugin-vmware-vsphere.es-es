@@ -1,0 +1,33 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_protect_data_overview.html 
+keywords:  
+summary: Todas las operaciones de backup se ejecutan en grupos de recursos, que pueden contener cualquier combinación de uno o más almacenes de datos y máquinas virtuales. Es posible realizar un backup bajo demanda o según una programación de protección definida. 
+---
+= Flujo de trabajo de protección de datos
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Utilice el cliente SnapCenter vSphere para realizar operaciones de protección de datos para máquinas virtuales, VMDK y almacenes de datos. Todas las operaciones de backup se ejecutan en grupos de recursos, que pueden contener cualquier combinación de uno o más almacenes de datos y máquinas virtuales. Es posible realizar un backup bajo demanda o según una programación de protección definida.
+
+Cuando realiza el backup de un almacén de datos, incluye en el backup todas las máquinas virtuales de dicho almacén de datos.
+
+No se pueden ejecutar en simultáneo operaciones de backup y restauración en el mismo grupo de recursos.
+
+Debe revisar la información relacionada con lo que hace el plugin de VMware de SnapCenter y no admite.link:scpivs44_deployment_planning_and_requirements.html["Planificación y requisitos de la puesta en marcha"]
+
+En configuraciones de MetroCluster:
+
+* Es posible que el complemento VMware de SnapCenter no pueda detectar una relación de protección después de una conmutación por error. Consulte https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Unable_to_detect_SnapMirror_or_SnapVault_relationship_after_MetroCluster_failover["Artículo de la base de conocimientos: No es posible detectar la relación de SnapMirror o SnapVault después de una conmutación por error de MetroCluster"^].
+* Si se produce un error en los backups `Unable to discover resources on SCV: <xxx>…` En el caso de máquinas virtuales NFS y VMFS tras la conmutación/conmutación de vuelta, reinicie los servicios VMware de SnapCenter desde la consola de mantenimiento.
+
+
+En la siguiente figura de flujos de trabajo, se muestra la secuencia que debe seguirse para ejecutar la operación de backup:
+
+image:scpivs44_image13.png["Error: Falta la imagen gráfica"]

@@ -1,0 +1,79 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_restore_deleted_vms_from_backups.html 
+keywords:  
+summary: Puede restaurar una máquina virtual eliminada a partir de un backup primario o secundario de un almacén de datos en el host ESXi que seleccione. 
+---
+= Restaurar máquinas virtuales eliminadas desde backups
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Puede restaurar una máquina virtual eliminada a partir de un backup primario o secundario de un almacén de datos en el host ESXi que seleccione.
+
+Es posible restaurar máquinas virtuales en las siguientes ubicaciones:
+
+* Restaurar a la ubicación original
++
+** En el almacén de datos original montado en el host ESXi original (esto realiza una copia de la máquina virtual)
+
+
+* Restauración para cambio de ubicación
++
+** En un almacén de datos diferente montado en el host ESXi original
+** En el almacén de datos original montado en un host ESXi diferente gestionado por la misma instancia de vCenter
+** En un almacén de datos diferente montado en un host ESXi diferente gestionado por la misma instancia de vCenter
+** En un almacén de datos diferente montado en un host ESXi diferente gestionado por una instancia diferente de vCenter en modo vinculado
+
+
+
+
+
+NOTE: Cuando se restaura a una ubicación diferente, el plugin de SnapCenter para VMware vSphere debe ejecutarse en la instancia de vCenter vinculada que es el destino de la operación de restauración. El almacén de datos de destino debe tener suficiente espacio.
+
+
+NOTE: No es posible restaurar máquinas virtuales VVol en una ubicación alternativa.
+
+
+NOTE: Al restaurar una máquina virtual eliminada, no se restauran las etiquetas o carpetas que originalmente se asignaron a la máquina virtual.
+
+.Antes de empezar
+* La cuenta de usuario del sistema de almacenamiento, en la página Storage Systems del cliente VMware vSphere, debe tener el link:scpivs44_minimum_ontap_privileges_required.html["Privilegios mínimos requeridos de ONTAP para ONTAP"].
+* La cuenta de usuario en vCenter debe tener el link:scpivs44_minimum_vcenter_privileges_required.html["Privilegios mínimos de vCenter requeridos para el plugin de SnapCenter para VMware vSphere"].
+* Debe existir un backup.
++
+Debe haber creado un backup de la máquina virtual mediante el plugin de SnapCenter para VMware vSphere para poder restaurar los VMDK en esa máquina virtual.
+
+
+
+
+TIP: Para mejorar el rendimiento de las operaciones de restauración en entornos NFS, habilite la aplicación VMware vStorage API for Array Integration (VAAI).
+
+.Acerca de esta tarea
+No es posible restaurar un almacén de datos, pero sí es posible restaurar cualquier máquina virtual incluida en ese almacén de datos.
+
+La operación de restauración puede fallar si no está disponible el nivel de almacenamiento de FabricPool donde se encuentra la máquina virtual.
+
+.Pasos
+. Haga clic en *Menú* y seleccione la opción de menú *almacenamiento*, a continuación, seleccione un almacén de datos, seleccione la ficha *Configurar* y, a continuación, haga clic en *copias de seguridad* en la sección *complemento SnapCenter para VMware vSphere*.
+. Haga doble clic en un backup para ver una lista con todas las máquinas virtuales que están incluidas en el backup.
+. Seleccione la VM eliminada de la lista de copias de seguridad y haga clic en *Restaurar*.
+. En el asistente *Restaurar*, en la página *Seleccionar copia de seguridad*, seleccione la copia de seguridad desde la que desea restaurar.
++
+Puede buscar por un nombre de backup específico o un nombre de backup parcial y también puede filtrar la lista de backups haciendo clic en el icono de filtro y seleccionando un intervalo de fechas y horas. Además, debe seleccionar si desea backups que contengan snapshots de VMware, si desea visualizar backups montados y la ubicación. Haga clic en *Aceptar* para volver al asistente.
+
+. En la página *Select Scope*, seleccione *entire virtual machine* en el campo *Restore scope*, a continuación, seleccione la ubicación de restauración y, a continuación, introduzca la información de destino ESXi donde debe montarse la copia de seguridad.
++
+El destino de la restauración puede ser cualquier host ESXi que se haya añadido a SnapCenter. Esta opción restaura el contenido del backup seleccionado en el que residió la máquina virtual, a partir de una copia de Snapshot con la fecha y hora especificadas. La casilla de verificación *Restart VM* se Marca si selecciona esta opción y la VM se encenderá.
+
++
+Si va a restaurar una máquina virtual de un almacén de datos NFS en un host ESXi alternativo ubicado en un clúster de ESXi, una vez restaurada la máquina virtual, se registra en el host alternativo.
+
+. En la página *Seleccionar ubicación*, seleccione la ubicación de la copia de seguridad desde la que desea restaurar (principal o secundario).
+. Revise la página Resumen y, a continuación, haga clic en *Finalizar*.
+

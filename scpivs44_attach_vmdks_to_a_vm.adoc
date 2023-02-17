@@ -1,0 +1,75 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_attach_vmdks_to_a_vm.html 
+keywords:  
+summary: Es posible asociar o más VMDK desde un backup a la máquina virtual principal, o a una máquina virtual alternativa en el mismo host ESXi, o a una máquina virtual alternativa en un host ESXi alternativo gestionado por la misma vCenter o una instancia diferente de vCenter en modo vinculado. Se admiten las máquinas virtuales de los almacenes de datos tradicionales y los almacenes de datos de VVol. 
+---
+= Asociar VMDK a una máquina virtual o una máquina virtual VVol
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Es posible asociar o más VMDK desde un backup a la máquina virtual principal, o a una máquina virtual alternativa en el mismo host ESXi, o a una máquina virtual alternativa en un host ESXi alternativo gestionado por la misma vCenter o una instancia diferente de vCenter en modo vinculado. Se admiten las máquinas virtuales de los almacenes de datos tradicionales y los almacenes de datos de VVol.
+
+De esta forma, es más fácil restaurar uno o varios archivos individuales desde una unidad en lugar de restaurar la unidad completa. Después de restaurar o acceder a los archivos que necesite, puede desvincular el VMDK.
+
+.Acerca de esta tarea
+Tiene las siguientes opciones para efectuar la asociación:
+
+* Puede asociar los discos virtuales desde un backup primario o secundario.
+* Puede asociar los discos virtuales a la máquina virtual principal (la misma a la que estaba asociado el disco virtual originalmente) o a otra máquina virtual alternativa en el mismo host ESXi.
+
+
+La asociación de discos virtuales está sujeta a las siguientes limitaciones:
+
+* Las operaciones de asociación y desvinculación no son compatibles con las plantillas de máquinas virtuales.
+* Cuando se conectan más de 15 VMDK a una controladora iSCSI, la máquina virtual para el plugin de SnapCenter para VMware vSphere no puede ubicar los números de unidades VMDK superiores a 15 debido a las restricciones de VMware.
++
+En este caso, añada las controladoras SCSI manualmente e intente nuevamente la operación de asociación.
+
+* No es posible asociar manualmente un disco virtual que se haya asociado o montado como parte de una operación de restauración de archivos invitados.
+* Las operaciones de asociación y restauración conectan VMDK mediante la controladora SCSI predeterminada. Se realizan backups de los VMDK que se asocian a una máquina virtual con una controladora NVMe, pero para las operaciones de asociación y restauración, los VMDK se vuelven a asociar con una controladora iSCSI.
+
+
+.Pasos
+. En la interfaz gráfica de usuario del cliente de VMware vSphere, haga clic en *Menú* en la barra de herramientas y, a continuación, seleccione *hosts y clústeres* en la lista desplegable.
+. En el panel de navegación de la izquierda, haga clic con el botón derecho en una máquina virtual y seleccione *SnapCenter* de NetApp en la lista desplegable; a continuación, seleccione *Attach virtual disk* en la lista desplegable secundaria.
++
+image:scpivs44_image22.png["Error: Falta la imagen gráfica"]
+
+. En la ventana *Attach Virtual Disk*, en la sección *Backup*, seleccione una copia de seguridad.
++
+Para filtrar la lista de backups, haga clic en el image:scpivs44_image41.png["Error: Falta la imagen gráfica"] Filtre el icono y seleccione un intervalo de fechas y horas, y seleccione si desea que los backups que contengan copias de VMware Snapshot, si desea visualizar los backups montados y la ubicación. Haga clic en *Aceptar*.
+
+. En la sección *Seleccionar discos*, seleccione uno o más discos que desee conectar y la ubicación desde la que desea conectar (principal o secundario).
++
+Puede cambiar el filtro para mostrar las ubicaciones primarias y secundarias.
+
+. De forma predeterminada, los discos virtuales seleccionados se asocian a la máquina virtual principal. Para asociar los discos virtuales seleccionados a una VM alternativa en el mismo host ESXi, haga clic en *haga clic aquí para asociar a una VM alternativa* y especifique la VM alternativa.
+. Haga clic en *Adjuntar*.
+. Opcional: Supervise el progreso de la operación en la sección *tareas recientes*.
++
+Actualice la pantalla para que muestre información actualizada.
+
+. Compruebe si el disco virtual está asociado siguiendo estos pasos:
++
+.. Haga clic en *Menú* en la barra de herramientas y, a continuación, seleccione *VMs and Templates* en la lista desplegable.
+.. En el panel de navegación izquierdo, haga clic con el botón derecho del ratón en una máquina virtual y, a continuación, seleccione *Editar configuración* en la lista desplegable.
+.. En la ventana *Editar configuración*, expanda la lista de cada disco duro para ver la lista de archivos de disco.
++
+image:scpivs44_image23.png["Error: Falta la imagen gráfica"]
+
++
+En la página Edit settings se incluyen los discos de la máquina virtual. Puede expandir los detalles de cada disco duro para ver la lista de discos virtuales asociados.
+
+
+
+
+
+.Resultado
+Puede acceder a los discos asociados desde el sistema operativo host y después recuperar la información que necesite desde los discos.

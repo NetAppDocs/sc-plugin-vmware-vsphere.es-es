@@ -1,0 +1,169 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_prescripts_and_postscripts.html 
+keywords:  
+summary: Es posible usar scripts previos y posteriores como parte de las operaciones de protección de datos. Estos scripts permiten la automatización antes o después del trabajo de protección de datos. 
+---
+= Scripts previos y posteriores
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Es posible usar scripts previos y posteriores como parte de las operaciones de protección de datos. Estos scripts permiten la automatización antes o después del trabajo de protección de datos. Por ejemplo, se puede incluir un script para notificar automáticamente si hay fallos o advertencias en un trabajo de protección de datos. Para configurar scripts previos y posteriores, es necesario comprender algunos de los requisitos para crearlos.
+
+
+
+== Tipos de scripts compatibles
+
+Se admiten scripts Perl y shell. Los scripts de shell deben comenzar por `!/bin/bash`. (`!/bin/sh` no es compatible).
+
+
+
+== Ubicación de la ruta del script
+
+El plugin de SnapCenter para VMware vSphere ejecuta los scripts previos y posteriores. Por lo tanto, los scripts deben encontrarse en el OVA del plugin de SnapCenter para VMware vSphere, con permisos ejecutables.
+
+Por ejemplo: * Puede haber una ruta DE scripts PERL `/support/support/script.pl`* Una ruta de comandos de shell puede ser `/support/support/script.sh`
+
+La ruta de acceso del script se valida en el momento en que se ejecuta el script.
+
+
+
+== Dónde especificar scripts
+
+Los scripts se especifican en las políticas de backup. Cuando se inicia una tarea de backup, la política asocia automáticamente el script con los recursos que se incluirán en el backup.
+
+Para especificar varios scripts, presione *Enter* después de cada ruta de script para enumerar cada script en una línea diferente. No se admite el uso de punto y coma (;). Es posible especificar varios scripts previos y posteriores. Un script individual se puede codificar como script previo y script posterior, y puede llamar a otros scripts.
+
+
+
+== Cuándo se ejecutan los scripts
+
+Los scripts se ejecutan según el valor configurado para BACKUP_PHASE.
+
+* BACKUP_PHASE=PRE_BACKUP
++
+Los scripts previos se ejecutan en la fase PRE_BACKUP de la operación.
+
+
+
+
+NOTE: Si el script previo falla, el backup se completa correctamente y se envía un mensaje de advertencia.
+
+* BACKUP_PHASE=POST_BACKUP O BACKUP_PHASE=FAILED_BACKUP
++
+Los scripts posteriores se ejecutan en la fase POST_BACKUP de la operación, una vez que el backup se completa correctamente, o en la fase FAILED_BACKUP si no fue posible completar el backup.
+
+
+
+
+NOTE: Si el script posterior falla, el backup se completa correctamente y se envía un mensaje de advertencia.
+
+Compruebe lo siguiente para verificar que los valores de la secuencia de comandos están llenos: * Para secuencias DE comandos PERL: `/support/support/log_env.log`* Para scripts de shell: `/support/support/log_file.log`
+
+
+
+== Variables de entorno que se transmiten a los scripts
+
+Es posible usar las variables de entorno que se muestran en la siguiente tabla en los scripts.
+
+|===
+| Variable de entorno | Descripción 
+
+
+| `BACKUP_NAME` | Nombre del backup. Variable que se incluye solo en los scripts posteriores. 
+
+
+| `BACKUP_DATE` | La fecha del backup, con el formato `yyyymmdd`Variable que se incluye solo en los scripts posteriores. 
+
+
+| `BACKUP_TIME` | Hora del backup, en formato `hhmmss`Variable que se incluye solo en los scripts posteriores. 
+
+
+| `BACKUP_PHASE` | La fase del backup donde se desea ejecutar el script. Valores válidos: `PRE_BACKUP, POST_BACKUP, and FAILED_BACKUP`. Variable que se incluye en scripts previos y posteriores. 
+
+
+| `STORAGE_SNAPSHOTS` | La cantidad de snapshots de almacenamiento del backup. Variable que se incluye solo en los scripts posteriores. 
+
+
+| `STORAGE_SNAPSHOT.#` | Una de las snapshots de almacenamiento definidas, con el siguiente formato:
+`<filer>:/vol/<volume>:<ONTAP-snapshot-name>`Variable que se incluye solo en los scripts posteriores. 
+
+
+| `VIRTUAL_MACHINES` | La cantidad de máquinas virtuales del backup. Variable que se incluye en scripts previos y posteriores. 
+
+
+| `VIRTUAL_MACHINE.#` | Una de las máquinas virtuales definidas, con el siguiente formato:
+`<VM name>[vertical bar]<VM UUID>[vertical bar]<power-state>[vertical bar]<VM snapshot>[vertical bar]<ip-addresses>
+<power-state> has the values POWERED_ON, POWERED_OFF, or
+SUSPENDED`
+`<VM snapshot>` tiene los valores `true` o. `false`Variable que se incluye en scripts previos y posteriores. 
+|===
+
+
+== Tiempo de espera de scripts
+
+El tiempo de espera de los scripts de backup es de 15 minutos y no puede modificarse.
+
+
+
+== Ejemplo de script PERL #1
+
+El siguiente ejemplo de script PERL imprime las variables de entorno cuando se ejecuta una copia de seguridad.
+
+`#!/usr/bin/perl`
+`use warnings;`
+`use strict;`
+`my $argnum;`
+`my $logfile = '/support/support/log_env.log';`
+`open (FH, '>>', $logfile) or die $!;`
+`foreach (sort keys %ENV) {`
+`print FH "$_ = $ENV{$_}\n";`
+`}`
+`print FH "=========\n";`
+`close (FH);`
+
+
+
+== Ejemplo de script PERL #2
+
+En el siguiente ejemplo se imprime información acerca de la copia de seguridad.
+
+`#!/usr/bin/perl`
+`use warnings;`
+`use strict;`
+
+`my $argnum;`
+`my $logfile = '/support/support/log_env.log';`
+`open (FH, '>>', $logfile) or die $!;`
+
+`print FH "BACKUP_PHASE is $ENV{'BACKUP_PHASE'}\n";`
+`print FH "Backup name  $ENV{'BACKUP_NAME'}\n";`
+`print FH "Virtual Machine  $ENV{'VIRTUAL_MACHINES'}\n";`
+`print FH "VIRTUAL_MACHINE # is $ENV{'VIRTUAL_MACHINE.1'}\n";`
+`print FH "BACKUP_DATE is $ENV{'BACKUP_DATE'}\n";`
+`print FH "BACKUP_TIME is $ENV{'BACKUP_TIME'}\n";`
+`print FH "STORAGE_SNAPSHOTS is $ENV{'STORAGE_SNAPSHOTS'}\n";`
+`print FH "STORAGE_SNAPSHOT # is $ENV{'STORAGE_SNAPSHOT.1'}\n";`
+
+`print FH "PWD is $ENV{'PWD'}\n";`
+`print FH "INVOCATION_ID is $ENV{'INVOCATION_ID'}\n";`
+
+`print FH "=========\n";`
+`close (FH);`
+
+
+
+== Ejemplo de script de shell
+
+
+`===============================================`
+`#!/bin/bash`
+`echo Stage $BACKUP_NAME >> /support/support/log_file.log`
+`env >> /support/support/log_file.log`
+`===============================================`

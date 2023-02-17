@@ -1,0 +1,46 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_rest_api_workflows__create_and_modify_resource_groups.html 
+keywords:  
+summary: Para realizar operaciones de creación y modificación de grupos de recursos mediante las API DE REST del plugin de SnapCenter para VMware vSphere, debe seguir la secuencia prescrita de llamadas de API de REST. 
+---
+= Flujos de trabajo de API DE REST para crear y modificar grupos de recursos
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Para realizar operaciones de creación y modificación de grupos de recursos mediante las API DE REST del plugin de SnapCenter para VMware vSphere, debe seguir la secuencia prescrita de llamadas de API de REST.
+
+Para cada API REST, añada `https://<server>:<port>` En la parte frontal de la API DE REST para formar un extremo completo.
+
+Para crear grupos de recursos, siga este flujo de trabajo:
+
+|===
+| Paso | API REST | Comentarios 
+
+
+| 1 | `/4.1/policies` | `Get Policies` Obtiene la lista de políticas del cliente de VMware vSphere. Tenga en cuenta el *ID de directiva* que desea utilizar al crear el grupo de recursos y la directiva *frecuencia*. Si no aparece ninguna directiva, utilice la `Create Policy` API DE REST para crear una nueva política. 
+
+
+| 2 | `/4.1/resource-groups` | `Create a Resource Group` crea un grupo de recursos con la política especificada. Pase el *ID de póliza* del paso 1 e introduzca los detalles de la directiva *frecuencia* además de todos los demás atributos requeridos. 
+|===
+Para modificar grupos de recursos, siga este flujo de trabajo:
+
+|===
+| Paso | API REST | Comentarios 
+
+
+| 1 | `/4.1/resource-groups` | `Get List of Resource Groups` Obtiene la lista de grupos de recursos de cliente de VMware vSphere. Tenga en cuenta *resourceGroupId* que desea modificar. 
+
+
+| 2 | `/4.1/policies` | Si desea modificar las políticas asignadas, `Get Policies` Obtiene la lista de políticas del cliente de VMware vSphere. Tenga en cuenta el *ID de directiva* que desea utilizar al modificar el grupo de recursos y la directiva *frecuencia*. 
+
+
+| 3 | `/4.1/resource-groups/
+{resouceGroupId}` | `Update a Resource Group` modifica el grupo de recursos especificado. Pase el *resourceGroupId* del paso 1. Opcionalmente, pase *ID de póliza* del paso 2 e introduzca los detalles de *frecuencia* además de todos los demás atributos requeridos. 
+|===

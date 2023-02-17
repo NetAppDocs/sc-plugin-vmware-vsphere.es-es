@@ -1,0 +1,30 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_generate_a_support_bundle_from_the_maintenance_console.html 
+keywords:  
+summary: Puede generar un paquete de soporte desde la consola de mantenimiento. 
+---
+= Genere un paquete de soporte desde la consola de mantenimiento
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+.Pasos
+[role="lead"]
+. En el cliente VMware vSphere, seleccione la máquina virtual donde esté ubicado el plugin de VMware de SnapCenter.
+. Haga clic con el botón derecho del ratón en el equipo virtual y, a continuación, en la ficha *Resumen* del dispositivo virtual, haga clic en *Iniciar consola remota o Iniciar consola web* para abrir una ventana de la consola de mantenimiento y, a continuación, inicie sesión.
++
+Para obtener información sobre el acceso a la consola de mantenimiento y el inicio de sesión, consulte link:scpivs44_access_the_maintenance_console.html["Acceda a la Consola de mantenimiento"^].
+
++
+image:scpivs44_image11.png["Error: Falta la imagen gráfica"]
+
+. En el menú principal, introduzca la opción *4) Soporte y diagnóstico*.
+. En el menú Soporte y diagnóstico, introduzca la opción *1) generar paquete de soporte*.
+
+
+Para acceder al paquete de soporte, en el menú Soporte y Diagnóstico, introduzca la opción *2) acceder al Shell de diagnóstico*. En la consola, vaya a. `/support/support/<bundle_name>.tar.gz`.

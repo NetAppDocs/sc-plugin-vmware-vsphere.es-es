@@ -1,0 +1,25 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_unregister_plugin_from_vcenter.html 
+keywords:  
+summary: Si detiene el servicio de plugin de VMware de SnapCenter en una instancia de vCenter que se encuentra en modo vinculado, los grupos de recursos no están disponibles en todos los vCenter vinculados, incluso cuando el servicio de plugin de SnapCenter VMware se ejecuta en otros vCenter vinculados. Debe cancelar el registro manual de las extensiones del plugin de VMware de SnapCenter. 
+---
+= Cancele el registro del plugin de SnapCenter para VMware vSphere de vCenter
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Si detiene el servicio de plugin de VMware de SnapCenter en una instancia de vCenter que se encuentra en modo vinculado, los grupos de recursos no están disponibles en todos los vCenter vinculados, incluso cuando el servicio de plugin de SnapCenter VMware se ejecuta en otros vCenter vinculados.
+
+Debe cancelar el registro manual de las extensiones del plugin de VMware de SnapCenter.
+
+.Pasos
+. En la instancia de vCenter vinculada que tiene el servicio del plugin de VMware de SnapCenter detenido, desplácese hasta el administrador de referencia de objetos gestionados (MOB).
+. En la opción Propiedades, seleccione *contenido* en la columna valor y, a continuación, en la siguiente pantalla seleccione *ExtensionManager* en la columna valor para mostrar una lista de las extensiones registradas.
+. Cancele el registro de las extensiones `com.netapp.scv.client` y.. `com.netapp.aegis`.
+
