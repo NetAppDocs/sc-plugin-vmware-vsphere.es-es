@@ -14,7 +14,7 @@ summary: Puede gestionar las configuraciones de aplicaciones, sistema y red medi
 
 
 [role="lead"]
-Puede gestionar las configuraciones de aplicaciones, sistema y red mediante la consola de mantenimiento del plugin de SnapCenter para VMware vSphere. Puede cambiar la contraseña de administrador, la contraseña de mantenimiento, generar paquetes de soporte e iniciar diagnósticos remotos.
+Puede gestionar las configuraciones de aplicaciones, sistemas y redes con la consola de mantenimiento del plugin de SnapCenter para VMware vSphere. Puede cambiar la contraseña de administrador, la contraseña de mantenimiento, generar paquetes de soporte e iniciar diagnósticos remotos.
 
 .Antes de empezar
 Antes de detener y reiniciar el servicio del plugin de SnapCenter para VMware vSphere, debe suspender todas las programaciones.

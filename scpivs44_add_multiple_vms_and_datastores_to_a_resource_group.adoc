@@ -14,7 +14,7 @@ summary: Puede añadir varios recursos a un grupo de recursos existente mediante
 
 
 [role="lead"]
-Puede añadir varios recursos a un grupo de recursos existente mediante el asistente SnapCenter VMware vSphere Client Edit Resource Group.
+Mediante el asistente SnapCenter VMware vSphere Client Edit Resource Group, es posible añadir varios recursos a un grupo de recursos existente.
 
 El grupo de recursos puede contener uno de los siguientes elementos:
 
@@ -34,7 +34,7 @@ NOTE: No se admiten las máquinas virtuales VVol que abarcan varios almacenes de
 . En la página *recurso*, haga lo siguiente:
 +
 .. En el campo datastores, desplácese hasta las máquinas virtuales o los almacenes de datos que desea añadir.
-.. En la lista Available Entities, seleccione una o más máquinas virtuales o almacenes de datos que desee agregar al grupo de recursos y, a continuación, haga clic en *>* para mover su selección a la lista Selected Entities. Puede mover todas las entidades disponibles haciendo clic en *>>*.
+.. En la lista Available Entities, seleccione una o más máquinas virtuales o almacenes de datos que desee agregar al grupo de recursos y, a continuación, haga clic en *>* para mover su selección a la lista Selected Entities. Haga clic en *>>* para mover todas las entidades disponibles.
 +
 De forma predeterminada, la lista Available Entities muestra el objeto del centro de datos. Puede hacer clic en un almacén de datos para ver las máquinas virtuales incluidas en él y añadirlas al grupo de recursos.
 

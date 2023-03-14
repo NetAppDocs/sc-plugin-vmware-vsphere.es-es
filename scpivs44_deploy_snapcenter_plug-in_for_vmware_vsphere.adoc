@@ -36,13 +36,13 @@ The OVA deployment is supported in VMware vCenter 7u1 and above.
 Implemente el complemento VMware de SnapCenter en la misma zona horaria que vCenter. Las programaciones de backup se ejecutan en la zona horaria en la que se implementó el plugin de VMware de SnapCenter. VCenter informa de los datos en la zona horaria en la que se encuentra la instancia de vCenter. Por lo tanto, si el plugin de VMware de SnapCenter y vCenter están en zonas horarias diferentes, es posible que los datos de la consola del plugin de VMware de SnapCenter no sean los mismos que los datos de los informes.
 
 .Pasos
+. Para VMware vCenter 7.0.3 y versiones posteriores, siga los pasos en link:scpivs44_download_the_ova_open_virtual_appliance.html["Descargue el dispositivo Open Virtual Appliance (OVA)"^] Para importar los certificados en vCenter.
 . En el explorador, desplácese hasta VMware vSphere vCenter.
 +
 
 NOTE: Para los clientes web HTML de IPv6, debe usar Chrome o Firefox.
 
 . Inicie sesión en la página *VMware vCenter Single Sign-On*.
-. Para VMware vCenter 7.0.3 y versiones posteriores, siga los pasos en link:scpivs44_download_the_ova_open_virtual_appliance.html["Descargue el dispositivo Open Virtual Appliance (OVA)"^] Para importar los certificados en vCenter.
 . En el panel de navegación, haga clic con el botón derecho del ratón en cualquier objeto de inventario que sea un objeto primario válido de una máquina virtual, como un centro de datos, clúster o host, y seleccione *implementar plantilla OVF* para iniciar el asistente de implementación de VMware.
 . Extraiga el archivo .tar, que contiene el archivo .ova en su sistema local. En la página *Seleccionar una plantilla OVF*, especifique la ubicación de `.ova` archivo dentro de la carpeta .tar extraída.
 . Haga clic en *Siguiente*.
