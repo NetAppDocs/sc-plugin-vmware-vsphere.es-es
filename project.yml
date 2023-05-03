@@ -281,8 +281,6 @@ homepage:
       url: "/scpivs44_restore_from_backups_overview.html"
     - title: Utilice las API de REST
       url: "/scpivs44_rest_apis_overview.html"
-    - title: Migre desde SCV basada en Windows
-      url: "/scpivs44_migrate.html"
   - title: Blogs y comunidad
     links:
     - title: Blog de NetApp – SCV
