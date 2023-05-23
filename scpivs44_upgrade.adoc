@@ -35,7 +35,7 @@ NOTE: No se admite el cambio de la configuración de red de estática a DHCP.
 
 . Descargue la actualización `.iso` archivo.
 +
-.. Inicie sesión en el sitio de soporte de NetApp (https://mysupport.netapp.com/products/index.html)[].
+.. Inicie sesión en el sitio de soporte de NetApp .
 .. En la lista de productos, seleccione *complemento SnapCenter para VMware vSphere* y, a continuación, haga clic en el botón *DESCARGAR LA ÚLTIMA VERSIÓN*.
 .. Descargue la actualización del plugin de SnapCenter para VMware vSphere `.iso` archivar en cualquier ubicación.
 
