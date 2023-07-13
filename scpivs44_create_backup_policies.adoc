@@ -16,7 +16,7 @@ summary:
 [role="lead"]
 Siga las instrucciones que se indican a continuación para crear normativas de backup
 
-. En el panel de navegación izquierdo del complemento de SCV, haga clic en *Directivas* y, a continuación, haga clic en image:scpivs44_image6.png["Error: Falta la imagen gráfica"] *Nueva Política*.
+. En el panel de navegación izquierdo del plug-in SCV, haga clic en *Policies* y, a continuación, seleccione *New Policy*.
 . En la página *Nueva política de copia de seguridad*, introduzca la información de configuración de la directiva y, a continuación, haga clic en *Agregar*.
 +
 Si la directiva se utilizará para las relaciones de mirror-vault, en el campo replicación, debe seleccionar sólo la opción *Actualizar SnapVault después de la copia de seguridad* si desea copiar las copias de seguridad en los destinos de mirror-vault.

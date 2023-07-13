@@ -34,7 +34,7 @@ Para obtener el permiso del usuario raíz para ejecutar el comando, use la sudo 
 Inicie sesión con el nombre de usuario predeterminado de la consola de mantenimiento `maint` y la contraseña que ha establecido en el momento de la instalación.
 
 +
-image:scpivs44_image11.png["Error: Falta la imagen gráfica"]
+image:scpivs44_image11.png["Ventana de la consola de mantenimiento"]
 
 . Es posible realizar las siguientes operaciones:
 +
@@ -44,7 +44,20 @@ Mostrar un resumen de SnapCenter complemento VMware Start o stop SnapCenter plug
 
 ** Opción 2: Configuración del sistema
 +
-Reiniciar o apagar máquina virtual Cambiar "mantenimiento" contraseña de usuario Cambiar zona horaria Cambiar servidor NTP Habilitar/deshabilitar acceso SSH aumentar el tamaño de la cárcel del disco (/cárcel) Actualizar instalar herramientas de VMware
+Reiniciar la máquina virtual
+Cierre la máquina virtual
+Cambiar la contraseña de usuario "mant"
+Cambiar zona horaria
+Cambie el servidor NTP
+Active el acceso SSH
+Aumentar el tamaño de los discos de cárcel (/prisión)
+Renovar
+Instalación de VMware Tools
+Generar Token MFA
+
++
+
+NOTE: MFA está siempre habilitado, no se puede deshabilitar la MFA.
 
 ** Opción 3: Configuración de red
 +

@@ -43,7 +43,7 @@ El complemento VMware de SnapCenter realiza operaciones de backup y restauració
 NOTE: Si utiliza el plugin de VMware de SnapCenter para admitir backups basados en aplicaciones en VMDK, debe utilizar la interfaz gráfica de usuario de SnapCenter para introducir detalles de autenticación de almacenamiento y registrar sistemas de almacenamiento.
 
 * Para vCenter en el modo vinculado, debe añadir sistemas de almacenamiento por separado a cada instancia de vCenter.
-* Los nombres de las máquinas virtuales de almacenamiento deben resolver las LIF de administración.
+* Si va a añadir SVM, los nombres de las máquinas virtuales de almacenamiento deben resolverse a las LIF de administración.
 +
 Si se añadieron entradas de host etc para los nombres de máquinas virtuales de almacenamiento en SnapCenter, debe verificar que también se puedan resolver del dispositivo virtual.
 
@@ -55,7 +55,7 @@ Si añade una máquina virtual de almacenamiento con un nombre que no puede reso
 
 .Pasos
 . En el panel de navegación izquierdo del cliente de vSphere, haga clic en *Storage Systems*.
-. En la página Storage Systems, haga clic en image:scpivs44_image6.png["Error: Falta la imagen gráfica"] *Agregar*.
+. En la página Sistemas de almacenamiento, seleccione la opción *Agregar*.
 . En el asistente *Add Storage System*, introduzca la información básica del clúster o VM de almacenamiento como se indica en la siguiente tabla:
 +
 |===
@@ -71,10 +71,10 @@ Si añade una máquina virtual de almacenamiento con un nombre que no puede reso
 | Método de autenticación | Seleccione Credentials o Certificate. Se admiten dos tipos de certificados: - https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_configure_a_CA_signed_certificate_for_storage_system_authentication_with_SCV["Certificado firmado por CA"^]- https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/How_to_configure_a_self-signed_certificate_for_storage_system_authentication_with_SCV["Certificado autofirmado"^] 
 
 
-| Nombre de usuario | Este campo aparece cuando selecciona credenciales como método de autenticación. Introduzca el nombre de usuario de ONTAP que se utilizará para iniciar sesión en la máquina virtual de almacenamiento. 
+| Nombre de usuario | Este campo aparece cuando selecciona credenciales como método de autenticación. Introduzca el nombre de usuario de ONTAP que se utiliza para iniciar sesión en la máquina virtual de almacenamiento o al clúster. 
 
 
-| Contraseña | Este campo aparece cuando selecciona credenciales como método de autenticación. Introduzca la contraseña de inicio de sesión de la máquina virtual de almacenamiento. 
+| Contraseña | Este campo aparece cuando selecciona credenciales como método de autenticación. Introduzca la contraseña de inicio de sesión de la máquina virtual de almacenamiento o del clúster. 
 
 
 | Certificado | Este campo aparece cuando selecciona Certificado como método de autenticación. Desplácese para seleccionar el archivo de certificado. 

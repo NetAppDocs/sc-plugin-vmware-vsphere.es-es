@@ -16,10 +16,10 @@ summary:
 [role="lead"]
 Siga estos pasos para crear grupos de recursos.
 
-. En el panel de navegación izquierdo del plugin de SCV, haga clic en *Resource Groups* y, a continuación, haga clic en image:scpivs44_image6.png["Error: Falta la imagen gráfica"] *Crear*.
+. En el panel de navegación izquierdo del plugin SCV, haga clic en *Resource Groups* y, a continuación, seleccione *Create*.
 . Introduzca la información requerida en cada página del asistente Create Resource Group, seleccione las máquinas virtuales y los almacenes de datos que se incluirán en el grupo de recursos y, a continuación, seleccione las políticas de backup que se aplicarán al grupo de recursos y especifique la programación de backup.
 
 
 Los backups se ejecutan según lo especificado en las políticas de backup que están configuradas para el grupo de recursos.
 
-Puede realizar una copia de seguridad a petición desde la página *grupos de recursos* haciendo clic en image:scpivs44_image38.png["Error: Falta la imagen gráfica"] *Ejecutar ahora*.
+Puede realizar una copia de seguridad bajo demanda desde la página *Grupos de recursos* seleccionando image:scpivs44_image38.png["icono reproducir"] *Ejecutar ahora*.

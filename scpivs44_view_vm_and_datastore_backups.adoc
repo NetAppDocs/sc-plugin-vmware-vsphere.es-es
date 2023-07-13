@@ -22,7 +22,7 @@ Explorar las carpetas de archivos de gran tamaño, por ejemplo, las carpetas de 
 .Pasos
 . Haga clic en *Menú* y seleccione la opción de menú *hosts y clústeres*, a continuación, seleccione una máquina virtual, seleccione la ficha *Configurar* y, a continuación, haga clic en *copias de seguridad* en la sección *SnapCenter Plug-in for VMware vSphere*.
 +
-image:scpivs44_image14.png["Error: Falta la imagen gráfica"]
+image:scpivs44_image14.png["IU del cliente de vSphere"]
 
 . Haga clic en el backup que desea ver.
 

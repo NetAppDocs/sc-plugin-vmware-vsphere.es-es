@@ -23,7 +23,7 @@ Cuando se implementa el plugin de VMware de SnapCenter, SSH está deshabilitado 
 Para obtener información sobre el acceso a la consola de mantenimiento y el inicio de sesión, consulte link:scpivs44_access_the_maintenance_console.html["Acceda a la Consola de mantenimiento"^].
 
 +
-image:scpivs44_image11.png["Error: Falta la imagen gráfica"]
+image:scpivs44_image11.png["Ventana de la consola de mantenimiento"]
 
 . En el menú principal, seleccione la opción de menú *2) Configuración del sistema*.
 . En el menú Configuración del sistema, seleccione la opción de menú *6) Activar acceso SSH* y, a continuación, introduzca “*y*” en el indicador de confirmación.

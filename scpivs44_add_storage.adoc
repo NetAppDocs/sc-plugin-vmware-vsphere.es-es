@@ -16,6 +16,6 @@ summary:
 [role="lead"]
 Siga los pasos de esta sección para añadir almacenamiento.
 
-. En el panel de navegación izquierdo del plugin de SCV, haga clic en *Storage Systems* y, a continuación, haga clic en image:scpivs44_image6.png["Error: Falta la imagen gráfica"] *Agregar*.
-. En el cuadro de diálogo Add Storage System (Agregar sistema de almacenamiento), introduzca la información básica del clúster o SVM y, a continuación, haga clic en *Add*.
+. En el panel de navegación izquierdo del plug-in SCV, haga clic en *Sistemas de almacenamiento* y luego seleccione la opción *Agregar*.
+. En el cuadro de diálogo Add Storage System, introduzca la información básica de SVM o del clúster y seleccione *Add*.
 

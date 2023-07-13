@@ -56,7 +56,7 @@ Puede registrar varias instancias del plugin de SnapCenter para VMware vSphere e
 +
 Cuando el host de máquina virtual se añade correctamente, se muestra en la pestaña Managed hosts.
 
-. En el panel de navegación izquierdo, haga clic en *Configuración*, luego en la ficha *credenciales* y, a continuación, haga clic en image:scpivs44_image6.png["Error: Falta la imagen gráfica"] *Agregar* para agregar credenciales para el dispositivo virtual.
+. En el panel de navegación de la izquierda, haga clic en *Configuración*, luego haga clic en la pestaña *Credencial* y luego seleccione *Agregar* para agregar credenciales para el dispositivo virtual.
 . Proporcione la información de credenciales que se especificó durante la implementación del plugin de SnapCenter para VMware vSphere.
 +
 

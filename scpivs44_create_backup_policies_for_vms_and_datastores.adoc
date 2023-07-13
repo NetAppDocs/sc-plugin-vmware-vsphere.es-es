@@ -39,7 +39,7 @@ La mayoría de los campos en estas páginas del asistente son claros y explicati
 
 .Pasos
 . En el panel de navegación izquierdo del complemento de SCV, haga clic en *Directivas*.
-. En la página *Directivas*, haga clic en image:scpivs44_image6.png["Error: Falta la imagen gráfica"] *Crear* para iniciar el asistente.
+. En la página *Policies*, selecciona *Create* para iniciar el asistente.
 . En la página *New Backup Policy*, seleccione la instancia de vCenter Server que utilizará la política y, a continuación, introduzca el nombre de la política y una descripción.
 +
 ** Modo vinculado

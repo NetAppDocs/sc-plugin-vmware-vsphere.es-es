@@ -19,7 +19,7 @@ Puede utilizar la consola de mantenimiento para restaurar el backup más recient
 .Pasos
 . Abra una ventana de la consola de mantenimiento.
 +
-link:scpivs44_manage_snapcenter_plug-in_for_vmware_vsphere.html#access-the-maintenance-console["Acceda a la consola de mantenimiento"].
+link:scpivs44_access_the_maintenance_console.html["Acceda a la Consola de mantenimiento"^].
 
 . En el menú principal, introduzca la opción *1) Configuración de la aplicación*.
 . En el menú Configuración de la aplicación, introduzca la opción *6) copia de seguridad y restauración de MySQL*.

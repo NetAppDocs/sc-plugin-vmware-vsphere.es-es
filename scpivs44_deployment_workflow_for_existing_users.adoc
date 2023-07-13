@@ -16,4 +16,4 @@ summary: Puede usar este flujo de trabajo si es un usuario de SnapCenter y tiene
 [role="lead"]
 Si es un usuario de SnapCenter y tiene backups de SnapCenter, use el siguiente flujo de trabajo para comenzar.
 
-image:scpivs44_image3.png["Error: Falta la imagen gráfica"]
+image:scpivs44_image3.png["Flujo de trabajo de implementación"]

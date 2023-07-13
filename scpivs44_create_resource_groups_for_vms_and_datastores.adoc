@@ -96,14 +96,15 @@ SnapCenter realiza comprobaciones de compatibilidad cuando se crea un grupo de r
 
 
 .Pasos
-. En el panel de navegación izquierdo del plugin de SCV, haga clic en *Resource Groups* y, a continuación, haga clic en image:scpivs44_image6.png["Error: Falta la imagen gráfica"] *Crear* para iniciar el asistente.
+. En el panel de navegación izquierdo del plugin SCV, haga clic en *Grupos de recursos* y, a continuación, seleccione *Crear* para iniciar el asistente.
 
 
 Esta es la forma más sencilla de crear un grupo de recursos. No obstante, también puede crear un grupo de recursos con un recurso realizando una de las acciones siguientes:
 
-+ ** para crear un grupo de recursos para una máquina virtual, haga clic en *Menú* > *hosts y clústeres*; a continuación, haga clic con el botón derecho en una máquina virtual, seleccione NetApp SnapCenter y, a continuación, haga clic en image:scpivs44_image6.png["Error: Falta la imagen gráfica"] *Crear Grupo de recursos*. ** Para crear un grupo de recursos para un almacén de datos, haga clic en *Menú* > *hosts y clústeres*; a continuación, haga clic con el botón derecho en un almacén de datos, seleccione *SnapCenter* de NetApp y, a continuación, haga clic en image:scpivs44_image6.png["Error: Falta la imagen gráfica"] *Crear Grupo de recursos*.
-
-. En la página *Información general y notificación* del asistente, haga lo siguiente:
+* Para crear un grupo de recursos para una VM, haga clic en *Menú* > *Hosts and Clusters*, luego haga clic con el botón derecho en una VM, seleccione NetApp SnapCenter y, a continuación, seleccione *Crear grupo de recursos*.
+* Para crear un grupo de recursos para un almacén de datos, haga clic en *Menú* > *Hosts and Clusters*, luego haga clic con el botón derecho en un almacén de datos, seleccione *NetApp SnapCenter* y, a continuación, seleccione *Crear grupo de recursos*.
++
+.. En la página *Información general y notificación* del asistente, haga lo siguiente:
 +
 |===
 | Para este campo… | Haga esto… 
@@ -141,13 +142,13 @@ NOTE: A. `_recent` el backup se crea para cada política que se asocia a un grup
 | Formato de instantánea personalizado  a| 
 Si desea usar un formato personalizado para los nombres de la copia de Snapshot, marque esta casilla y escriba el formato del nombre.
 
-** De forma predeterminada, esta función está deshabilitada.
-** Los nombres de copias Snapshot predeterminados utilizan el formato `<ResourceGroup>_<Date-TimeStamp>`Sin embargo, puede especificar un formato personalizado mediante las variables $ResourceGroup, $Policy, $hostname, $ScheduleType y $CustomText. Utilice la lista desplegable del campo de nombre personalizado para seleccionar las variables que desea utilizar y el orden en el que se utilizan. Si selecciona $CustomText, el formato del nombre es `<CustomName>_<Date-TimeStamp>`. Introduzca el texto personalizado en el cuadro adicional que se proporciona. NOTA: Si también selecciona el sufijo “_Recent”, debe asegurarse de que los nombres de instantánea personalizados sean únicos en el almacén de datos, por lo tanto, debe agregar las variables $ResourceGroup y $Policy al nombre.
-** Caracteres especiales para caracteres especiales en nombres, siga las mismas directrices que se indican para el campo Nombre.
+*** De forma predeterminada, esta función está deshabilitada.
+*** Los nombres de copias Snapshot predeterminados utilizan el formato `<ResourceGroup>_<Date-TimeStamp>`Sin embargo, puede especificar un formato personalizado mediante las variables $ResourceGroup, $Policy, $hostname, $ScheduleType y $CustomText. Utilice la lista desplegable del campo de nombre personalizado para seleccionar las variables que desea utilizar y el orden en el que se utilizan. Si selecciona $CustomText, el formato del nombre es `<CustomName>_<Date-TimeStamp>`. Introduzca el texto personalizado en el cuadro adicional que se proporciona. NOTA: Si también selecciona el sufijo “_Recent”, debe asegurarse de que los nombres de instantánea personalizados sean únicos en el almacén de datos, por lo tanto, debe agregar las variables $ResourceGroup y $Policy al nombre.
+*** Caracteres especiales para caracteres especiales en nombres, siga las mismas directrices que se indican para el campo Nombre.
 
 
 |===
-. En la página *Recursos*, haga lo siguiente:
+.. En la página *Recursos*, haga lo siguiente:
 +
 |===
 | Para este campo… | Haga esto… 
@@ -170,17 +171,17 @@ Si el mensaje `Selected <resource-name> is not SnapCenter compatible` Entonces, 
 +
 Para excluir globalmente uno o varios almacenes de datos de los backups, debe especificar los nombres de los almacenes de datos en la `global.ds.exclusion.pattern` propiedad en la `scbr.override` archivo de configuración. Consulte <<scpivs44_properties_you_can_override.adoc#Properties you can override,Propiedades que se pueden anular>>.
 
-. En la página *Spanning disks*, seleccione una opción para máquinas virtuales con varios VMDK en varios almacenes de datos:
+.. En la página *Spanning disks*, seleccione una opción para máquinas virtuales con varios VMDK en varios almacenes de datos:
 +
-** Always exclude all spanning datastores [este es el comportamiento predeterminado para los almacenes de datos.]
-** Always include all spanning datastores [este es el comportamiento predeterminados para las máquinas virtuales.]
-** Seleccione manualmente los almacenes de datos de expansión que se incluirán
+*** Always exclude all spanning datastores [este es el comportamiento predeterminado para los almacenes de datos.]
+*** Always include all spanning datastores [este es el comportamiento predeterminados para las máquinas virtuales.]
+*** Seleccione manualmente los almacenes de datos de expansión que se incluirán
 +
 Las máquinas virtuales por expansión no son compatibles con los almacenes de datos FlexGroup y VVol.
 
 
 
-. En la página *Policies*, seleccione o cree una o más políticas de copia de seguridad, como se muestra en la siguiente tabla:
+.. En la página *Policies*, seleccione o cree una o más políticas de copia de seguridad, como se muestra en la siguiente tabla:
 +
 |===
 | Para usar… | Haga esto… 
@@ -190,17 +191,17 @@ Las máquinas virtuales por expansión no son compatibles con los almacenes de d
 
 
 | Una política nueva  a| 
-.. Haga clic en image:scpivs44_image6.png["Error: Falta la imagen gráfica"] *Crear*.
-.. Complete el asistente New Backup Policy para volver al asistente Create Resource Group.
+... Seleccione *Crear*.
+... Complete el asistente New Backup Policy para volver al asistente Create Resource Group.
 
 
 |===
 +
 En Linked Mode, la lista incluye políticas en todas las instancias de vCenter vinculadas. Debe seleccionar una política que esté en la misma instancia de vCenter que el grupo de recursos.
 
-. En la página *programaciones*, configure el programa de copia de seguridad para cada directiva seleccionada.
+.. En la página *programaciones*, configure el programa de copia de seguridad para cada directiva seleccionada.
 +
-image:scpivs44_image18.png["Error: Falta la imagen gráfica"]
+image:scpivs44_image18.png["Crear grupo de recursos"]
 
 +
 En el campo Hora de inicio, introduzca una fecha y hora distintas a cero. La fecha debe tener el formato `day/month/year`.
@@ -214,7 +215,7 @@ Debe rellenar todos los campos. El plugin de VMware de SnapCenter crea programac
 +
 link:scpivs44_modify_the_time_zones.html["Modifique las zonas horarias para los backups"].
 
-. Revise el resumen y, a continuación, haga clic en *Finalizar*.
+.. Revise el resumen y, a continuación, haga clic en *Finalizar*.
 +
 Antes de hacer clic en *Finalizar*, puede volver a cualquier página del asistente y cambiar la información.
 
@@ -224,6 +225,8 @@ Después de hacer clic en *Finalizar*, el nuevo grupo de recursos se agrega a la
 +
 
 NOTE: Si la operación de inactividad falla para alguna de las máquinas virtuales del backup, el backup se Marca como no coherente con la máquina virtual aunque la política seleccionada tenga seleccionada la consistencia de la máquina virtual. En este caso, es posible que algunas de las máquinas virtuales se hayan inactivo correctamente.
+
+
 
 
 
@@ -241,7 +244,7 @@ Estos pueden ser los motivos de la incompatibilidad:
 SnapCenter versión 4.x es compatible con ONTAP 8.3.1 y versiones posteriores.
 
 +
-El plugin de SnapCenter para VMware vSphere no realiza comprobaciones de compatibilidad para todas las versiones de ONTAP; solamente para las versiones 8.2.1 y anteriores de ONTAP. Por lo tanto, consulte siempre la https://imt.netapp.com/matrix/imt.jsp?components=108380;&solution=1257&isHWU&src=IMT["Herramienta de matriz de interoperabilidad de NetApp (IMT)"^] Para obtener la información más actualizada sobre compatibilidad con SnapCenter.
+El plugin de SnapCenter para VMware vSphere no realiza comprobaciones de compatibilidad para todas las versiones de ONTAP; solamente para las versiones 8.2.1 y anteriores de ONTAP. Por lo tanto, consulte siempre la https://imt.netapp.com/matrix/imt.jsp?components=112310;&solution=1517&isHWU&src=IMT["Herramienta de matriz de interoperabilidad de NetApp (IMT)"^] Para obtener la información más actualizada sobre compatibilidad con SnapCenter.
 
 * Un dispositivo PCI compartido está conectado a una máquina virtual.
 * No se configuró una IP preferida en SnapCenter.

@@ -40,11 +40,11 @@ En este caso, añada las controladoras SCSI manualmente e intente nuevamente la 
 . En la interfaz gráfica de usuario del cliente de VMware vSphere, haga clic en *Menú* en la barra de herramientas y, a continuación, seleccione *hosts y clústeres* en la lista desplegable.
 . En el panel de navegación de la izquierda, haga clic con el botón derecho en una máquina virtual y seleccione *SnapCenter* de NetApp en la lista desplegable; a continuación, seleccione *Attach virtual disk* en la lista desplegable secundaria.
 +
-image:scpivs44_image22.png["Error: Falta la imagen gráfica"]
+image:scpivs44_image22.png["Asocie la ventana Disco virtual"]
 
 . En la ventana *Attach Virtual Disk*, en la sección *Backup*, seleccione una copia de seguridad.
 +
-Para filtrar la lista de backups, haga clic en el image:scpivs44_image41.png["Error: Falta la imagen gráfica"] Filtre el icono y seleccione un intervalo de fechas y horas, y seleccione si desea que los backups que contengan copias de VMware Snapshot, si desea visualizar los backups montados y la ubicación. Haga clic en *Aceptar*.
+Puede filtrar la lista de backups seleccionando el icono de filtrar y eligiendo un intervalo de fechas y horas. Debe seleccionar también si desea visualizar los backups que contengan copias de Snapshot de VMware, si desea visualizar los backups montados y también la ubicación. Haga clic en *Aceptar*.
 
 . En la sección *Seleccionar discos*, seleccione uno o más discos que desee conectar y la ubicación desde la que desea conectar (principal o secundario).
 +
@@ -62,7 +62,7 @@ Actualice la pantalla para que muestre información actualizada.
 .. En el panel de navegación izquierdo, haga clic con el botón derecho del ratón en una máquina virtual y, a continuación, seleccione *Editar configuración* en la lista desplegable.
 .. En la ventana *Editar configuración*, expanda la lista de cada disco duro para ver la lista de archivos de disco.
 +
-image:scpivs44_image23.png["Error: Falta la imagen gráfica"]
+image:scpivs44_image23.png["Ventana Editar configuración"]
 
 +
 En la página Edit settings se incluyen los discos de la máquina virtual. Puede expandir los detalles de cada disco duro para ver la lista de discos virtuales asociados.

@@ -16,4 +16,4 @@ summary: Puede usar este flujo de trabajo si no utilizó SnapCenter antes y no p
 [role="lead"]
 Si no ha usado SnapCenter antes y no tiene ningún backup de SnapCenter, use el siguiente flujo de trabajo para comenzar.
 
-image:scpivs44_image2.png["Error: Falta la imagen gráfica"]
+image:scpivs44_image2.png["Flujo de trabajo de puesta en marcha para nuevos usuarios"]

@@ -32,6 +32,6 @@ Puede buscar y encontrar un backup específico de una máquina virtual o de un a
 . Opcional: Haga clic con el botón derecho en una máquina virtual o un almacén de datos y seleccione *SnapCenter* de NetApp en la lista desplegable; a continuación, seleccione *Restaurar* en la lista desplegable secundaria.
 . En el asistente *Restaurar*, introduzca un nombre de búsqueda y haga clic en *Buscar*.
 +
-Para filtrar la lista de backups, haga clic en el image:scpivs44_image41.png["Error: Falta la imagen gráfica"] Filtrar el icono y seleccionar un intervalo de fechas y horas, y seleccionar si desea backups que contengan snapshots de VMware, si desea visualizar backups montados y la ubicación. Haga clic en *Aceptar*.
+Puede filtrar la lista de backups seleccionando el icono de filtrar y seleccionando un intervalo de fechas y horas. Debe seleccionar también si desea visualizar los backups que contengan snapshots de VMware, si desea visualizar los backups montados y también la ubicación. Haga clic en *Aceptar*.
 
 

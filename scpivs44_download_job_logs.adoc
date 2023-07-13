@@ -23,7 +23,7 @@ NOTE: El valor predeterminado para retener registros de trabajos es de 30 días;
 
 .Pasos
 . En el panel de navegación izquierdo del cliente de vSphere, haga clic en *Dashboard*, seleccione una instancia de vCenter Server y, a continuación, haga clic en la pestaña *Job Monitor* del panel Dashboard.
-. Haga clic en la image:scpivs44_image37.png["Error: Falta la imagen gráfica"] El icono de descarga de la barra de título Job Monitor.
+. Seleccione el icono de descarga en la barra de título Job Monitor.
 +
 Es posible que deba desplazarse a la derecha para ver el icono.
 

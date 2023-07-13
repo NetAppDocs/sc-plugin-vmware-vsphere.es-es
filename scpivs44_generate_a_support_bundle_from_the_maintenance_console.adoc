@@ -21,7 +21,7 @@ summary: Puede generar un paquete de soporte desde la consola de mantenimiento.
 Para obtener información sobre el acceso a la consola de mantenimiento y el inicio de sesión, consulte link:scpivs44_access_the_maintenance_console.html["Acceda a la Consola de mantenimiento"^].
 
 +
-image:scpivs44_image11.png["Error: Falta la imagen gráfica"]
+image:scpivs44_image11.png["Ventana de la consola de mantenimiento"]
 
 . En el menú principal, introduzca la opción *4) Soporte y diagnóstico*.
 . En el menú Soporte y diagnóstico, introduzca la opción *1) generar paquete de soporte*.

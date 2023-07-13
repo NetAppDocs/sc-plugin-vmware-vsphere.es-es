@@ -19,9 +19,9 @@ Después de ejecutar una operación de protección de datos mediante el cliente 
 .Pasos
 . En el panel de navegación izquierdo del cliente de vSphere, haga clic en *Dashboard*, cuando dos o más vCenter estén configurados en modo vinculado, seleccione una instancia de vCenter Server y, a continuación, haga clic en la pestaña *Job Monitor* en el panel Dashboard. En la pestaña Job Monitor, se enumera cada trabajo y su estado, hora de inicio y hora de finalización. Si los nombres de los trabajos son extensos, es posible que deba desplazarse a la derecha para ver las horas de inicio y de finalización. La pantalla se actualiza cada 30 segundos.
 +
-** Haga clic en la image:scpivs44_image36.png["Error: Falta la imagen gráfica"] actualice el icono de la barra de herramientas para actualizar la pantalla bajo demanda.
-** Haga clic en la image:scpivs44_image41.png["Error: Falta la imagen gráfica"] icono de filtro para seleccionar el rango de horas, el tipo, la etiqueta y el estado de los trabajos que desea que se muestren. El filtro distingue entre mayúsculas y minúsculas.
-** Haga clic en la image:scpivs44_image36.png["Error: Falta la imagen gráfica"] Icono de actualización de la ventana Job Details para actualizar la pantalla mientras el trabajo está en ejecución.
+** Seleccione el icono de actualización de la barra de herramientas para actualizar la pantalla a petición.
+** Seleccione el icono de filtro para elegir el rango de horas, el tipo, la etiqueta y el estado de los trabajos que desea que se muestren. El filtro distingue entre mayúsculas y minúsculas.
+** Seleccione el icono de actualización en la ventana Job Details para actualizar la pantalla mientras el trabajo está en ejecución.
 
 
 

@@ -29,10 +29,10 @@ IMPORTANT: Si añadió máquinas virtuales de almacenamiento para operaciones de
 
 .Pasos
 . En el panel de navegación izquierdo del plugin de SCV, haga clic en *sistemas de almacenamiento*.
-. En la página *Storage Systems*, seleccione el equipo virtual de almacenamiento que desea modificar y, a continuación, haga clic en image:scpivs44_image25.png["Error: Falta la imagen gráfica"] *Edición*.
+. En la página *Sistemas de almacenamiento*, seleccione la VM de almacenamiento que se va a modificar y luego seleccione *Editar*.
 . En la ventana *Editar sistema de almacenamiento*, introduzca los nuevos valores y, a continuación, haga clic en *Actualizar* para aplicar los cambios.
 +
-image:scpivs44_image43.png["Error: Falta la imagen gráfica"]
+image:scpivs44_image43.png["Editar la ventana Sistemas de almacenamiento"]
 
 
 

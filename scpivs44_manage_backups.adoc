@@ -25,7 +25,7 @@ Es posible cambiar el nombre de los backups del plugin de SnapCenter para VMware
 .Pasos
 . Haga clic en *Menú* y seleccione la opción de menú *hosts y clústeres*, a continuación, seleccione una máquina virtual, seleccione la ficha *Configurar* y, a continuación, haga clic en *copias de seguridad* en la sección *SnapCenter Plug-in for VMware vSphere*.
 +
-image:scpivs44_image14.png["Error: Falta la imagen gráfica"]
+image:scpivs44_image14.png["Pantalla del cliente de vSphere"]
 
 . En la ficha Configurar, seleccione una copia de seguridad y haga clic en *Cambiar nombre*.
 . En el cuadro de diálogo *Renombrar copia de seguridad*, introduzca el nuevo nombre y haga clic en *Aceptar*.
@@ -48,7 +48,7 @@ Las copias de Snapshot en almacenamiento secundario se gestionan mediante su con
 
 . Haga clic en *Menú* y seleccione la opción de menú *hosts y clústeres*, a continuación, seleccione una máquina virtual, seleccione la ficha *Configurar* y, a continuación, haga clic en *copias de seguridad* en la sección *SnapCenter Plug-in for VMware vSphere*.
 +
-image:scpivs44_image14.png["Error: Falta la imagen gráfica"]
+image:scpivs44_image14.png["Ventana del cliente de vSphere"]
 
 . Seleccione una o más copias de seguridad y haga clic en *Eliminar*.
 +

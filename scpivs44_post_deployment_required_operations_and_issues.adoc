@@ -14,7 +14,11 @@ summary: Después de implementar el plugin de SnapCenter para VMware vSphere, de
 
 
 [role="lead"]
-Después de implementar el plugin de SnapCenter para VMware vSphere, debe completar la instalación. == operaciones necesarias tras la implementación
+Después de implementar el plugin de SnapCenter para VMware vSphere, debe completar la instalación.
+
+
+
+== Operaciones necesarias tras la puesta en marcha
 
 Si es un usuario de SnapCenter nuevo, debe añadir máquinas virtuales de almacenamiento a SnapCenter para poder ejecutar cualquier operación de protección de datos. Al agregar máquinas virtuales de almacenamiento, especifique la LIF de gestión. También puede agregar un clúster y especificar la LIF de gestión de clústeres. Para obtener información sobre cómo añadir almacenamiento, consulte link:scpivs44_add_storage_01.html["Añada almacenamiento"^].
 
@@ -53,7 +57,7 @@ Si el problema persiste, reinicie el servicio del cliente de VMware vSphere
 Si no utiliza las credenciales de administrador, es posible que reciba un error de autenticación después de implementar el plugin de SnapCenter para VMware vSphere o después de migrar. Si se encuentra con un error de autenticación, debe reiniciar el servicio.
 
 .Pasos
-. Inicie sesión en la interfaz gráfica de usuario de la gestión del plugin de VMware de SnapCenter con el formato `https://<appliance-IP-address>:8080`.
+. Inicie sesión en la interfaz gráfica de usuario de la gestión del plugin de VMware de SnapCenter con el formato `https://<appliance-IP-address>:8080`. Use el nombre de usuario de administrador, la contraseña y los detalles del token de MFA para iniciar sesión. El token MFA se puede generar desde la consola de mantenimiento.
 . Reinicie el servicio.
 
 
@@ -101,7 +105,7 @@ Puede registrar varias instancias del plugin de SnapCenter para VMware vSphere e
 +
 Cuando el host de máquina virtual se añade correctamente, se muestra en la pestaña Managed hosts.
 
-. En el panel de navegación izquierdo, haga clic en *Configuración*, luego en la ficha *credenciales* y, a continuación, haga clic en image:scpivs44_image6.png["Error: Falta la imagen gráfica"] *Agregar* para agregar credenciales para el dispositivo virtual.
+. En el panel de navegación de la izquierda, haga clic en *Configuración*, luego haga clic en la pestaña *Credencial* y luego seleccione *Agregar* para agregar credenciales para el dispositivo virtual.
 . Proporcione la información de credenciales que se especificó durante la implementación del plugin de SnapCenter para VMware vSphere.
 +
 

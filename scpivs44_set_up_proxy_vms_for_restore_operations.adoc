@@ -28,7 +28,7 @@ Si desea utilizar una máquina virtual proxy para asociar un disco virtual para 
 
 
 | Añadir nuevas credenciales  a| 
-.. Haga clic en image:scpivs44_image6.png["Error: Falta la imagen gráfica"] *Agregar*.
+.. Seleccione *Agregar*.
 .. En el cuadro de diálogo *credenciales Run as*, introduzca las credenciales.
 .. Haga clic en *Seleccionar VM* y, a continuación, seleccione una VM en el cuadro de diálogo *Proxy VM*. Haga clic en *Guardar* para volver al cuadro de diálogo *Ejecutar como credenciales*.
 .. Introduzca las credenciales. En Nombre de usuario, debe introducir “Administrador”.

@@ -30,4 +30,4 @@ En configuraciones de MetroCluster:
 
 En la siguiente figura de flujos de trabajo, se muestra la secuencia que debe seguirse para ejecutar la operación de backup:
 
-image:scpivs44_image13.png["Error: Falta la imagen gráfica"]
+image:scpivs44_image13.png["Flujo de trabajo de operaciones de backup"]

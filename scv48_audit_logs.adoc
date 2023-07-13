@@ -52,13 +52,15 @@ La integridad de los registros de auditoría acumulados se verifica periódicame
 | NORMAL | El archivo de registro de auditoría no está modificado 
 
 
-| ELIMINACIÓN DINÁMICA | * El archivo de registro de auditoría se elimina según la retención * de forma predeterminada, sólo se conservan 10 archivos 
+| ELIMINACIÓN DINÁMICA | - El archivo de registro de auditoría se elimina en función de la retención
+- Por defecto, solo se conservan 10 archivos 
 
 
 | ELIMINACIÓN INESPERADA | Se elimina el archivo de registro de auditoría 
 
 
-| ACTIVO | * El archivo de registro de auditoría está en uso * sólo aplicable a audit.log 
+| ACTIVO | - El archivo de registro de auditoría está en uso
+- Solo aplicable a audit.log 
 |===
 Los eventos se clasifican en tres categorías principales:
 
@@ -143,4 +145,49 @@ Se auditan las siguientes operaciones en la interfaz de usuario de la Consola de
 ** Activación/desactivación del plug-in
 
 
+
+
+
+
+== Configurar los servidores de syslog
+
+Los registros de auditoría se almacenan en el dispositivo y se verifican periódicamente para comprobar que están completos. El reenvío de eventos le permite obtener eventos del equipo de origen o de reenvío y almacenarlos en un equipo centralizado, que es el servidor de syslog. Los datos se cifran en tránsito entre el origen y el destino.
+
+.Antes de empezar
+Debe tener privilegios de administrador.
+
+.Acerca de esta tarea
+Esta tarea permite configurar el servidor de syslog.
+
+.Pasos
+. Inicie sesión en el plugin de SnapCenter para VMware vSphere.
+. En el panel de navegación de la izquierda, selecciona *Ajustes* > *Registros de auditoría* > *Ajustes*.
+. En el panel *Configuración del registro de auditoría*, seleccione *Enviar registros de auditoría al servidor Syslog*
+. Introduzca los siguientes detalles:
++
+** IP del servidor de syslog
+** Puerto de servidor de syslog
+** Formato RFC
+** Certificado de servidor de syslog
+
+
+. Haga clic en *SAVE* para guardar la configuración del servidor Syslog.
+
+
+
+
+== Cambiar la configuración del registro de auditoría
+
+Es posible cambiar las configuraciones predeterminadas de los ajustes de registro.
+
+.Antes de empezar
+Debe tener privilegios de administrador.
+
+.Acerca de esta tarea
+Esta tarea permite cambiar la configuración predeterminada del registro de auditoría.
+
+.Pasos
+. Inicie sesión en el plugin de SnapCenter para VMware vSphere.
+. En el panel de navegación de la izquierda, selecciona *Ajustes* > *Registros de auditoría* > *Ajustes*.
+. En el panel *Configuración del registro de auditoría*, ingrese el *Número de entradas de auditoría* y *Límite de tamaño del registro de auditoría* de acuerdo con sus requisitos.
 

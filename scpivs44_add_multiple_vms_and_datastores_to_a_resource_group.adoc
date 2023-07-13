@@ -30,7 +30,7 @@ El grupo de recursos puede contener uno de los siguientes elementos:
 NOTE: No se admiten las máquinas virtuales VVol que abarcan varios almacenes de datos de VVol, ya que SnapCenter solo realiza backups de vVols en el almacén de datos VVol primario, seleccionado.
 
 .Pasos
-. En el panel de navegación izquierdo del plugin de SCV, haga clic en *Resource Groups*, después seleccione un grupo de recursos y, a continuación, haga clic en image:scpivs44_image39.png["Error: Falta la imagen gráfica"] *Editar grupo de recursos* para iniciar el asistente.
+. En el panel de navegación izquierdo del plugin de SCV, haga clic en *Resource Groups*, después seleccione un grupo de recursos y, a continuación, haga clic en image:scpivs44_image39.png["icono editar"] *Editar grupo de recursos* para iniciar el asistente.
 . En la página *recurso*, haga lo siguiente:
 +
 .. En el campo datastores, desplácese hasta las máquinas virtuales o los almacenes de datos que desea añadir.

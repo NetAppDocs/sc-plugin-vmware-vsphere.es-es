@@ -24,7 +24,7 @@ La pestaña Reports contiene información sobre los trabajos seleccionados en la
 +
 .. Modifique el informe
 +
-Haga clic en la image:scpivs44_image41.png["Error: Falta la imagen gráfica"] icono de filtro para modificar el intervalo de tiempo, el tipo de estado del trabajo, los grupos de recursos y las políticas que deben incluirse en el informe.
+Seleccione el icono de filtro para modificar el intervalo de tiempo, el tipo de estado del trabajo, los grupos de recursos y las políticas que deben incluirse en el informe.
 
 .. Generar un informe detallado
 +
@@ -34,7 +34,7 @@ Haga doble clic en cualquier trabajo para generar un informe detallado para ese 
 
 . Opcional: En la ficha Reports, haga clic en *Download* y seleccione el formato (HTML o CSV).
 +
-También puede hacer clic en el image:scpivs44_image37.png["Error: Falta la imagen gráfica"] el icono de descarga para descargar registros de plugins.
+También es posible hacer clic en el icono de descarga para descargar registros de plugins.
 
 
 
