@@ -44,3 +44,6 @@ Las credenciales Run as deben ser del administrador de dominio predeterminado qu
 . En la sección *credenciales de proxy*, haga clic en *Agregar* para agregar una VM que se utilizará como proxy.
 . En el cuadro de diálogo *Proxy VM*, complete la información y, a continuación, haga clic en *Guardar*.
 
+
+
+NOTE: Tiene que eliminar la máquina virtual proxy de la interfaz de usuario del plugin de SnapCenter para VMware vSphere antes de eliminarla de ESXi.
