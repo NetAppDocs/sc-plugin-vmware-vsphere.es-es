@@ -32,6 +32,19 @@ Para obtener información acerca de cómo los administradores asignan recursos a
 
 
 * Si desea realizar backups consistentes con la máquina virtual, debe tener instaladas y en ejecución las herramientas de VMware. Se necesitan herramientas de VMware para desactivar las máquinas virtuales. No se admiten backups consistentes con las máquinas virtuales para máquinas virtuales VVol.
+* SnapMirror Business Continuity (SM-BC) permite que los servicios empresariales sigan funcionando incluso si se produce un fallo completo en el sitio, lo que permite a las aplicaciones conmutar por error de forma transparente mediante una copia secundaria.
++
+
+NOTE: SM-BC solo es compatible con almacenes de datos VMFS.
+
++
+Para proteger un almacén de datos VMFS en una implementación de SM-BC, como administrador de SnapCenter, necesita:
+
++
+** Configure clústeres y mediador tal y como se describe en el informe técnico: https://www.netapp.com/pdf.html?item=/media/21888-tr-4878.pdf["TR-4878: Continuidad del negocio de SnapMirror"].
+** Añada el volumen asociado con el almacén de datos VMFS al grupo de coherencia y cree una relación de protección de datos mediante la política de protección _AutomatedFailOver_ entre dos sistemas de almacenamiento de ONTAP.
+
+
 
 
 .Acerca de esta tarea
@@ -55,6 +68,11 @@ Se permite el carácter de guion bajo (_).
 
 
 
+. Especifique la configuración de frecuencia.
++
+La política especifica solamente la frecuencia de backup. La programación de protección específica para realizar el backup se define en el grupo de recursos. Por lo tanto, dos o más grupos de recursos pueden compartir la misma política y frecuencia de backup y, a su vez, tener diferentes programaciones de backup.
+
+. Seleccione la casilla de verificación *período de bloqueo* para habilitar el bloqueo de instantáneas. Puede seleccionar el período de bloqueo de instantáneas como días/meses/años.
 . Especifique la configuración de retención.
 +
 
@@ -63,10 +81,6 @@ IMPORTANT: Debe establecer el número de retención en 2 backups o un valor más
 +
 
 NOTE: El valor de retención máximo es de 1018 backups para recursos en ONTAP 9.4 o posterior, y 254 backups para recursos en ONTAP 9.3 o anterior. Se producirá un error en los backups si la retención se establece en un valor superior a la versión de ONTAP subyacente. Esto también se aplica a almacenes de datos de expansión. Si un almacén de datos con extensión incluye recursos en ONTAP 9.3 y versiones anteriores, y en ONTAP 9.4 y versiones posteriores, asegúrese de configurar el valor de retención por debajo de 254.
-
-. Especifique la configuración de frecuencia.
-+
-La política especifica solamente la frecuencia de backup. La programación de protección específica para realizar el backup se define en el grupo de recursos. Por lo tanto, dos o más grupos de recursos pueden compartir la misma política y frecuencia de backup y, a su vez, tener diferentes programaciones de backup.
 
 . En los campos *replicación*, especifique el tipo de replicación al almacenamiento secundario, como se muestra en la siguiente tabla:
 +
@@ -79,6 +93,9 @@ Seleccione esta opción para crear copias reflejadas de los conjuntos de backups
 
 
 NOTE: Esta opción es compatible para almacenes de datos en FlexGroup Volumes en el plugin de SnapCenter para VMware vSphere 4.5 y versiones posteriores.
+
+
+NOTE: Para proteger el almacén de datos VMFS en la implementación de SM-BC, debe completar los requisitos previos mencionados en la sección _Antes de comenzar_ y habilitar *Actualizar SnapMirror después de la copia de seguridad*.
 
 
 

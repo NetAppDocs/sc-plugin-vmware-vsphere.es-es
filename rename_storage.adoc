@@ -1,0 +1,59 @@
+---
+sidebar: sidebar 
+permalink: rename_storage.html 
+keywords:  
+summary: Es posible cambiar el nombre del almacenamiento con la API de REST. 
+---
+= Restaurar copia de seguridad de almacenamiento renombrado
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Cuando se cambia el nombre del almacenamiento, se utilizan los flujos de trabajo utilizando los backups necesarios antes de que el nombre se restablezca. Con la introducción de la función de backup de cambio de nombre, a la que se puede acceder exclusivamente mediante la API DE REST, ahora es posible usar los backups realizados antes del cambio de nombre del almacenamiento. A continuación, se describen el flujo de trabajo y el uso de la API DE REST.
+
+.Pasos
+. Añada o actualice la nueva conexión de almacenamiento, asegurando que el nuevo nombre del clúster o SVM se refleje en SCV.
+. Reinicie el servicio para refrescar las cachés como se describe en el artículo de la base de conocimientos: https://kb.netapp.com/mgmt/SnapCenter/SCV_backups_fail_after_SVM_rename["Error en los backups de SCV después de cambiar el nombre de SVM"]
+. Cree un nuevo backup.
+. Utilice los detalles de las copias de seguridad para buscar los nombres de almacenamiento antiguos y nuevos.
+. En la pantalla *backups* del cliente vSphere, seleccione la copia de seguridad para ver sus detalles.
+. Acceda a Swagger desde la URL: https://<SCV-IP>:8144/api/swagger-ui/index.html[]
++
+Use la siguiente API para cambiar el nombre del almacenamiento:
+
++
+PARCHE
+/4,1/sistema de almacenamiento
+
++
+Ejemplo:
+{
+  «ExistingSVM»: {
+    nombre: «string»
+  },
+  «NewSVM»: {
+    nombre: «string»
+  }
+}
+
++
+Respuesta:
+
++
+{
+  «StatusMessage»: «OK»,
+  «StatusCode»: 200,
+  «ResponseMessage»: [
+    El nombre del sistema de almacenamiento se ha cambiado correctamente.
+  ]
+}
+
++
+Después de ejecutar esta API, podrá ejecutar todos los flujos de trabajo, incluida la operación de restauración desde el backup anterior.
+
+

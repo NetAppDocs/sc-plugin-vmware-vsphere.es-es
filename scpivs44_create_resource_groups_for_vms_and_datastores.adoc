@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: scpivs44_create_resource_groups_for_vms_and_datastores.html 
 keywords:  
-summary: Un grupo de recursos es el contenedor para máquinas virtuales, almacenes de datos o máquinas virtuales vVols que desea proteger. 
+summary: Un grupo de recursos es el contenedor para máquinas virtuales, almacenes de datos, etiquetas de vSphere y carpetas de máquinas virtuales de vSphere que desea proteger. 
 ---
 = Crear grupos de recursos
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: Un grupo de recursos es el contenedor para máquinas virtuales, almacen
 
 
 [role="lead"]
-Un grupo de recursos es el contenedor para máquinas virtuales, almacenes de datos y máquinas virtuales VVol que se desea proteger.
+Un grupo de recursos es el contenedor para máquinas virtuales, almacenes de datos, etiquetas de vSphere y carpetas de máquinas virtuales de vSphere que desea proteger.
 
 Un grupo de recursos puede contener lo siguiente:
 
@@ -34,9 +34,9 @@ Uno o varios almacenes de datos FlexVol. Se admiten almacenes de datos expansivo
 +
 Una o más máquinas virtuales VVol. No es posible combinar máquinas virtuales de VVol con almacenes de datos o máquinas virtuales tradicionales.
 
-* Máquinas virtuales VVol con una etiqueta
+* Etiqueta de vSphere
 +
-Todas las máquinas virtuales de VVol con una etiqueta de vCenter especificada. No se admiten otras entidades con etiquetas, como almacenes de datos o máquinas virtuales tradicionales, con la misma etiqueta en la misma instancia de vCenter o en una instancia diferente de vCenter. Si la lista de máquinas virtuales con la etiqueta especificada contiene una combinación de máquinas virtuales VVol y máquinas virtuales tradicionales, el plugin de SnapCenter para VMware vSphere realiza un backup de las máquinas virtuales VVol y omite las máquinas virtuales tradicionales.
+Todas las máquinas virtuales y almacenes de datos, excepto los almacenes de datos de VVol, que tienen la etiqueta de vSphere especificada.
 
 * Máquinas virtuales VVol en una carpeta
 +
@@ -84,7 +84,13 @@ Para optimizar las copias de Snapshot, debe agrupar las máquinas virtuales y lo
 
 * Política de backup
 +
-Aunque es posible crear un grupo de recursos sin una política de backup, solo puede ejecutar operaciones de protección de datos programadas cuando se asocia al menos una política al grupo de recursos. Puede usar una política existente, o bien crear una nueva mientras crea un grupo de recursos.
+Si bien puede crear un grupo de recursos sin una política de backup, las operaciones de protección de datos solo son posibles cuando se asocia al menos una política al grupo de recursos. Tiene la opción de usar una política existente o crear una nueva durante el proceso de creación del grupo de recursos.
+
++
+
+NOTE: Si tiene que seleccionar una política de backup con período de bloqueo de Snapshot, debe seleccionar ONTAP 9.12.1 o una versión posterior.
+
+
 
 * Comprobación de compatibilidad
 +
@@ -154,7 +160,13 @@ Si desea usar un formato personalizado para los nombres de la copia de Snapshot,
 | Para este campo… | Haga esto… 
 
 
-| Ámbito | Seleccione el tipo de recurso que desea proteger: * Datastores (todas las máquinas virtuales tradicionales de uno o más almacenes de datos especificados). No se puede seleccionar un almacén de datos de VVol. * Máquinas virtuales (máquinas virtuales VVol o máquinas virtuales individuales; en el campo, debe navegar hasta el almacén de datos que contiene las máquinas virtuales o VVol). No es posible seleccionar máquinas virtuales individuales en un almacén de datos de FlexGroup. * Tags (todas las máquinas virtuales VVol con una única etiqueta de VMware especificada; en el cuadro de lista debe introducir la etiqueta) * VM Folder (todas las máquinas virtuales VVol en una carpeta especificada; en el campo emergente debe desplazarse al centro de datos en el que se encuentra la carpeta) 
+| Ámbito | Seleccione el tipo de recurso que desea proteger:
+* Almacenes de datos (todas las máquinas virtuales tradicionales en uno o más almacenes de datos especificados). No se puede seleccionar un almacén de datos de VVol.
+* Máquinas virtuales (máquinas virtuales VVol o máquinas virtuales individuales; en el campo, debe navegar hasta el almacén de datos que contiene las máquinas virtuales o VVol).
+No es posible seleccionar máquinas virtuales individuales en un almacén de datos de FlexGroup.
+* Etiquetas
+La protección de almacenes de datos basada en etiquetas solo se admite para almacenes de datos NFS y VMFS, así como para máquinas virtuales y máquinas virtuales VVol.
+* Carpeta VM (todas las VM VVol en una carpeta especificada; en el campo emergente debe navegar al centro de datos en el que se encuentra la carpeta) 
 
 
 | Centro de datos | Desplácese hasta las máquinas virtuales o los almacenes de datos o la carpeta que desea añadir. 
@@ -173,8 +185,8 @@ Para excluir globalmente uno o varios almacenes de datos de los backups, debe es
 
 .. En la página *Spanning disks*, seleccione una opción para máquinas virtuales con varios VMDK en varios almacenes de datos:
 +
-*** Always exclude all spanning datastores [este es el comportamiento predeterminado para los almacenes de datos.]
-*** Always include all spanning datastores [este es el comportamiento predeterminados para las máquinas virtuales.]
+*** Always exclude all spanning datastores (este es el comportamiento predeterminado para los almacenes de datos).
+*** Always include all spanning datastores (este es el comportamiento predeterminados para las máquinas virtuales).
 *** Seleccione manualmente los almacenes de datos de expansión que se incluirán
 +
 Las máquinas virtuales por expansión no son compatibles con los almacenes de datos FlexGroup y VVol.

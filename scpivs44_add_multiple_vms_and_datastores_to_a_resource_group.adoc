@@ -22,7 +22,7 @@ El grupo de recursos puede contener uno de los siguientes elementos:
 * Un almacén de datos FlexGroup (no se admiten las máquinas virtuales de expansión).
 * Uno o más almacenes de datos FlexVol (se admiten las máquinas virtuales de expansión).
 * Una o más máquinas virtuales VVol.
-* Todas las máquinas virtuales de VVol con una etiqueta de vCenter especificada.
+* Todas las máquinas virtuales de VVol con una etiqueta de vSphere especificada.
 * Todas las máquinas virtuales VVol en una carpeta específica.
 
 

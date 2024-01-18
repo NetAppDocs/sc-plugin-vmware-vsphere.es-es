@@ -59,14 +59,25 @@ Generar Token MFA
 
 NOTE: MFA está siempre habilitado, no se puede deshabilitar la MFA.
 
-** Opción 3: Configuración de red
+
+
+
+
 +
-Mostrar o cambiar la configuración de la dirección IP Mostrar o cambiar la configuración de búsqueda de nombres de dominio Mostrar o cambiar las rutas estáticas realizar cambios ping a un host
+* Opción 3: Configuración de red
 
-** Opción 4: Soporte y diagnóstico
 +
-Genere un shell de diagnóstico de acceso al bundle de soporte Habilitar el acceso remoto a diagnóstico genere un paquete de volcado de memoria
+Mostrar o cambiar la configuración de la dirección IP
+Mostrar o cambiar la configuración de búsqueda de nombres de dominio
+Mostrar o cambiar rutas estáticas
+Confirmar cambios
+Hacer ping a un host
 
++
+* Opción 4: Soporte y Diagnóstico
 
-
-
++
+Genere el bundle de soporte
+Acceder al shell de diagnóstico
+Active el acceso de diagnóstico remoto
+Genere paquete de volcado de memoria

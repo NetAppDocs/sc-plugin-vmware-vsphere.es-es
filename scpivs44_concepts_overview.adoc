@@ -54,7 +54,7 @@ El flujo de trabajo de restauración para el sistema de archivos de VMware (VMFS
 +
 La mayoría de las operaciones de restauración en entornos de NFS utilizan la funcionalidad ONTAP nativa (por ejemplo, Single File SnapRestore) y no requieren VMware Storage vMotion.
 
-* Se requieren las herramientas de ONTAP para VMware vSphere para configurar las máquinas virtuales de VVol de VMware.
+* Se requieren las herramientas de ONTAP para VMware vSphere para configurar máquinas virtuales VMware VVOL.
 +
 Las herramientas de ONTAP se utilizan para aprovisionar y configurar el almacenamiento para vVols en ONTAP y en el cliente web de VMware.
 

@@ -14,7 +14,7 @@ summary: Debe conocer los requisitos de puesta en marcha antes de poner en march
 
 
 [role="lead"]
-Debe conocer los requisitos de puesta en marcha antes de poner en marcha el dispositivo virtual. Los requisitos de implementación se enumeran en las cinco tablas siguientes.
+Debe conocer los requisitos de puesta en marcha antes de poner en marcha el dispositivo virtual. Los requisitos de implementación se enumeran en las siguientes tablas.
 
 
 
@@ -162,7 +162,7 @@ Para obtener la información más reciente sobre las versiones compatibles, cons
 | Puerto del plugin de SnapCenter para VMware vSphere  a| 
 8144 (HTTPS), bidireccional que el puerto se utiliza para las comunicaciones desde el cliente VMware vSphere y desde el servidor SnapCenter. 8080 bidireccional este puerto se utiliza para gestionar el dispositivo virtual.
 
-Nota: No puede modificar la configuración de puertos.
+Nota: Se admite el puerto personalizado para añadir el host de SCV a SnapCenter.
 
 
 
