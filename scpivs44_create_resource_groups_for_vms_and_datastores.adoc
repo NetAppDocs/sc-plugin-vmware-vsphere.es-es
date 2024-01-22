@@ -50,7 +50,7 @@ Para todos los grupos de recursos:
 IMPORTANT: Si utiliza VMware vSphere Cluster Service (VCL), no incluya máquinas virtuales gestionadas por VCL en grupos de recursos del plugin de VMware de SnapCenter.
 
 
-TIP: El complemento SnapCenter para VMware vSphere 4.5 y versiones posteriores admiten almacenes de datos en LUN de gran tamaño de hasta 128 TB en agregados de ASA. Si va a proteger LUN de gran tamaño, utilice solo LUN con aprovisionamiento grueso para evitar la latencia.
+TIP: El plugin de SnapCenter para VMware vSphere 4,5 y versiones posteriores admite almacenes de datos en LUN de gran tamaño y archivos de hasta 128TB con volúmenes de hasta 300 TB. Si va a proteger LUN de gran tamaño, utilice solo LUN con aprovisionamiento grueso para evitar la latencia.
 
 
 IMPORTANT: No se deben añadir máquinas virtuales que estén en estado inaccesible. Aunque es posible crear un grupo de recursos que contenga máquinas virtuales inaccesibles, se producirá un error en los backups de ese grupo de recursos.
@@ -149,7 +149,11 @@ NOTE: A. `_recent` el backup se crea para cada política que se asocia a un grup
 Si desea usar un formato personalizado para los nombres de la copia de Snapshot, marque esta casilla y escriba el formato del nombre.
 
 *** De forma predeterminada, esta función está deshabilitada.
-*** Los nombres de copias Snapshot predeterminados utilizan el formato `<ResourceGroup>_<Date-TimeStamp>`Sin embargo, puede especificar un formato personalizado mediante las variables $ResourceGroup, $Policy, $hostname, $ScheduleType y $CustomText. Utilice la lista desplegable del campo de nombre personalizado para seleccionar las variables que desea utilizar y el orden en el que se utilizan. Si selecciona $CustomText, el formato del nombre es `<CustomName>_<Date-TimeStamp>`. Introduzca el texto personalizado en el cuadro adicional que se proporciona. NOTA: Si también selecciona el sufijo “_Recent”, debe asegurarse de que los nombres de instantánea personalizados sean únicos en el almacén de datos, por lo tanto, debe agregar las variables $ResourceGroup y $Policy al nombre.
+*** Los nombres de copias Snapshot predeterminados utilizan el formato `<ResourceGroup>_<Date-TimeStamp>`
+Sin embargo, puede especificar un formato personalizado mediante las variables $ResourceGroup, $Policy, $hostname, $ScheduleType y $CustomText. Utilice la lista desplegable del campo de nombre personalizado para seleccionar las variables que desea utilizar y el orden en el que se utilizan.
+Si selecciona $CustomText, el formato del nombre es `<CustomName>_<Date-TimeStamp>`. Introduzca el texto personalizado en el cuadro adicional que se proporciona.
+[NOTA]:
+Si también selecciona el sufijo «_recent», debe asegurarse de que los nombres de Snapshot personalizados sean únicos en el almacén de datos, por lo tanto, debe añadir las variables $ResourceGroup y $Policy al nombre.
 *** Caracteres especiales para caracteres especiales en nombres, siga las mismas directrices que se indican para el campo Nombre.
 
 
@@ -169,7 +173,8 @@ La protección de almacenes de datos basada en etiquetas solo se admite para alm
 * Carpeta VM (todas las VM VVol en una carpeta especificada; en el campo emergente debe navegar al centro de datos en el que se encuentra la carpeta) 
 
 
-| Centro de datos | Desplácese hasta las máquinas virtuales o los almacenes de datos o la carpeta que desea añadir. 
+| Centro de datos | Desplácese hasta las máquinas virtuales o los almacenes de datos o la carpeta que desea añadir.
+Los nombres de máquinas virtuales y almacenes de datos de un grupo de recursos deben ser únicos. 
 
 
 | Entidades disponibles | Seleccione los recursos que desea proteger y, a continuación, haga clic en *>* para mover las selecciones a la lista Selected Entities. 

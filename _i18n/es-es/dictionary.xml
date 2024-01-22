@@ -828,7 +828,6 @@
   <block id="dc9d5117fa27f9852d62a28174a9c1bf" category="paragraph">Todos los vVols en una única carpeta VVol especificada. Si la carpeta contiene una combinación de máquinas virtuales de VVol y máquinas virtuales tradicionales, el plugin de SnapCenter para VMware vSphere realiza backups de las máquinas virtuales de VVol y omite las máquinas virtuales tradicionales.</block>
   <block id="c7fda16b0d034ce0f2afcab4d2064e02" category="paragraph">Para todos los grupos de recursos:</block>
   <block id="32e5f7f976ca899df5a227d732f28456" category="admonition">Si utiliza VMware vSphere Cluster Service (VCL), no incluya máquinas virtuales gestionadas por VCL en grupos de recursos del plugin de VMware de SnapCenter.</block>
-  <block id="c8e385cc7a112ebc9131fa51b5a3767b" category="admonition">El complemento SnapCenter para VMware vSphere 4.5 y versiones posteriores admiten almacenes de datos en LUN de gran tamaño de hasta 128 TB en agregados de ASA. Si va a proteger LUN de gran tamaño, utilice solo LUN con aprovisionamiento grueso para evitar la latencia.</block>
   <block id="14a4c06df8c2378b5b2b307902f01931" category="admonition">No se deben añadir máquinas virtuales que estén en estado inaccesible. Aunque es posible crear un grupo de recursos que contenga máquinas virtuales inaccesibles, se producirá un error en los backups de ese grupo de recursos.</block>
   <block id="a751540accbac3082773b3074f77377e" category="paragraph">Las herramientas de ONTAP para VMware deben ponerse en marcha antes de crear un grupo de recursos que contenga máquinas virtuales de VVol.</block>
   <block id="dbe8d9afdbe58c6e60fa055bbaa03417" category="paragraph">Para obtener más información, consulte<block ref="803b0580f102da00b07f33d2f17fdadb" category="inline-link-rx"></block>.</block>
@@ -867,12 +866,10 @@
   <block id="db483b4b52b624fc9163590680bfec11" category="cell">Formato de instantánea personalizado</block>
   <block id="cdd24b9d1a277d3a5383ba07346b9f5a" category="paragraph">Si desea usar un formato personalizado para los nombres de la copia de Snapshot, marque esta casilla y escriba el formato del nombre.</block>
   <block id="424f6337d74c16c2d02e5cb2e6d97f82" category="list-text">De forma predeterminada, esta función está deshabilitada.</block>
-  <block id="b5fa0613e2fb44b25ee1739ace5e3746" category="list-text">Los nombres de copias Snapshot predeterminados utilizan el formato<block ref="ba8f4cc4ace4f3315ea21bd52fbde9d9" prefix=" " category="inline-code"></block>Sin embargo, puede especificar un formato personalizado mediante las variables $ResourceGroup, $Policy, $hostname, $ScheduleType y $CustomText. Utilice la lista desplegable del campo de nombre personalizado para seleccionar las variables que desea utilizar y el orden en el que se utilizan. Si selecciona $CustomText, el formato del nombre es<block ref="ad231838859064f0fe437a9669c0d36f" prefix=" " category="inline-code"></block>. Introduzca el texto personalizado en el cuadro adicional que se proporciona. NOTA: Si también selecciona el sufijo “_Recent”, debe asegurarse de que los nombres de instantánea personalizados sean únicos en el almacén de datos, por lo tanto, debe agregar las variables $ResourceGroup y $Policy al nombre.</block>
   <block id="f6023484d4c2c1da1f8822ae43bc066a" category="list-text">Caracteres especiales para caracteres especiales en nombres, siga las mismas directrices que se indican para el campo Nombre.</block>
   <block id="2b2620f1962d78eb23f6f754d96e6546" category="list-text">En la página *Recursos*, haga lo siguiente:</block>
   <block id="5d113f2038d289f391614c39043629e8" category="cell">Ámbito</block>
   <block id="615707baa418ce315e44ac2a5d6164af" category="cell">Centro de datos</block>
-  <block id="d1fce2857d6a7747bc3a9e485e2cf30f" category="cell">Desplácese hasta las máquinas virtuales o los almacenes de datos o la carpeta que desea añadir.</block>
   <block id="4c928d1c171b7d62d8f758ffa689710f" category="cell">Entidades disponibles</block>
   <block id="0ae7bb79645eeb5721a499d2799dbf70" category="cell">Seleccione los recursos que desea proteger y, a continuación, haga clic en *&gt;* para mover las selecciones a la lista Selected Entities.</block>
   <block id="749435efb6e9940bcadad406e3a36d76" category="paragraph">Al hacer clic en *Siguiente*, el sistema comprueba primero que SnapCenter gestiona y es compatible con el almacenamiento en el que se encuentran los recursos seleccionados.</block>
@@ -2121,4 +2118,12 @@ Genere paquete de volcado de memoria</block>
   <block id="8857a92c9dd7ad8b9a97a4565e945efb" category="paragraph"><block ref="8857a92c9dd7ad8b9a97a4565e945efb" category="inline-image-macro-rx" type="image"></block></block>
   <block id="d8c6c8a7a8f9e330585c15378277631e" category="sidebar">Documentos del complemento de SnapCenter para VMware vSphere 5,0</block>
   <block id="9f4e4670e68c9e84125d82202a3b5d12" category="sidebar">Cambie el nombre del almacenamiento</block>
+  <block id="8cf2f0f05d235c9fc28a55c8caf77bb9" category="admonition">El plugin de SnapCenter para VMware vSphere 4,5 y versiones posteriores admite almacenes de datos en LUN de gran tamaño y archivos de hasta 128TB con volúmenes de hasta 300 TB. Si va a proteger LUN de gran tamaño, utilice solo LUN con aprovisionamiento grueso para evitar la latencia.</block>
+  <block id="ca70c61465600177453c8557e7c34dfb" category="list-text">Los nombres de copias Snapshot predeterminados utilizan el formato<block ref="ba8f4cc4ace4f3315ea21bd52fbde9d9" prefix=" " category="inline-code"></block>
+Sin embargo, puede especificar un formato personalizado mediante las variables $ResourceGroup, $Policy, $hostname, $ScheduleType y $CustomText. Utilice la lista desplegable del campo de nombre personalizado para seleccionar las variables que desea utilizar y el orden en el que se utilizan.
+Si selecciona $CustomText, el formato del nombre es<block ref="ad231838859064f0fe437a9669c0d36f" prefix=" " category="inline-code"></block>. Introduzca el texto personalizado en el cuadro adicional que se proporciona.
+[NOTA]:
+Si también selecciona el sufijo «_recent», debe asegurarse de que los nombres de Snapshot personalizados sean únicos en el almacén de datos, por lo tanto, debe añadir las variables $ResourceGroup y $Policy al nombre.</block>
+  <block id="d07079db3fe1ac66c315b010e4b99b35" category="cell">Desplácese hasta las máquinas virtuales o los almacenes de datos o la carpeta que desea añadir.
+Los nombres de máquinas virtuales y almacenes de datos de un grupo de recursos deben ser únicos.</block>
 </blocks>
