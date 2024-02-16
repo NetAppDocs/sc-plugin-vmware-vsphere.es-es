@@ -1812,7 +1812,6 @@
   <block id="015b635404a717ebcfa72500098a5d70" category="summary">Si utiliza el dispositivo virtual del plugin de SnapCenter para VMware vSphere, puede actualizar a una versión más reciente.</block>
   <block id="331b48aba7178950c3dc14c31a21f9c0" category="doc">Actualice desde una versión anterior del plugin de SnapCenter para VMware vSphere</block>
   <block id="637f9e5cc0956a7a76dc0a24cefff651" category="paragraph">Si utiliza el dispositivo virtual del plugin de SnapCenter para VMware vSphere, puede actualizar a una versión más reciente. El proceso de actualización cancela el registro del plugin existente e implementa un plugin que solo es compatible con vSphere 7.0U1 y versiones posteriores.</block>
-  <block id="2d611cef8c845765881d408c7f4ca34d" category="paragraph">Consulte <block ref="7b21f43f6f2c3f2cfd7e9a930ea43d44" category="inline-link-macro-rx"></block> para obtener información sobre las rutas de actualización admitidas.</block>
   <block id="5550f9423496c2c9ab880e725d34e0e5" category="admonition">Realice un backup del OVA del plugin de SnapCenter para VMware vSphere antes de iniciar una actualización.</block>
   <block id="ae40a6aa6dbafd02a1a6877c0cd95c90" category="admonition">No se admite el cambio de la configuración de red de estática a DHCP.</block>
   <block id="a115e2512005f81c492d368a9613ee58" category="list-text">Para preparar la actualización, deshabilite el plugin de SnapCenter para VMware vSphere.</block>
@@ -1883,7 +1882,6 @@
   <block id="d90d97c73d9c4c24dc7be83a35c1ab51" category="list-text">En el panel de navegación izquierdo del plugin SCV, haga clic en *Resource Groups* y, a continuación, seleccione *Create*.</block>
   <block id="f39d1b5ce3c4df954b444643fe062bd4" category="inline-image-macro">icono reproducir</block>
   <block id="388b702f54518810e19e7ac7da349911" category="paragraph">Puede realizar una copia de seguridad bajo demanda desde la página *Grupos de recursos* seleccionando <block ref="3b0d2a888e66a4061c822e3f42e77666" category="inline-image-macro-rx" type="image"></block> *Ejecutar ahora*.</block>
-  <block id="efc0b04f06a29088ceba47c01100d18a" category="paragraph">Para obtener la información más reciente sobre las versiones compatibles, consulte<block ref="afaa5c2ff662f28d0c8c3429effcad87" category="inline-link-rx"></block> (IMT).</block>
   <block id="837adfe579e9f6e54bb71e607139e89e" category="paragraph"><block ref="837adfe579e9f6e54bb71e607139e89e" category="inline-image-macro-rx" type="image"></block></block>
   <block id="bac80dc0b6b539e2676fb6e2f1e66985" category="inline-image-macro">Ventana de la consola de mantenimiento</block>
   <block id="b6b7c58249919c09c14b897be2947b59" category="paragraph"><block ref="b6b7c58249919c09c14b897be2947b59" category="inline-image-macro-rx" type="image"></block></block>
@@ -1904,12 +1902,8 @@
   <block id="bf18811faac9b8e4fcaebab51afd1113" category="list-text">Seleccione *Crear*.</block>
   <block id="2d9c6a052b962f45f8525e4ec1dec880" category="inline-image-macro">Crear grupo de recursos</block>
   <block id="3ec7abcc0f628e9d54f81021b20cd0b8" category="paragraph"><block ref="3ec7abcc0f628e9d54f81021b20cd0b8" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="27622cb89e7a8739e00f582918ccbbf9" category="paragraph">El plugin de SnapCenter para VMware vSphere no realiza comprobaciones de compatibilidad para todas las versiones de ONTAP; solamente para las versiones 8.2.1 y anteriores de ONTAP. Por lo tanto, consulte siempre la<block ref="d081994606edbb1b5fb4741bf9627763" category="inline-link-rx"></block> Para obtener la información más actualizada sobre compatibilidad con SnapCenter.</block>
   <block id="0a9ba38bb4f35a4cc659e9264312419d" category="list-text">En el panel de navegación izquierdo del plug-in SCV, haga clic en *Policies* y, a continuación, seleccione *New Policy*.</block>
   <block id="fa12509cfb8e8ccded16e2a254e988c4" category="list-text">Seleccione *Agregar*.</block>
-  <block id="daa784a8a1fa3539432d36b3cba74c8f" category="paragraph">Para obtener la información más reciente sobre las versiones compatibles de herramientas de ONTAP, consulte<block ref="afaa5c2ff662f28d0c8c3429effcad87" category="inline-link-rx"></block>.</block>
-  <block id="7a1850db5de77ac7debf2683475ac36d" category="cell">El plugin de SnapCenter para VMware vSphere utiliza esto para gestionar almacenes de datos de VVol (volúmenes virtuales de VMware). Para conocer las versiones compatibles, consulte<block ref="afaa5c2ff662f28d0c8c3429effcad87" category="inline-link-rx"></block>.</block>
-  <block id="138ca37c88473f8732582e7a16c36cdd" category="paragraph">Para obtener la información más reciente sobre las versiones compatibles, consulte<block ref="afaa5c2ff662f28d0c8c3429effcad87" category="inline-link-rx"></block>.</block>
   <block id="cf0ab757341ba6d3dc7ba387b7608080" category="inline-image-macro">Representación gráfica de configuración admitida</block>
   <block id="9dfe68c8c0e7d63c6014f412ad6f64f4" category="paragraph"><block ref="9dfe68c8c0e7d63c6014f412ad6f64f4" category="inline-image-macro-rx" type="image"></block></block>
   <block id="8ef8968610fbd3a0de9ce23482e5a914" category="list-text">En la página *Sistemas de almacenamiento*, seleccione la VM de almacenamiento que se va a modificar y luego seleccione *Editar*.</block>
@@ -1981,8 +1975,6 @@ Generar Token MFA</block>
   <block id="c3794c98b162b9ad9268737618829c92" category="list-text">En el cuadro de diálogo Add Storage System, introduzca la información básica de SVM o del clúster y seleccione *Add*.</block>
   <block id="ab3ccb0be518e752d20f706d36d252c9" category="inline-image-macro">Flujo de trabajo de implementación</block>
   <block id="c26ad7db9fdd9afcec80cb243992f363" category="paragraph"><block ref="c26ad7db9fdd9afcec80cb243992f363" category="inline-image-macro-rx" type="image"></block></block>
-  <block id="0c815b7acb1c06a9fdce13c84db10d63" category="paragraph">Para obtener la información más reciente sobre las versiones compatibles, consulte<block ref="d081994606edbb1b5fb4741bf9627763" category="inline-link-rx"></block>.</block>
-  <block id="09a955bc17c83be6473e1db023f65598" category="paragraph">No es posible restaurar archivos y carpetas desde una máquina virtual que ejecute un sistema operativo invitado Linux. Sin embargo, puede asociar un VMDK y luego restaurar manualmente los archivos y las carpetas. Para obtener la información más reciente sobre los sistemas operativos invitados compatibles, consulte<block ref="d081994606edbb1b5fb4741bf9627763" category="inline-link-rx"></block>.</block>
   <block id="07469a3427540cc9f743a04851332eb8" category="paragraph">Debe conocer la dirección IP y las credenciales de inicio de sesión de la interfaz gráfica de usuario de gestión del plugin de SnapCenter para VMware vSphere. También debe anotar el token MFA generado desde la consola de mantenimiento.</block>
   <block id="bd891b75b7b195d1b26cc7dc247e67f0" category="paragraph"><block ref="bd891b75b7b195d1b26cc7dc247e67f0" category="inline-image-macro-rx" type="image"></block></block>
   <block id="f30c6912958443264ac38c6e96e6c0b1" category="inline-image-macro">Flujo de trabajo de operaciones de backup</block>
@@ -2008,7 +2000,6 @@ Generar Token MFA</block>
   <block id="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-macro"><block ref="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-rx"></block></block>
   <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
   <block id="d0ea0acf98adef65d75abe323fe90376" category="admonition">Tiene que eliminar la máquina virtual proxy de la interfaz de usuario del plugin de SnapCenter para VMware vSphere antes de eliminarla de ESXi.</block>
-  <block id="a06bb07ae4f38addfa216f1bf6d50271" category="paragraph">Primero, debe añadir el sistema de almacenamiento vVols a herramientas de ONTAP para VMware vSphere y, a continuación, añadirlo al plugin de SnapCenter para VMware vSphere.</block>
   <block id="0d4068754a5316289f4fe4cb2c9f06ab" category="paragraph">Si agregó entradas al archivo _etc\hosts_ para los nombres de máquinas virtuales de almacenamiento en SnapCenter, debe asegurarse de que también se puedan resolver desde el dispositivo virtual. Si no lo son, debe agregar entradas similares al archivo _etc/hosts_ dentro del dispositivo.</block>
   <block id="ec152cd63150806755f263280e145f0b" category="cell">Introduzca el FQDN o la dirección IP de Management LIF de un clúster de almacenamiento o una máquina virtual de almacenamiento.
 El complemento de VMware de SnapCenter no admite varias máquinas virtuales de almacenamiento con el mismo nombre en clústeres diferentes.</block>
@@ -2118,7 +2109,6 @@ Genere paquete de volcado de memoria</block>
   <block id="8857a92c9dd7ad8b9a97a4565e945efb" category="paragraph"><block ref="8857a92c9dd7ad8b9a97a4565e945efb" category="inline-image-macro-rx" type="image"></block></block>
   <block id="d8c6c8a7a8f9e330585c15378277631e" category="sidebar">Documentos del complemento de SnapCenter para VMware vSphere 5,0</block>
   <block id="9f4e4670e68c9e84125d82202a3b5d12" category="sidebar">Cambie el nombre del almacenamiento</block>
-  <block id="8cf2f0f05d235c9fc28a55c8caf77bb9" category="admonition">El plugin de SnapCenter para VMware vSphere 4,5 y versiones posteriores admite almacenes de datos en LUN de gran tamaño y archivos de hasta 128TB con volúmenes de hasta 300 TB. Si va a proteger LUN de gran tamaño, utilice solo LUN con aprovisionamiento grueso para evitar la latencia.</block>
   <block id="ca70c61465600177453c8557e7c34dfb" category="list-text">Los nombres de copias Snapshot predeterminados utilizan el formato<block ref="ba8f4cc4ace4f3315ea21bd52fbde9d9" prefix=" " category="inline-code"></block>
 Sin embargo, puede especificar un formato personalizado mediante las variables $ResourceGroup, $Policy, $hostname, $ScheduleType y $CustomText. Utilice la lista desplegable del campo de nombre personalizado para seleccionar las variables que desea utilizar y el orden en el que se utilizan.
 Si selecciona $CustomText, el formato del nombre es<block ref="ad231838859064f0fe437a9669c0d36f" prefix=" " category="inline-code"></block>. Introduzca el texto personalizado en el cuadro adicional que se proporciona.
@@ -2126,4 +2116,25 @@ Si selecciona $CustomText, el formato del nombre es<block ref="ad231838859064f0f
 Si también selecciona el sufijo «_recent», debe asegurarse de que los nombres de Snapshot personalizados sean únicos en el almacén de datos, por lo tanto, debe añadir las variables $ResourceGroup y $Policy al nombre.</block>
   <block id="d07079db3fe1ac66c315b010e4b99b35" category="cell">Desplácese hasta las máquinas virtuales o los almacenes de datos o la carpeta que desea añadir.
 Los nombres de máquinas virtuales y almacenes de datos de un grupo de recursos deben ser únicos.</block>
+  <block id="854a748f8563eb3099b0bfa18a176d34" category="paragraph">Para obtener la información más reciente sobre las versiones compatibles, consulte<block ref="045f3ddde5c3413f11a91218d71b4b1a" category="inline-link-rx"></block>.</block>
+  <block id="1a455fa606ca1378d17326c892e16c90" category="paragraph">No es posible restaurar archivos y carpetas desde una máquina virtual que ejecute un sistema operativo invitado Linux. Sin embargo, puede asociar un VMDK y luego restaurar manualmente los archivos y las carpetas. Para obtener la información más reciente sobre los sistemas operativos invitados compatibles, consulte<block ref="045f3ddde5c3413f11a91218d71b4b1a" category="inline-link-rx"></block>.</block>
+  <block id="772cc7fa822f49dc4b192692e0632437" category="paragraph">Para obtener la información más reciente sobre las versiones compatibles, consulte<block ref="b52a20f044306968704839d484981363" category="inline-link-rx"></block>
+[Herramienta de matriz de interoperabilidad de NetApp^] (IMT).</block>
+  <block id="a5760e04dea15becd0f211df3320ab07" category="paragraph">Debe añadir clústeres de almacenamiento al plugin de SnapCenter para VMware vSphere y herramientas ONTAP para VMware vSphere para que la protección de datos de VVOL funcione.</block>
+  <block id="db9f46474186d8c960347226166c2a57" category="admonition">El plugin de SnapCenter para VMware vSphere 4,5 y versiones posteriores admite almacenes de datos en LUN de gran tamaño y archivos de hasta 128 TB con volúmenes de hasta 300 TB. Si va a proteger LUN de gran tamaño, utilice solo LUN con aprovisionamiento grueso para evitar la latencia.</block>
+  <block id="8e1e7b095ff12bdad81e079afe30b615" category="paragraph">El plugin de SnapCenter para VMware vSphere no realiza comprobaciones de compatibilidad para todas las versiones de ONTAP; solamente para las versiones 8.2.1 y anteriores de ONTAP. Por lo tanto, consulte siempre la<block ref="045f3ddde5c3413f11a91218d71b4b1a" category="inline-link-rx"></block> Para obtener la información más actualizada sobre compatibilidad con SnapCenter.</block>
+  <block id="e614f4fd5db40ad1197def61d63aaeef" category="section-title">Rutas de actualización</block>
+  <block id="8f5cac67a5239c3412476c9eee5d843b" category="cell">Si está en la versión del complemento de SnapCenter para VMware vSphere (SCV)...</block>
+  <block id="c6000eccbb9d2d80f767a17144086162" category="cell">Puede actualizar directamente el complemento SnapCenter para VMware vSphere al...</block>
+  <block id="d6efd9a0701d44c2a386de616f0467d8" category="cell">SCV 4,9</block>
+  <block id="fb7a6940ca16530832134b6d1fc68dd0" category="cell">Actualice a SCV 5,0</block>
+  <block id="bfa55b54891f35acedca543067d8d978" category="cell">SCV 4,8</block>
+  <block id="d50d1b713f54e3b00e5a58cb07663ae1" category="cell">Actualice a SCV 4,9 y SCV 5,0</block>
+  <block id="57c532701e1b9a6e91035127c990e2d5" category="cell">SCV 4,7</block>
+  <block id="9e3312df8e6fea31816b8ec7d06d6943" category="cell">Actualice a SCV 4,8 y SCV 4,9</block>
+  <block id="3baea5f2b6a39ee42e75af8ff8dffaf8" category="cell">SCV 4,6</block>
+  <block id="1bc72f3e2c1f0294eeae251d150eadaf" category="cell">Actualice a SCV 4,7 y SCV 4,8</block>
+  <block id="be62a39629f9bf44c0b7764858df7180" category="paragraph">Para obtener la información más reciente sobre las versiones compatibles de herramientas de ONTAP, consulte<block ref="f480f082c29fcf628f934199402ad852" category="inline-link-rx"></block>.</block>
+  <block id="574bca4b9d134d315e5eca84b213c9cf" category="cell">El plugin de SnapCenter para VMware vSphere utiliza esto para gestionar almacenes de datos de VVol (volúmenes virtuales de VMware). Para conocer las versiones compatibles, consulte<block ref="f480f082c29fcf628f934199402ad852" category="inline-link-rx"></block>.</block>
+  <block id="0c94c2c3fa58ffce83643eed644bb1ad" category="paragraph">Para obtener la información más reciente sobre las versiones compatibles, consulte<block ref="f480f082c29fcf628f934199402ad852" category="inline-link-rx"></block>.</block>
 </blocks>

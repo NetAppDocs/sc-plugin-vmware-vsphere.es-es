@@ -18,8 +18,27 @@ NOTE: La actualización a SCV 5,0 solo es compatible con VMware vCenter Server 7
 
 Si utiliza el dispositivo virtual del plugin de SnapCenter para VMware vSphere, puede actualizar a una versión más reciente. El proceso de actualización cancela el registro del plugin existente e implementa un plugin que solo es compatible con vSphere 7.0U1 y versiones posteriores.
 
-Consulte link:scpivs44_release_notes.html["Notas de la versión del plugin de SnapCenter para VMware vSphere"] para obtener información sobre las rutas de actualización admitidas.
 
+
+== Rutas de actualización
+
+|===
+
+
+| Si está en la versión del complemento de SnapCenter para VMware vSphere (SCV)... | Puede actualizar directamente el complemento SnapCenter para VMware vSphere al... 
+
+
+| SCV 4,9 | Actualice a SCV 5,0 
+
+
+| SCV 4,8 | Actualice a SCV 4,9 y SCV 5,0 
+
+
+| SCV 4,7 | Actualice a SCV 4,8 y SCV 4,9 
+
+
+| SCV 4,6 | Actualice a SCV 4,7 y SCV 4,8 
+|===
 
 TIP: Realice un backup del OVA del plugin de SnapCenter para VMware vSphere antes de iniciar una actualización.
 

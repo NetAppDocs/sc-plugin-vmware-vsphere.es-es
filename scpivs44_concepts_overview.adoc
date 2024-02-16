@@ -69,7 +69,8 @@ Aunque el dispositivo virtual debe instalarse como máquina virtual Linux, el pl
 
 Además de estas funciones principales, el plugin de SnapCenter para VMware vSphere es compatible con iSCSI, Fibre Channel, FCoE, VMDK sobre NFS 3.0 y 4.1, y VMDK sobre VMFS 5.0 y 6.0.
 
-Para obtener la información más reciente sobre las versiones compatibles, consulte https://imt.netapp.com/matrix/imt.jsp?components=112310;&solution=1517&isHWU&src=IMT["Herramienta de matriz de interoperabilidad de NetApp"^] (IMT).
+Para obtener la información más reciente sobre las versiones compatibles, consulte https://imt.netapp.com/matrix/imt.jsp?components=117018;&solution=1259&isHWU&src=IMT[]
+[Herramienta de matriz de interoperabilidad de NetApp^] (IMT).
 
 Para obtener información sobre los protocolos NFS y ESXi, consulte la documentación sobre vSphere Storage que proporciona VMware.
 

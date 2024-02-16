@@ -26,7 +26,7 @@ El complemento SnapCenter para VMware vSphere 4.5 y versiones posteriores admite
 
 * Volúmenes virtuales de VMware (vVols)
 +
-Primero, debe añadir el sistema de almacenamiento vVols a herramientas de ONTAP para VMware vSphere y, a continuación, añadirlo al plugin de SnapCenter para VMware vSphere.
+Debe añadir clústeres de almacenamiento al plugin de SnapCenter para VMware vSphere y herramientas ONTAP para VMware vSphere para que la protección de datos de VVOL funcione.
 
 +
 Para obtener más información, consulte https://docs.netapp.com/vapp-98/index.jsp["Herramientas de ONTAP para VMware vSphere"^]
