@@ -140,7 +140,7 @@ La pantalla muestra la dirección IP donde se implementó el plugin de VMware de
 
 . Inicie sesión en la interfaz gráfica de usuario de la gestión del plugin de VMware de SnapCenter mediante la dirección IP que se muestra en la pantalla de implementación y con las credenciales que proporcionó en el asistente de implementación. A continuación, compruebe en la consola que el plugin de VMware de SnapCenter esté correctamente conectado a vCenter y esté habilitado.
 +
-Utilice el formato `https://<appliance-IP-address>:8080` Para acceder a la GUI de gestión.
+Utilice el formato `\https://<appliance-IP-address>:8080` Para acceder a la GUI de gestión.
 
 +
 Inicie sesión con el nombre de usuario y la contraseña de administrador establecidos en el momento de la implementación y el token de MFA generado con la consola de mantenimiento.

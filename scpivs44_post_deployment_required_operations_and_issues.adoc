@@ -57,7 +57,7 @@ Si el problema persiste, reinicie el servicio del cliente de VMware vSphere
 Si no utiliza las credenciales de administrador, es posible que reciba un error de autenticación después de implementar el plugin de SnapCenter para VMware vSphere o después de migrar. Si se encuentra con un error de autenticación, debe reiniciar el servicio.
 
 .Pasos
-. Inicie sesión en la interfaz gráfica de usuario de la gestión del plugin de VMware de SnapCenter con el formato `https://<appliance-IP-address>:8080`. Use el nombre de usuario de administrador, la contraseña y los detalles del token de MFA para iniciar sesión. El token MFA se puede generar desde la consola de mantenimiento.
+. Inicie sesión en la interfaz gráfica de usuario de la gestión del plugin de VMware de SnapCenter con el formato `\https://<appliance-IP-address>:8080`. Use el nombre de usuario de administrador, la contraseña y los detalles del token de MFA para iniciar sesión. El token MFA se puede generar desde la consola de mantenimiento.
 . Reinicie el servicio.
 
 

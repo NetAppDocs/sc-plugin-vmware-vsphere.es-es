@@ -16,7 +16,7 @@ summary: Para realizar operaciones de añadir y modificar máquinas virtuales de
 [role="lead"]
 Para realizar operaciones de añadir y modificar máquinas virtuales de almacenamiento mediante las API DE REST del plugin de SnapCenter para VMware vSphere, debe seguir la secuencia prescrita de las llamadas de API de REST.
 
-Para cada API REST, añada `https://<server>:<port>` En la parte frontal de la API DE REST para formar un extremo completo.
+Para cada API REST, añada `\https://<server>:<port>` En la parte frontal de la API DE REST para formar un extremo completo.
 
 Para añadir operaciones de una máquina virtual de almacenamiento, siga este flujo de trabajo:
 

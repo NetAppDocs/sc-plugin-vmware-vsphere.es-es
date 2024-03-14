@@ -16,7 +16,7 @@ summary: Para generar informes y descargar registros para trabajos de cliente de
 [role="lead"]
 Para generar informes y descargar registros para trabajos de cliente de VMware vSphere mediante la API DE REST del plugin de SnapCenter para VMware vSphere, debe usar las llamadas de API de REST para VMware vSphere.
 
-Para cada API REST, añada `https://<server>:<port>` En la parte frontal de la API DE REST para formar un extremo completo.
+Para cada API REST, añada `\https://<server>:<port>` En la parte frontal de la API DE REST para formar un extremo completo.
 
 
 

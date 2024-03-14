@@ -16,7 +16,7 @@ summary: Para realizar operaciones de creación y modificación de grupos de rec
 [role="lead"]
 Para realizar operaciones de creación y modificación de grupos de recursos mediante las API DE REST del plugin de SnapCenter para VMware vSphere, debe seguir la secuencia prescrita de llamadas de API de REST.
 
-Para cada API REST, añada `https://<server>:<port>` En la parte frontal de la API DE REST para formar un extremo completo.
+Para cada API REST, añada `\https://<server>:<port>` En la parte frontal de la API DE REST para formar un extremo completo.
 
 Para crear grupos de recursos, siga este flujo de trabajo:
 

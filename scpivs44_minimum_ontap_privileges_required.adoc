@@ -17,19 +17,29 @@ summary: Los privilegios mínimos requeridos de ONTAP varían en función de los
 Los privilegios mínimos requeridos de ONTAP varían en función de los plugins de SnapCenter que utilice para la protección de datos.
 
 
+NOTE: A partir del plugin de SnapCenter para VMware (SCV) 5,0, es necesario añadir aplicaciones de tipo HTTP y ONTAPI como métodos de inicio de sesión de usuario para cualquier usuario de ONTAP con acceso personalizado basado en roles a SCV. Sin el acceso a estas aplicaciones, los backups fallarán. Es necesario reiniciar el servicio de SCV para reconocer los cambios en los métodos de inicio de sesión de usuarios de ONTAP.
+
+
 
 == Privilegios mínimos requeridos de ONTAP
 
 Todos los plugins de SnapCenter requieren los siguientes privilegios mínimos.
 
 |===
+
+
 | Comandos de acceso total: Privilegios mínimos requeridos para ONTAP 8.3 y versiones posteriores 
+
+
+| se muestra la identidad del clúster 
 
 
 | event generate-autosupport-log 
 
 
-| el historial del trabajo muestra la detención del trabajo 
+| se muestra el historial del trabajo
+exposición de trabajos
+detención de trabajo 
 
 
 | lun lun lun create lun delete lun igroup add lun igroup create lun igroup delete lun igroup rename lun igroup show lun mapping add-reporting-nodes lun mapping create lun mapping delete lun mapping remove-reporting-nodes mapa de lun show lun modify lun move-in-volume lun offline lun online lun persistent-reservation clear lun redimensione lun serial lun muestra de lun 
@@ -41,7 +51,32 @@ Todos los plugins de SnapCenter requieren los siguientes privilegios mínimos.
 | Versión 
 
 
-| clon de volumen crear clon de volumen mostrar clon de división de volumen iniciar división de clon de volumen detener creación de volumen destruir volumen archivo de volumen crear archivo de volumen mostrar uso de disco volumen sin conexión volumen en línea modificar volumen qtree crear volumen qtree eliminar qtree delete volume qtree modificar volumen qtree show volumen restringir volumen mostrar volumen crear copia de snapshot de volumen copias de snapshot de volumen eliminar copias de snapshot de volumen modificar copias de snapshot de volumen cambiar nombre de volumen restaurar copias de snapshot de volumen restaurar-volumen copia de snapshot de volumen mostrar volumen desmontar 
+| crear el clon de volumen
+show de clon de volumen
+inicio de división de clon de volumen
+detención de división de clon de volumen
+cree el volumen
+eliminar el volumen
+destrucción del volumen
+crear el archivo de volumen
+uso show-disk del archivo de volumen
+volumen sin conexión
+volumen en línea
+modificación del volumen
+crear el qtree de volúmenes
+eliminación de qtree de volumen
+modificación del qtree del volumen
+se muestra volume qtree
+restricción de volumen
+visualización de volumen
+crear snapshots de volumen
+eliminación de snapshots de volumen
+modificación de las copias de snapshot de volumen
+cambio de nombre de copias de snapshot de volumen
+restauración de copias snapshot de volumen
+archivo de restauración de snapshots de volumen
+visualización de copias de snapshot de volumen
+desmonte el volumen 
 
 
 | vserver cifs share crea vserver cifs share delete vserver cifs shadowcopy show vserver cifs share show vserver cifs share show vserver show vserver vserver show vserver vserver export-policy vserver export-policy vserver create vserver export-policy create vserver export-policy delete vserver export-policy create vserver export-policy policy create vserver export-policy show vserver iscsi connection show vserver show vserver show network interface interfaz de red: grupos de recuperación tras fallos de la interfaz de red se muestra 

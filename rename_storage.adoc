@@ -22,7 +22,7 @@ Cuando se cambia el nombre del almacenamiento, se utilizan los flujos de trabajo
 . Cree un nuevo backup.
 . Utilice los detalles de las copias de seguridad para buscar los nombres de almacenamiento antiguos y nuevos.
 . En la pantalla *backups* del cliente vSphere, seleccione la copia de seguridad para ver sus detalles.
-. Acceda a Swagger desde la URL: https://<SCV-IP>:8144/api/swagger-ui/index.html[]
+. Acceda a Swagger desde la URL: `\https://<SCV-IP>:8144/api/swagger-ui/index.html`
 +
 Use la siguiente API para cambiar el nombre del almacenamiento:
 

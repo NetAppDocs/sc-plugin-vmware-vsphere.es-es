@@ -20,7 +20,7 @@ Debe conocer los requisitos de puesta en marcha antes de poner en marcha el disp
 
 == Requisitos del host
 
-Antes de iniciar la implementación del plugin de SnapCenter para VMware vSphere, debe estar familiarizado con los requisitos del host.
+Antes de iniciar la implementación del plugin de SnapCenter para VMware vSphere (SCV), debe estar familiarizado con los requisitos del host.
 
 * El plugin de VMware de SnapCenter se implementa como máquina virtual de Linux, independientemente de si utiliza el plugin para proteger datos en sistemas Windows o sistemas Linux.
 * Debe implementar el plugin de VMware de SnapCenter en vCenter Server.

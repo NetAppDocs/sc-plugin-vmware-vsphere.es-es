@@ -16,7 +16,7 @@ summary: Para realizar operaciones de montaje y desmontaje para backups de almac
 [role="lead"]
 Para realizar operaciones de montaje y desmontaje para backups de almacén de datos con las API DE REST del plugin de SnapCenter para VMware vSphere, debe seguir la secuencia prescrita de llamadas de API de REST.
 
-Para cada API REST, añada `https://<server>:<port>` En la parte frontal de la API DE REST para formar un extremo completo.
+Para cada API REST, añada `\https://<server>:<port>` En la parte frontal de la API DE REST para formar un extremo completo.
 
 
 
@@ -26,7 +26,7 @@ Para cada API REST, añada `https://<server>:<port>` En la parte frontal de la A
 | Paso | API REST | Comentarios 
 
 
-| 1 | Vaya a. `http://<vCenter-IP>/mob` | Busque el archivo moref del almacén de datos en la URL de VMware Managed Objects. Observe *moref* para el almacén de datos que desea montar. 
+| 1 | Vaya a. `\http://<vCenter-IP>/mob` | Busque el archivo moref del almacén de datos en la URL de VMware Managed Objects. Observe *moref* para el almacén de datos que desea montar. 
 
 
 | 2 | `/4.1/datastores/{moref}/

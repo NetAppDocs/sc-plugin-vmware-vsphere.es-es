@@ -16,7 +16,7 @@ summary: Para realizar operaciones de asociación y desvinculación para VMDK me
 [role="lead"]
 Para realizar operaciones de asociación y desvinculación para VMDK mediante las API DE REST del plugin de SnapCenter para VMware vSphere, debe seguir la secuencia prescrita de llamadas de API DE REST.
 
-Para cada API REST, añada `https://<server>:<port>` En la parte frontal de la API DE REST para formar un extremo completo.
+Para cada API REST, añada `\https://<server>:<port>` En la parte frontal de la API DE REST para formar un extremo completo.
 
 
 
@@ -26,7 +26,7 @@ Para cada API REST, añada `https://<server>:<port>` En la parte frontal de la A
 | Paso | API REST | Comentarios 
 
 
-| 1 | Vaya a. `http://<vCenter-IP>/mob` | Busque el archivo VM en la URL de VMware Managed Objects. Tenga en cuenta el *moref* para el equipo virtual al que desea asociar un VMDK. 
+| 1 | Vaya a. `\http://<vCenter-IP>/mob` | Busque el archivo VM en la URL de VMware Managed Objects. Tenga en cuenta el *moref* para el equipo virtual al que desea asociar un VMDK. 
 
 
 | 2 | `/4.1/vm/{moref}/backups` | `Get VM Backups` Obtiene una lista de backups para la máquina virtual especificada. Pase el *moref* desde el Paso 1. Tenga en cuenta *BackupId* de la copia de seguridad que desea restaurar. 
@@ -51,7 +51,7 @@ NOTE: Para asociar un VMDK a una VM diferente, pase el moref de la VM de destino
 | Paso | API REST | Comentarios 
 
 
-| 1 | Vaya a. `http://<vCenter-IP>/mob` | Busque el archivo VM en la URL de VMware Managed Objects. Tenga en cuenta el *moref* de la máquina virtual en la que desea desvincular un VMDK. 
+| 1 | Vaya a. `\http://<vCenter-IP>/mob` | Busque el archivo VM en la URL de VMware Managed Objects. Tenga en cuenta el *moref* de la máquina virtual en la que desea desvincular un VMDK. 
 
 
 | 2 | `/4.1/vm/{moref}/backups` | `Get VM Backups` Obtiene una lista de backups para la máquina virtual especificada. Pase el *moref* desde el Paso 1. Tenga en cuenta *BackupId* de la copia de seguridad que desea restaurar. 
