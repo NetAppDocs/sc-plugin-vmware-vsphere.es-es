@@ -56,7 +56,7 @@ Puede buscar por un nombre de backup específico o un nombre de backup parcial y
 
 | Un almacén de datos alternativo en una ubicación alternativa | Haga clic en el almacén de datos de destino y seleccione un almacén de datos distinto de la lista. 
 |===
-. En la página *Seleccionar ubicación*, seleccione la copia de Snapshot que desea restaurar (primaria o secundaria).
+. En la página *Select Location*, seleccione la instantánea que desea restaurar (primaria o secundaria).
 . Revise la página Resumen y, a continuación, haga clic en *Finalizar*.
 . Opcional: Supervise el progreso de la operación haciendo clic en *tareas recientes* en la parte inferior de la pantalla.
 . Actualice la pantalla para que muestre información actualizada.

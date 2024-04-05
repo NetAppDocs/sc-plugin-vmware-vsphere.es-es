@@ -78,9 +78,9 @@ Si ya funciona con ONTAP 9.8 o ONTAP 9.9, después de una conmutación de sitios
 +
 En ONTAP 9.8, los backups se cuelgan después de la conmutación de regreso. Este problema se ha solucionado en ONTAP 9.9.
 
-* Optimizar las copias de Snapshot
+* Optimización de Snapshots
 +
-Para optimizar las copias de Snapshot, debe agrupar las máquinas virtuales y los almacenes de datos que estén asociados con el mismo volumen en un solo grupo de recursos.
+Para optimizar las copias Snapshot, debe agrupar las máquinas virtuales y los almacenes de datos que estén asociados con el mismo volumen en un solo grupo de recursos.
 
 * Política de backup
 +
@@ -138,7 +138,7 @@ Esta es la forma más sencilla de crear un grupo de recursos. No obstante, tambi
 
 
 | Nombre de snapshot más reciente  a| 
-Si desea agregar el sufijo “_Recent” a la última copia snapshot, active esta casilla. El sufijo “_Recent” reemplaza la fecha y la Marca de hora.
+Si desea que el sufijo “_recent” se agregue a la última instantánea, marque esta casilla. El sufijo “_Recent” reemplaza la fecha y la Marca de hora.
 
 
 NOTE: A. `_recent` el backup se crea para cada política que se asocia a un grupo de recursos. Por lo tanto, un grupo de recursos con varias políticas tendrá múltiples `_recent` completos. No cambie el nombre manualmente `_recent` completos.
@@ -146,10 +146,10 @@ NOTE: A. `_recent` el backup se crea para cada política que se asocia a un grup
 
 
 | Formato de instantánea personalizado  a| 
-Si desea usar un formato personalizado para los nombres de la copia de Snapshot, marque esta casilla y escriba el formato del nombre.
+Si desea usar un formato personalizado para los nombres de Snapshot, marque esta casilla e introduzca el formato del nombre.
 
 *** De forma predeterminada, esta función está deshabilitada.
-*** Los nombres de copias Snapshot predeterminados utilizan el formato `<ResourceGroup>_<Date-TimeStamp>`
+*** Los nombres de Snapshot predeterminados usan el formato `<ResourceGroup>_<Date-TimeStamp>`
 Sin embargo, puede especificar un formato personalizado mediante las variables $ResourceGroup, $Policy, $hostname, $ScheduleType y $CustomText. Utilice la lista desplegable del campo de nombre personalizado para seleccionar las variables que desea utilizar y el orden en el que se utilizan.
 Si selecciona $CustomText, el formato del nombre es `<CustomName>_<Date-TimeStamp>`. Introduzca el texto personalizado en el cuadro adicional que se proporciona.
 [NOTA]:

@@ -20,11 +20,11 @@ Debe crear políticas de backup antes de usar el plugin de SnapCenter para VMwar
 * Debe haber leído antes los requisitos previos.
 * Debe haber configurado las relaciones de almacenamiento secundario.
 +
-** Si va a replicar las copias de Snapshot en un almacenamiento secundario reflejado o en almacén, deben configurarse las relaciones y el administrador de SnapCenter debe haberle asignado las máquinas virtuales de almacenamiento tanto para el volumen de origen como para el volumen de destino.
-** A fin de transferir correctamente copias de Snapshot a un almacenamiento secundario para relaciones de reflejo de versión flexible en un almacén de datos NFS o VMFS, compruebe que el tipo de política de SnapMirror sea Asynchronous Mirror y que esté marcada la opción "all_source_snapshots".
-** Cuando la cantidad de copias Snapshot en el almacenamiento secundario (reflejo-almacén) alcanza el límite máximo, se produce un error en la actividad para registrar el backup y aplicar la retención en la operación de backup: `This Snapshot copy is currently used as a reference Snapshot copy by one or more SnapMirror relationships. Deleting the Snapshot copy can cause future SnapMirror operations to fail.`
+** Si va a replicar snapshots en un almacenamiento secundario reflejado o en almacén, deben configurarse las relaciones y el administrador de SnapCenter debe haberle asignado las máquinas virtuales de almacenamiento tanto para el volumen de origen como para el volumen de destino.
+** A fin de transferir correctamente snapshots a un almacenamiento secundario para relaciones de reflejo de versión flexible en un almacén de datos NFS o VMFS, asegúrese de que el tipo de política de SnapMirror sea Asynchronous Mirror y que esté marcada la opción «all_source_snapshots».
+** Cuando el número de Snapshots en el almacenamiento secundario (reflejo-almacén) alcanza el límite máximo, se produce un error en la actividad para registrar el backup y aplicar la retención en la operación de backup: `This Snapshot is currently used as a reference Snapshot by one or more SnapMirror relationships. Deleting the Snapshot can cause future SnapMirror operations to fail.`
 +
-Para corregir este problema, configure la normativa de retención de SnapMirror para el almacenamiento secundario y evite alcanzar el límite máximo de copias de Snapshot.
+Para corregir este problema, configure la normativa de retención de SnapMirror para el almacenamiento secundario y evite alcanzar el límite máximo de Snapshots.
 
 +
 Para obtener información acerca de cómo los administradores asignan recursos a los usuarios, consulte https://docs.netapp.com/us-en/snapcenter/concept/concept_types_of_role_based_access_control_in_snapcenter.html["Información de SnapCenter sobre el uso del control de acceso basado en roles"^].
@@ -76,7 +76,7 @@ La política especifica solamente la frecuencia de backup. La programación de p
 . Especifique la configuración de retención.
 +
 
-IMPORTANT: Debe establecer el número de retención en 2 backups o un valor más alto si tiene pensado habilitar la replicación de SnapVault. Si configura el número de retención en 1 backup para conservar, la operación de retención podría fallar. Esto se debe a que la primera copia de Snapshot es la copia de Snapshot de referencia para la relación de SnapVault hasta que se replica una nueva copia de Snapshot en el destino.
+IMPORTANT: Debe establecer el número de retención en 2 backups o un valor más alto si tiene pensado habilitar la replicación de SnapVault. Si configura el número de retención en 1 backup para conservar, la operación de retención podría fallar. Esto se debe a que la primera snapshot es la snapshot de referencia para la relación de SnapVault hasta que se replica una nueva snapshot en el destino.
 
 +
 
@@ -111,10 +111,11 @@ NOTE: Esta opción es compatible para almacenes de datos en FlexGroup Volumes en
 
 
 | Etiqueta de Snapshot  a| 
-Especifique una etiqueta opcional y personalizada que se añadirá a las copias de Snapshot de SnapVault y SnapMirror creadas con esta política. La etiqueta de Snapshot ayuda a distinguir las Snapshot creadas con esta política desde otras Snapshot del sistema de almacenamiento secundario.
+Especifique una etiqueta opcional y personalizada que se añadirá a las copias de Snapshot de SnapVault y de SnapMirror creadas con esta política.
+La etiqueta de Snapshot ayuda a distinguir las Snapshot creadas con esta política desde otras Snapshot del sistema de almacenamiento secundario.
 
 
-NOTE: Se permite un máximo de 31 caracteres para las etiquetas de copia de Snapshot.
+NOTE: Se permite un máximo de 31 caracteres para las etiquetas de Snapshot.
 
 |===
 . Opcional: En los campos *Avanzado*, seleccione los campos necesarios. Los detalles del campo Advanced se enumeran en la siguiente tabla.

@@ -65,9 +65,9 @@ Para obtener la información más reciente sobre las versiones compatibles, cons
 
 IMPORTANT: Si tiene que utilizar una cuenta que no es la cuenta de administrador incorporada, pero tiene privilegios de administración en la máquina virtual, deberá deshabilitar UAC en la máquina virtual invitada.
 
-* Debe conocer la copia de Snapshot del backup y el VMDK a partir del que desea restaurar.
+* Debe conocer la Snapshot del backup y el VMDK a partir del que desea restaurar.
 +
-El plugin de SnapCenter para VMware vSphere no admite la búsqueda de archivos o carpetas que restaurar. Por lo tanto, antes de empezar, debe conocer la ubicación de los archivos o las carpetas con respecto a la copia de Snapshot y el VMDK correspondiente.
+El plugin de SnapCenter para VMware vSphere no admite la búsqueda de archivos o carpetas que restaurar. Por lo tanto, antes de empezar, debe conocer la ubicación de los archivos o las carpetas con respecto a la Snapshot y el VMDK correspondiente.
 
 * El disco virtual que se va a asociar debe estar en un backup de SnapCenter.
 +

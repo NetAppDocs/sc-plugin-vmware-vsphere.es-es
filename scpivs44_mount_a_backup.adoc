@@ -45,10 +45,10 @@ La operación de montaje puede fallar si no está disponible el nivel de almacen
 .. Haga clic en *Menú* en la barra de herramientas y, a continuación, seleccione *almacenamiento* en la lista desplegable.
 .. En el panel de navegación de la izquierda, el almacén de datos que montó aparecerá en la parte superior de la lista.
 +
-Si ejecuta una operación de asociación o montaje en un volumen de destino de SnapVault que está protegido por programaciones de SnapVault y que funciona con ONTAP 8.3, puede ver una copia de Snapshot adicional en la pantalla de diálogo de la asociación o el montaje. Esto ocurre porque la operación de asociación o montaje clona el volumen de destino de SnapVault y ONTAP actualiza el volumen creando una nueva copia de Snapshot.
+Si ejecuta una operación de asociación o montaje en un volumen de destino de SnapVault que está protegido por programaciones de SnapVault y que funciona con ONTAP 8,3, puede ver una Snapshot adicional en la pantalla de diálogo de la asociación o el montaje. Esto ocurre porque la operación de asociación o montaje clona el volumen de destino de SnapVault y ONTAP actualiza el volumen creando una nueva copia de Snapshot.
 
 +
-Para evitar que se creen nuevas copias Snapshot al clonar el volumen, apague la programación ONTAP para el volumen SnapVault. Las copias de Snapshot que existían previamente no se eliminan.
+Para evitar que se creen nuevas copias de Snapshot al clonar el volumen, desactive la programación de ONTAP para el volumen de SnapVault. Las snapshots que existían previamente no se eliminan.
 
 
 
