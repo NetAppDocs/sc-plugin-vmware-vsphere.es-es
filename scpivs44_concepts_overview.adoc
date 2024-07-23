@@ -21,7 +21,7 @@ summary: 'El complemento de SnapCenter para VMware vSphere es un dispositivo vir
 
 El plugin de SnapCenter para VMware vSphere se pone en marcha como un dispositivo virtual basado en Linux.
 
-El complemento VMware de SnapCenter añade la siguiente funcionalidad a su entorno:
+El plugin de SnapCenter para VMware vSphere añade la siguiente funcionalidad al entorno:
 
 * Compatibilidad con operaciones de protección de datos consistentes con los fallos y consistentes con las máquinas virtuales.
 +
@@ -31,14 +31,14 @@ Es posible usar la interfaz gráfica de usuario del cliente de VMware vSphere en
 Al realizar backup de máquinas virtuales, VMDK y almacenes de datos, el plugin no admite RDM. Las tareas de backup para máquinas virtuales ignoran RDM. Si necesita realizar el backup de RDM, tiene que utilizar un plugin basado en aplicaciones de SnapCenter.
 
 +
-El plugin de VMware de SnapCenter incluye una base de datos de MySQL que contiene los metadatos del plugin de VMware de SnapCenter. Para la protección de datos coherente con los fallos y la máquina virtual, no es necesario instalar SnapCenter Server.
+El plugin de SnapCenter para VMware vSphere incluye una base de datos de MySQL que contiene los metadatos del plugin de SnapCenter para VMware vSphere. Para la protección de datos coherente con los fallos y la máquina virtual, no es necesario instalar SnapCenter Server.
 
 * Soporte para operaciones de protección de datos consistentes con las aplicaciones (aplicación a través de VMDK/RDM).
 +
 Puede utilizar la interfaz gráfica de usuario de SnapCenter y los complementos de aplicaciones de SnapCenter adecuados para todas las operaciones de backup y restauración de bases de datos y sistemas de archivos en almacenamiento primario y secundario en equipos virtuales.
 
 +
-SnapCenter aprovecha de forma nativa el plugin de VMware de SnapCenter para todas las operaciones de protección de datos en VMDK, asignaciones de dispositivos sin formato (RDM) y almacenes de datos NFS. Una vez puesto en marcha el dispositivo virtual, el plugin se encarga de todas las interacciones con vCenter. El complemento VMware de SnapCenter es compatible con todos los plugins basados en aplicaciones SnapCenter.
+SnapCenter aprovecha de forma nativa el plugin de SnapCenter para VMware vSphere en todas las operaciones de protección de datos en VMDK, asignaciones de dispositivos sin formato (RDM) y almacenes de datos NFS. Una vez puesto en marcha el dispositivo virtual, el plugin se encarga de todas las interacciones con vCenter. El plugin de SnapCenter para VMware vSphere es compatible con todos los plugins basados en aplicaciones de SnapCenter.
 
 +
 SnapCenter no admite copias Snapshot únicas de bases de datos y máquinas virtuales. Los backups de máquinas virtuales y bases de datos deben programarse y ejecutarse por separado, lo cual crea copias de Snapshot independientes, incluso si las bases de datos y las máquinas virtuales están alojadas en el mismo volumen. Programar los backups de aplicaciones de la base de datos mediante la interfaz gráfica de usuario de SnapCenter; programar los backups de máquinas virtuales y almacenes de datos mediante la interfaz gráfica de usuario del cliente VMware vSphere.
@@ -61,19 +61,18 @@ Las herramientas de ONTAP se utilizan para aprovisionar y configurar el almacena
 +
 Para obtener más información, consulte https://docs.netapp.com/us-en/ontap-tools-vmware-vsphere/index.html["Herramientas de ONTAP para VMware vSphere"^]
 
-* El complemento VMware de SnapCenter se pone en marcha como un dispositivo virtual en una máquina virtual Linux
+* El plugin de SnapCenter para VMware vSphere se pone en marcha como dispositivo virtual en una máquina virtual de Linux
 +
-Aunque el dispositivo virtual debe instalarse como máquina virtual Linux, el plugin de VMware de SnapCenter admite vCenter basadas en Windows y vCenter basadas en Linux. De forma nativa, SnapCenter utiliza este plugin sin intervención del usuario para comunicarse con vCenter a fin de admitir los plugins basados en aplicaciones de SnapCenter que realizan operaciones de protección de datos en aplicaciones virtualizadas en Windows y Linux.
+Aunque el dispositivo virtual debe instalarse como máquina virtual Linux, el plugin de SnapCenter para VMware vSphere admite vCenter basados en Windows y Linux. De forma nativa, SnapCenter utiliza este plugin sin intervención del usuario para comunicarse con vCenter a fin de admitir los plugins basados en aplicaciones de SnapCenter que realizan operaciones de protección de datos en aplicaciones virtualizadas en Windows y Linux.
 
 
 
-Además de estas funciones principales, el plugin de SnapCenter para VMware vSphere es compatible con iSCSI, Fibre Channel, FCoE, VMDK sobre NFS 3.0 y 4.1, y VMDK sobre VMFS 5.0 y 6.0.
+Además de estas funciones principales, el complemento de SnapCenter para VMware vSphere es compatible con iSCSI, Fibre Channel, FCoE, NFS 3,0/4,1, VMFS 5,0/6,0, y NVMe sobre TCP.
 
-Para obtener la información más reciente sobre las versiones compatibles, consulte https://imt.netapp.com/matrix/imt.jsp?components=117018;&solution=1259&isHWU&src=IMT[]
-[Herramienta de matriz de interoperabilidad de NetApp^] (IMT).
+Para obtener la información más actualizada sobre las versiones compatibles, consulte https://imt.netapp.com/matrix/imt.jsp?components=117018;&solution=1259&isHWU&src=IMT["Herramienta de matriz de interoperabilidad de NetApp"^] (IMT).
 
-Para obtener información sobre los protocolos NFS y ESXi, consulte la documentación sobre vSphere Storage que proporciona VMware.
+Para obtener información sobre los protocolos NFS y el host ESXi, consulte la documentación de vSphere Storage que suministra VMware.
 
 Para obtener información sobre la protección de datos de SnapCenter, consulte la información de protección de datos del plugin de SnapCenter en http://docs.netapp.com/us-en/snapcenter/index.html["Documentación de SnapCenter"^].
 
-Para obtener información acerca de las rutas de actualización y migración admitidas, consulte link:scpivs44_release_notes.html["Notas de la versión del plugin de SnapCenter para VMware vSphere"^].
+Para obtener información sobre las rutas de migración y actualización admitidas, consulte link:scpivs44_release_notes.html["Notas de la versión del plugin de SnapCenter para VMware vSphere"^].

@@ -24,7 +24,7 @@ Se debe habilitar Transport Layer Security (TLS) en vCenter. Consulte la documen
 . Inicie sesión en la página *VMware vCenter Single Sign-On*.
 +
 
-IMPORTANT: Haga clic en el botón *Login*. Debido a un problema conocido de VMware, no utilice la clave ENTER para iniciar sesión. Para obtener más detalles, consulte la documentación de VMware sobre problemas del cliente host integrado ESXi.
+IMPORTANT: Haga clic en el botón *Login*. Debido a un problema conocido de VMware, no use la clave INTRO para iniciar sesión. Para obtener más detalles, consulte la documentación de VMware en Problemas del cliente de host integrado ESXi.
 
 . En la página *VMware vSphere Client*, haga clic en Menú en la barra de herramientas y, a continuación, seleccione *SnapCenter Plug-in for VMware vSphere*.
 

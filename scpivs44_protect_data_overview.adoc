@@ -20,11 +20,11 @@ Cuando realiza el backup de un almacén de datos, incluye en el backup todas las
 
 No se pueden ejecutar en simultáneo operaciones de backup y restauración en el mismo grupo de recursos.
 
-Debe revisar la información relacionada con lo que hace el plugin de VMware de SnapCenter y no admite.link:scpivs44_deployment_planning_and_requirements.html["Planificación y requisitos de la puesta en marcha"]
+Debe revisar la información sobre lo que el plugin de SnapCenter para VMware vSphere admite y no admite. link:scpivs44_deployment_planning_and_requirements.html["Planificación y requisitos de la puesta en marcha"]
 
 En configuraciones de MetroCluster:
 
-* Es posible que el complemento VMware de SnapCenter no pueda detectar una relación de protección después de una conmutación por error. Consulte https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Unable_to_detect_SnapMirror_or_SnapVault_relationship_after_MetroCluster_failover["Artículo de la base de conocimientos: No es posible detectar la relación de SnapMirror o SnapVault después de una conmutación por error de MetroCluster"^].
+* Es posible que el plugin de SnapCenter para VMware vSphere no pueda detectar una relación de protección después de una conmutación por error. Consulte https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/Unable_to_detect_SnapMirror_or_SnapVault_relationship_after_MetroCluster_failover["Artículo de la base de conocimientos: No es posible detectar la relación de SnapMirror o SnapVault después de una conmutación por error de MetroCluster"^] si desea obtener más información.
 * Si se produce un error en los backups `Unable to discover resources on SCV: <xxx>…` En el caso de máquinas virtuales NFS y VMFS tras la conmutación/conmutación de vuelta, reinicie los servicios VMware de SnapCenter desde la consola de mantenimiento.
 
 

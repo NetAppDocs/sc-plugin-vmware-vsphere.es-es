@@ -52,21 +52,21 @@ El valor predeterminado es "5".
 
 * *GuestFileRestore.monitorInterval=30*
 +
-Especifica el intervalo de tiempo, en minutos, durante el cual el plugin de VMware de SnapCenter supervisa las sesiones de restauración de archivos invitados que expiraron. Toda sesión que se ejecute más allá del tiempo configurado se desconectará.
+Especifica el intervalo de tiempo, en minutos, durante el cual el plugin de SnapCenter para VMware vSphere supervisa las sesiones de restauración de archivos invitados que expiraron. Toda sesión que se ejecute más allá del tiempo configurado se desconectará.
 
 +
 El valor predeterminado es "30".
 
 * *GuestFileRestore.online.disk.timeout=100*
 +
-Especifica el tiempo, en segundos, durante el cual el complemento VMware de SnapCenter espera a que se complete una operación de disco en línea en una máquina virtual invitada. Tenga en cuenta que hay un tiempo de espera adicional de 30 segundos antes de que el plugin sondee para completar la operación de disco en línea.
+Especifica el tiempo, en segundos, durante el cual el plugin de SnapCenter para VMware vSphere espera a que se complete una operación de disco en línea en una máquina virtual invitada. Tenga en cuenta que hay un tiempo de espera adicional de 30 segundos antes de que el plugin sondee para completar la operación de disco en línea.
 
 +
 El valor predeterminado es "100".
 
 * *GuestFileRestore.restore.files.timeout=3600*
 +
-Especifica el tiempo, en segundos, durante el cual el plugin de VMware de SnapCenter espera a que se complete una operación de restauración de archivos en una máquina virtual invitada. Si se supera el tiempo, el proceso finaliza y el trabajo se Marca como erróneo.
+Especifica el tiempo, en segundos, durante el cual el plugin de SnapCenter para VMware vSphere espera a que se complete una operación de restauración de archivos en una máquina virtual invitada. Si se supera el tiempo, el proceso finaliza y el trabajo se Marca como erróneo.
 
 +
 El valor predeterminado es "3600" (1 hora).
@@ -113,7 +113,7 @@ El valor predeterminado es "false".
 
 * *include.esx.initiator.id.from.cluster=true*
 +
-Especifica que el plugin de VMware de SnapCenter debe incluir los ID de iniciador iSCSI y FCP de todos los hosts ESXi que hay en el clúster de la aplicación sobre flujos de trabajo de VMDK.
+Especifica que el plugin de SnapCenter para VMware vSphere debe incluir los ID de iniciadores iSCSI y FCP de todos los hosts ESXi que se encuentran en el clúster de la aplicación sobre flujos de trabajo de VMDK.
 
 +
 El valor predeterminado es "false".
@@ -124,18 +124,18 @@ Cuando `disable.weakCiphers` se establece en `true`, especifica los códigos dé
 
 * *max.concurrente.ds.storage.query.count=15*
 +
-Especifica la cantidad máxima de llamadas simultáneas que el plugin de VMware de SnapCenter puede realizar a SnapCenter Server para detectar el espacio de almacenamiento de los almacenes de datos. El plugin realiza estas llamadas al reiniciar el servicio de Linux en el host de máquina virtual del plugin de VMware de SnapCenter.
+Especifica la cantidad máxima de llamadas simultáneas que el plugin de SnapCenter para VMware vSphere puede realizar a SnapCenter Server para detectar el espacio de almacenamiento de los almacenes de datos. El plugin realiza estas llamadas cuando reinicia el servicio Linux en el host de máquina virtual del plugin de SnapCenter para VMware vSphere.
 
 * *nfs.datastore.mount.retry.count=3*
 +
-Especifica la cantidad máxima de veces que el plugin de VMware de SnapCenter intenta montar un volumen como almacén de datos NFS en vCenter.
+Especifica la cantidad máxima de veces que el plugin de SnapCenter para VMware vSphere intenta montar un volumen como almacén de datos NFS en vCenter.
 
 +
 El valor predeterminado es "3".
 
 * *nfs.datastore.mount.retry.delay=60000*
 +
-Especifica el tiempo, en milisegundos, durante el cual el plugin de VMware de SnapCenter espera entre cada intento para montar un volumen como almacén de datos NFS en vCenter.
+Especifica el tiempo, en milisegundos, durante el cual el plugin de SnapCenter para VMware vSphere espera entre cada intento para montar un volumen como almacén de datos NFS en vCenter.
 
 +
 El valor predeterminado es "60000." (60 segundos).
@@ -173,17 +173,17 @@ El valor predeterminado es "600000." (10 minutos).
 
 * *vmware.esx.ip.kernel.ip.map*
 +
-No hay un valor predeterminado. Utilice este valor para asignar la dirección IP de ESXi a la dirección IP de VMkernel. De forma predeterminada, el plugin de VMware de SnapCenter utiliza la dirección IP del adaptador de VMkernel de gestión del host ESXi. Si desea que el plugin de VMware de SnapCenter utilice una dirección IP del adaptador de VMkernel diferente, tendrá que proporcionar un valor de anulación.
+No hay un valor predeterminado. Utilice este valor para asignar la dirección IP del host ESXi a la dirección IP de VMkernel. De forma predeterminada, el plugin de SnapCenter para VMware vSphere utiliza la dirección IP del adaptador de VMkernel de gestión del host ESXi. Si desea que el plugin de SnapCenter para VMware vSphere utilice una dirección IP del adaptador de VMkernel diferente, tendrá que proporcionar un valor de anulación.
 
 +
-En el ejemplo siguiente, la dirección IP del adaptador de VMkernel de gestión es 10.225.10.56. Sin embargo, el plugin de VMware de SnapCenter utiliza la dirección especificada de 10.225.11.57 y 10.225.11.58. Y si la dirección IP del adaptador de VMkernel de gestión es 10.225.10.60, el plugin utiliza la dirección 10.225.11.61.
+En el ejemplo siguiente, la dirección IP del adaptador de VMkernel de gestión es 10.225.10.56. Sin embargo, el plugin de SnapCenter para VMware vSphere utiliza la dirección especificada de 10.225.11.57 y 10.225.11.58. Y si la dirección IP del adaptador de VMkernel de gestión es 10.225.10.60, el plugin utiliza la dirección 10.225.11.61.
 
 +
 `vmware.esx.ip.kernel.ip.map=10.225.10.56:10.225.11.57,10.225.11.58; 10.225.10.60:10.225.11.61`
 
 * *vmware.max.concurrente.snapshots=30*
 +
-Especifica la cantidad máxima de snapshots de VMware que el plugin de SnapCenter para VMware realiza al servidor.
+Especifica la cantidad máxima de snapshots de VMware que el plugin de SnapCenter para VMware vSphere realiza a la vez en el servidor.
 
 +
 Este número se comprueba por cada almacén de datos y se comprueba solo si se ha seleccionado la política "VM coherente". Si va a realizar backups consistentes con los fallos, esta configuración no se aplica.
@@ -193,7 +193,7 @@ El valor predeterminado es "30".
 
 * *vmware.max.concurrent.snapshots.delete=30*
 +
-Especifica la cantidad máxima de operaciones de eliminación de snapshots de VMware, por cada almacén de datos, que el plugin de VMware de SnapCenter realiza a la vez en el servidor.
+Especifica la cantidad máxima de operaciones de eliminación de snapshots de VMware, por cada almacén de datos, que el plugin de SnapCenter para VMware vSphere realiza a la vez en el servidor.
 
 +
 Este número se comprueba por cada almacén de datos.
@@ -203,56 +203,56 @@ El valor predeterminado es "30".
 
 * *vmware.query.unresolved.retry.count=10*
 +
-Especifica la cantidad máxima de veces que el plugin de VMware de SnapCenter reintenta enviar una consulta sobre volúmenes sin resolver debido a "...time limit for holding off I/O..." errores.
+Especifica la cantidad máxima de veces que el plugin de SnapCenter para VMware vSphere reintenta enviar una consulta sobre volúmenes sin resolver debido a «...time limit for holding off I/O...» errores.
 
 +
 El valor predeterminado es "10".
 
 * *vmware.quiesce.retry.count=0*
 +
-Especifica la cantidad máxima de veces que el plugin de VMware de SnapCenter reintenta enviar consultas acerca de snapshots de VMware debido a "...time limit for holding off I/O..." errores durante una copia de seguridad.
+Especifica la cantidad máxima de veces que el plugin de SnapCenter para VMware vSphere reintenta enviar consultas acerca de snapshots de VMware debido a «...time limit for holding off I/O...» errores durante una copia de seguridad.
 
 +
 El valor predeterminado es "0".
 
 * *vmware.quiesce.retry.interval=5*
 +
-Especifica la cantidad de tiempo, en segundos, durante el cual el plugin de VMware de SnapCenter espera entre el envío de cada consulta sobre las copias Snapshot de VMware "...time limit for holding off I/O...". errores durante una copia de seguridad.
+Especifica la cantidad de tiempo, en segundos, durante el cual el plugin de SnapCenter para VMware vSphere espera entre el envío de cada consulta sobre «...time limit for holding off I/O...» para snapshots de VMware. errores durante una copia de seguridad.
 
 +
 El valor predeterminado es "5".
 
 * *vmware.query.unresolved.retry.delay= 60000*
 +
-Especifica la cantidad de tiempo, en milisegundos, durante el cual el plugin de VMware de SnapCenter espera entre cada envío de consultas sobre volúmenes sin resolver debido a "...time limit for holding off I/O...". errores. Este error se produce al clonar un almacén de datos VMFS.
+Especifica la cantidad de tiempo, en milisegundos, durante el cual el plugin de SnapCenter para VMware vSphere espera entre cada envío de consultas sobre volúmenes sin resolver debido a «...time limit for holding off I/O...» errores. Este error se produce al clonar un almacén de datos VMFS.
 
 +
 El valor predeterminado es "60000." (60 segundos).
 
 * *vmware.reconfig.vm.retry.count=10*
 +
-Especifica la cantidad máxima de veces que el plugin de VMware de SnapCenter reintenta enviar una consulta acerca de cómo reconfigurar una máquina virtual debido al límite de tiempo "...time para retener las operaciones de I/O.." errores.
+Especifica la cantidad máxima de veces que el plugin de SnapCenter para VMware vSphere reintenta enviar una consulta acerca de cómo reconfigurar una máquina virtual debido a «...time limit for holding off I/O...» errores.
 
 +
 El valor predeterminado es "10".
 
 * *vmware.reconfig.vm.retry.delay=30000*
 +
-Especifica el tiempo máximo, en milisegundos, durante el cual el complemento VMware de SnapCenter espera entre cada envío de consultas sobre la reconfiguración de una máquina virtual debido a "...time limit for holding off I/O...". errores.
+Especifica el tiempo máximo, en milisegundos, durante el cual el plugin de SnapCenter para VMware vSphere espera entre cada envío de consultas sobre la reconfiguración de una máquina virtual debido al «...time limit for holding off I/O.». errores.
 
 +
 El valor predeterminado es "30000." (30 segundos).
 
 * *vmware.rescan.hba.retry.count=3*
 +
-Especifica la cantidad de tiempo, en milisegundos, durante el cual el plugin de VMware de SnapCenter espera entre cada envío de consultas sobre el reexamen del adaptador de bus de host debido a "...time limit for holding off I/O...". errores.
+Especifica la cantidad de tiempo, en milisegundos, durante el cual el plugin de SnapCenter para VMware vSphere espera entre cada envío de consultas sobre el reexamen del adaptador de bus de host debido a «...time limit for holding off I/O...» errores.
 
 +
 El valor predeterminado es "3".
 
 * *vmware.rescan.hba.retry.delay=30000*
 +
-Especifica la cantidad máxima de veces que el plugin de VMware de SnapCenter reintenta reexaminar el adaptador del bus de host.
+Especifica la cantidad máxima de veces que el plugin de SnapCenter para VMware vSphere reintenta reexaminar el adaptador del bus de host.
 
 +
 El valor predeterminado es "30000".

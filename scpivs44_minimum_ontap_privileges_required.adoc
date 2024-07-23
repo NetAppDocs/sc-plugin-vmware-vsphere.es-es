@@ -28,10 +28,7 @@ Todos los plugins de SnapCenter requieren los siguientes privilegios mínimos.
 |===
 
 
-| Comandos de acceso total: Privilegios mínimos requeridos para ONTAP 8.3 y versiones posteriores 
-
-
-| se muestra la identidad del clúster 
+| Comandos de acceso total: Privilegios mínimos requeridos para ONTAP 8,3 y versiones posteriores. 
 
 
 | event generate-autosupport-log 
@@ -79,13 +76,13 @@ visualización de copias de snapshot de volumen
 desmonte el volumen 
 
 
-| vserver cifs share crea vserver cifs share delete vserver cifs shadowcopy show vserver cifs share show vserver cifs share show vserver show vserver vserver show vserver vserver export-policy vserver export-policy vserver create vserver export-policy create vserver export-policy delete vserver export-policy create vserver export-policy policy create vserver export-policy show vserver iscsi connection show vserver show vserver show network interface interfaz de red: grupos de recuperación tras fallos de la interfaz de red se muestra 
+| vserver cifs vserver compartir cifs crear vserver compartir cifs eliminar vserver cifs shadowcopy mostrar vserver compartir cifs mostrar vserver cifs mostrar vserver política de exportación vserver política de exportación crear vserver política de exportación eliminar regla de política de exportación de vserver crear regla de política de exportación de vserver mostrar política de exportación de vserver mostrar vserver iscsi vserver conexión iscsi mostrar vserver subsistema vserver nvme controlador subsistema nvme de vserver controladora show subsistema nvme de vserver mapa subsistema nvme de vserver mapa show subsistema nvme de vserver mapa add subsistema nvme de vserver mapa remove subsistema nvme host show subsistema nvme de vserver host add subsistema nvme de vserver host remove subsistema de vserver nvme show subsistema de vserver nvme delete espacio de nombres de vserver nvme mostrar grupos de conmutación por error de interfaz de red 
 |===
 |===
 | Comandos de solo lectura: Privilegios mínimos requeridos para ONTAP 8.3 y versiones posteriores 
 
 
-| vserver peer 
+| identidad del clúster mostrar la interfaz de red mostrar vserver vserver peer vserver show 
 |===
 
 NOTE: Puede ignorar los mensajes de advertencia acerca de los comandos de vServer no compatibles.
@@ -103,14 +100,15 @@ Debe iniciar sesión como `vsadmin` En la máquina virtual de almacenamiento con
 Debe iniciar sesión como `vsadmin` o con un rol que tenga los privilegios mínimos indicados en las tablas anteriores.
 
 * Debe ser el administrador del clúster para crear y gestionar los roles de usuario. Puede asociar los usuarios con la máquina virtual de almacenamiento del clúster o con la máquina virtual de almacenamiento.
-* Necesita ONTAP 9.12.1 o versiones posteriores para usar la funcionalidad de continuidad del negocio de SnapMirror (SM-BC).
+* Necesita ONTAP 9.12.1 o versiones posteriores para usar la función de sincronización activa de SnapMirror.
 * Para utilizar la función Instantánea a prueba de manipulaciones (TPS):
 +
 ** Necesita ONTAP 9.13.1 y versiones posteriores para SAN
 ** Necesita ONTAP 9.12.1 y versiones posteriores para NFS
 
 
+* Para el protocolo NVMe over TCP se necesita ONTAP 9.10.1 y posteriores.
 
 
 
-NOTE: Para ONTAP versión 9.11.1 y posteriores, la comunicación con el clúster de ONTAP se realiza a través de las API DE REST. El usuario de ONTAP debe tener activada la aplicación http. Sin embargo, si se encuentran problemas con las API REST DE ONTAP, la clave de configuración 'FORCE_zapi' ayuda a la conmutación al flujo de trabajo de ZAPI tradicional. Puede que necesite agregar o actualizar esta clave mediante LAS API DE configuración y establecerla en true. Consulte el artículo de la base de conocimientos, https://kb.netapp.com/mgmt/SnapCenter/How_to_use_RestAPI_to_edit_configuration_parameters_in_SCV["Cómo usar RestAPI para editar parámetros de configuración en SCV"].
+NOTE: A partir de la versión 9.11.1 de ONTAP, la comunicación con el clúster de ONTAP se realiza mediante las API DE REST. El usuario de ONTAP debe tener activada la aplicación http. Sin embargo, si se encuentran problemas con las API REST DE ONTAP, la clave de configuración 'FORCE_zapi' ayuda a la conmutación al flujo de trabajo de ZAPI tradicional. Puede que necesite agregar o actualizar esta clave mediante LAS API DE configuración y establecerla en true. Consulte el artículo de la base de conocimientos https://kb.netapp.com/mgmt/SnapCenter/How_to_use_RestAPI_to_edit_configuration_parameters_in_SCV["Cómo usar RestAPI para editar parámetros de configuración en SCV"] para obtener más información.

@@ -35,12 +35,12 @@ La máquina virtual que se desea restaurar no debe estar en el estado de vMotion
 .Acerca de esta tarea
 * Si el VMDK se elimina o se desvincula de la máquina virtual, la operación de restauración asocia el VMDK a la máquina virtual.
 * La operación de restauración puede fallar si no está disponible el nivel de almacenamiento de FabricPool donde se encuentra la máquina virtual.
-* Las operaciones de asociación y restauración conectan VMDK mediante la controladora SCSI predeterminada. Se realizan backups de los VMDK que se asocian a una máquina virtual con una controladora NVMe, pero para las operaciones de asociación y restauración, los VMDK se vuelven a asociar con una controladora iSCSI.
+* Las operaciones de asociación y restauración conectan VMDK mediante la controladora SCSI predeterminada. Sin embargo, cuando se realizan un backup de los VMDK que se asocian a una máquina virtual con un disco NVMe, las operaciones de asociación y restauración utilizan la controladora NVMe si están disponibles.
 
 
 .Pasos
 . En la interfaz gráfica de usuario del cliente de VMware vSphere, haga clic en *Menú* en la barra de herramientas y, a continuación, seleccione *VMs and Templates* en la lista desplegable.
-. En el panel de navegación de la izquierda, haga clic con el botón derecho en una máquina virtual y seleccione *SnapCenter* de NetApp en la lista desplegable; a continuación, seleccione *Restaurar* en la lista desplegable secundaria.
+. En el panel de navegación de la izquierda, haga clic con el botón derecho en una máquina virtual y seleccione *SnapCenter Plug-in for VMware vSphere* en la lista desplegable y, a continuación, seleccione *Restore* en la lista desplegable secundaria.
 . En el asistente *Restaurar*, en la página Seleccionar copia de seguridad, seleccione la copia de seguridad desde la que desea restaurar.
 +
 Puede buscar por un nombre de backup específico o un nombre de backup parcial y también puede filtrar la lista de backups haciendo clic en el icono de filtro y seleccionando un intervalo de fechas y horas. Además, debe seleccionar si desea backups que contengan snapshots de VMware, si desea visualizar backups montados, y la ubicación primaria o secundaria. Haga clic en *Aceptar* para volver al asistente.

@@ -28,7 +28,7 @@ Para corregir el problema, vuelva a conectar manualmente los VMDK en el sistema 
 
 == Error en la operación para asociar el disco de restauración de archivos invitados
 
-Este problema se produce cuando se inicia una operación de restauración de archivos invitados, pero se produce un error en la operación para asociar el disco aunque VMware Tools esté en ejecución y las credenciales del sistema operativo invitado sean correctas. Si esto ocurre, se devuelve el siguiente error:
+Este problema se produce cuando se inicia una operación de restauración de archivos invitados, pero se produce un error en la operación para asociar el disco aunque las herramientas de VMware estén en ejecución y las credenciales del sistema operativo invitado sean correctas. Si esto ocurre, se devuelve el siguiente error:
 
 `Error while validating guest credentials, failed to access guest system using specified credentials: Verify VMWare tools is running properly on system and account used is Administrator account, Error is SystemError vix error codes = (3016, 0).`
 

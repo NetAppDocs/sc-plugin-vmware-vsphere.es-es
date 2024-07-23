@@ -43,7 +43,7 @@ Para garantizar el éxito de la migración, el comando suspende todos los hosts 
 
 * Proceso de cmdlet de migración
 +
-Debe utilizar el cmdlet de Windows PowerShell `invoke-SCVOVAMigration` Para cada instancia del plugin de VMware de SnapCenter que está registrado en SnapCenter.
+Es necesario usar el cmdlet de Windows PowerShell `invoke-SCVOVAMigration` para cada instancia del plugin de SnapCenter para VMware vSphere que esté registrada en SnapCenter.
 
 +
 El cmdlet hace lo siguiente:
@@ -54,15 +54,15 @@ El cmdlet hace lo siguiente:
 ** Crea programaciones de backup para backups posteriores a la migración.
 ** Desinstala el plugin de SnapCenter para VMware vSphere existente del host de Windows.
 +
-Si el plugin de VMware de SnapCenter se instala en el host de SnapCenter Server y la protección está configurada para el repositorio de SnapCenter, el proceso de migración también desinstala el paquete de plugins basado en Windows que contiene el plugin de SnapCenter para VMware vSphere y el plugin de SnapCenter para Windows, A continuación, vuelve a instalar la versión más reciente del plugin de SnapCenter para Windows para admitir la protección de repositorio. El tipo de host de la interfaz gráfica de usuario de SnapCenter cambia de "vsphere" a "Windows".
+Si el plugin de SnapCenter para VMware vSphere está instalado en el host de SnapCenter Server y la protección está configurada para el repositorio de SnapCenter, el proceso de migración también desinstala el paquete de plugins basado en Windows que contiene el plugin de SnapCenter para VMware vSphere y el plugin de SnapCenter para Windows, y, a continuación, reinstala la versión más reciente del plugin de SnapCenter para Windows para admitir la protección de repositorios. El tipo de host de la interfaz gráfica de usuario de SnapCenter cambia de "vsphere" a "Windows".
 
 ** Quita el host de vSphere y los grupos de recursos de Windows SnapCenter Server.
-** Activa los trabajos de backup en el plugin de VMware de SnapCenter basado en Linux.
-** Registra el host de vSphere del plugin para VMware de SnapCenter "con SnapCenter para admitir backups basados en aplicaciones de bases de datos y sistemas de archivos virtualizados (aplicaciones en backups de VMDK).
+** Activa los trabajos de backup en el plugin de SnapCenter para VMware vSphere basado en Linux.
+** Registra el host de vSphere para el plugin de SnapCenter para VMware vSphere `con SnapCenter para admitir backups basados en aplicaciones de bases de datos y sistemas de archivos virtualizados (aplicación sobre backups de VMDK).
 
 
 * El lugar donde se almacenan los metadatos
 +
-Los metadatos de los backups de VMDK basados en aplicaciones se almacenan en el repositorio de SnapCenter Server. Los metadatos de los backups de máquinas virtuales y almacenes de datos se almacenan en el repositorio MySQL del plugin para VMware de SnapCenter.
+Los metadatos de los backups de VMDK basados en aplicaciones se almacenan en el repositorio de SnapCenter Server. Los metadatos para los backups de máquinas virtuales y almacenes de datos se almacenan en el repositorio MySQL del plugin de SnapCenter para VMware vSphere.
 
 

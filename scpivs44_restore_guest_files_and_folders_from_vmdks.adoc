@@ -28,8 +28,8 @@ IMPORTANT: No se puede ejecutar más de una operación de asociación o restaura
 IMPORTANT: La función de restauración de archivos invitados permite visualizar y restaurar archivos de sistema y ocultos, así como también visualizar archivos cifrados. No intente sobrescribir un archivo de sistema existente ni restaurar archivos cifrados en una carpeta cifrada. Durante la operación de restauración, el archivo restaurado no conserva los atributos ocultos, de cifrado y sistema de los archivos invitados. Ver o explorar particiones reservadas puede provocar un error.
 
 .Pasos
-. Haga clic en *Menú* y seleccione la opción de menú *hosts y clústeres*, a continuación, seleccione una máquina virtual, seleccione *SnapCenter* de NetApp y, a continuación, haga clic en *Restauración de archivos invitados*.
-. En el cliente VMware vSphere, haga clic en *Guest File Restore* en la lista desplegable secundaria para iniciar el asistente.
+. En la ventana de accesos directos del cliente de vSphere, seleccione *Hosts and Clusters* y seleccione una VM.
+. Haga clic con el botón derecho en la máquina virtual y seleccione *SnapCenter Plug-in for VMware vSphere* > *Guest File Restore*.
 . En la página *Restore Scope*, especifique la copia de seguridad que contiene el disco virtual que desea asociar haciendo lo siguiente:
 +
 .. En la tabla *Nombre de copia de seguridad*, seleccione la copia de seguridad que contiene el disco virtual que desea asociar.
@@ -81,7 +81,8 @@ Antes de hacer clic en *Finalizar*, puede volver a cualquier página del asisten
 +
 Puede ver el progreso de la operación en el supervisor de trabajos de la consola. También puede esperar a recibir la notificación por correo electrónico.
 
-. Para encontrar los archivos que desea restaurar desde el disco virtual asociado, haga clic en *Menú > complemento de SnapCenter para VMware vSphere*; a continuación, en el panel de navegación de la izquierda, haga clic en *Restauración de archivos invitados* y seleccione la ficha *Configuración de invitados*.
+. Para encontrar los archivos que desea restaurar desde el disco virtual asociado, seleccione *Plugin de SnapCenter para VMware vSphere* en la ventana de accesos directos del cliente de vSphere.
+. En el panel de navegación de la izquierda, seleccione *Guest File Restore* > *Guest Configuration*.
 +
 En la tabla Guest Session Monitor, puede ver información adicional de la sesión si hace clic en *... *en la columna derecha.
 

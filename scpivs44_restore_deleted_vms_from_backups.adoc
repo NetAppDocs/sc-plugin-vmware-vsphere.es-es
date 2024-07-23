@@ -67,7 +67,7 @@ La operación de restauración puede fallar si no está disponible el nivel de a
 +
 Puede buscar por un nombre de backup específico o un nombre de backup parcial y también puede filtrar la lista de backups haciendo clic en el icono de filtro y seleccionando un intervalo de fechas y horas. Además, debe seleccionar si desea backups que contengan snapshots de VMware, si desea visualizar backups montados y la ubicación. Haga clic en *Aceptar* para volver al asistente.
 
-. En la página *Select Scope*, seleccione *entire virtual machine* en el campo *Restore scope*, a continuación, seleccione la ubicación de restauración y, a continuación, introduzca la información de destino ESXi donde debe montarse la copia de seguridad.
+. En la página *Select Scope*, seleccione *entire virtual machine* en el campo *Restore scope*, luego seleccione la ubicación de restauración y, a continuación, introduzca la información del host ESXi de destino donde se debe montar la copia de seguridad.
 +
 El destino de la restauración puede ser cualquier host ESXi que se haya añadido a SnapCenter. Esta opción restaura el contenido del backup seleccionado en el que residió la máquina virtual, a partir de una snapshot con la fecha y hora especificadas. La casilla de verificación *Restart VM* se Marca si selecciona esta opción y la VM se encenderá.
 

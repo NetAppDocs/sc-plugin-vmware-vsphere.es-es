@@ -17,8 +17,8 @@ summary: Puede generar un paquete de soporte desde la interfaz gráfica de usuar
 [role="lead"]
 Para iniciar sesión en la interfaz gráfica de usuario de gestión del plugin de SnapCenter para VMware vSphere, debe conocer la dirección IP y las credenciales de inicio de sesión. También debe anotar el token MFA generado desde la consola de mantenimiento.
 
-* La dirección IP se muestra cuando se implementó el plugin de VMware de SnapCenter.
-* Use las credenciales de registro proporcionadas durante la implementación del plugin de VMware de SnapCenter o como se modificó más adelante.
+* La dirección IP se mostró cuando se implementó el plugin de SnapCenter para VMware vSphere.
+* Use las credenciales de inicio de sesión que se proporcionan durante la implementación del plugin de SnapCenter para VMware vSphere o como se modifican posteriormente.
 * Genere un token MFA de 6 dígitos con las opciones de configuración del sistema de la consola de mantenimiento.
 
 

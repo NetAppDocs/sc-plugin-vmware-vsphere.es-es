@@ -17,7 +17,9 @@ summary: Después de ejecutar una operación de protección de datos mediante el
 Después de ejecutar una operación de protección de datos mediante el cliente VMware vSphere, es posible supervisar el estado del trabajo y ver sus detalles desde la pestaña Job Monitor en Dashboard.
 
 .Pasos
-. En el panel de navegación izquierdo del cliente de vSphere, haga clic en *Dashboard*, cuando dos o más vCenter estén configurados en modo vinculado, seleccione una instancia de vCenter Server y, a continuación, haga clic en la pestaña *Job Monitor* en el panel Dashboard. En la pestaña Job Monitor, se enumera cada trabajo y su estado, hora de inicio y hora de finalización. Si los nombres de los trabajos son extensos, es posible que deba desplazarse a la derecha para ver las horas de inicio y de finalización. La pantalla se actualiza cada 30 segundos.
+. En la página de acceso directo del cliente de vCenter, seleccione SnapCenter Plug-in for VMware vSphere (SCV).
+. En el panel de navegación izquierdo de SCV, seleccione *Dashboard*.
+. Cuando dos o más vCenters estén configurados en modo vinculado, seleccione la instancia del plugin de SCV y seleccione la pestaña *Job Monitor*. En la pestaña Job Monitor, se enumera cada trabajo y su estado, hora de inicio y hora de finalización. Si los nombres de los trabajos son extensos, es posible que deba desplazarse a la derecha para ver las horas de inicio y de finalización. La pantalla se actualiza cada 30 segundos.
 +
 ** Seleccione el icono de actualización de la barra de herramientas para actualizar la pantalla a petición.
 ** Seleccione el icono de filtro para elegir el rango de horas, el tipo, la etiqueta y el estado de los trabajos que desea que se muestren. El filtro distingue entre mayúsculas y minúsculas.
@@ -26,4 +28,4 @@ Después de ejecutar una operación de protección de datos mediante el cliente 
 
 
 
-Si la consola no muestra información de trabajos, consulte https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_vSphere_web_client_dashboard_does_not_display_jobs["Artículo de base de conocimientos: La consola del cliente de SnapCenter vSphere no muestra trabajos"^].
+Si el panel de control no muestra información del trabajo, consulte https://kb.netapp.com/Advice_and_Troubleshooting/Data_Protection_and_Security/SnapCenter/SnapCenter_vSphere_web_client_dashboard_does_not_display_jobs["Artículo de base de conocimientos: La consola del cliente de SnapCenter vSphere no muestra trabajos"^].

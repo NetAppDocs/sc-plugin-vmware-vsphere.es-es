@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: scpivs44_back_up_the_snapcenter_plug-in_for_vmware_vsphere_mysql_database.html 
 keywords:  
-summary: 'El plugin de VMware de SnapCenter incluye una base de datos de MySQL (también denominada base de datos NSM) que contiene los metadatos para todos los trabajos realizados por el plugin. Debe realizar el backup de este repositorio de forma regular.' 
+summary: 'El plugin de SnapCenter para VMware vSphere incluye una base de datos MySQL (también denominada base de datos NSM) que contiene los metadatos para todos los trabajos que realiza el plugin. Debe realizar una copia de seguridad de este repositorio regularmente.' 
 ---
 = Realice el backup de la base de datos MySQL del plugin de SnapCenter para VMware vSphere
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: 'El plugin de VMware de SnapCenter incluye una base de datos de MySQL (
 
 
 [role="lead"]
-El plugin de VMware de SnapCenter incluye una base de datos de MySQL (también denominada base de datos NSM) que contiene los metadatos para todos los trabajos realizados por el plugin. Debe realizar el backup de este repositorio de forma regular.
+El plugin de SnapCenter para VMware vSphere incluye una base de datos MySQL (también denominada base de datos NSM) que contiene los metadatos para todos los trabajos que realiza el plugin. Debe realizar una copia de seguridad de este repositorio regularmente.
 
 También debe realizar una copia de seguridad del repositorio antes de realizar migraciones o actualizaciones.
 
@@ -22,8 +22,8 @@ También debe realizar una copia de seguridad del repositorio antes de realizar 
 No inicie una tarea para realizar un backup de la base de datos MySQL cuando ya se está ejecutando un trabajo de backup bajo demanda.
 
 .Pasos
-. En el cliente VMware vSphere, seleccione la máquina virtual donde esté ubicado el plugin de VMware de SnapCenter.
-. Haga clic con el botón derecho del ratón en el equipo virtual y, a continuación, en la ficha *Resumen* del dispositivo virtual, haga clic en *Iniciar consola remota* * o Iniciar Web Console* para abrir una ventana de la consola de mantenimiento.
+. En el cliente VMware vSphere, seleccione la máquina virtual donde se encuentra el plugin de SnapCenter para VMware vSphere.
+. En la pestaña *Resumen* del dispositivo virtual, haga clic en *Iniciar Consola Remota* *o Iniciar Consola Web* para abrir una ventana de consola de mantenimiento.
 +
 image:scpivs44_image21.png["ventana de la consola de mantenimiento"]
 

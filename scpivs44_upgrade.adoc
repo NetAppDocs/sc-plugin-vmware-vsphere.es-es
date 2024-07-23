@@ -14,7 +14,7 @@ summary: Si utiliza el dispositivo virtual del plugin de SnapCenter para VMware 
 
 
 
-NOTE: La actualización a SCV 5,0 solo es compatible con VMware vCenter Server 7 update 1 y versiones posteriores, para VMware vCenter Server antes de la actualización 7 1, debe continuar usando SCV 4,7. La actualización no provoca interrupciones en versiones no compatibles de VMware vCenter Server.
+NOTE: La actualización a SCV 6,0 solo es compatible con VMware vCenter Server 7 update 1 y versiones posteriores, para VMware vCenter Server antes de la actualización 7 1, debe continuar usando SCV 4,7. La actualización no provoca interrupciones en versiones no compatibles de VMware vCenter Server.
 
 Si utiliza el dispositivo virtual del plugin de SnapCenter para VMware vSphere, puede actualizar a una versión más reciente. El proceso de actualización cancela el registro del plugin existente e implementa un plugin que solo es compatible con vSphere 7.0U1 y versiones posteriores.
 
@@ -25,10 +25,13 @@ Si utiliza el dispositivo virtual del plugin de SnapCenter para VMware vSphere, 
 |===
 
 
-| Si está en la versión del complemento de SnapCenter para VMware vSphere (SCV)... | Puede actualizar directamente el complemento SnapCenter para VMware vSphere al... 
+| Si tiene la versión del plugin de SnapCenter para VMware vSphere (SCV)... | Puede actualizar directamente el plugin de SnapCenter para VMware vSphere al... 
 
 
-| SCV 4,9 | Actualice a SCV 5,0 
+| SCV 5,0 | Actualice a SCV 6,0 
+
+
+| SCV 4,9 | Actualice a SCV 5,0 y SCV 6,0 
 
 
 | SCV 4,8 | Actualice a SCV 4,9 y SCV 5,0 
@@ -48,7 +51,7 @@ NOTE: No se admite el cambio de la configuración de red de estática a DHCP.
 .Pasos
 . Para preparar la actualización, deshabilite el plugin de SnapCenter para VMware vSphere.
 +
-.. Inicie sesión en la interfaz gráfica de usuario de gestión del plugin de SnapCenter para VMware vSphere. La IP se muestra cuando se implementa el plugin de VMware de SnapCenter.
+.. Inicie sesión en la interfaz gráfica de usuario de gestión del plugin de SnapCenter para VMware vSphere. La dirección IP se muestra cuando implementa el plugin de SnapCenter para VMware vSphere.
 .. Haga clic en *Configuración* en el panel de navegación de la izquierda y, a continuación, haga clic en la opción *Servicio* de la sección Detalles del complemento para desactivar el plugin.
 
 
@@ -64,7 +67,7 @@ NOTE: No se admite el cambio de la configuración de red de estática a DHCP.
 .. En el explorador, desplácese hasta VMware vSphere vCenter.
 .. En la interfaz gráfica de usuario de vCenter, haga clic en *vSphere Client (HTML)*.
 .. Inicie sesión en la página *VMware vCenter Single Sign-On*.
-.. En el panel de navegación, haga clic en la máquina virtual que desee actualizar y, a continuación, haga clic en la ficha *Resumen*.
+.. En el panel del navegador, haga clic en la VM que desea actualizar y, a continuación, haga clic en la pestaña *Resumen*.
 .. En el panel *objetos relacionados*, haga clic en cualquier almacén de datos de la lista y, a continuación, haga clic en la ficha *Resumen*.
 .. En la ficha *Archivos* del almacén de datos seleccionado, haga clic en cualquier carpeta de la lista y, a continuación, haga clic en *cargar archivos*.
 .. En la pantalla emergente de carga, desplácese hasta la ubicación en la que ha descargado el `.iso` haga clic en el archivo `.iso` Imagen de archivo y, a continuación, haga clic en *Abrir*. El archivo se carga en el almacén de datos.

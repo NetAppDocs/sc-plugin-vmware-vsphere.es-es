@@ -20,9 +20,9 @@ Cuando se usa el plugin de SnapCenter para VMware vSphere, vCenter Server propor
 
 == RBAC en vCenter Server
 
-Este mecanismo de seguridad se aplica a todos los trabajos realizados por el plugin de VMware de SnapCenter, que incluye SnapCenter trabajos consistentes con los fallos de las máquinas virtuales y consistentes con las aplicaciones (aplicación a través de VMDK) consistentes con las máquinas virtuales. Este nivel de RBAC restringe la capacidad de los usuarios de vSphere para ejecutar tareas en el plugin de SnapCenter VMware sobre objetos de vSphere, como máquinas virtuales (VM) y almacenes de datos.
+Este mecanismo de seguridad se aplica a todos los trabajos realizados por el plugin de SnapCenter para VMware vSphere, que incluye trabajos consistentes con las máquinas virtuales, consistentes con los fallos y consistentes con las aplicaciones del servidor de SnapCenter (aplicación a través de VMDK). Este nivel de RBAC restringe la capacidad de los usuarios de vSphere para ejecutar tareas en el plugin de SnapCenter para VMware vSphere sobre objetos de vSphere, como máquinas virtuales (VM) y almacenes de datos.
 
-La implementación del complemento VMware de SnapCenter crea los siguientes roles para las operaciones de SnapCenter en vCenter:
+La implementación del plugin de SnapCenter para VMware vSphere crea los siguientes roles para las operaciones de SnapCenter en vCenter:
 
 `SCV Administrator`
 `SCV Backup`

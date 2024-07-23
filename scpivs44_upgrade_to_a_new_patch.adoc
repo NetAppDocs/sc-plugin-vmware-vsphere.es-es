@@ -19,7 +19,7 @@ Si va a actualizar a una nueva revisión de la misma versión, debe borrar la ca
 Si no se borra la caché del plugin, en las siguientes situaciones no se muestran los trabajos recientes en la consola ni en el monitor de trabajos:
 
 * El plugin de SnapCenter para VMware vSphere se puso en marcha con vCenter y, posteriormente, se actualizó con una revisión en la misma versión.
-* El dispositivo virtual de VMware de SnapCenter se puso en marcha en vCenter 1. Más tarde, este complemento de VMware de SnapCenter fue registrado en un nuevo vCenter2. Una nueva instancia del complemento VMware de SnapCenter se crea con un parche y se registra en vCenter1. Sin embargo, como vCenter1 aún tiene el plugin en caché del primer complemento VMware SnapCenter sin el parche, la caché debe borrarse.
+* El dispositivo virtual de VMware de SnapCenter se puso en marcha en vCenter 1. Más tarde, este plugin de SnapCenter para VMware vSphere se registró en un nuevo sistema vCenter2. Se crea una nueva instancia del plugin de SnapCenter para VMware vSphere con un parche y registrada en vCenter1. Sin embargo, como vCenter1 sigue teniendo el plugin almacenado en caché del primer plugin de SnapCenter para VMware vSphere sin la revisión, la caché se debe borrar.
 
 
 
@@ -31,10 +31,10 @@ Si no se borra la caché del plugin, en las siguientes situaciones no se muestra
 El nombre de la carpeta cambia para cada versión.
 
 +
-Consulte la documentación de VMware para ver la ubicación del `vsphere-client-serenity` carpeta para el sistema operativo.
+Consulte la documentación de VMware para conocer la ubicación de `vsphere-client-serenity` la carpeta para el sistema operativo.
 
 . Reinicie vCenter Server.
 +
-Posteriormente, puede actualizar el plugin de VMware de SnapCenter.
+Luego, puede actualizar el plugin de SnapCenter para VMware vSphere.
 
 

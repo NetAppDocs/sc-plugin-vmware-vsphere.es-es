@@ -29,7 +29,7 @@ Puede buscar y encontrar un backup específico de una máquina virtual o de un a
 | Almacenes de datos | Haga clic en la opción de menú *almacenamiento*, seleccione un almacén de datos, haga clic en la ficha *Configurar* y, a continuación, haga clic en *copias de seguridad* en la sección *SnapCenter Plug-in for VMware vSphere*. 
 |===
 . En el panel de navegación de la izquierda, expanda el centro de datos que contiene la máquina virtual o el almacén de datos.
-. Opcional: Haga clic con el botón derecho en una máquina virtual o un almacén de datos y seleccione *SnapCenter* de NetApp en la lista desplegable; a continuación, seleccione *Restaurar* en la lista desplegable secundaria.
+. Opcional: Haga clic con el botón derecho en una máquina virtual o almacén de datos, luego seleccione *SnapCenter Plug-in for VMware vSphere* en la lista desplegable y, a continuación, seleccione *Restaurar* en la lista desplegable secundaria.
 . En el asistente *Restaurar*, introduzca un nombre de búsqueda y haga clic en *Buscar*.
 +
 Puede filtrar la lista de backups seleccionando el icono de filtrar y seleccionando un intervalo de fechas y horas. Debe seleccionar también si desea visualizar los backups que contengan snapshots de VMware, si desea visualizar los backups montados y también la ubicación. Haga clic en *Aceptar*.

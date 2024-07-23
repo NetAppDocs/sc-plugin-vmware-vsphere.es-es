@@ -22,21 +22,21 @@ Debe conocer los requisitos de puesta en marcha antes de poner en marcha el disp
 
 Antes de iniciar la implementación del plugin de SnapCenter para VMware vSphere (SCV), debe estar familiarizado con los requisitos del host.
 
-* El plugin de VMware de SnapCenter se implementa como máquina virtual de Linux, independientemente de si utiliza el plugin para proteger datos en sistemas Windows o sistemas Linux.
-* Debe implementar el plugin de VMware de SnapCenter en vCenter Server.
+* El plugin de SnapCenter para VMware vSphere se implementa como máquina virtual Linux, independientemente de si utiliza el plugin para proteger datos en sistemas Windows o sistemas Linux.
+* Debe implementar el plugin de SnapCenter para VMware vSphere en vCenter Server.
 +
-Las programaciones de backup se ejecutan en la zona horaria en la que se implementó el plugin de VMware de SnapCenter. VCenter informa de los datos en la zona horaria en la que se encuentra la instancia de vCenter. Por lo tanto, si el plugin de VMware de SnapCenter y vCenter están en zonas horarias diferentes, es posible que los datos de la consola del plugin de VMware de SnapCenter no sean los mismos que los datos de los informes.
+Las programaciones de backups se ejecutan en la zona horaria en la que se implementa el plugin de SnapCenter para VMware vSphere. VCenter informa los datos en la zona horaria en la que se encuentra el para vCenter. Por lo tanto, si el plugin de SnapCenter para VMware vSphere y vCenter están en zonas horarias diferentes, los datos de la consola del plugin de SnapCenter para VMware vSphere pueden no ser iguales a los datos de los informes.
 
-* No debe implementar el plugin de VMware de SnapCenter en una carpeta cuyo nombre contenga caracteres especiales.
+* No debe implementar el plugin de SnapCenter para VMware vSphere en una carpeta cuyo nombre contenga caracteres especiales.
 +
 El nombre de la carpeta no debe contener los siguientes caracteres especiales: $!@#%&()_+{}';.,*?"<>|
 
-* Es necesario poner en marcha y registrar una instancia única e independiente del plugin de VMware de SnapCenter para cada servidor de vCenter.
+* Debe implementar y registrar una instancia única y separada del plugin de SnapCenter para VMware vSphere para cada servidor de vCenter.
 +
-** Cada instancia de vCenter Server, ya esté en modo vinculado o no, debe emparejarse con una instancia independiente del plugin de VMware de SnapCenter.
-** Cada instancia del plugin de VMware de SnapCenter se debe poner en marcha como una máquina virtual de Linux independiente.
+** Cada servidor de vCenter, ya sea en modo vinculado o no, debe emparejarse con una instancia independiente del plugin de SnapCenter para VMware vSphere.
+** Cada instancia del plugin de SnapCenter para VMware vSphere debe implementarse como máquina virtual Linux independiente.
 +
-Por ejemplo, si desea realizar backups de seis instancias diferentes de vCenter Server, debe implementar el plugin de VMware de SnapCenter en seis hosts y cada instancia de vCenter Server se debe emparejar con una instancia única del plugin de VMware de SnapCenter.
+Por ejemplo, si desea realizar backups de seis instancias diferentes de vCenter Server, debe implementar el plugin de SnapCenter para VMware vSphere en seis hosts y cada servidor de vCenter debe emparejarse con una instancia única del plugin de SnapCenter para VMware vSphere.
 
 
 
@@ -45,9 +45,9 @@ Por ejemplo, si desea realizar backups de seis instancias diferentes de vCenter 
 Para obtener más información, consulte https://docs.netapp.com/us-en/ontap-tools-vmware-vsphere/index.html["Herramientas de ONTAP para VMware vSphere"^]
 
 +
-Para obtener la información más reciente sobre las versiones compatibles de herramientas de ONTAP, consulte https://imt.netapp.com/matrix/imt.jsp?components=117018;&solution=1259&isHWU&src=IMT["Herramienta de matriz de interoperabilidad de NetApp"^].
+Para obtener la información más reciente sobre las versiones compatibles de las herramientas de ONTAP, consulte https://imt.netapp.com/matrix/imt.jsp?components=117018;&solution=1259&isHWU&src=IMT["Herramienta de matriz de interoperabilidad de NetApp"^].
 
-* El complemento VMware de SnapCenter ofrece compatibilidad limitada con dispositivos PCI o PCIe compartidos (por ejemplo, NVIDIA Grid GPU) debido a una limitación de las máquinas virtuales en el soporte de Storage vMotion. Para obtener más información, consulte el documento del proveedor Guía de puesta en marcha de VMware.
+* El plugin de SnapCenter para VMware vSphere ofrece compatibilidad limitada con dispositivos compartidos PCI o PCIe (por ejemplo, GPU NVIDIA Grid) debido a una limitación de las máquinas virtuales en el soporte de Storage vMotion. Para obtener más información, consulte el documento del proveedor Guía de puesta en marcha de VMware.
 +
 ** Qué se admite:
 +
@@ -77,7 +77,7 @@ Restaurar una máquina virtual completa cuando uno o más VMDK están en un alma
 
 
 
-* Para obtener una lista detallada de las limitaciones del complemento VMware de SnapCenter, consulte link:scpivs44_release_notes.html["Notas de la versión del plugin de SnapCenter para VMware vSphere"^].
+* Para obtener una lista detallada de las limitaciones del plugin de SnapCenter para VMware vSphere, consulte link:scpivs44_release_notes.html["Notas de la versión del plugin de SnapCenter para VMware vSphere"^].
 
 
 
@@ -107,10 +107,10 @@ Restaurar una máquina virtual completa cuando uno o más VMDK están en un alma
 | Elemento | Versiones compatibles 
 
 
-| VSphere | 7.0U1 y superior 
+| VSphere | 7.0U1 y superior. 
 
 
-| ESXi | 7.0U1 y superior 
+| Servidor ESXi | 7.0U1 y superior. 
 
 
 | Direcciones IP | IPv4, IPv6 
@@ -119,15 +119,26 @@ Restaurar una máquina virtual completa cuando uno o más VMDK están en un alma
 | TLS de VMware | 1.2, 1.3 
 
 
-| TLS en el servidor SnapCenter | 1.2 de febrero de 1.3, el servidor SnapCenter lo utiliza para comunicarse con el plugin de VMware de SnapCenter para aplicaciones a través de operaciones de protección de datos de VMDK. 
+| TLS en el servidor SnapCenter | 1,2, 1,3 El servidor de SnapCenter utiliza esto para comunicarse con el plugin de SnapCenter para VMware vSphere para la aplicación a través de operaciones de protección de datos de VMDK. 
 
 
 | Aplicación VMware vStorage API para integración de cabinas (VAAI) | El plugin de SnapCenter para VMware vSphere utiliza esta característica para mejorar el rendimiento de las operaciones de restauración. También mejora el rendimiento en entornos NFS. 
 
 
-| Herramientas de ONTAP para VMware | El plugin de SnapCenter para VMware vSphere utiliza esto para gestionar almacenes de datos de VVol (volúmenes virtuales de VMware). Para conocer las versiones compatibles, consulte https://imt.netapp.com/matrix/imt.jsp?components=117018;&solution=1259&isHWU&src=IMT["Herramienta de matriz de interoperabilidad de NetApp"^]. 
+| Herramientas de ONTAP para VMware | El plugin de SnapCenter para VMware vSphere utiliza esto para gestionar almacenes de datos de VVol (volúmenes virtuales de VMware). Para las versiones compatibles, consulte https://imt.netapp.com/matrix/imt.jsp?components=117018;&solution=1259&isHWU&src=IMT["Herramienta de matriz de interoperabilidad de NetApp"^]. 
 |===
 Para obtener la información más reciente sobre las versiones compatibles, consulte https://imt.netapp.com/matrix/imt.jsp?components=117018;&solution=1259&isHWU&src=IMT["Herramienta de matriz de interoperabilidad de NetApp"^].
+
+
+
+==== Requisitos para el protocolo NVMe over TCP
+
+Los requisitos mínimos de software para la compatibilidad con el protocolo NVMe over TCP son los siguientes:
+
+* VCenter vSphere 7.0U3
+* ESXi 7.0U3
+* ONTAP 9.10.1
+
 
 
 
@@ -160,7 +171,7 @@ Para obtener la información más reciente sobre las versiones compatibles, cons
 
 
 | Puerto del plugin de SnapCenter para VMware vSphere  a| 
-8144 (HTTPS), bidireccional que el puerto se utiliza para las comunicaciones desde el cliente VMware vSphere y desde el servidor SnapCenter. 8080 bidireccional este puerto se utiliza para gestionar el dispositivo virtual.
+8144 (HTTPS), bidireccional que el puerto se utiliza para las comunicaciones desde el cliente VMware vSphere y desde el servidor SnapCenter. 8080 bidireccional Este puerto se utiliza para gestionar dispositivos virtuales.
 
 Nota: Se admite el puerto personalizado para añadir el host de SCV a SnapCenter.
 
@@ -210,4 +221,4 @@ Extensión
 
 == AutoSupport
 
-El plugin de SnapCenter para VMware vSphere ofrece un mínimo de información para realizar un seguimiento del uso, incluida la URL del plugin. AutoSupport incluye una tabla de plugins instalados que muestra el visor de AutoSupport.
+El plugin de SnapCenter para VMware vSphere ofrece un mínimo de información para realizar un seguimiento de su uso, incluida la URL del plugin. AutoSupport incluye una tabla de plugins instalados que muestra el visor de AutoSupport.

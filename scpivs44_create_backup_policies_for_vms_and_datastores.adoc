@@ -27,22 +27,22 @@ Debe crear políticas de backup antes de usar el plugin de SnapCenter para VMwar
 Para corregir este problema, configure la normativa de retención de SnapMirror para el almacenamiento secundario y evite alcanzar el límite máximo de Snapshots.
 
 +
-Para obtener información acerca de cómo los administradores asignan recursos a los usuarios, consulte https://docs.netapp.com/us-en/snapcenter/concept/concept_types_of_role_based_access_control_in_snapcenter.html["Información de SnapCenter sobre el uso del control de acceso basado en roles"^].
+Para obtener información sobre cómo los administradores asignan recursos a los usuarios, consulte https://docs.netapp.com/us-en/snapcenter/concept/concept_types_of_role_based_access_control_in_snapcenter.html["Información de SnapCenter sobre el uso del control de acceso basado en roles"^].
 
 
 
 * Si desea realizar backups consistentes con la máquina virtual, debe tener instaladas y en ejecución las herramientas de VMware. Se necesitan herramientas de VMware para desactivar las máquinas virtuales. No se admiten backups consistentes con las máquinas virtuales para máquinas virtuales VVol.
-* SnapMirror Business Continuity (SM-BC) permite que los servicios empresariales sigan funcionando incluso si se produce un fallo completo en el sitio, lo que permite a las aplicaciones conmutar por error de forma transparente mediante una copia secundaria.
+* La sincronización activa de SnapMirror permite que los servicios empresariales continúen funcionando incluso si se produce un fallo completo del sitio, lo que permite a las aplicaciones conmutar por error de forma transparente mediante una copia secundaria.
 +
 
-NOTE: SM-BC solo es compatible con almacenes de datos VMFS.
+NOTE: La sincronización activa de SnapMirror solo se admite para almacenes de datos VMFS.
 
 +
-Para proteger un almacén de datos VMFS en una implementación de SM-BC, como administrador de SnapCenter, necesita:
+Para proteger un almacén de datos VMFS en una implementación de sincronización activa de SnapMirror, como administrador de SnapCenter necesita:
 
 +
-** Configure clústeres y mediador tal y como se describe en el informe técnico: https://www.netapp.com/pdf.html?item=/media/21888-tr-4878.pdf["TR-4878: Continuidad del negocio de SnapMirror"].
-** Añada el volumen asociado con el almacén de datos VMFS al grupo de coherencia y cree una relación de protección de datos mediante la política de protección _AutomatedFailOver_ entre dos sistemas de almacenamiento de ONTAP.
+** Configure clusters y mediador como se describe en el informe técnico: https://www.netapp.com/pdf.html?item=/media/21888-tr-4878.pdf["TR-4878: Sincronización activa con SnapMirror (anteriormente SMBC)"].
+** Añada el volumen asociado con el almacén de datos VMFS al grupo de coherencia y cree una relación de protección de datos mediante la política de protección _AutomatedFailOver_ o _AutomatedFailOverDuplex_ entre dos sistemas de almacenamiento de ONTAP. La política _AutomatedFailOverDuplex_ se admite a partir de la versión ONTAP 9.15.1.
 
 
 
@@ -51,7 +51,7 @@ Para proteger un almacén de datos VMFS en una implementación de SM-BC, como ad
 La mayoría de los campos en estas páginas del asistente son claros y explicativos. La siguiente información describe algunos de los campos que pueden requerir explicación.
 
 .Pasos
-. En el panel de navegación izquierdo del complemento de SCV, haga clic en *Directivas*.
+. En el panel de navegación izquierdo del plugin SCV, haga clic en *Policies*.
 . En la página *Policies*, selecciona *Create* para iniciar el asistente.
 . En la página *New Backup Policy*, seleccione la instancia de vCenter Server que utilizará la política y, a continuación, introduzca el nombre de la política y una descripción.
 +
@@ -95,7 +95,7 @@ Seleccione esta opción para crear copias reflejadas de los conjuntos de backups
 NOTE: Esta opción es compatible para almacenes de datos en FlexGroup Volumes en el plugin de SnapCenter para VMware vSphere 4.5 y versiones posteriores.
 
 
-NOTE: Para proteger el almacén de datos VMFS en la implementación de SM-BC, debe completar los requisitos previos mencionados en la sección _Antes de comenzar_ y habilitar *Actualizar SnapMirror después de la copia de seguridad*.
+NOTE: Para proteger el almacén de datos VMFS en la implementación de sincronización activa de SnapMirror, debe completar los requisitos previos mencionados en la sección _Antes de comenzar_ y habilitar *Actualizar SnapMirror después de la copia de seguridad*.
 
 
 
@@ -130,7 +130,7 @@ Marque esta casilla para poner en modo inactivo las máquinas virtuales y crear 
 Esta opción no es compatible con vVols. Para máquinas virtuales VVol, solo se realizan backups consistentes con los fallos.
 
 
-IMPORTANT: Para realizar backups consistentes de las máquinas virtuales, debe tener herramientas de VMware en ejecución en la máquina virtual. Si VMware Tools no está en ejecución, se realiza un backup coherente con los fallos.
+IMPORTANT: Para realizar backups consistentes de las máquinas virtuales, debe tener herramientas de VMware en ejecución en la máquina virtual. Si las herramientas de VMware no funcionan, se realiza un backup coherente con los fallos.
 
 
 NOTE: Al marcar la casilla de consistencia de máquina virtual, las operaciones de backup pueden tardar más y requerir más espacio de almacenamiento. En este caso, las máquinas virtuales primero se ponen en modo inactivo, después VMware ejecuta una Snapshot de consistencia de máquina virtual, SnapCenter procede con su operación de backup y, a continuación, se reanudan las operaciones de máquina virtual. La memoria invitada de la máquina virtual no se incluye en las Snapshots de consistencia de la máquina virtual.
@@ -141,7 +141,7 @@ NOTE: Al marcar la casilla de consistencia de máquina virtual, las operaciones 
 
 
 | Scripts  a| 
-Especifique la ruta completa de scripts previos o scripts posteriores que desee que el plugin de SnapCenter VMware ejecute antes o después de las operaciones de backup. Por ejemplo, se puede ejecutar un script para actualizar capturas SNMP, automatizar alertas y enviar registros. La ruta de acceso del script se valida en el momento en que se ejecuta el script.
+Especifique la ruta completa de scripts previos o scripts posteriores que desee que el plugin de SnapCenter para VMware vSphere ejecute antes o después de las operaciones de backup. Por ejemplo, se puede ejecutar un script para actualizar capturas SNMP, automatizar alertas y enviar registros. La ruta de acceso del script se valida en el momento en que se ejecuta el script.
 
 
 NOTE: Los scripts previos y posteriores deben encontrarse en la máquina virtual del dispositivo virtual. Para introducir varios scripts, presione *Enter* después de cada ruta de script para enumerar cada script en una línea diferente. No se permite el carácter ";".

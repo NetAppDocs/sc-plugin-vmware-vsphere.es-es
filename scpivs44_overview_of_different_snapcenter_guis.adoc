@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: scpivs44_overview_of_different_snapcenter_guis.html 
 keywords:  
-summary: El plugin de SnapCenter para VMware vSphere es un plugin independiente que difiere de otros plugins de SnapCenter. Debe utilizar la interfaz gráfica de usuario del cliente de VMware vSphere en vCenter para todas las operaciones de backup y restauración de máquinas virtuales, VMDK y almacenes de datos. 
+summary: El plugin de SnapCenter para VMware vSphere es un plugin independiente que es diferente de otros plugins de SnapCenter. Debe utilizar la interfaz gráfica de usuario del cliente de VMware vSphere en vCenter para todas las operaciones de backup y restauración de máquinas virtuales, VMDK y almacenes de datos. 
 ---
 = Descripción general de las distintas GUI de SnapCenter
 :hardbreaks:
@@ -16,11 +16,11 @@ summary: El plugin de SnapCenter para VMware vSphere es un plugin independiente 
 [role="lead"]
 En el entorno de SnapCenter, es necesario usar la interfaz gráfica de usuario adecuada para realizar operaciones de protección de datos y gestión.
 
-El plugin de SnapCenter para VMware vSphere es un plugin independiente que difiere de otros plugins de SnapCenter. Debe utilizar la interfaz gráfica de usuario del cliente de VMware vSphere en vCenter para todas las operaciones de backup y restauración de máquinas virtuales, VMDK y almacenes de datos. También se usa la consola de la interfaz gráfica de usuario del cliente web para supervisar la lista de máquinas virtuales protegidas y sin proteger. Para el resto de operaciones de plugins de SnapCenter (plugins basados en aplicaciones), como backup y restauración y supervisión de trabajos, se usa la interfaz gráfica de usuario de SnapCenter.
+El plugin de SnapCenter para VMware vSphere es un plugin independiente que es diferente de otros plugins de SnapCenter. Debe utilizar la interfaz gráfica de usuario del cliente de VMware vSphere en vCenter para todas las operaciones de backup y restauración de máquinas virtuales, VMDK y almacenes de datos. También se usa la consola de la interfaz gráfica de usuario del cliente web para supervisar la lista de máquinas virtuales protegidas y sin proteger. Para el resto de operaciones de plugins de SnapCenter (plugins basados en aplicaciones), como backup y restauración y supervisión de trabajos, se usa la interfaz gráfica de usuario de SnapCenter.
 
 Para proteger máquinas virtuales y almacenes de datos, se usa la interfaz de cliente de VMware vSphere. La interfaz gráfica de usuario del cliente web se integra con la tecnología Snapshot de NetApp en el sistema de almacenamiento. De esta forma, es posible realizar backup de máquinas virtuales y almacenes de datos en segundos y restaurar máquinas virtuales sin desconectar el host ESXi.
 
-También hay una GUI de gestión para realizar operaciones administrativas en el complemento VMware de SnapCenter.
+También hay una interfaz gráfica de usuario de gestión para realizar operaciones administrativas en el plugin de SnapCenter para VMware vSphere.
 
 La siguiente tabla muestra las operaciones que realiza la interfaz gráfica de usuario de SnapCenter.
 

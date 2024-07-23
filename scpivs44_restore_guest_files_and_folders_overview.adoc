@@ -98,7 +98,7 @@ Antes de restaurar un archivo o una carpeta desde un sistema operativo invitado,
 * La página Guest File Browse muestra los archivos y carpetas ocultos, que no es posible filtrar.
 * No es posible restaurar desde un sistema operativo invitado Linux.
 +
-No es posible restaurar archivos y carpetas desde una máquina virtual que ejecute un sistema operativo invitado Linux. Sin embargo, puede asociar un VMDK y luego restaurar manualmente los archivos y las carpetas. Para obtener la información más reciente sobre los sistemas operativos invitados compatibles, consulte https://imt.netapp.com/matrix/imt.jsp?components=117018;&solution=1259&isHWU&src=IMT["Herramienta de matriz de interoperabilidad de NetApp (IMT)"^].
+No es posible restaurar archivos y carpetas desde una máquina virtual que ejecute un sistema operativo invitado Linux. Sin embargo, puede asociar un VMDK y luego restaurar manualmente los archivos y las carpetas. Para obtener la información más reciente sobre los sistemas operativos invitados compatibles, consulte la https://imt.netapp.com/matrix/imt.jsp?components=117018;&solution=1259&isHWU&src=IMT["Herramienta de matriz de interoperabilidad de NetApp (IMT)"^].
 
 * No puede restaurar desde un sistema de archivos NTFS a un sistema de archivos FAT.
 +

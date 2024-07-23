@@ -45,7 +45,7 @@ TIP: Para mejorar el rendimiento de las operaciones de restauración en entornos
 .Antes de empezar
 * Debe existir un backup.
 +
-Debe haber creado un backup de la máquina virtual con el plugin de VMware de SnapCenter para poder restaurar la máquina virtual.
+Debe haber creado un backup de la máquina virtual con el plugin de SnapCenter para VMware vSphere para poder restaurar la máquina virtual.
 
 +
 
@@ -100,9 +100,9 @@ Aunque una snapshot de consistencia de VMware arroje un fallo para una máquina 
 . En la interfaz gráfica de usuario del cliente de VMware vSphere, haga clic en *Menú* en la barra de herramientas y, a continuación, seleccione *VMs and Templates* en la lista desplegable.
 +
 
-NOTE: Si va a restaurar una máquina virtual eliminada, deben ser las credenciales de máquina virtual de almacenamiento que se añadieron al plugin de VMware de SnapCenter `vsadmin` o una cuenta de usuario que tenga todos los mismos privilegios que `vsadmin`. El host debe estar ubicado en un sistema de almacenamiento que funcione con ONTAP 8.2.2 o una versión posterior.
+NOTE: Si va a restaurar una máquina virtual eliminada, las credenciales de la máquina virtual de almacenamiento que se añadieron al plugin de SnapCenter para VMware vSphere deben ser `vsadmin` o una cuenta de usuario que tenga todos los mismos privilegios que `vsadmin`el . El host debe estar ubicado en un sistema de almacenamiento que funcione con ONTAP 8.2.2 o una versión posterior.
 
-. En el panel de navegación de la izquierda, haga clic con el botón derecho en una máquina virtual y seleccione *SnapCenter* de NetApp en la lista desplegable; a continuación, seleccione *Restaurar* en la lista desplegable secundaria para iniciar el asistente.
+. En el panel de navegación de la izquierda, haga clic con el botón derecho en una máquina virtual y, a continuación, seleccione *SnapCenter Plug-in for VMware vSphere* en la lista desplegable y, a continuación, seleccione *Restore* en la lista desplegable secundaria para iniciar el asistente.
 . En el asistente *Restore*, en la página *Select Backup*, seleccione la instantánea de copia de seguridad que desea restaurar.
 +
 Puede buscar por un nombre de backup específico o un nombre de backup parcial y también puede filtrar la lista de backups haciendo clic en el icono de filtro y seleccionando un intervalo de fechas y horas. Además, debe seleccionar si desea backups que contengan snapshots de VMware, si desea visualizar backups montados y la ubicación. Haga clic en *Aceptar* para volver al asistente.

@@ -30,7 +30,7 @@ Si es un usuario de SnapCenter nuevo, debe añadir máquinas virtuales de almace
 +
 ** El sistema ejecuta IPv4 y tiene dos direcciones IP para el host de VMware vSphere de SnapCenter. Como resultado, la solicitud de trabajo se envía a una dirección IP que no reconoce el servidor SnapCenter. Para evitar este problema, agregue la dirección IP que desea utilizar de la siguiente manera:
 +
-... Desplácese hasta la ubicación en la que se haya implementado el complemento VMware de SnapCenter: `/opt/netapp/scvservice/standalone_aegis/etc`
+... Desplácese hasta la ubicación donde se implementó el plugin de SnapCenter para VMware vSphere: `/opt/netapp/scvservice/standalone_aegis/etc`
 ... Abra la red de archivos interface.properties.
 ... En la `network.interface=10.10.10.10` Añada la dirección IP que desee usar.
 
@@ -38,7 +38,7 @@ Si es un usuario de SnapCenter nuevo, debe añadir máquinas virtuales de almace
 ** Dispone de dos NIC.
 
 
-* Después de implementar el plugin de VMware SnapCenter, es posible que la entrada del MOB en vCenter para el plugin de SnapCenter para VMware vSphere siga mostrando el número de versión anterior. Esto puede suceder cuando se ejecutan otros trabajos en vCenter. En algún momento, vCenter actualizará la entrada.
+* Después de implementar el plugin de SnapCenter para VMware vSphere, es posible que la entrada de MOB en vCenter para el plugin de SnapCenter para VMware vSphere siga mostrando el número de versión anterior. Esto puede ocurrir cuando se ejecutan otros trabajos en el para vCenter. En algún momento, el para vCenter actualizará la entrada.
 
 
 Para corregir cualquiera de estos problemas, haga lo siguiente:
@@ -54,10 +54,10 @@ Si el problema persiste, reinicie el servicio del cliente de VMware vSphere
 
 == Administrar errores de autenticación
 
-Si no utiliza las credenciales de administrador, es posible que reciba un error de autenticación después de implementar el plugin de SnapCenter para VMware vSphere o después de migrar. Si se encuentra con un error de autenticación, debe reiniciar el servicio.
+Si no se utilizan las credenciales de administrador, es posible recibir un error de autenticación después de implementar el plugin de SnapCenter para VMware vSphere o después de migrar. Si se encuentra con un error de autenticación, debe reiniciar el servicio.
 
 .Pasos
-. Inicie sesión en la interfaz gráfica de usuario de la gestión del plugin de VMware de SnapCenter con el formato `\https://<appliance-IP-address>:8080`. Use el nombre de usuario de administrador, la contraseña y los detalles del token de MFA para iniciar sesión. El token MFA se puede generar desde la consola de mantenimiento.
+. Inicie sesión en la interfaz gráfica de usuario de gestión del plugin de SnapCenter para VMware vSphere con el formato `\https://<appliance-IP-address>:8080`. Use el nombre de usuario de administrador, la contraseña y los detalles del token de MFA para iniciar sesión. El token MFA se puede generar desde la consola de mantenimiento.
 . Reinicie el servicio.
 
 
@@ -75,7 +75,7 @@ Si desea realizar flujos de trabajo de aplicación en VMDK en SnapCenter (flujos
 .Acerca de esta tarea
 * Para registrar el plugin de SnapCenter para VMware vSphere en SnapCenter Server, se utiliza la interfaz gráfica de usuario de SnapCenter con el fin de añadir un host de tipo "vsphere".
 +
-El puerto 8144 está predefinido para la comunicación con el plugin de SnapCenter para VMware.
+El puerto 8144 está predefinido para la comunicación dentro del plugin de SnapCenter para VMware vSphere.
 
 +
 Puede registrar varias instancias del plugin de SnapCenter para VMware vSphere en el mismo servidor SnapCenter para admitir operaciones de protección de datos basadas en aplicaciones en máquinas virtuales. No puede registrar el mismo plugin de SnapCenter para VMware vSphere en varias instancias de SnapCenter Server.
@@ -99,7 +99,7 @@ Puede registrar varias instancias del plugin de SnapCenter para VMware vSphere e
 | Nombre de host | Compruebe la dirección IP del dispositivo virtual. 
 
 
-| Credencial | Introduzca el nombre de usuario y la contraseña del plugin de VMware de SnapCenter que se proporcionó durante la implementación. 
+| Credencial | Introduzca el nombre de usuario y la contraseña del plugin de SnapCenter para VMware vSphere que se proporcionó durante la implementación. 
 |===
 . Haga clic en *Enviar*.
 +

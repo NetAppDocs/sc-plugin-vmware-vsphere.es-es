@@ -33,12 +33,21 @@ La asociación de discos virtuales está sujeta a las siguientes limitaciones:
 En este caso, añada las controladoras SCSI manualmente e intente nuevamente la operación de asociación.
 
 * No es posible asociar manualmente un disco virtual que se haya asociado o montado como parte de una operación de restauración de archivos invitados.
-* Las operaciones de asociación y restauración conectan VMDK mediante la controladora SCSI predeterminada. Se realizan backups de los VMDK que se asocian a una máquina virtual con una controladora NVMe, pero para las operaciones de asociación y restauración, los VMDK se vuelven a asociar con una controladora iSCSI.
+* Las operaciones de asociación y restauración conectan VMDK mediante la controladora SCSI predeterminada. Sin embargo, cuando se realizan un backup de los VMDK que se asocian a una máquina virtual con un disco NVMe, las operaciones de asociación y restauración utilizan la controladora NVMe si están disponibles.
+
+
+.Antes de empezar
+Siga los siguientes pasos para añadir la controladora NVMe al disco.
+
+. Inicie sesión en el cliente de vCenter
+. Seleccione la máquina virtual del almacén de datos de VMFS
+. Haga clic con el botón derecho en la VM y vaya a *Editar configuración*
+. En la ventana de edición de ajustes, selecciona *Añadir nuevo dispositivo* > *Controlador NVMe*
 
 
 .Pasos
 . En la interfaz gráfica de usuario del cliente de VMware vSphere, haga clic en *Menú* en la barra de herramientas y, a continuación, seleccione *hosts y clústeres* en la lista desplegable.
-. En el panel de navegación de la izquierda, haga clic con el botón derecho en una máquina virtual y seleccione *SnapCenter* de NetApp en la lista desplegable; a continuación, seleccione *Attach virtual disk* en la lista desplegable secundaria.
+. En el panel de navegación de la izquierda, haga clic con el botón derecho en una máquina virtual y seleccione *SnapCenter Plug-in for VMware vSphere* > *Attach virtual disk(s)*.
 . En la ventana *Attach Virtual Disk*, en la sección *Backup*, seleccione una copia de seguridad.
 +
 Puede filtrar la lista de backups seleccionando el icono de filtrar y eligiendo un intervalo de fechas y horas. Debe seleccionar también si desea visualizar los backups que contengan snapshots de VMware, si desea visualizar los backups montados y también la ubicación. Haga clic en *Aceptar*.
@@ -47,7 +56,7 @@ Puede filtrar la lista de backups seleccionando el icono de filtrar y eligiendo 
 +
 Puede cambiar el filtro para mostrar las ubicaciones primarias y secundarias.
 
-. De forma predeterminada, los discos virtuales seleccionados se asocian a la máquina virtual principal. Para asociar los discos virtuales seleccionados a una VM alternativa en el mismo host ESXi, haga clic en *haga clic aquí para asociar a una VM alternativa* y especifique la VM alternativa.
+. De forma predeterminada, los discos virtuales seleccionados se asocian a la máquina virtual principal. Para asociar los discos virtuales seleccionados a una máquina virtual alternativa en el mismo host ESXi, seleccione *Click here to attach to alternate VM* y especifique la máquina virtual alternativa.
 . Haga clic en *Adjuntar*.
 . Opcional: Supervise el progreso de la operación en la sección *tareas recientes*.
 +
@@ -56,7 +65,7 @@ Actualice la pantalla para que muestre información actualizada.
 . Compruebe si el disco virtual está asociado siguiendo estos pasos:
 +
 .. Haga clic en *Menú* en la barra de herramientas y, a continuación, seleccione *VMs and Templates* en la lista desplegable.
-.. En el panel de navegación izquierdo, haga clic con el botón derecho del ratón en una máquina virtual y, a continuación, seleccione *Editar configuración* en la lista desplegable.
+.. En el panel de navegación de la izquierda, haga clic con el botón derecho en una VM y, a continuación, seleccione *Editar configuración* en la lista desplegable.
 .. En la ventana *Editar configuración*, expanda la lista de cada disco duro para ver la lista de archivos de disco.
 +
 image:scpivs44_image23.png["Ventana Editar configuración"]

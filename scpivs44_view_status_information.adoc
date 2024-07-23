@@ -17,7 +17,8 @@ summary: La información de estado se puede ver en la consola de cliente de vSph
 La información de estado se puede ver en la consola de cliente de vSphere. La información de estado se actualiza una vez por hora.
 
 .Pasos
-. En el panel de navegación izquierdo del cliente de vSphere, haga clic en *Dashboard*, seleccione una instancia de vCenter Server y, a continuación, haga clic en la pestaña *Status* del panel de consola.
+. En la página de acceso directo del cliente de vCenter, seleccione SnapCenter Plug-in for VMware vSphere (SCV).
+. En el panel de navegación izquierdo de SCV, seleccione *Dashboard* > *Status*.
 . Vea la información sobre el estado de la información general o haga clic en un enlace para obtener más detalles, como se indica en la siguiente tabla.
 +
 |===

@@ -19,7 +19,8 @@ Es posible solicitar informes de uno o varios trabajos de en la consola.
 La pestaña Reports contiene información sobre los trabajos seleccionados en la página Jobs de la consola. Si no se selecciona ningún trabajo, la ficha Informes estará en blanco.
 
 .Pasos
-. En el panel de navegación izquierdo del cliente de vSphere, haga clic en *Dashboard*, seleccione una instancia de vCenter Server y, a continuación, haga clic en la pestaña *Reports*.
+. En la página de acceso directo del cliente de vCenter, seleccione SnapCenter Plug-in for VMware vSphere (SCV).
+. En el panel de navegación izquierdo de SCV, seleccione *Dashboard* > pestaña *Reports*.
 . En los informes de backup, es posible hacer lo siguiente:
 +
 .. Modifique el informe
@@ -45,7 +46,7 @@ También es posible hacer clic en el icono de descarga para descargar registros 
 El cliente de VMware vSphere para SnapCenter ofrece opciones de informes personalizables para obtener detalles sobre el estado de los trabajos de protección de datos y los recursos del plugin. Solo puede generar informes para la protección principal.
 
 
-NOTE: Las programaciones de backup se ejecutan en la zona horaria en la que se implementó el plugin de VMware de SnapCenter. VCenter informa de los datos en la zona horaria en la que se encuentra la instancia de vCenter. Por lo tanto, si el plugin de VMware de SnapCenter y vCenter se encuentran en zonas horarias diferentes, es posible que los datos de la consola del cliente de VMware vSphere no sean los mismos que los datos de los informes.
+NOTE: Las programaciones de backups se ejecutan en la zona horaria en la que se implementa el plugin de SnapCenter para VMware vSphere. VCenter informa los datos en la zona horaria en la que se encuentra el para vCenter. Por lo tanto, si el plugin de SnapCenter para VMware vSphere y el vCenter están en zonas horarias diferentes, es posible que los datos de la consola del cliente de VMware vSphere no sean iguales a los datos de los informes.
 
 La consola muestra información sobre los backups migrados únicamente después de realizar los backups posteriores a la migración.
 
@@ -78,13 +79,5 @@ Para cada trabajo, el informe enumera el ID del trabajo, el estado del trabajo, 
 Puede descargar la tabla Report en formato HTML o CSV. También es posible descargar los registros de trabajos Job Monitor para todos los trabajos (no solo los trabajos del informe). 
 
 
-| Último informe de estado de protección de máquinas virtuales o almacenes de datos | Muestra información general sobre el estado de protección, durante la cantidad de días configurados, para máquinas virtuales y almacenes de datos gestionados por el plugin de VMware de SnapCenter. El valor predeterminado es 7 días. Para modificar el valor del archivo de propiedades, consulte link:scpivs44_modify_configuration_default_values.html["Modifique los valores predeterminados de la configuración"].
-
-Haga clic en una sección/estado en el gráfico de protección principal para ver una lista de máquinas virtuales o almacenes de datos con ese estado en la ficha *Informes*.
-
-VM o datastores Protection Status Report for protected VMs and datastores muestra los nombres de las máquinas virtuales o los almacenes de datos de los que se han respaldado durante la cantidad configurada de días, el nombre de Snapshot más reciente, y las horas de inicio y de finalización para el último backup ejecutado.
-
-VM o datastores Protection Status Report for unprotected VMs o almacenes de datos muestran los nombres de las máquinas virtuales o los almacenes de datos que no tienen backups realizados correctamente durante la cantidad de días configurada.
-
-Puede descargar la tabla Report en formato HTML o CSV. También es posible descargar los registros de trabajos Job Monitor para todos los trabajos (no solo los trabajos del informe). Este informe se actualiza cada hora cuando se actualiza la caché del plugin. Por lo tanto, es posible que el informe no muestre las máquinas virtuales o los almacenes de datos de los que se realizó un backup recientemente. 
+| Último informe de estado de protección de máquinas virtuales o almacenes de datos | Muestra información general sobre el estado de protección, durante la cantidad configurada de días, para las máquinas virtuales y los almacenes de datos gestionados por el plugin de SnapCenter para VMware vSphere. El valor predeterminado es 7 días. Para modificar el valor en el archivo de propiedades, consulte link:scpivs44_modify_configuration_default_values.html["Modifique los valores predeterminados de la configuración"]. Haga clic en una sección/estado en el gráfico de protección principal para ver una lista de máquinas virtuales o almacenes de datos con ese estado en la ficha *Informes*. VM o datastores Protection Status Report for protected VMs and datastores muestra los nombres de las máquinas virtuales o los almacenes de datos de los que se han respaldado durante la cantidad configurada de días, el nombre de Snapshot más reciente, y las horas de inicio y de finalización para el último backup ejecutado. VM o datastores Protection Status Report for unprotected VMs o almacenes de datos muestran los nombres de las máquinas virtuales o los almacenes de datos que no tienen backups realizados correctamente durante la cantidad de días configurada. Puede descargar la tabla Report en formato HTML o CSV. También es posible descargar los registros de trabajos Job Monitor para todos los trabajos (no solo los trabajos del informe). Este informe se actualiza cada hora cuando se actualiza la caché del plugin. Por lo tanto, es posible que el informe no muestre las máquinas virtuales o los almacenes de datos de los que se realizó un backup recientemente. 
 |===

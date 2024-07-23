@@ -47,7 +47,7 @@ Todos los vVols en una única carpeta VVol especificada. Si la carpeta contiene 
 Para todos los grupos de recursos:
 
 
-IMPORTANT: Si utiliza VMware vSphere Cluster Service (VCL), no incluya máquinas virtuales gestionadas por VCL en grupos de recursos del plugin de VMware de SnapCenter.
+IMPORTANT: Si utiliza el servicio de clústeres de VMware vSphere (vCLS), no incluya las máquinas virtuales gestionadas por vCLS en los grupos de recursos del plugin de SnapCenter para VMware vSphere.
 
 
 TIP: El plugin de SnapCenter para VMware vSphere 4,5 y versiones posteriores admite almacenes de datos en LUN de gran tamaño y archivos de hasta 128 TB con volúmenes de hasta 300 TB. Si va a proteger LUN de gran tamaño, utilice solo LUN con aprovisionamiento grueso para evitar la latencia.
@@ -73,7 +73,7 @@ Para realizar el backup de varios recursos, debe crear un grupo de recursos que 
 
 * Grupos de recursos que contienen volúmenes FlexGroup en entornos MetroCluster
 +
-Si ya funciona con ONTAP 9.8 o ONTAP 9.9, después de una conmutación de sitios o una conmutación de estado, debe reiniciar el servicio del complemento VMware de SnapCenter y volver a sincronizar las relaciones de SnapMirror antes de realizar un backup de los grupos de recursos en entornos MetroCluster.
+Si se ejecuta en ONTAP 9,8 o ONTAP 9,9, después de una conmutación de sitios o conmutación de estado, debe reiniciar el servicio del plugin de SnapCenter para VMware vSphere y volver a sincronizar las relaciones de SnapMirror antes de realizar el backup de los grupos de recursos en entornos MetroCluster.
 
 +
 En ONTAP 9.8, los backups se cuelgan después de la conmutación de regreso. Este problema se ha solucionado en ONTAP 9.9.
@@ -102,13 +102,13 @@ SnapCenter realiza comprobaciones de compatibilidad cuando se crea un grupo de r
 
 
 .Pasos
-. En el panel de navegación izquierdo del plugin SCV, haga clic en *Grupos de recursos* y, a continuación, seleccione *Crear* para iniciar el asistente.
+. En el panel de navegación izquierdo del plugin SCV, haga clic en *Resource Groups* y luego seleccione *Create* para iniciar el asistente.
 
 
 Esta es la forma más sencilla de crear un grupo de recursos. No obstante, también puede crear un grupo de recursos con un recurso realizando una de las acciones siguientes:
 
-* Para crear un grupo de recursos para una VM, haga clic en *Menú* > *Hosts and Clusters*, luego haga clic con el botón derecho en una VM, seleccione NetApp SnapCenter y, a continuación, seleccione *Crear grupo de recursos*.
-* Para crear un grupo de recursos para un almacén de datos, haga clic en *Menú* > *Hosts and Clusters*, luego haga clic con el botón derecho en un almacén de datos, seleccione *NetApp SnapCenter* y, a continuación, seleccione *Crear grupo de recursos*.
+* Para crear un grupo de recursos para una máquina virtual, en la página de accesos directos, seleccione *Hosts and Clusters*, luego haga clic con el botón derecho en una máquina virtual, seleccione *SnapCenter Plug-in for VMware vSphere* > *Crear grupo de recursos*.
+* Para crear un grupo de recursos para un almacén de datos, en la página de accesos directos, seleccione *Hosts and Clusters*, luego haga clic con el botón derecho en un almacén de datos, seleccione *Plugin de SnapCenter para VMware vSphere* > *Crear grupo de recursos*.
 +
 .. En la página *Información general y notificación* del asistente, haga lo siguiente:
 +
@@ -119,7 +119,7 @@ Esta es la forma más sencilla de crear un grupo de recursos. No obstante, tambi
 | VCenter Server | Seleccione una instancia de vCenter Server. 
 
 
-| Nombre | Escriba un nombre para el grupo de recursos. No utilice los siguientes caracteres especiales en nombres de equipos virtuales, almacenes de datos, políticas, backups o grupos de recursos: % & * $ # @ ! \ / : * ? " < > - [barra vertical] ; ' , . Se permite el carácter de guion bajo (_). Los nombres de máquinas virtuales o almacenes de datos con caracteres especiales se truncarán, lo que dificulta la búsqueda de un backup concreto. En el modo vinculado, cada instancia de vCenter tiene un repositorio de complementos de VMware de SnapCenter separado. Por lo tanto, se pueden usar nombres duplicados en vCenter. 
+| Nombre | Escriba un nombre para el grupo de recursos. No utilice los siguientes caracteres especiales en nombres de equipos virtuales, almacenes de datos, políticas, backups o grupos de recursos: % & * $ # @ ! \ / : * ? " < > - [barra vertical] ; ' , . Se permite el carácter de guion bajo (_). Los nombres de máquinas virtuales o almacenes de datos con caracteres especiales se truncarán, lo que dificulta la búsqueda de un backup concreto. En el modo vinculado, cada vCenter tiene un repositorio del plugin de SnapCenter para VMware vSphere separado. Por lo tanto, se pueden usar nombres duplicados en vCenter. 
 
 
 | Descripción | Especifique una descripción del grupo de recursos. 
@@ -183,10 +183,10 @@ Los nombres de máquinas virtuales y almacenes de datos de un grupo de recursos 
 Al hacer clic en *Siguiente*, el sistema comprueba primero que SnapCenter gestiona y es compatible con el almacenamiento en el que se encuentran los recursos seleccionados.
 
 +
-Si el mensaje `Selected <resource-name> is not SnapCenter compatible` Entonces, el recurso seleccionado no es compatible con SnapCenter. Consulte <<Gestione los fallos de comprobación de compatibilidad>> si quiere más información.
+Si aparece el mensaje `Selected <resource-name> is not SnapCenter compatible` , significa que el recurso seleccionado no es compatible con SnapCenter.
 
 +
-Para excluir globalmente uno o varios almacenes de datos de los backups, debe especificar los nombres de los almacenes de datos en la `global.ds.exclusion.pattern` propiedad en la `scbr.override` archivo de configuración. Consulte <<scpivs44_properties_you_can_override.adoc#Properties you can override,Propiedades que se pueden anular>>.
+Para excluir globalmente uno o varios almacenes de datos de los backups, debe especificar los nombres de almacén de datos en `global.ds.exclusion.pattern` la propiedad en `scbr.override` el archivo de configuración. Consulte link:scpivs44_properties_you_can_override.html["Propiedades que se pueden anular"].
 
 .. En la página *Spanning disks*, seleccione una opción para máquinas virtuales con varios VMDK en varios almacenes de datos:
 +
@@ -224,10 +224,10 @@ image:scpivs44_image18.png["Crear grupo de recursos"]
 En el campo Hora de inicio, introduzca una fecha y hora distintas a cero. La fecha debe tener el formato `day/month/year`.
 
 +
-Cuando selecciona un número de días en el campo *cada*, las copias de seguridad se realizan el día 1 del mes y, a continuación, en cada intervalo especificado. Por ejemplo, si selecciona la opción *cada 2 días*, las copias de seguridad se realizan en el día 1, 3, 5, 7, etc. a lo largo del mes, independientemente de si la fecha de inicio es par o impar.
+Cuando selecciona un número de días en cada campo, las copias de seguridad se realizan el día 1 del mes y, a continuación, en cada intervalo especificado. Por ejemplo, si selecciona la opción *cada 2 días*, las copias de seguridad se realizan en el día 1, 3, 5, 7, etc. a lo largo del mes, independientemente de si la fecha de inicio es par o impar.
 
 +
-Debe rellenar todos los campos. El plugin de VMware de SnapCenter crea programaciones en la zona horaria en la que se implementó el plugin de VMware de SnapCenter. Puede modificar la zona horaria mediante la interfaz gráfica de usuario del plugin de SnapCenter para VMware vSphere.
+Debe rellenar todos los campos. El plugin de SnapCenter para VMware vSphere crea programaciones en la zona horaria en la que se implementa el plugin de SnapCenter para VMware vSphere. Puede modificar la zona horaria mediante la interfaz gráfica de usuario del plugin de SnapCenter para VMware vSphere.
 
 +
 link:scpivs44_modify_the_time_zones.html["Modifique las zonas horarias para los backups"].
@@ -261,11 +261,11 @@ Estos pueden ser los motivos de la incompatibilidad:
 SnapCenter versión 4.x es compatible con ONTAP 8.3.1 y versiones posteriores.
 
 +
-El plugin de SnapCenter para VMware vSphere no realiza comprobaciones de compatibilidad para todas las versiones de ONTAP; solamente para las versiones 8.2.1 y anteriores de ONTAP. Por lo tanto, consulte siempre la https://imt.netapp.com/matrix/imt.jsp?components=117018;&solution=1259&isHWU&src=IMT["Herramienta de matriz de interoperabilidad de NetApp (IMT)"^] Para obtener la información más actualizada sobre compatibilidad con SnapCenter.
+El plugin de SnapCenter para VMware vSphere no realiza comprobaciones de compatibilidad para todas las versiones de ONTAP; solamente para las versiones 8.2.1 y anteriores de ONTAP. Por lo tanto, consulte siempre https://imt.netapp.com/matrix/imt.jsp?components=117018;&solution=1259&isHWU&src=IMT["Herramienta de matriz de interoperabilidad de NetApp (IMT)"^] la información más reciente sobre el soporte de SnapCenter.
 
 * Un dispositivo PCI compartido está conectado a una máquina virtual.
-* No se configuró una IP preferida en SnapCenter.
-* No añadió la IP de gestión de la máquina virtual de almacenamiento (SVM) a SnapCenter.
+* La dirección IP preferida no está configurada en SnapCenter.
+* No añadió la dirección IP de gestión de la máquina virtual de almacenamiento (SVM) a SnapCenter.
 * El equipo virtual de almacenamiento no está inactivo.
 
 

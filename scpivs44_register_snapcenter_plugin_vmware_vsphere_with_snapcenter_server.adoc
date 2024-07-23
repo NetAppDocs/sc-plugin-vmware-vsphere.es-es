@@ -26,7 +26,7 @@ Si es usuario de SnapCenter y actualizó a SnapCenter 4.2 y migró los backups d
 .Acerca de esta tarea
 * Para registrar el plugin de SnapCenter para VMware vSphere en SnapCenter Server, se utiliza la interfaz gráfica de usuario de SnapCenter con el fin de añadir un host de tipo "vsphere".
 +
-El puerto 8144 está predefinido para la comunicación con el plugin de SnapCenter para VMware.
+El puerto 8144 está predefinido para la comunicación dentro del plugin de SnapCenter para VMware vSphere.
 
 +
 Puede registrar varias instancias del plugin de SnapCenter para VMware vSphere en la misma instancia de SnapCenter Server 4.2 para admitir operaciones de protección de datos basadas en aplicaciones en máquinas virtuales. No puede registrar el mismo plugin de SnapCenter para VMware vSphere en varias instancias de SnapCenter Server.
@@ -50,7 +50,7 @@ Puede registrar varias instancias del plugin de SnapCenter para VMware vSphere e
 | Nombre de host | Compruebe la dirección IP del dispositivo virtual. 
 
 
-| Credencial | Introduzca el nombre de usuario y la contraseña del plugin de VMware de SnapCenter que se proporcionó durante la implementación. 
+| Credencial | Introduzca el nombre de usuario y la contraseña del plugin de SnapCenter para VMware vSphere que se proporcionó durante la implementación. 
 |===
 . Haga clic en *Enviar*.
 +

@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: scpivs44_disable_and_enable_plugin.html 
 keywords:  
-summary: Si ya no necesita las funciones de protección de datos de SnapCenter, es necesario cambiar la configuración del plugin de VMware de SnapCenter. Por ejemplo, si se implementa el plugin en un entorno de prueba, es posible que deba deshabilitar las funciones de SnapCenter en ese entorno y habilitarlas en un entorno de producción. 
+summary: Si ya no necesita las funciones de protección de datos de SnapCenter, debe cambiar la configuración del plugin de SnapCenter para VMware vSphere. Por ejemplo, si se implementa el plugin en un entorno de prueba, es posible que deba deshabilitar las funciones de SnapCenter en ese entorno y habilitarlas en un entorno de producción. 
 ---
 = Deshabilite y habilite el plugin de SnapCenter para VMware vSphere
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: Si ya no necesita las funciones de protección de datos de SnapCenter, 
 
 
 [role="lead"]
-Si ya no necesita las funciones de protección de datos de SnapCenter, es necesario cambiar la configuración del plugin de VMware de SnapCenter. Por ejemplo, si se implementa el plugin en un entorno de prueba, es posible que deba deshabilitar las funciones de SnapCenter en ese entorno y habilitarlas en un entorno de producción.
+Si ya no necesita las funciones de protección de datos de SnapCenter, debe cambiar la configuración del plugin de SnapCenter para VMware vSphere. Por ejemplo, si se implementa el plugin en un entorno de prueba, es posible que deba deshabilitar las funciones de SnapCenter en ese entorno y habilitarlas en un entorno de producción.
 
 .Antes de empezar
 * Debe tener privilegios de administrador.
@@ -22,34 +22,34 @@ Si ya no necesita las funciones de protección de datos de SnapCenter, es necesa
 
 
 .Acerca de esta tarea
-Cuando se deshabilita el plugin de VMware de SnapCenter, se suspenden todos los grupos de recursos y el plugin se cancela como extensión en vCenter.
+Cuando se deshabilita el plugin de SnapCenter para VMware vSphere, todos los grupos de recursos se suspenden y el plugin deja de registrarse como extensión en vCenter.
 
-Cuando se habilita el plugin de VMware de SnapCenter, el plugin se registra como una extensión en vCenter, todos los grupos de recursos se encuentran en modo de producción y todas las programaciones se habilitan.
+Cuando se habilita el plugin de SnapCenter para VMware vSphere, el plugin se registra como extensión en vCenter, todos los grupos de recursos se encuentran en modo de producción y todas las programaciones se habilitan.
 
 .Pasos
-. Opcional: Realice un backup del repositorio MySQL del plugin de VMware de SnapCenter en caso de que desee restaurarlo a un nuevo dispositivo virtual.
+. Opcional: Realice un backup del repositorio de MySQL del plugin de SnapCenter para VMware vSphere en caso de que desee restaurarlo en un dispositivo virtual nuevo.
 +
 link:scpivs44_back_up_the_snapcenter_plug-in_for_vmware_vsphere_mysql_database.html["Realice el backup de la base de datos MySQL del plugin de SnapCenter para VMware vSphere"].
 
-. Inicie sesión en la interfaz gráfica de usuario de la gestión del plugin de VMware de SnapCenter con el formato `\https://<OVA-IP-address>:8080`. Inicie sesión con el nombre de usuario y la contraseña de administrador establecidos en el momento de la implementación y el token de MFA generado con la consola de mantenimiento.
+. Inicie sesión en la interfaz gráfica de usuario de gestión del plugin de SnapCenter para VMware vSphere con el formato `\https://<OVA-IP-address>:8080`. Inicie sesión con el nombre de usuario y la contraseña de administrador establecidos en el momento de la implementación y el token de MFA generado con la consola de mantenimiento.
 +
-La IP del plugin de VMware de SnapCenter se muestra cuando implementa el plugin.
+Cuando se implementa el plugin, se muestra la dirección IP del plugin de SnapCenter para VMware vSphere.
 
 . Haga clic en *Configuración* en el panel de navegación izquierdo y, a continuación, anule la selección de la opción Servicio en la sección *Detalles del complemento* para desactivar el plugin.
 . Confirme la elección.
 +
-** Si solo utilizó el plugin de VMware de SnapCenter para realizar backups consistentes de la máquina virtual
+** Si solo utilizó el plugin de SnapCenter para VMware vSphere para ejecutar backups consistentes con máquinas virtuales
 +
 El plugin está deshabilitado y no se requiere ninguna otra acción.
 
-** Si utilizó el plugin de VMware de SnapCenter para realizar backups consistentes con las aplicaciones
+** Si se utilizó el plugin de SnapCenter para VMware vSphere para realizar backups consistentes con las aplicaciones
 +
 El plug-in está desactivado y es necesario realizar más tareas de limpieza.
 
 +
 ... Inicie sesión en VMware vSphere.
 ... Apague la máquina virtual.
-... En la pantalla de navegación de la izquierda, haga clic con el botón derecho en la instancia del complemento de VMware de SnapCenter (el nombre de la `.ova` Archivo que se utilizó cuando se implementó el dispositivo virtual) y seleccione *Eliminar del disco*.
+... En la pantalla del navegador de la izquierda, haga clic con el botón derecho en la instancia del complemento SnapCenter para VMware vSphere (el nombre del `.ova` archivo que se utilizó cuando se implementó el dispositivo virtual) y seleccione *Eliminar del disco*.
 ... Inicie sesión en SnapCenter y quite el host de vSphere.
 
 

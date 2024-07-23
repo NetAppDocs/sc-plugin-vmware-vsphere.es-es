@@ -16,4 +16,4 @@ summary: La documentación de inicio rápido ofrece un conjunto condensado de in
 [role="lead"]
 La documentación de inicio rápido ofrece un conjunto condensado de instrucciones para poner en marcha el dispositivo virtual del plugin de SnapCenter para VMware vSphere y habilitar el plugin de SnapCenter para VMware vSphere. Estas instrucciones están destinadas a clientes que no tienen SnapCenter ya instalado y que solo desean proteger máquinas virtuales y almacenes de datos.
 
-Antes de comenzar, consulte link:scpivs44_deployment_planning_and_requirements.html["Planificación y requisitos de la puesta en marcha"].
+Antes de empezar, consulte link:scpivs44_deployment_planning_and_requirements.html["Planificación y requisitos de la puesta en marcha"].

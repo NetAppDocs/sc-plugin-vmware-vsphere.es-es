@@ -20,13 +20,13 @@ Se realizan operaciones de backup con todos los recursos definidos en un grupo d
 Debe tener creado un grupo de recursos con una política anexada.
 
 
-IMPORTANT: No inicie un trabajo de backup bajo demanda cuando ya se esté ejecutando un trabajo para realizar backup de la base de datos MySQL del plugin de VMware de SnapCenter. Utilice la consola de mantenimiento para ver la programación de copia de seguridad configurada para la base de datos MySQL.
+IMPORTANT: No inicie una tarea de backup bajo demanda cuando ya se esté ejecutando un trabajo para realizar backup de la base de datos MySQL del plugin de SnapCenter para VMware vSphere. Utilice la consola de mantenimiento para ver la programación de copia de seguridad configurada para la base de datos MySQL.
 
 .Acerca de esta tarea
-En versiones anteriores de VSC, puede ejecutar un backup bajo demanda sin tener un trabajo de backup configurado para una máquina virtual o un almacén de datos. Sin embargo, para el plugin de VMware de SnapCenter, las máquinas virtuales y los almacenes de datos deben estar dentro de un grupo de recursos para poder realizar backups.
+En versiones anteriores de VSC, puede ejecutar un backup bajo demanda sin tener un trabajo de backup configurado para una máquina virtual o un almacén de datos. Sin embargo, para el plugin de SnapCenter para VMware vSphere, las máquinas virtuales y los almacenes de datos deben estar dentro de un grupo de recursos para poder realizar backups.
 
 .Pasos
-. En el panel de navegación de la izquierda del plugin de SCV, haga clic en *Resource Groups*, después seleccione un grupo de recursos y, a continuación, seleccione image:scpivs44_image38.png["Icono Reproducir"] *Ejecutar ahora* para iniciar la copia de seguridad.
+. En el panel de navegación izquierdo del plugin de SCV, haga clic en *Resource Groups*, seleccione un grupo de recursos y, a continuación, seleccione image:scpivs44_image38.png["Icono Reproducir"] *Run Now* para iniciar el backup.
 . Si el grupo de recursos tiene varias políticas configuradas, en el cuadro de diálogo *Backup Now*, seleccione la política que desea utilizar para esta operación de backup.
 . Haga clic en *Aceptar* para iniciar la copia de seguridad.
 . Opcional: Supervise el progreso de la operación haciendo clic en *tareas recientes* en la parte inferior de la ventana o en el panel *Monitor de trabajo* para obtener más detalles. .Result

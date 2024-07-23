@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: scv48_audit_logs.html 
 keywords:  
-summary: El registro de auditoría permite realizar un seguimiento de quién realizó qué y cuándo. El registro de auditoría es una colección de eventos en un orden cronológico y se escribe en un archivo dentro del dispositivo. 
+summary: El registro de auditoría permite realizar un seguimiento de quién realizó qué y cuándo. Un registro de auditoría es una colección de eventos en orden cronológico y se escribe en un archivo del dispositivo. 
 ---
 = Registros de auditoría
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: El registro de auditoría permite realizar un seguimiento de quién rea
 
 
 [role="lead"]
-El registro de auditoría es una colección de eventos en un orden cronológico, que se escribe en un archivo dentro del dispositivo. El archivo de registro de auditoría se genera en `/var/log/netapp/audit` la ubicación y los nombres de los archivos siguen una de las siguientes convenciones de nomenclatura:
+Un registro de auditoría es una colección de eventos en orden cronológico que se escriben en un archivo del dispositivo. Los archivos de registro de auditoría se generan en `/var/log/netapp/audit` la ubicación, y los nombres de los archivos siguen una de las siguientes convenciones de nomenclatura:
 
 * Audit.log: Archivo de registro de auditoría activo que está en uso.
 * Auditoría-%d{aaaa-MM-dd-HH-mm-ss}.log.gz: Archivo de registro de auditoría. La fecha y la hora en el nombre del archivo indican cuándo se creó el archivo, por ejemplo: Audit-2022-12-15-16-28-01.log.gz.
@@ -22,7 +22,7 @@ El registro de auditoría es una colección de eventos en un orden cronológico,
 
 En la interfaz de usuario del complemento SCV, puede ver y exportar los detalles del registro de auditoría desde la ficha *Panel* > *Configuración* > *registros de auditoría* puede ver la auditoría de operaciones en los registros de auditoría. Los registros de auditoría se descargan con el bundle de soporte.
 
-Si la configuración de correo electrónico está configurada, SCV envía una notificación de correo electrónico en caso de que se produzca un fallo en la verificación de integridad del registro de auditoría. Se puede producir un error de verificación de integridad del registro de auditoría cuando se elimina o se altera uno de los archivos.
+Si la configuración de correo electrónico está configurada, SCV envía una notificación de correo electrónico en caso de que se produzca un fallo en la verificación de integridad del registro de auditoría. Se puede producir un error de verificación de integridad del registro de auditoría cuando se manipula o se elimina uno de los archivos.
 
 Las configuraciones predeterminadas de los archivos de auditoría son:
 
@@ -190,4 +190,6 @@ Esta tarea permite cambiar la configuración predeterminada del registro de audi
 . Inicie sesión en el plugin de SnapCenter para VMware vSphere.
 . En el panel de navegación de la izquierda, selecciona *Ajustes* > *Registros de auditoría* > *Ajustes*.
 . En el panel *Configuración del registro de auditoría*, introduzca el número máximo de archivos de registro de auditoría y el límite de tamaño del archivo de registro de auditoría.
+. Seleccione la opción *Enviar registros de auditoría al servidor Syslog* si decide enviar los registros al servidor syslog. Introduzca los detalles del servidor.
+. Guarde la configuración.
 
