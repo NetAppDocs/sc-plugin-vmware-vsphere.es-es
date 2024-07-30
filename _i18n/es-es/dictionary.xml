@@ -625,7 +625,6 @@
   <block id="9511d611d059dad2cee26dd7b6fc4d5a" category="paragraph">Es necesario desmontar todos los almacenes de datos que haya en la máquina virtual de almacenamiento antes de quitarla.</block>
   <block id="bbef84b0a53276c7c512270e3dbf2029" category="paragraph">Si un grupo de recursos tiene backups que residen en una máquina virtual de almacenamiento que se quita, los intentos posteriores de realizar backups de ese grupo de recursos generarán errores.</block>
   <block id="a87f600185266e8baed2f9874a5a9772" category="list-text">En la página *sistemas de almacenamiento*, seleccione el equipo virtual de almacenamiento que desea eliminar y, a continuación, haga clic en *Eliminar*.</block>
-  <block id="d1bcb651c16c1e49822b4f7c61910214" category="paragraph"><block ref="882f890d3418627cf43cd6225ef7eb22" category="inline-link-macro-rx"></block>.</block>
   <block id="bbb99087c1b7afbe7385f4e0f05bceaa" category="summary">Es posible usar scripts previos y posteriores como parte de las operaciones de protección de datos. Estos scripts permiten la automatización antes o después del trabajo de protección de datos.</block>
   <block id="7322146fa0278b7076d42a67da3ca68f" category="doc">Scripts previos y posteriores</block>
   <block id="61f6987ebe8ac6f46f0b880c5ae59a51" category="paragraph">Es posible usar scripts previos y posteriores como parte de las operaciones de protección de datos. Estos scripts permiten la automatización antes o después del trabajo de protección de datos. Por ejemplo, se puede incluir un script para notificar automáticamente si hay fallos o advertencias en un trabajo de protección de datos. Para configurar scripts previos y posteriores, es necesario comprender algunos de los requisitos para crearlos.</block>
@@ -1388,17 +1387,11 @@
   <block id="27b2e549cc51fb06281af543965846c2" category="paragraph">Explorar las carpetas de archivos de gran tamaño, por ejemplo, las carpetas de archivos de 10K, puede tardar uno o más minutos la primera vez. Las siguientes sesiones de exploración requieren menos tiempo.</block>
   <block id="bb46ac4338fc50ace325640971d87b41" category="list-text">Haga clic en *Menú* y seleccione la opción de menú *hosts y clústeres*, a continuación, seleccione una máquina virtual, seleccione la ficha *Configurar* y, a continuación, haga clic en *copias de seguridad* en la sección *SnapCenter Plug-in for VMware vSphere*.</block>
   <block id="7f9834a181f8fd15bc168c47caf536e3" category="list-text">Haga clic en el backup que desea ver.</block>
-  <block id="15522b8dcb225880b816b8456110deaf" category="summary">Si el cliente VMware vSphere de SnapCenter comienza a comportarse de forma incorrecta, es posible que deba borrar la memoria caché del explorador. Si el problema persiste, reinicie el servicio del cliente de VMware vSphere.</block>
-  <block id="fc5672573975422a722953bf5496e5ad" category="section-title">Reinicie el servicio del cliente web en una instancia de Linux vCenter</block>
-  <block id="bbbb4a3d88d4a0dafc319898d6206ae7" category="paragraph">Si su instancia de vCenter está instalada en un dispositivo Linux, deberá utilizar comandos de Linux para reiniciar el servicio de cliente de VMware vSphere de SnapCenter.</block>
-  <block id="df005eed1212d84ddce99431a04fc779" category="paragraph">Debe ejecutar vCenter 6.5 o una versión posterior.</block>
   <block id="d9ac8e6076d4e4d7529e26c9238771a4" category="list-text">Utilice SSH para iniciar sesión en el dispositivo de vCenter Server como raíz.</block>
   <block id="263de88bd463a408f8eabe4c8a4ace37" category="list-text">Acceda al shell del dispositivo o al shell BASH por medio del siguiente comando:</block>
   <block id="ad288d5d0843f98ebb574a6ae9d65a4e" category="paragraph"><block ref="2591c98b70119fe624898b1e424b5e91" prefix="" category="inline-code"></block></block>
   <block id="76acab39397c08b9a6f90dc3612ad3b4" category="list-text">Detenga el servicio del cliente web por medio del siguiente comando HTML5:</block>
   <block id="fe179a5e6c3cce08786099d7d4f4c814" category="paragraph"><block ref="4ad331c0aae87e53252a4e9c0fb7b3fe" prefix="" category="inline-code"></block></block>
-  <block id="4c09019cb803ffc62d7d0666df0def34" category="list-text">Elimine todos los paquetes de svm obsoletos de vCenter por medio del siguiente comando HTML5:</block>
-  <block id="7f52ae2d13fc881eab436a11ad6556a4" category="paragraph"><block ref="ca3710e05c94c666b5609593ee562322" prefix="" category="inline-code"></block></block>
   <block id="9246d25288272bdfe6c58f34a564ec38" category="admonition">No quite los paquetes VASA o vCenter 7.x y posteriores.</block>
   <block id="1ee241c7544c04de9f1ca46058beb4cb" category="list-text">Inicie el servicio del cliente web por medio del siguiente comando HTML5:</block>
   <block id="6b76a32b7668e5fed9b8e910943fdee7" category="paragraph"><block ref="bfbe7f4b006f6fcfc7bb66e075309067" prefix="" category="inline-code"></block></block>
@@ -2223,4 +2216,5 @@ Puede descargar la tabla Report en formato HTML o CSV. También es posible desca
   <block id="c0407ba9e12515280efc0fea9f89e131" category="sidebar">Restaurar backups</block>
   <block id="1fe3b3d815ea6fb48fb7d036907904e3" category="sidebar">Complemento de SnapCenter para VMware vSphere 6,0</block>
   <block id="fd03aeb9f7de3aae10e07664eb1cd6c6" category="sidebar">Genere un paquete de soporte desde la interfaz gráfica de usuario del plugin de SnapCenter para VMware vSphere</block>
+  <block id="b02541bab3f320c7517f41f638f6ef31" category="paragraph"><block ref="6f48ea8f284b5f5f2ad46612a3e37eec" category="inline-link-macro-rx"></block>.</block>
 </blocks>

@@ -53,6 +53,6 @@ Si un grupo de recursos tiene backups que residen en una máquina virtual de alm
 . En la página *sistemas de almacenamiento*, seleccione el equipo virtual de almacenamiento que desea eliminar y, a continuación, haga clic en *Eliminar*.
 . En la casilla de confirmación *Remove Storage System*, active la casilla de verificación *Delete Storage system(s)* y, a continuación, haga clic en *Yes* para confirmar. *Nota:* Solo se admite el host ESXi 7.0U1 y versiones posteriores.
 +
-link:scpivs44_manage_the_vmware_vsphere_web_client_service.html["Reinicie el servicio del cliente de VMware vSphere"].
+link:scpivs44_restart_the_vmware_vsphere_web_client_service.html["Reinicie el servicio del cliente de VMware vSphere"].
 
 
