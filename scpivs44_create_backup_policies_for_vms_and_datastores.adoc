@@ -43,6 +43,10 @@ Para proteger un almacén de datos VMFS en una implementación de sincronizació
 +
 ** Configure clusters y mediador como se describe en el informe técnico: https://www.netapp.com/pdf.html?item=/media/21888-tr-4878.pdf["TR-4878: Sincronización activa con SnapMirror (anteriormente SMBC)"].
 ** Añada el volumen asociado con el almacén de datos VMFS al grupo de coherencia y cree una relación de protección de datos mediante la política de protección _AutomatedFailOver_ o _AutomatedFailOverDuplex_ entre dos sistemas de almacenamiento de ONTAP. La política _AutomatedFailOverDuplex_ se admite a partir de la versión ONTAP 9.15.1.
++
+
+NOTE: En una configuración de dispersión, el grupo de consistencia no es compatible con el sitio terciario.
+
 
 
 

@@ -58,7 +58,7 @@ SnapCenter utiliza información de herramientas de VMware para establecer una co
 
 * El sistema operativo invitado de Windows debe ejecutar Windows Server 2008 R2 o una versión posterior.
 +
-Para obtener la información más reciente sobre las versiones compatibles, consulte https://imt.netapp.com/matrix/imt.jsp?components=117018;&solution=1259&isHWU&src=IMT["Herramienta de matriz de interoperabilidad de NetApp (IMT)"^].
+Para obtener la información más reciente sobre las versiones compatibles, consulte https://imt.netapp.com/matrix/imt.jsp?components=121034;&solution=1517&isHWU&src=IMT["Herramienta de matriz de interoperabilidad de NetApp (IMT)"^].
 
 * Las credenciales para la máquina virtual de destino tienen que especificar la cuenta de administrador de dominio integrada o la cuenta de administrador local integrada. El nombre de usuario debe ser "Administrador". Antes de iniciar la operación de restauración, las credenciales tienen que haberse configurado para la máquina virtual a la que desea asociar el disco virtual. Las credenciales son obligatorias tanto para la operación de asociación como para la operación de restauración posterior. Los usuarios de grupo de trabajo pueden utilizar la cuenta de administrador local integrada.
 +
@@ -83,7 +83,7 @@ Puede restaurar archivos con nombres no alfabéticos, como kanjis japoneses, res
 
 * No se admite la restauración desde un sistema operativo invitado Linux
 +
-No es posible restaurar archivos y carpetas desde una máquina virtual que ejecute un sistema operativo invitado Linux. Sin embargo, puede asociar un VMDK y luego restaurar manualmente los archivos y las carpetas. Para obtener la información más reciente sobre los sistemas operativos invitados compatibles, consulte https://imt.netapp.com/matrix/imt.jsp?components=117018;&solution=1259&isHWU&src=IMT["Herramienta de matriz de interoperabilidad de NetApp (IMT)"^].
+No es posible restaurar archivos y carpetas desde una máquina virtual que ejecute un sistema operativo invitado Linux. Sin embargo, puede asociar un VMDK y luego restaurar manualmente los archivos y las carpetas. Para obtener la información más reciente sobre los sistemas operativos invitados compatibles, consulte https://imt.netapp.com/matrix/imt.jsp?components=121034;&solution=1517&isHWU&src=IMT["Herramienta de matriz de interoperabilidad de NetApp (IMT)"^].
 
 
 
@@ -98,7 +98,7 @@ Antes de restaurar un archivo o una carpeta desde un sistema operativo invitado,
 * La página Guest File Browse muestra los archivos y carpetas ocultos, que no es posible filtrar.
 * No es posible restaurar desde un sistema operativo invitado Linux.
 +
-No es posible restaurar archivos y carpetas desde una máquina virtual que ejecute un sistema operativo invitado Linux. Sin embargo, puede asociar un VMDK y luego restaurar manualmente los archivos y las carpetas. Para obtener la información más reciente sobre los sistemas operativos invitados compatibles, consulte la https://imt.netapp.com/matrix/imt.jsp?components=117018;&solution=1259&isHWU&src=IMT["Herramienta de matriz de interoperabilidad de NetApp (IMT)"^].
+No es posible restaurar archivos y carpetas desde una máquina virtual que ejecute un sistema operativo invitado Linux. Sin embargo, puede asociar un VMDK y luego restaurar manualmente los archivos y las carpetas. Para obtener la información más reciente sobre los sistemas operativos invitados compatibles, consulte la https://imt.netapp.com/matrix/imt.jsp?components=121034;&solution=1517&isHWU&src=IMT["Herramienta de matriz de interoperabilidad de NetApp (IMT)"^].
 
 * No puede restaurar desde un sistema de archivos NTFS a un sistema de archivos FAT.
 +

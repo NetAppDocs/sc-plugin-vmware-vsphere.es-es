@@ -69,7 +69,7 @@ Aunque el dispositivo virtual debe instalarse como máquina virtual Linux, el pl
 
 Además de estas funciones principales, el complemento de SnapCenter para VMware vSphere es compatible con iSCSI, Fibre Channel, FCoE, NFS 3,0/4,1, VMFS 5,0/6,0, y NVMe sobre TCP.
 
-Para obtener la información más actualizada sobre las versiones compatibles, consulte https://imt.netapp.com/matrix/imt.jsp?components=117018;&solution=1259&isHWU&src=IMT["Herramienta de matriz de interoperabilidad de NetApp"^] (IMT).
+Para obtener la información más actualizada sobre las versiones compatibles, consulte https://imt.netapp.com/matrix/imt.jsp?components=121034;&solution=1517&isHWU&src=IMT["Herramienta de matriz de interoperabilidad de NetApp"^] (IMT).
 
 Para obtener información sobre los protocolos NFS y el host ESXi, consulte la documentación de vSphere Storage que suministra VMware.
 
