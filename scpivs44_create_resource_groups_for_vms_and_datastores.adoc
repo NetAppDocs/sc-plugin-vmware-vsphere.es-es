@@ -49,6 +49,8 @@ Para todos los grupos de recursos:
 
 IMPORTANT: Si utiliza el servicio de clústeres de VMware vSphere (vCLS), no incluya las máquinas virtuales gestionadas por vCLS en los grupos de recursos del plugin de SnapCenter para VMware vSphere.
 
+Para obtener más información, consulte https://kb.netapp.com/data-mgmt/SnapCenter/SC_KBs/SCV_unable_to_backup_vCLS_VMs_after_updating_vCenter_to_7.0.x["SCV no puede realizar un backup de máquinas virtuales de vCLS después de actualizar vCenter a 7,0.x"]
+
 
 TIP: El plugin de SnapCenter para VMware vSphere 4,5 y versiones posteriores admite almacenes de datos en LUN de gran tamaño y archivos de hasta 128 TB con volúmenes de hasta 300 TB. Si va a proteger LUN de gran tamaño, utilice solo LUN con aprovisionamiento grueso para evitar la latencia.
 
@@ -58,7 +60,7 @@ IMPORTANT: No se deben añadir máquinas virtuales que estén en estado inaccesi
 .Antes de empezar
 Las herramientas de ONTAP para VMware deben ponerse en marcha antes de crear un grupo de recursos que contenga máquinas virtuales de VVol.
 
-Para obtener más información, consulte https://docs.netapp.com/us-en/ontap-tools-vmware-vsphere/index.html["Herramientas de ONTAP para VMware vSphere"^].
+Para obtener más información, consulte la documentación de las herramientas de ONTAP para VMware vSphere. Además, consulte la https://imt.netapp.com/matrix/imt.jsp?components=121034;&solution=1517&isHWU&src=IMT["Herramienta de matriz de interoperabilidad de NetApp"^] información más reciente sobre las versiones compatibles en las herramientas de ONTAP.
 
 .Acerca de esta tarea
 Puede añadir o quitar recursos de un grupo de recursos en cualquier momento.

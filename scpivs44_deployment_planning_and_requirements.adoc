@@ -42,10 +42,7 @@ Por ejemplo, si desea realizar backups de seis instancias diferentes de vCenter 
 
 * Para proteger las máquinas virtuales de VVol (VM en almacenes de datos de VVol de VMware), primero se deben implementar herramientas de ONTAP para VMware vSphere. Las herramientas de ONTAP aprovisiona y configura el almacenamiento para vVols en ONTAP y en el cliente web de VMware.
 +
-Para obtener más información, consulte https://docs.netapp.com/us-en/ontap-tools-vmware-vsphere/index.html["Herramientas de ONTAP para VMware vSphere"^]
-
-+
-Para obtener la información más reciente sobre las versiones compatibles de las herramientas de ONTAP, consulte https://imt.netapp.com/matrix/imt.jsp?components=121034;&solution=1517&isHWU&src=IMT["Herramienta de matriz de interoperabilidad de NetApp"^].
+Para obtener más información, consulte la documentación de las herramientas de ONTAP para VMware vSphere. Además, consulte la https://imt.netapp.com/matrix/imt.jsp?components=121034;&solution=1517&isHWU&src=IMT["Herramienta de matriz de interoperabilidad de NetApp"^] información más reciente sobre las versiones compatibles en las herramientas de ONTAP.
 
 * El plugin de SnapCenter para VMware vSphere ofrece compatibilidad limitada con dispositivos compartidos PCI o PCIe (por ejemplo, GPU NVIDIA Grid) debido a una limitación de las máquinas virtuales en el soporte de Storage vMotion. Para obtener más información, consulte el documento del proveedor Guía de puesta en marcha de VMware.
 +

@@ -84,6 +84,8 @@ desmonte el volumen
 
 | identidad del clúster mostrar la interfaz de red mostrar vserver vserver peer vserver show 
 |===
+Puede ignorar el comando _cluster identity show_ cluster level al crear un rol para asociarlo con el vServer de datos.
+
 
 NOTE: Puede ignorar los mensajes de advertencia acerca de los comandos de vServer no compatibles.
 

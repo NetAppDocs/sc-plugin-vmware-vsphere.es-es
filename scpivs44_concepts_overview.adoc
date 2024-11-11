@@ -59,7 +59,7 @@ La mayoría de las operaciones de restauración en entornos de NFS utilizan la f
 Las herramientas de ONTAP se utilizan para aprovisionar y configurar el almacenamiento para vVols en ONTAP y en el cliente web de VMware.
 
 +
-Para obtener más información, consulte https://docs.netapp.com/us-en/ontap-tools-vmware-vsphere/index.html["Herramientas de ONTAP para VMware vSphere"^]
+Para obtener más información, consulte la documentación de las herramientas de ONTAP para VMware vSphere. Además, consulte la https://imt.netapp.com/matrix/imt.jsp?components=121034;&solution=1517&isHWU&src=IMT["Herramienta de matriz de interoperabilidad de NetApp"^] información más reciente sobre las versiones compatibles en las herramientas de ONTAP.
 
 * El plugin de SnapCenter para VMware vSphere se pone en marcha como dispositivo virtual en una máquina virtual de Linux
 +
