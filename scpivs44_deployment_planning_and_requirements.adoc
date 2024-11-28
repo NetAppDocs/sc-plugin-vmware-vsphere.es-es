@@ -128,9 +128,9 @@ Para obtener la información más reciente sobre las versiones compatibles, cons
 
 
 
-==== Requisitos para el protocolo NVMe over TCP
+==== Requisitos para los protocolos NVMe over TCP y NVMe over FC
 
-Los requisitos mínimos de software para la compatibilidad con el protocolo NVMe over TCP son los siguientes:
+Los requisitos mínimos de software para la compatibilidad con NVMe over TCP y NVMe over FC son los siguientes:
 
 * VCenter vSphere 7.0U3
 * ESXi 7.0U3
