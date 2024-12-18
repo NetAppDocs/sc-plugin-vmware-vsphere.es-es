@@ -1,0 +1,92 @@
+---
+permalink: scv60_rn_upgrade_paths.html 
+sidebar: sidebar 
+keywords: upgrade paths, scv, 6.0, 6.0.1 
+summary: Descubra las nuevas funcionalidades disponibles en el complemento SnapCenter para VMware vSphere 6,0. 
+---
+= Rutas de actualización
+:allow-uri-read: 
+
+
+[role="lead"]
+La versión del plugin de SnapCenter para VMware vSphere (SCV) a la que puede actualizar depende de la versión que esté ejecutando actualmente.
+
+[NOTE]
+====
+La actualización al plugin de SnapCenter para VMware vSphere (SCV) 4,8 y posteriores solo se admite en VMware vCenter Server 7, la actualización 1 y versiones posteriores. Para el servidor de VMware vCenter antes de la actualización 1 de la versión 7, debe continuar utilizando SCV 4,7.
+
+====
+[cols="50%,50%"]
+|===
+| Si está en la versión SCV… | Puede actualizar directamente SCV a… 
+
+
+ a| 
+SCV 5,0
+ a| 
+SCV 6,0
+
+
+
+ a| 
+SCV 4,9
+ a| 
+SCV 5,0 y SCV 6,0
+
+
+
+ a| 
+SCV 4,8
+ a| 
+SCV 4,9 y SCV 5,0
+
+
+
+ a| 
+SCV 4,7
+ a| 
+SCV 4,8 y SCV 4,9
+
+|===
+Para bases de datos y sistemas de archivos virtualizados que están integrados con SnapCenter, esta es la ruta de actualización:
+
+[cols="30%,30%,40%"]
+|===
+| Si está utilizando | Si su complemento de VMware es… | Puede actualizar directamente a… 
+
+
+ a| 
+SnapCenter 6,0
+ a| 
+SCV 5,0
+ a| 
+SCV 6,0
+
+
+
+ a| 
+SnapCenter 5,0
+ a| 
+SCV 4,9
+ a| 
+SCV 5,0
+
+
+
+ a| 
+SnapCenter 4,9
+ a| 
+SCV 4,8
+ a| 
+SCV 4,9
+
+
+
+ a| 
+SnapCenter 4,8
+ a| 
+SCV 4,7
+ a| 
+SCV 4,8
+
+|===

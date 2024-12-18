@@ -1,0 +1,34 @@
+---
+permalink: scv60_releasenotes_60_whats_new.html 
+sidebar: sidebar 
+keywords: 'what"s new, release notes, scv, 6.0, 6.0.1' 
+summary: Descubra las nuevas funcionalidades disponibles en el complemento SnapCenter para VMware vSphere 6,0. 
+---
+= Novedades del plugin de SnapCenter para VMware vSphere 6,0
+:allow-uri-read: 
+
+
+[cols="30%,70%"]
+|===
+| Actualizar | Descripción 
+
+
+ a| 
+https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_concepts_overview.html["Compatibilidad con el protocolo NVMe over TCP"]
+ a| 
+El plugin de SnapCenter para VMware vSphere 6,0 ahora admite el protocolo NVMe over TCP para almacenes de datos VMFS.
+
+No se necesita ningún hardware adicional para poner en marcha NVMe a través del protocolo TCP, lo que simplifica y resulta rentable para usted.
+
+Al igual que iSCSI, los almacenes de datos VMFS con el protocolo NVMe over TCP pueden usar cualquier NIC y switches ethernet y admitir todas las operaciones estándar, como backup, restauración, montaje, conexión y desconexión.
+
+
+
+ a| 
+https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_create_backup_policies_for_vms_and_datastores.html["Soporte para la sincronización activa de SnapMirror"]
+ a| 
+Ahora es posible utilizar el plugin de SnapCenter para VMware vSphere para configurar funciones de sincronización activa de SnapMirror, como objetivo de punto de recuperación cero (RPO), objetivo de tiempo de recuperación (RTO) y conmutación por error transparente de aplicaciones.
+
+La sincronización activa de SnapMirror solo se admite para almacenes de datos VMFS.
+
+|===
