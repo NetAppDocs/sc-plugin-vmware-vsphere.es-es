@@ -2219,7 +2219,6 @@ Puede descargar la tabla Report en formato HTML o CSV. También es posible desca
   <block id="5ba878c4a46b0a8571800aaa6e8445a7" category="paragraph">El plugin de SnapCenter para VMware vSphere 6.0.1 ahora admite el protocolo NVMe over FC para almacenes de datos VMFS con el fin de optimizar el rendimiento, reducir los costes y garantizar un rendimiento continuo.</block>
   <block id="1c7703c1d060b65ce6fd3a75ba50400e" category="inline-link">Integración de herramientas de ONTAP para VMware vSphere 10.x con SCV 6.0.1</block>
   <block id="0d1fedc1c92b2bac1ad8d29266340940" category="paragraph"><block ref="0d1fedc1c92b2bac1ad8d29266340940" category="inline-link-rx"></block></block>
-  <block id="41d114a9720ad1ac299b2dffec2f7186" category="paragraph">Las herramientas de ONTAP para VMware vSphere 10.x ayudan a configurar VMware vSphere Virtual Volumes. Con esta interconexión, puede configurar, realizar backups y restaurar máquinas virtuales que residen en almacenes de datos de vVols basados en NFS.</block>
   <block id="704fc5c8ea6982e3179f495b7b832121" category="doc">Novedades del plugin de SnapCenter para VMware vSphere 6,0</block>
   <block id="05355694c1b9a07fdbe4cd953d66f950" category="inline-link">Compatibilidad con el protocolo NVMe over TCP</block>
   <block id="537b09dbac250171d06580c68b67b2f2" category="paragraph"><block ref="537b09dbac250171d06580c68b67b2f2" category="inline-link-rx"></block></block>
@@ -2228,7 +2227,6 @@ Puede descargar la tabla Report en formato HTML o CSV. También es posible desca
   <block id="b154808e6bcc13034e613c359731ad79" category="paragraph">Al igual que iSCSI, los almacenes de datos VMFS con el protocolo NVMe over TCP pueden usar cualquier NIC y switches ethernet y admitir todas las operaciones estándar, como backup, restauración, montaje, conexión y desconexión.</block>
   <block id="4f53b479c6b47d73b1fdb28f399b1301" category="inline-link">Soporte para la sincronización activa de SnapMirror</block>
   <block id="a3dde13a3e6b0437cbcc67d81b0b023f" category="paragraph"><block ref="a3dde13a3e6b0437cbcc67d81b0b023f" category="inline-link-rx"></block></block>
-  <block id="88ae2479bcea5ca16281e31626f2f8d8" category="paragraph">Ahora es posible utilizar el plugin de SnapCenter para VMware vSphere para configurar funciones de sincronización activa de SnapMirror, como objetivo de punto de recuperación cero (RPO), objetivo de tiempo de recuperación (RTO) y conmutación por error transparente de aplicaciones.</block>
   <block id="6884e6f09d7d01f963a72f6d4b4dee73" category="paragraph">La sincronización activa de SnapMirror solo se admite para almacenes de datos VMFS.</block>
   <block id="ee8f5755a6e1671a63e8da1209dc860f" category="paragraph">La versión del plugin de SnapCenter para VMware vSphere (SCV) a la que puede actualizar depende de la versión que esté ejecutando actualmente.</block>
   <block id="4181b34482469dce169449ef3b643b27" category="paragraph">La actualización al plugin de SnapCenter para VMware vSphere (SCV) 4,8 y posteriores solo se admite en VMware vCenter Server 7, la actualización 1 y versiones posteriores. Para el servidor de VMware vCenter antes de la actualización 1 de la versión 7, debe continuar utilizando SCV 4,7.</block>
@@ -2248,4 +2246,6 @@ Puede descargar la tabla Report en formato HTML o CSV. También es posible desca
   <block id="7e35de6c484fe702e7c4fe21538ac2a4" category="paragraph">SnapCenter 4,8</block>
   <block id="9fb9e3e27a3792a16059036c9b877598" category="sidebar">Novedades del plugin de SnapCenter para VMware vSphere 6.0.1</block>
   <block id="43e9871fb2ac1e50ad02c9c15dce6a93" category="sidebar">Novedades del plugin de SnapCenter para VMware vSphere 6,0</block>
+  <block id="2c1653c7d21f34b83ac4f6c2e6d95617" category="paragraph">Las herramientas de ONTAP para VMware vSphere 10.x ayudan a configurar VMware vSphere Virtual Volumes. Con esta integración puede configurar, realizar backups y restaurar máquinas virtuales que residen en almacenes de datos vVols basados en NFS.</block>
+  <block id="260461e32230b11c5e5f1e46e498eb6d" category="paragraph">Ahora es posible utilizar el plugin de SnapCenter para VMware vSphere para configurar funciones de sincronización activa de SnapMirror, como objetivo de punto de recuperación cero (RPO), objetivo de tiempo de recuperación (RTO) y conmutación por error de aplicaciones transparente.</block>
 </blocks>

@@ -23,6 +23,6 @@ El plugin de SnapCenter para VMware vSphere 6.0.1 ahora admite el protocolo NVMe
  a| 
 https://docs.netapp.com/us-en/sc-plugin-vmware-vsphere/scpivs44_concepts_overview.html["Integración de herramientas de ONTAP para VMware vSphere 10.x con SCV 6.0.1"]
  a| 
-Las herramientas de ONTAP para VMware vSphere 10.x ayudan a configurar VMware vSphere Virtual Volumes. Con esta interconexión, puede configurar, realizar backups y restaurar máquinas virtuales que residen en almacenes de datos de vVols basados en NFS.
+Las herramientas de ONTAP para VMware vSphere 10.x ayudan a configurar VMware vSphere Virtual Volumes. Con esta integración puede configurar, realizar backups y restaurar máquinas virtuales que residen en almacenes de datos vVols basados en NFS.
 
 |===
