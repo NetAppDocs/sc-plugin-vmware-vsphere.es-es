@@ -42,6 +42,10 @@ Todas las máquinas virtuales y almacenes de datos, excepto los almacenes de dat
 +
 Todos los vVols en una única carpeta VVol especificada. Si la carpeta contiene una combinación de máquinas virtuales de VVol y máquinas virtuales tradicionales, el plugin de SnapCenter para VMware vSphere realiza backups de las máquinas virtuales de VVol y omite las máquinas virtuales tradicionales.
 
+* Equipos virtuales y almacenes de datos en ASA R2
++
+No es posible combinar máquinas virtuales y almacenes de datos de ASA R2 con otras máquinas virtuales y almacenes de datos.
+
 
 
 Para todos los grupos de recursos:
@@ -92,8 +96,6 @@ Si bien puede crear un grupo de recursos sin una política de backup, las operac
 
 NOTE: Si tiene que seleccionar una política de backup con período de bloqueo de Snapshot, debe seleccionar ONTAP 9.12.1 o una versión posterior.
 
-
-
 * Comprobación de compatibilidad
 +
 SnapCenter realiza comprobaciones de compatibilidad cuando se crea un grupo de recursos.
@@ -101,7 +103,13 @@ SnapCenter realiza comprobaciones de compatibilidad cuando se crea un grupo de r
 +
 <<Gestione los fallos de comprobación de compatibilidad>>
 
+* Crear una protección secundaria para un grupo de recursos
++
+La protección secundaria se ocupa de crear una relación de replicación para los recursos añadidos en el grupo de recursos. Debe crear una relación de SnapMirror basada en grupo de consistencia en el clúster preferido y una SVM usando una política especificada del primario. La protección secundaria solo se admite para máquinas virtuales y almacenes de datos basados en el sistema ASA R2. La relación de iguales de clústeres y la relación entre iguales de SVM deben estar preconfiguradas. La protección secundaria únicamente permite aplicar normativas SnapMirror asíncronas. Debe proporcionar un sufijo de grupo de consistencia al crear la protección secundaria.
 
+
+
+La protección secundaria se ocupa de crear una relación de replicación para los recursos añadidos en el grupo de recursos.
 
 .Pasos
 . En el panel de navegación izquierdo del plugin SCV, haga clic en *Resource Groups* y luego seleccione *Create* para iniciar el asistente.
@@ -144,6 +152,9 @@ Si desea que el sufijo “_recent” se agregue a la última instantánea, marqu
 
 
 NOTE: A. `_recent` el backup se crea para cada política que se asocia a un grupo de recursos. Por lo tanto, un grupo de recursos con varias políticas tendrá múltiples `_recent` completos. No cambie el nombre manualmente `_recent` completos.
+
+
+NOTE: El sistema de almacenamiento ASA R2 no admite el cambio de nombre de Snapshots y, como resultado, no se admiten las funciones de nomenclatura de SCV backup y _recent Snapshot.
 
 
 
@@ -206,7 +217,7 @@ Las máquinas virtuales por expansión no son compatibles con los almacenes de d
 | Para usar… | Haga esto… 
 
 
-| Una política existente | Seleccione una o más políticas de la lista. 
+| Una política existente | Seleccione una o más políticas de la lista. La protección secundaria se aplica a políticas nuevas y existentes en las que ha seleccionado tanto actualizaciones de SnapMirror como de SnapVault. 
 
 
 | Una política nueva  a| 
@@ -218,10 +229,32 @@ Las máquinas virtuales por expansión no son compatibles con los almacenes de d
 +
 En Linked Mode, la lista incluye políticas en todas las instancias de vCenter vinculadas. Debe seleccionar una política que esté en la misma instancia de vCenter que el grupo de recursos.
 
-.. En la página *programaciones*, configure el programa de copia de seguridad para cada directiva seleccionada.
-+
-image:scpivs44_image18.png["Crear grupo de recursos"]
+.. En la página *Protección secundaria*, la lista de recursos seleccionados se muestra con su estado de protección. Para proteger los recursos no protegidos, seleccione el tipo de política de replicación, el sufijo del grupo de consistencia, el clúster de destino y la SVM de destino en el menú desplegable. Al crear un grupo de recursos, se crea un trabajo independiente para protección secundaria, y puede verlo en la ventana de supervisión del trabajo.
 
+
+
+
+|===
+| Campos | Descripción 
+
+
+| Nombre de la política de replicación | Nombre de la política de SnapMirror. Solo se admiten las políticas secundarias *Asynchronous* y *Mirror and Vault*. 
+
+
+| Sufijo del grupo de consistencia | Una configuración de destino utilizada para adjuntar al grupo de coherencia primario para formar el nombre del grupo de consistencia de destino. Por ejemplo: Si el nombre del grupo de consistencia primario es sccg_2024-11-28_120918 e introduce _dest como sufijo, el grupo de consistencia secundario se creará como sccg_2024-11-28_120918_dest. El sufijo solo se aplica a los grupos de consistencia sin protección. 
+
+
+| Clúster de destino | Para todas las unidades de almacenamiento sin proteger, SCV muestra nombres de los clústeres entre iguales en el menú desplegable. Si el almacenamiento añadido a SCV se encuentra en el ámbito de SVM, debido a la limitación de ONTAP, se muestra el ID de clúster en lugar del nombre. 
+
+
+| SVM de destino | Para todas las unidades de almacenamiento sin proteger, SCV muestra nombres de SVM entre iguales. Cluster and SVM se eligen automáticamente cuando se selecciona una de las unidades de almacenamiento que forma parte del grupo de coherencia. Lo mismo se aplica a todas las demás unidades de almacenamiento del mismo grupo de consistencia. 
+
+
+| Recursos secundarios protegidos | Para todas las unidades de almacenamiento protegidas de los recursos que se añaden en la página de recursos, se muestran los detalles de las relaciones secundarias, incluidos el clúster, la SVM y el tipo de replicación. 
+|===
+image:secondary_protection.png["Crear grupo de recursos"]
+
+. En la página *programaciones*, configure el programa de copia de seguridad para cada directiva seleccionada.
 +
 En el campo Hora de inicio, introduzca una fecha y hora distintas a cero. La fecha debe tener el formato `day/month/year`.
 
@@ -234,7 +267,7 @@ Debe rellenar todos los campos. El plugin de SnapCenter para VMware vSphere crea
 +
 link:scpivs44_modify_the_time_zones.html["Modifique las zonas horarias para los backups"].
 
-.. Revise el resumen y, a continuación, haga clic en *Finalizar*.
+. Revise el resumen y luego haga clic en *Finalizar*. A partir de SCV 6,1, los recursos de la protección secundaria para los sistemas ASA R2 se pueden ver en la página de resumen.
 +
 Antes de hacer clic en *Finalizar*, puede volver a cualquier página del asistente y cambiar la información.
 
@@ -244,8 +277,6 @@ Después de hacer clic en *Finalizar*, el nuevo grupo de recursos se agrega a la
 +
 
 NOTE: Si la operación de inactividad falla para alguna de las máquinas virtuales del backup, el backup se Marca como no coherente con la máquina virtual aunque la política seleccionada tenga seleccionada la consistencia de la máquina virtual. En este caso, es posible que algunas de las máquinas virtuales se hayan inactivo correctamente.
-
-
 
 
 

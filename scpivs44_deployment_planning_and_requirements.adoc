@@ -139,7 +139,7 @@ Los requisitos mínimos de software para la compatibilidad con NVMe over TCP y N
 
 
 
-== Requisitos de espacio y de tamaño
+== Requisitos de espacio, ajuste de tamaño y escalado
 
 |===
 | Elemento | Requisitos 
@@ -148,13 +148,16 @@ Los requisitos mínimos de software para la compatibilidad con NVMe over TCP y N
 | De NetApp | Linux 
 
 
-| Recuento de CPU mínimo | 4 núcleos 
+| Recuento de CPU recomendado | 8 núcleos 
 
 
-| RAM mínimo | Mínimo: Se recomiendan 12 GB: 16 GB 
+| RAM recomendada | 24GB 
 
 
 | Espacio en disco duro mínimo para el plugin de SnapCenter para VMware vSphere, registros y base de datos MySQL | 100 GB 
+
+
+| Tamaño máximo de pila del servicio vmcontrol en el aparato | 8GB 
 |===
 
 

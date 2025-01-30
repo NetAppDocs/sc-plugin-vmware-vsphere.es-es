@@ -28,10 +28,10 @@ Para ver los roles predefinidos en la interfaz gráfica de usuario de vCenter, h
 | Función | Descripción 
 
 
-| Administrador de SCV | Ofrece todos los privilegios nativos de vCenter Server y específicos de SnapCenter necesarios para ejecutar todas las tareas del plugin de SnapCenter para VMware vSphere. 
+| Administrador de SCV | Ofrece todos los privilegios nativos de vCenter Server y específicos de SnapCenter necesarios para ejecutar todas las tareas del plugin de SnapCenter para VMware vSphere. A partir de la versión SCV 6,1, se añade un nuevo privilegio para crear la protección secundaria a este rol. 
 
 
-| Backup de SCV | Ofrece todos los privilegios nativos de vCenter Server y específicos de SnapCenter necesarios para realizar backup de los objetos de vSphere (máquinas virtuales y almacenes de datos). El usuario también tiene acceso al privilegio de configuración. El usuario no puede restaurar backups. 
+| Backup de SCV | Ofrece todos los privilegios nativos de vCenter Server y específicos de SnapCenter necesarios para realizar backup de los objetos de vSphere (máquinas virtuales y almacenes de datos). El usuario también tiene acceso al privilegio de configuración. El usuario no puede restaurar backups. A partir de la versión SCV 6,1, se añade un nuevo privilegio para crear la protección secundaria a este rol. 
 
 
 | Restauración de archivos invitados de SCV | Ofrece todos los privilegios nativos de vCenter Server y específicos de SnapCenter necesarios para restaurar archivos y carpetas de invitado. El usuario no puede restaurar máquinas virtuales o VMDK. 

@@ -1,8 +1,8 @@
 ---
-permalink: scv60_rn_upgrade_paths.html 
+permalink: scv_rn_upgrade_paths.html 
 sidebar: sidebar 
-keywords: upgrade paths, scv, 6.0, 6.0.1 
-summary: Descubra las nuevas funcionalidades disponibles en el complemento SnapCenter para VMware vSphere 6,0. 
+keywords: upgrade paths, scv, 6.1 
+summary: Descubra las nuevas funcionalidades disponibles en el complemento SnapCenter para VMware vSphere 6,1. 
 ---
 = Rutas de actualización
 :allow-uri-read: 
@@ -22,9 +22,16 @@ La actualización al plugin de SnapCenter para VMware vSphere (SCV) 4,8 y poster
 
 
  a| 
+SCV 6,0
+ a| 
+SCV 6,1
+
+
+
+ a| 
 SCV 5,0
  a| 
-SCV 6,0
+SCV 6,0 y SCV 6,1
 
 
 
@@ -53,6 +60,15 @@ Para bases de datos y sistemas de archivos virtualizados que están integrados c
 [cols="30%,30%,40%"]
 |===
 | Si está utilizando | Si su complemento de VMware es… | Puede actualizar directamente a… 
+
+
+ a| 
+SnapCenter 6,1
+ a| 
+SCV 6,0
+ a| 
+SCV 6,1
+
 
 
  a| 
@@ -90,3 +106,4 @@ SCV 4,7
 SCV 4,8
 
 |===
+Para obtener la información más actualizada sobre las versiones compatibles, consulte https://imt.netapp.com/matrix/imt.jsp?components=121034;&solution=1517&isHWU&src=IMT["Herramienta de matriz de interoperabilidad de NetApp"^] (IMT).

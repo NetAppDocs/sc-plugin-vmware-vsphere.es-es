@@ -33,7 +33,7 @@ Utilice el formato `\https://<appliance-IP-address>:8080`
 +
 image:scpivs44_image31.png["Interfaz gráfica de usuario de gestión del plugin de SnapCenter para VMware vSphere"]
 
-. En la página *Configuración*, en la sección *Configuración de red*, haga clic en *IPv4* o *IPv6* y, a continuación, haga clic en *Editar*.
+. En la página *Ajustes*, en la sección *Ajustes de red*, haz clic en *IPv4* o *IPv6* dirección, y luego haz clic en *Editar*.
 +
 Introduzca la nueva información y haga clic en *Guardar*.
 
@@ -46,4 +46,4 @@ Introduzca la nueva información y haga clic en *Guardar*.
 
 
 
-NOTE: Si utiliza IPv4 e IPv6, no puede eliminar ambas opciones de red. La red restante debe especificar los campos servidores DNS y Dominios de búsqueda.
+NOTE: Si utiliza direcciones IPv4 e IPv6, no puede quitar ambas configuraciones de red. La red restante debe especificar los campos servidores DNS y Dominios de búsqueda.

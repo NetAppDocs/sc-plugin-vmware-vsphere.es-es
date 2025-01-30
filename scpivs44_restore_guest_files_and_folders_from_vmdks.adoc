@@ -73,7 +73,7 @@ Esta opción utiliza los ajustes de configuración del correo electrónico que s
 
 
 
-. Revise el resumen y, a continuación, haga clic en *Finalizar*.
+. Revise el resumen y luego haga clic en *Finalizar*.
 +
 Antes de hacer clic en *Finalizar*, puede volver a cualquier página del asistente y cambiar la información.
 
@@ -150,7 +150,7 @@ Los archivos y las carpetas que se van a restaurar se enumeran en la tabla Selec
 | Opción | Descripción 
 
 
-| Restaurar en ruta | Introduzca la ruta de uso compartido UNC que permite acceder al elemento invitado donde se restaurarán los archivos seleccionados. Ejemplo de IPv4: `\\10.60.136.65\c$`Ejemplo de IPv6: `\\fd20-8b1e-b255-832e--61.ipv6-literal.net\C\restore` 
+| Restaurar en ruta | Introduzca la ruta de uso compartido UNC que permite acceder al elemento invitado donde se restaurarán los archivos seleccionados. Ejemplo de dirección IPv4: `\\10.60.136.65\c$` Dirección IPv6 Ejemplo: `\\fd20-8b1e-b255-832e--61.ipv6-literal.net\C\restore` 
 
 
 | Si existen archivos originales  a| 

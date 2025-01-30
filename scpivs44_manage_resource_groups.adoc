@@ -52,7 +52,7 @@ Se permite el carácter de guion bajo (_).
 . En el panel de navegación izquierdo del plugin SCV, haga clic en *Resource Groups*, seleccione un grupo de recursos y haga clic en *Edit*.
 . En la lista de la izquierda del asistente *Editar grupo de recursos*, haga clic en la categoría que desee modificar e introduzca los cambios.
 +
-Puede realizar cambios en varias categorías.
+Puede realizar cambios en varias categorías. En esta opción también se pueden editar recursos secundarios protegidos.
 
 . Haga clic en *Siguiente* hasta que aparezca la página Resumen y, a continuación, haga clic en *Finalizar*.
 

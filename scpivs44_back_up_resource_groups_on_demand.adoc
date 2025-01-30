@@ -16,6 +16,9 @@ summary: Se realizan operaciones de backup con todos los recursos definidos en u
 [role="lead"]
 Se realizan operaciones de backup con todos los recursos definidos en un grupo de recursos. Si un grupo de recursos tiene una política anexada y una programación configurada, los backups se realizan automáticamente según esa programación.
 
+
+NOTE: El backup de ASA R2 crea copias Snapshot de grupo de consistencia y aprovisiona el grupo de consistencia primario si el recurso dado no lo tiene ya.
+
 .Antes de empezar
 Debe tener creado un grupo de recursos con una política anexada.
 

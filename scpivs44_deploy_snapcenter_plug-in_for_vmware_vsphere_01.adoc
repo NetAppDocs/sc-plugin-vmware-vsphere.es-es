@@ -21,7 +21,7 @@ La link:scpivs44_download_the_ova_open_virtual_appliance.html["Descargue el disp
 . En el explorador, desplácese hasta VMware vSphere vCenter.
 +
 
-NOTE: Para los clientes web HTML de IPv6, debe usar Chrome o Firefox.
+NOTE: Para los clientes web HTML de direcciones IPv6, debe usar Chrome o Firefox.
 
 . Inicie sesión en la *página de inicio de sesión único de VMware vCenter*.
 . En el panel de navegación, haga clic con el botón derecho del ratón en cualquier objeto de inventario que sea un objeto primario válido de una máquina virtual, como un centro de datos, una carpeta, un clúster o un host, y seleccione *implementar plantilla OVF* para iniciar el asistente de implementación de VMware.

@@ -1,14 +1,16 @@
 ---
 settings:
-  name: SnapCenter Plug-in for VMware vSphere 6.0
+  name: SnapCenter Plug-in for VMware vSphere 6.1
   internal:
     pdf_enabled: true
   prod:
     pdf_enabled: true
     harmony_enabled: false
   versions:
-  - version-number: '6.0'
+  - version-number: '6.1'
     url: "/sc-plugin-vmware-vsphere"
+  - version-number: '6.0'
+    url: "/sc-plugin-vmware-vsphere-60"
   - version-number: '5.0'
     url: "/sc-plugin-vmware-vsphere-50"
   - version-number: '4.9'
@@ -24,18 +26,16 @@ settings:
   langs: es-es,us-en,de-de,fr-fr,it-it,pt-br,ja-jp,ko-kr,zh-cn,zh-tw
 sidebar:
   entries:
-  - title: Complemento de SnapCenter para VMware vSphere 6,0
+  - title: Complemento de SnapCenter para VMware vSphere 6,1
     url: "/index.html"
   - title: Notas de la versión
     entries:
     - title: Notas de la versión del plugin de SnapCenter para VMware vSphere
       url: "/scpivs44_release_notes.html"
-    - title: Novedades del plugin de SnapCenter para VMware vSphere 6.0.1
-      url: "/scv60_releasenotes_601_whats_new.html"
-    - title: Novedades del plugin de SnapCenter para VMware vSphere 6,0
-      url: "/scv60_releasenotes_60_whats_new.html"
+    - title: Novedades del plugin de SnapCenter para VMware vSphere 6,1
+      url: "/scv_releasenotes_whats_new.html"
     - title: Rutas de actualización
-      url: "/scv60_rn_upgrade_paths.html"
+      url: "/scv_rn_upgrade_paths.html"
   - title: Conceptos
     entries:
     - title: Información general del producto

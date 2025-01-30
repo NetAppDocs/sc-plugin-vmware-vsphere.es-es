@@ -28,7 +28,7 @@ Si es un usuario de SnapCenter nuevo, debe añadir máquinas virtuales de almace
 
 * Después de implementar el dispositivo virtual, es posible que la ficha *trabajos de copia de seguridad* del Panel no se cargue en las siguientes situaciones:
 +
-** El sistema ejecuta IPv4 y tiene dos direcciones IP para el host de VMware vSphere de SnapCenter. Como resultado, la solicitud de trabajo se envía a una dirección IP que no reconoce el servidor SnapCenter. Para evitar este problema, agregue la dirección IP que desea utilizar de la siguiente manera:
+** Va a ejecutar la dirección IPv4 y tiene dos direcciones IP para el host VMware vSphere de SnapCenter. Como resultado, la solicitud de trabajo se envía a una dirección IP que no reconoce el servidor SnapCenter. Para evitar este problema, agregue la dirección IP que desea utilizar de la siguiente manera:
 +
 ... Desplácese hasta la ubicación donde se implementó el plugin de SnapCenter para VMware vSphere: `/opt/netapp/scvservice/standalone_aegis/etc`
 ... Abra la red de archivos interface.properties.

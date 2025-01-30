@@ -42,7 +42,7 @@ Ponga en marcha el plugin de SnapCenter para VMware vSphere en la misma zona hor
 . En el explorador, desplácese hasta VMware vSphere vCenter.
 +
 
-NOTE: Para los clientes web HTML de IPv6, debe usar Chrome o Firefox.
+NOTE: Para los clientes web HTML de direcciones IPv6, debe usar Chrome o Firefox.
 
 . Inicie sesión en la página *VMware vCenter Single Sign-On*.
 . En el panel del navegador, haga clic con el botón derecho en cualquier objeto de inventario que sea un objeto principal válido de una máquina virtual, como un centro de datos, un clúster o un host, y seleccione *Desplegar plantilla OVF* para iniciar el asistente de implementación de VMware.
@@ -106,7 +106,7 @@ IMPORTANT: Anote el nombre de usuario y la contraseña que especifique. Debe uti
 ... En la sección *Setup IPv4 Network Properties*, ingrese la información de la red como dirección IPv4, máscara de red IPv4, puerta de enlace IPv4, DNS principal IPv4, DNS secundario IPv4, y dominios de búsqueda IPv4.
 ... En la sección *Setup IPv6 Network Properties*, ingrese la información de la red como la dirección IPv6, la máscara de red IPv6, la puerta de enlace IPv6, IPv6 DNS primario, IPv6 DNS secundario, y dominios de búsqueda IPv6.
 +
-Seleccione los campos IPv4 o IPv6, o ambos, si corresponde. Si utiliza tanto IPv4 como IPv6, debe especificar el DNS primario solo para uno de ellos.
+Seleccione los campos de dirección IPv4 o IPv6, o ambos, si corresponde. Si utiliza direcciones IPv4 e IPv6, debe especificar el DNS primario solo para una de ellas.
 
 +
 

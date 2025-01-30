@@ -16,12 +16,12 @@ indexpage:
     También funciona con SnapCenter Server para admitir las operaciones de backup
     y restauración basadas en aplicaciones en entornos VMware para plugins específicos
     de aplicaciones de SnapCenter. Esta biblioteca de documentación describe las versiones
-    6,0 del plugin de SnapCenter para VMware vSphere.
+    6,1 del plugin de SnapCenter para VMware vSphere.
   tiles:
   - title: Manos a la obra
     links:
     - title: Notas de la versión
-      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP3322664
+      url: https://library.netapp.com/ecm/ecm_download_file/ECMLP3337464
     - title: Obtenga más información sobre SCV
       url: "/scpivs44_concepts_overview.html"
     - title: Requisitos de puesta en marcha

@@ -293,7 +293,6 @@
   <block id="04e7bb0411c1c8f56ca4fc8000c62ad8" category="doc">Ponga en marcha el plugin de SnapCenter para VMware vSphere</block>
   <block id="ce6d088abcea43c594e7a9f4cfba2fd5" category="paragraph">Para utilizar las funciones de SnapCenter con el fin de proteger máquinas virtuales, almacenes de datos y bases de datos consistentes con las aplicaciones en máquinas virtualizadas, se debe implementar el plugin de SnapCenter para VMware vSphere.</block>
   <block id="9e6343514537d0d6a99bafe616c5aa86" category="list-text">En el explorador, desplácese hasta VMware vSphere vCenter.</block>
-  <block id="13ca46cd634ae1f7c847dd56daefc40c" category="admonition">Para los clientes web HTML de IPv6, debe usar Chrome o Firefox.</block>
   <block id="a5bc2dcdf45e4e981e8c5477447aa605" category="list-text">Inicie sesión en la *página de inicio de sesión único de VMware vCenter*.</block>
   <block id="6a03edb8ab46dff4278e3f5e0e5ebe46" category="list-text">Para VMware vCenter 7.0.3 y versiones posteriores, siga los pasos en <block ref="205a43536d4d7a501f66e7fd657c91ca" category="inline-link-macro-rx"></block> Para importar los certificados en vCenter.</block>
   <block id="6c8295efcbb45c1c61f419f14cc9f532" category="list-text">En el panel de navegación, haga clic con el botón derecho del ratón en cualquier objeto de inventario que sea un objeto primario válido de una máquina virtual, como un centro de datos, una carpeta, un clúster o un host, y seleccione *implementar plantilla OVF* para iniciar el asistente de implementación de VMware.</block>
@@ -507,7 +506,6 @@
   <block id="55e37024d03d0cd46e11ea4b0c9ddc47" category="list-text">En la sección *Crear credenciales de VCS*, introduzca las credenciales locales.</block>
   <block id="a8b8a57e48b9ffeadf52134384793930" category="paragraph">En el campo *Nombre de usuario*, introduzca el nombre de usuario local; no incluya los detalles del dominio.</block>
   <block id="61a8dab3f6aedb51e104e8b3324b04ea" category="list-text">Introduzca las credenciales para el usuario maint.</block>
-  <block id="1421f12d822ef0a0be6928cf3d192201" category="paragraph">Seleccione los campos IPv4 o IPv6, o ambos, si corresponde. Si utiliza tanto IPv4 como IPv6, debe especificar el DNS primario solo para uno de ellos.</block>
   <block id="da8ca49d9d20bd0409b70809cfef56bc" category="admonition">Puede omitir estos pasos y dejar las entradas en blanco en la sección *Propiedades de red de instalación*, si desea continuar con DHCP como configuración de red.</block>
   <block id="71f9ed6b3799a05b8e015c69367cfb37" category="list-text">En *Fecha y hora de configuración*, seleccione la zona horaria en la que se encuentra el para vCenter.</block>
   <block id="e69d6a911676da089c14c8e8f2935510" category="list-text">En la página *preparado para completar*, revise la página y haga clic en *Finalizar*.</block>
@@ -734,7 +732,6 @@
   <block id="3210952a5fb8d5ccfeba07ae678f1775" category="list-text">En la página *Policies*, seleccione o cree una o más políticas de copia de seguridad, como se muestra en la siguiente tabla:</block>
   <block id="2cdd19659310fc48844c26aedc8fd9a4" category="cell">Para usar…</block>
   <block id="6059ad69090f1a7b85ee31e84e827f9c" category="cell">Una política existente</block>
-  <block id="5e8922fe6b33e53144f78b8592674a6c" category="cell">Seleccione una o más políticas de la lista.</block>
   <block id="9c5b7358395094126cc2831e0ded69a9" category="cell">Una política nueva</block>
   <block id="fd9ca72572d4ab5e600c85b32f8a9e6a" category="list-text">Complete el asistente New Backup Policy para volver al asistente Create Resource Group.</block>
   <block id="f756ba31a99a4185d9ca1e432a20a83f" category="paragraph">En Linked Mode, la lista incluye políticas en todas las instancias de vCenter vinculadas. Debe seleccionar una política que esté en la misma instancia de vCenter que el grupo de recursos.</block>
@@ -742,7 +739,6 @@
   <block id="9d53fb85cd7b48e31e4ae938dd8a9d13" category="paragraph">En el campo Hora de inicio, introduzca una fecha y hora distintas a cero. La fecha debe tener el formato<block ref="8aab24d4e5fcc880d089c1c29ea13f0b" prefix=" " category="inline-code"></block>.</block>
   <block id="67b9c02e71508024192e407aa7425aa2" category="inline-link-macro">Modifique las zonas horarias para los backups</block>
   <block id="381ccd52bbe70b77caebf5b7721bc854" category="paragraph"><block ref="a1b611f7f1d7d8197cb1d43fb49ccfda" category="inline-link-macro-rx"></block>.</block>
-  <block id="fed1c121dc4f5a5484e5623e297385fb" category="list-text">Revise el resumen y, a continuación, haga clic en *Finalizar*.</block>
   <block id="00c4e348fbc4d70b3f20028f27a0b2ab" category="paragraph">Antes de hacer clic en *Finalizar*, puede volver a cualquier página del asistente y cambiar la información.</block>
   <block id="c32889f5fe21a50841ec14f3184ac30b" category="paragraph">Después de hacer clic en *Finalizar*, el nuevo grupo de recursos se agrega a la lista de grupos de recursos.</block>
   <block id="2ff2dc58f2ec2635705f09ff662f69ce" category="admonition">Si la operación de inactividad falla para alguna de las máquinas virtuales del backup, el backup se Marca como no coherente con la máquina virtual aunque la política seleccionada tenga seleccionada la consistencia de la máquina virtual. En este caso, es posible que algunas de las máquinas virtuales se hayan inactivo correctamente.</block>
@@ -768,12 +764,10 @@
   <block id="9ce66f05fe7909f94e1823660b617ddf" category="list-text">Haga clic en un tipo de recurso de la API para mostrar las API en ese tipo de recurso.</block>
   <block id="e7683ab9f61fe80a16f3111a33febbda" category="summary">Es posible modificar los ajustes de red configurados en el plugin de SnapCenter para VMware vSphere. El plugin utiliza estos ajustes para acceder a vCenter.</block>
   <block id="d120dfcded58a5506ff23bf511e0f19f" category="doc">Modifique los ajustes de red</block>
-  <block id="593612012c0fd1880ba8813c8d41d02c" category="list-text">En la página *Configuración*, en la sección *Configuración de red*, haga clic en *IPv4* o *IPv6* y, a continuación, haga clic en *Editar*.</block>
   <block id="32e625127a9589134f64d90dac6cb7cd" category="paragraph">Introduzca la nueva información y haga clic en *Guardar*.</block>
   <block id="3c1620dc3cd833488e7cde6109b6d1bb" category="list-text">Si va a eliminar una configuración de red, haga lo siguiente:</block>
   <block id="63abf295f097ef207b859912a9f5c590" category="list-text">IPv4: En el campo *Dirección IP*, introduzca<block ref="f1f17934834ae2613699701054ef9684" prefix=" " category="inline-code"></block> Y, a continuación, haga clic en *Guardar*.</block>
   <block id="b24ed737f6ddf4dab1777258847520d0" category="list-text">IPv6: En el campo *Dirección IP*: Introduzca<block ref="c36786bc262473df7cbe294ed6ea806b" prefix=" " category="inline-code"></block> Y, a continuación, haga clic en *Guardar*.</block>
-  <block id="0158c9c916e2f0de4c880aed70d061aa" category="admonition">Si utiliza IPv4 e IPv6, no puede eliminar ambas opciones de red. La red restante debe especificar los campos servidores DNS y Dominios de búsqueda.</block>
   <block id="daf7cc2554c2855a22d49a54327d1a02" category="summary">El complemento de SnapCenter para VMware vSphere es un dispositivo virtual independiente (formato de dispositivo virtual abierto) que ofrece servicios de protección de datos para máquinas virtuales y almacenes de datos, y es compatible con servicios de protección de datos para plugins basados en aplicaciones de SnapCenter. Este documento describe cómo poner en marcha y utilizar el plugin de SnapCenter para VMware vSphere, e incluye información de inicio rápido.</block>
   <block id="4b983fff716674f120176e09551dd445" category="doc">Información general del producto</block>
   <block id="536d4cac2b03788a96cdff576afafb34" category="paragraph">El plugin de SnapCenter para VMware vSphere se pone en marcha como un dispositivo virtual basado en Linux.</block>
@@ -921,7 +915,6 @@
   <block id="1404a4829eb43be207dc9d418c129c51" category="list-text">En la página *Seleccionar ubicación de restauración*, especifique lo siguiente:</block>
   <block id="054b4f3ea543c990f6b125f41af6ebf7" category="cell">Opción</block>
   <block id="64ed3fcb4250d337b2f6551bf3310d35" category="cell">Restaurar en ruta</block>
-  <block id="c260f02960f3654c5d72d72244a8221e" category="cell">Introduzca la ruta de uso compartido UNC que permite acceder al elemento invitado donde se restaurarán los archivos seleccionados. Ejemplo de IPv4:<block ref="c1efda00eba14c667cfd89393b2be583" prefix=" " category="inline-code"></block>Ejemplo de IPv6:<block ref="f7a108079a0dc952ef09921776f4796f" prefix=" " category="inline-code"></block></block>
   <block id="788a23520c9ca6920e284fe4dfdfcf9c" category="cell">Si existen archivos originales</block>
   <block id="92555e73117a4723c02849a8e31de3e3" category="paragraph">Seleccione la acción que se debe realizar si el archivo o la carpeta que se va a restaurar ya existe en el destino de la restauración: Siempre sobrescriba o siempre omita.</block>
   <block id="883a7ba4f8c59dbcd87a8b94a15652c6" category="admonition">Si la carpeta ya existe, el contenido de esa carpeta se fusiona con la carpeta ya existente.</block>
@@ -963,7 +956,6 @@
   <block id="5a8be763f7b47c14c6c0fca91e41acc6" category="paragraph">Para ver los roles predefinidos en la interfaz gráfica de usuario de vCenter, haga clic en *Menú &gt; Administración &gt; roles*, como se muestra en la siguiente tabla.</block>
   <block id="bbbabdbe1b262f75d99d62880b953be1" category="cell">Función</block>
   <block id="3d0f61a1174e21cbdd43433a0cdd1587" category="cell">Administrador de SCV</block>
-  <block id="2f1662883e3b660770fa59a127bc029a" category="cell">Ofrece todos los privilegios nativos de vCenter Server y específicos de SnapCenter necesarios para ejecutar todas las tareas del plugin de SnapCenter para VMware vSphere.</block>
   <block id="9e5d312df6041327157130535c90513a" category="cell">Backup de SCV</block>
   <block id="fab80f3b151fabee7b9febb22c2ebc54" category="cell">Restauración de archivos invitados de SCV</block>
   <block id="29aa027fb0fee4e7b2990e1a7dc146d2" category="cell">Ofrece todos los privilegios nativos de vCenter Server y específicos de SnapCenter necesarios para restaurar archivos y carpetas de invitado. El usuario no puede restaurar máquinas virtuales o VMDK.</block>
@@ -1066,14 +1058,9 @@
   <block id="91a33043fc7eebee30634cb063fa6e2c" category="cell">Aplicación VMware vStorage API para integración de cabinas (VAAI)</block>
   <block id="16e729ceefd4cd71e291d0800dd9e9c0" category="cell">El plugin de SnapCenter para VMware vSphere utiliza esta característica para mejorar el rendimiento de las operaciones de restauración. También mejora el rendimiento en entornos NFS.</block>
   <block id="652b6799454f23103801798b5880725b" category="cell">Herramientas de ONTAP para VMware</block>
-  <block id="18cd7192921dd5ac27a1a7c5ef795c20" category="section-title">Requisitos de espacio y de tamaño</block>
   <block id="5a2ebfb8baa378cfcfcba58bbb1380c2" category="cell">Requisitos</block>
   <block id="696c660ff8d9323e55146a6dbd4e4088" category="cell">De NetApp</block>
   <block id="edc9f0a5a5d57797bf68e37364743831" category="cell">Linux</block>
-  <block id="44e5a606cb3fbfaed79ce8eb853ed886" category="cell">Recuento de CPU mínimo</block>
-  <block id="39d305d656d2efca941f50ce8253a426" category="cell">4 núcleos</block>
-  <block id="a88605ea0ad2e6919ae06fa5bb9e26d2" category="cell">RAM mínimo</block>
-  <block id="50ba65e996b60e443a12aa7a9036f5d1" category="cell">Mínimo: Se recomiendan 12 GB: 16 GB</block>
   <block id="3cb874290f06f3c2d44ce2e858bb041f" category="cell">Espacio en disco duro mínimo para el plugin de SnapCenter para VMware vSphere, registros y base de datos MySQL</block>
   <block id="dcfebc6fbca2c5316f55c914e6593d2d" category="cell">100 GB</block>
   <block id="9a0980e2d2a75eb076f41f7a4d439162" category="section-title">Requisitos de conexión y puerto</block>
@@ -1161,7 +1148,6 @@
   <block id="99f6fd129ebef0c9ba4fbbfc952c2d3f" category="list-text">En el campo datastores, desplácese hasta las máquinas virtuales o los almacenes de datos que desea añadir.</block>
   <block id="ccdaf65f600f0c505b15315d8df78297" category="paragraph">De forma predeterminada, la lista Available Entities muestra el objeto del centro de datos. Puede hacer clic en un almacén de datos para ver las máquinas virtuales incluidas en él y añadirlas al grupo de recursos.</block>
   <block id="bea0ca05b5e1fc971afeba63c277ff99" category="list-text">Repita el paso 2 para cada máquina virtual o almacén de datos que desee añadir.</block>
-  <block id="2fe0db662b9371f06a8b5392db88b6b1" category="list-text">Haga clic en *Siguiente* hasta que llegue a la página *Resumen* y, a continuación, revise el resumen y haga clic en *Finalizar*.</block>
   <block id="21a2a6efe53ed1369868aa991298fb0e" category="summary">Después de ejecutar una operación de protección de datos mediante el cliente VMware vSphere, es posible supervisar el estado del trabajo y ver sus detalles desde la pestaña Job Monitor en Dashboard.</block>
   <block id="4639d0e2e2909a747265c2f704128bca" category="doc">Supervisar trabajos</block>
   <block id="0090445899b9588f3e6305ac90b57e7b" category="inline-link">Artículo de base de conocimientos: La consola del cliente de SnapCenter vSphere no muestra trabajos</block>
@@ -1287,7 +1273,6 @@
   <block id="f4f70727dc34561dfde1a3c529b6205c" category="list-text">Configuración</block>
   <block id="d2cf8cb85b7643c0afec512224617b11" category="list-text">Cambie las credenciales de administrador</block>
   <block id="31a101d4cc913440856e9bc9979b76a4" category="list-text">Cambie la zona horaria</block>
-  <block id="da9a9075e0c02d8cf100e9f40220a9db" category="list-text">Cambie la configuración de IPv4/IPv6</block>
   <block id="4f4f4543ab03d05f7af5ae78d5aebe61" category="list-text">Cambie las credenciales de vCenter</block>
   <block id="74696cef76e7f4a4ca8d4e46191e2843" category="list-text">Activación/desactivación del plug-in</block>
   <block id="35b654fd14f12a33551c1993b5321fcb" category="summary">El plugin de SnapCenter para VMware vSphere (SCV) es un dispositivo virtual basado en Linux. Como independiente, ofrece operaciones de backup y restauración rápidas, eficientes con el espacio, consistentes con los fallos y consistentes con las máquinas virtuales para máquinas virtuales, almacenes de datos y VMDK. También funciona con SnapCenter Server para admitir las operaciones de backup y restauración basadas en aplicaciones en entornos VMware para plugins específicos de aplicaciones de SnapCenter.</block>
@@ -1305,7 +1290,6 @@
   <block id="683a572529e7ee01c3f3b2f6e84ee453" category="paragraph">Si desea modificar el nombre de un grupo de recursos, no utilice los siguientes caracteres especiales en nombres de máquinas virtuales, almacenes de datos, políticas, backups o grupos de recursos:</block>
   <block id="bf6bb853aafb837a490acb97d9acbf87" category="paragraph">% &amp; * $ # @ ! \ / : * ? " &lt; &gt; - | ; ' , .</block>
   <block id="bc967eed1e1f8494f71a02de0d06a1ba" category="list-text">En la lista de la izquierda del asistente *Editar grupo de recursos*, haga clic en la categoría que desee modificar e introduzca los cambios.</block>
-  <block id="e71911e6fc1645b76466cbac653dbb12" category="paragraph">Puede realizar cambios en varias categorías.</block>
   <block id="cb0503d668bf3e03dd4da3d424936f20" category="list-text">Haga clic en *Siguiente* hasta que aparezca la página Resumen y, a continuación, haga clic en *Finalizar*.</block>
   <block id="ad9a47e46e4ad7c3e60285f394572957" category="section-title">Eliminar grupos de recursos</block>
   <block id="16b1a35ba7401a13d918126c70a9b4e4" category="paragraph">Es posible eliminar un grupo de recursos en vCenter si ya no es necesario proteger los recursos del grupo. Debe asegurarse de que todos los grupos de recursos se eliminen antes de poder quitar el plugin de SnapCenter para VMware vSphere de vCenter.</block>
@@ -1398,7 +1382,6 @@
   <block id="99aca73e7bf6d92c807a47e7e35aaae9" category="paragraph">Para crear grupos de recursos, siga este flujo de trabajo:</block>
   <block id="e97ce39b2b8a10ba21e7830c5ea5b49e" category="cell"><block ref="eb2894246e8c5f4670fca9f0575c9b7a" prefix="" category="inline-code"></block></block>
   <block id="4e597935ea2294ca23b3d188204bd5ac" category="cell"><block ref="0dea22b6f92cc5216c8c25dd30613855" prefix="" category="inline-code"></block> Obtiene la lista de políticas del cliente de VMware vSphere. Tenga en cuenta el *ID de directiva* que desea utilizar al crear el grupo de recursos y la directiva *frecuencia*. Si no aparece ninguna directiva, utilice la<block ref="dc34af9dab91ee63dc5061320d408072" prefix=" " category="inline-code"></block> API DE REST para crear una nueva política.</block>
-  <block id="7c14f4e0699b64ee7c9bc363420c3238" category="cell"><block ref="8877dc9fcfb6df8dad34589e1a225411" prefix="" category="inline-code"></block> crea un grupo de recursos con la política especificada. Pase el *ID de póliza* del paso 1 e introduzca los detalles de la directiva *frecuencia* además de todos los demás atributos requeridos.</block>
   <block id="3c621082440c8e5f88e802202f106575" category="paragraph">Para modificar grupos de recursos, siga este flujo de trabajo:</block>
   <block id="d20ccedcf7be9ea11f1f0f93975422b7" category="cell"><block ref="339b206c33fd676f6b8ec7c4e8df2406" prefix="" category="inline-code"></block> Obtiene la lista de grupos de recursos de cliente de VMware vSphere. Tenga en cuenta *resourceGroupId* que desea modificar.</block>
   <block id="c63fb99af65af76b2e8f24650bd717d2" category="cell">Si desea modificar las políticas asignadas,<block ref="0dea22b6f92cc5216c8c25dd30613855" prefix=" " category="inline-code"></block> Obtiene la lista de políticas del cliente de VMware vSphere. Tenga en cuenta el *ID de directiva* que desea utilizar al modificar el grupo de recursos y la directiva *frecuencia*.</block>
@@ -1411,7 +1394,6 @@
   <block id="b3b58566d772ea091ad559ad7c722828" category="doc">Operaciones y problemas necesarios después de la implementación</block>
   <block id="40e6eca2154c52c78e678989d72d7903" category="section-title">Problemas de implementación que pueden encontrarse</block>
   <block id="b4f66c551198bcae0c148df6464649d2" category="list-text">Después de implementar el dispositivo virtual, es posible que la ficha *trabajos de copia de seguridad* del Panel no se cargue en las siguientes situaciones:</block>
-  <block id="01247ceba6ba6adacf0cb970001c3199" category="list-text">El sistema ejecuta IPv4 y tiene dos direcciones IP para el host de VMware vSphere de SnapCenter. Como resultado, la solicitud de trabajo se envía a una dirección IP que no reconoce el servidor SnapCenter. Para evitar este problema, agregue la dirección IP que desea utilizar de la siguiente manera:</block>
   <block id="cdb0aee875e47386f8401b32252a3dd0" category="list-text">Abra la red de archivos interface.properties.</block>
   <block id="fcc3a5678f0005b20d9b7c499d1b8dc3" category="list-text">En la<block ref="b2aafe9ac180ff5dd3d3d8b6145097cd" prefix=" " category="inline-code"></block> Añada la dirección IP que desee usar.</block>
   <block id="4fa13494fd3dbaf358f71d6c97ee016f" category="list-text">Dispone de dos NIC.</block>
@@ -1452,7 +1434,6 @@
   <block id="e68d40414316869d2023656b071a3cc1" category="admonition">Asegúrese de haber seleccionado el almacén de datos correcto para desmontar. De lo contrario, podría afectar al trabajo de producción.</block>
   <block id="767e2e183fc102315aacf7d310c2140d" category="list-text">En el cuadro de diálogo *Unmount Cloned Datastore*, seleccione un almacén de datos, seleccione la casilla de verificación *Unmount the cloned datastore* y, a continuación, haga clic en *Unmount*.</block>
   <block id="36e391315954a298b55333c0f1afcc71" category="paragraph">Siga estos pasos para crear grupos de recursos.</block>
-  <block id="08b700204b080921e158ac4569ab02b7" category="list-text">Introduzca la información requerida en cada página del asistente Create Resource Group, seleccione las máquinas virtuales y los almacenes de datos que se incluirán en el grupo de recursos y, a continuación, seleccione las políticas de backup que se aplicarán al grupo de recursos y especifique la programación de backup.</block>
   <block id="d4a6978acacfefd87687ddcaa390823d" category="paragraph">Los backups se ejecutan según lo especificado en las políticas de backup que están configuradas para el grupo de recursos.</block>
   <block id="0732e8e379c23dc5fb5e0055374a7f1d" category="summary">Si el cliente VMware vSphere de SnapCenter comienza a comportarse de forma incorrecta, es posible que deba borrar la memoria caché del explorador. Si el problema persiste, reinicie el servicio del cliente web.</block>
   <block id="ae6aa491e5b4d2d79971ced34f86c80e" category="section-title">Reinicie el servicio del cliente de VMware vSphere en una instancia de Linux vCenter</block>
@@ -1602,7 +1583,6 @@
   <block id="9f81f48337075ddbb687c776efe5cf67" category="paragraph"><block ref="9f81f48337075ddbb687c776efe5cf67" category="inline-image-macro-rx" type="image"></block></block>
   <block id="bf18811faac9b8e4fcaebab51afd1113" category="list-text">Seleccione *Crear*.</block>
   <block id="2d9c6a052b962f45f8525e4ec1dec880" category="inline-image-macro">Crear grupo de recursos</block>
-  <block id="3ec7abcc0f628e9d54f81021b20cd0b8" category="paragraph"><block ref="3ec7abcc0f628e9d54f81021b20cd0b8" category="inline-image-macro-rx" type="image"></block></block>
   <block id="fa12509cfb8e8ccded16e2a254e988c4" category="list-text">Seleccione *Agregar*.</block>
   <block id="cf0ab757341ba6d3dc7ba387b7608080" category="inline-image-macro">Representación gráfica de configuración admitida</block>
   <block id="9dfe68c8c0e7d63c6014f412ad6f64f4" category="paragraph"><block ref="9dfe68c8c0e7d63c6014f412ad6f64f4" category="inline-image-macro-rx" type="image"></block></block>
@@ -1783,32 +1763,6 @@ Cuando se cambia la contraseña de vCenter, se debe cancelar el registro de las 
   <block id="eb329c5960128e617403445c31a29da6" category="cell">se muestra el historial del trabajo
 exposición de trabajos
 detención de trabajo</block>
-  <block id="f70ff09711c9d04b2cce7fac4814083d" category="cell">crear el clon de volumen
-show de clon de volumen
-inicio de división de clon de volumen
-detención de división de clon de volumen
-cree el volumen
-eliminar el volumen
-destrucción del volumen
-crear el archivo de volumen
-uso show-disk del archivo de volumen
-volumen sin conexión
-volumen en línea
-modificación del volumen
-crear el qtree de volúmenes
-eliminación de qtree de volumen
-modificación del qtree del volumen
-se muestra volume qtree
-restricción de volumen
-visualización de volumen
-crear snapshots de volumen
-eliminación de snapshots de volumen
-modificación de las copias de snapshot de volumen
-cambio de nombre de copias de snapshot de volumen
-restauración de copias snapshot de volumen
-archivo de restauración de snapshots de volumen
-visualización de copias de snapshot de volumen
-desmonte el volumen</block>
   <block id="16b92fbbb10cb2f1d734ca41dcf581d0" category="paragraph">Utilice el formato<block ref="3dfacd84c996ac983963942e2712a0bf" prefix=" " category="inline-code"></block>.</block>
   <block id="aadf7df1c4f29cbf9325555b71ac60a6" category="inline-link">Hojas de cálculo para la autenticación del administrador y la configuración de RBAC</block>
   <block id="6ba7b5d818acb6cab3137d4c011e2db2" category="inline-link">Autenticación de administrador y RBAC</block>
@@ -1887,8 +1841,6 @@ Puede descargar la tabla Report en formato HTML o CSV. También es posible desca
   <block id="7608e75619cff3eeb4e8bce40481b456" category="sidebar">Documentación sobre el software SnapCenter</block>
   <block id="11d88a82190664755120fc16494310df" category="sidebar">Documentación para versiones anteriores de SCV</block>
   <block id="74fe1f888648848c4fd5f85ae847a16c" category="sidebar">Base de conocimientos de NetApp – SCV</block>
-  <block id="c509b8a656aef03a24bb97d38089d79d" category="inline-link">Aviso acerca del plugin de SnapCenter para VMware vSphere 6,0</block>
-  <block id="d6333f2d4419de88c51591a532f89ca4" category="paragraph"><block ref="d6333f2d4419de88c51591a532f89ca4" category="inline-link-rx"></block></block>
   <block id="b07f5a589dfba9c50331d3753c44828e" category="list-text">En la página de acceso directo del cliente de vCenter, seleccione SnapCenter Plug-in for VMware vSphere (SCV).</block>
   <block id="cb2dc08c39241837cb4a00bc68a28171" category="list-text">En el panel de navegación izquierdo de SCV, seleccione *Dashboard* &gt; pestaña *Reports*.</block>
   <block id="74f69e9b1980c384917fc2295036ad1e" category="admonition">Las programaciones de backups se ejecutan en la zona horaria en la que se implementa el plugin de SnapCenter para VMware vSphere. VCenter informa los datos en la zona horaria en la que se encuentra el para vCenter. Por lo tanto, si el plugin de SnapCenter para VMware vSphere y el vCenter están en zonas horarias diferentes, es posible que los datos de la consola del cliente de VMware vSphere no sean iguales a los datos de los informes.</block>
@@ -2085,7 +2037,6 @@ Puede descargar la tabla Report en formato HTML o CSV. También es posible desca
   <block id="aee31424ca1b9b281c02d03f7ac377e8" category="list-text">Registra el host de vSphere para el plugin de SnapCenter para VMware vSphere `con SnapCenter para admitir backups basados en aplicaciones de bases de datos y sistemas de archivos virtualizados (aplicación sobre backups de VMDK).</block>
   <block id="25d3d5cc2932319d2a5ac63ec6d3af42" category="paragraph">Los metadatos de los backups de VMDK basados en aplicaciones se almacenan en el repositorio de SnapCenter Server. Los metadatos para los backups de máquinas virtuales y almacenes de datos se almacenan en el repositorio MySQL del plugin de SnapCenter para VMware vSphere.</block>
   <block id="86c9bcf1bbcb7b1ccccb458aa66555aa" category="cell">Comandos de acceso total: Privilegios mínimos requeridos para ONTAP 8,3 y versiones posteriores.</block>
-  <block id="57442019ae8a4f358f6ca948df78b8a7" category="cell">vserver cifs vserver compartir cifs crear vserver compartir cifs eliminar vserver cifs shadowcopy mostrar vserver compartir cifs mostrar vserver cifs mostrar vserver política de exportación vserver política de exportación crear vserver política de exportación eliminar regla de política de exportación de vserver crear regla de política de exportación de vserver mostrar política de exportación de vserver mostrar vserver iscsi vserver conexión iscsi mostrar vserver subsistema vserver nvme controlador subsistema nvme de vserver controladora show subsistema nvme de vserver mapa subsistema nvme de vserver mapa show subsistema nvme de vserver mapa add subsistema nvme de vserver mapa remove subsistema nvme host show subsistema nvme de vserver host add subsistema nvme de vserver host remove subsistema de vserver nvme show subsistema de vserver nvme delete espacio de nombres de vserver nvme mostrar grupos de conmutación por error de interfaz de red</block>
   <block id="de92ae935b9e0d1f381bebce31b4ae2e" category="cell">identidad del clúster mostrar la interfaz de red mostrar vserver vserver peer vserver show</block>
   <block id="f492e93d9d3e86fc62690b1632797659" category="list-text">Necesita ONTAP 9.12.1 o versiones posteriores para usar la función de sincronización activa de SnapMirror.</block>
   <block id="edf08e5a72e49a6f8e59f09ad7747a6b" category="admonition">A partir de la versión 9.11.1 de ONTAP, la comunicación con el clúster de ONTAP se realiza mediante las API DE REST. El usuario de ONTAP debe tener activada la aplicación http. Sin embargo, si se encuentran problemas con las API REST DE ONTAP, la clave de configuración 'FORCE_zapi' ayuda a la conmutación al flujo de trabajo de ZAPI tradicional. Puede que necesite agregar o actualizar esta clave mediante LAS API DE configuración y establecerla en true. Consulte el artículo de la base de conocimientos<block ref="1c569ff15e6174002858600fc974b74f" category="inline-link-rx"></block> para obtener más información.</block>
@@ -2123,7 +2074,6 @@ Puede descargar la tabla Report en formato HTML o CSV. También es posible desca
   <block id="cb01d41b0aab19b422d36f530e7fd6de" category="summary">Para simplificar el uso del control de acceso basado en roles de vCenter Server, el plugin de SnapCenter para VMware vSphere ofrece un conjunto de roles predefinidos que permiten que los usuarios ejecuten tareas de SnapCenter. También hay un rol de solo lectura que permite a los usuarios ver la información de SnapCenter, pero no ejecutar tareas.</block>
   <block id="7725ffbf0bad378c06b12868afb9039b" category="paragraph">Los roles predefinidos tienen privilegios específicos para SnapCenter y los privilegios nativos de vCenter Server para garantizar que las tareas se completen correctamente. Además, los roles están configurados para contar con todos los privilegios necesarios en todas las versiones compatibles de vCenter Server.</block>
   <block id="2fc5b5221c79ffd8bb3f63dc3aaf9a6e" category="paragraph">El plugin de SnapCenter para VMware vSphere reasigna a estos roles los valores predeterminados (conjunto inicial de privilegios) cada vez que se reinicia el servicio del cliente web de vCenter o se modifica la instalación. Si se actualiza el plugin de SnapCenter para VMware vSphere, los roles predefinidos se actualizan automáticamente para que funcionen con esa versión del plugin.</block>
-  <block id="c8c51f25f2c35a602348ef48786a61e7" category="cell">Ofrece todos los privilegios nativos de vCenter Server y específicos de SnapCenter necesarios para realizar backup de los objetos de vSphere (máquinas virtuales y almacenes de datos). El usuario también tiene acceso al privilegio de configuración. El usuario no puede restaurar backups.</block>
   <block id="8cec8f197f3878fe48b31b04ffba6d80" category="cell">Ofrece todos los privilegios nativos de vCenter Server y específicos de SnapCenter necesarios para restaurar objetos de vSphere incluidos en backups generados con el plugin de SnapCenter para VMware vSphere y para restaurar archivos y carpetas de invitados. El usuario también tiene acceso al privilegio de configuración. El usuario no puede realizar backup de objetos de vSphere.</block>
   <block id="71ae2585645e5c6a49fae6e0e8582f04" category="cell">Ofrece acceso de solo lectura a todos los backups, grupos de recursos y políticas del plugin de SnapCenter para VMware vSphere.</block>
   <block id="3f03a4f6b5e3c9929a9c197f70a09f22" category="paragraph">No hay un valor predeterminado. Utilice este valor para asignar la dirección IP del host ESXi a la dirección IP de VMkernel. De forma predeterminada, el plugin de SnapCenter para VMware vSphere utiliza la dirección IP del adaptador de VMkernel de gestión del host ESXi. Si desea que el plugin de SnapCenter para VMware vSphere utilice una dirección IP del adaptador de VMkernel diferente, tendrá que proporcionar un valor de anulación.</block>
@@ -2161,11 +2111,9 @@ Puede descargar la tabla Report en formato HTML o CSV. También es posible desca
   <block id="328f32c762dec158caf3d2ea653c1180" category="paragraph">Si detiene el servicio del plugin de SnapCenter para VMware vSphere en una instancia de vCenter que se encuentra en modo vinculado, los grupos de recursos no están disponibles en todos los vCenter vinculados, incluso cuando el servicio del plugin de SnapCenter para VMware vSphere se esté ejecutando en otros vCenter vinculados.</block>
   <block id="fad37daffef9b692ddee35955e6497a2" category="paragraph">Es necesario cancelar manualmente el registro de las extensiones del plugin de SnapCenter para VMware vSphere.</block>
   <block id="54c2048147554399fedce576885f1492" category="list-text">En la instancia de vCenter vinculada que tiene el servicio del plugin de SnapCenter para VMware vSphere detenido, desplácese hasta el administrador de referencia de objetos gestionados (MOB).</block>
-  <block id="6190c9a80a66f4e25e577241857efd45" category="admonition">La actualización a SCV 6,0 solo es compatible con VMware vCenter Server 7 update 1 y versiones posteriores, para VMware vCenter Server antes de la actualización 7 1, debe continuar usando SCV 4,7. La actualización no provoca interrupciones en versiones no compatibles de VMware vCenter Server.</block>
   <block id="224ceeb2917402bd6d8dd7a3e2f19e1a" category="cell">Si tiene la versión del plugin de SnapCenter para VMware vSphere (SCV)...</block>
   <block id="6f95773fb09a10c0a1a8350183ddd7fd" category="cell">Puede actualizar directamente el plugin de SnapCenter para VMware vSphere al...</block>
   <block id="7f82273caf689b5fe5d147479aee9dab" category="cell">SCV 5,0</block>
-  <block id="b96efbc0a65341ba7e683489ae34fe60" category="cell">Actualice a SCV 6,0</block>
   <block id="8f0cfebd2785db3468780aa4a2fe25f0" category="cell">Actualice a SCV 5,0 y SCV 6,0</block>
   <block id="d00ac81a0a443883139be6455462a9b5" category="list-text">Inicie sesión en la interfaz gráfica de usuario de gestión del plugin de SnapCenter para VMware vSphere. La dirección IP se muestra cuando implementa el plugin de SnapCenter para VMware vSphere.</block>
   <block id="950f93a03b622a14040c9cfe3599ae64" category="list-text">En el panel del navegador, haga clic en la VM que desea actualizar y, a continuación, haga clic en la pestaña *Resumen*.</block>
@@ -2178,9 +2126,7 @@ Puede descargar la tabla Report en formato HTML o CSV. También es posible desca
   <block id="1d5285014fcc25c67c920dcc1ba9cd0d" category="paragraph">Si la configuración de correo electrónico está configurada, SCV envía una notificación de correo electrónico en caso de que se produzca un fallo en la verificación de integridad del registro de auditoría. Se puede producir un error de verificación de integridad del registro de auditoría cuando se manipula o se elimina uno de los archivos.</block>
   <block id="32458f17a77f27841fa1e786f430f2d6" category="list-text">Seleccione la opción *Enviar registros de auditoría al servidor Syslog* si decide enviar los registros al servidor syslog. Introduzca los detalles del servidor.</block>
   <block id="df127e661b212457f6bc59234c70fec6" category="list-text">Guarde la configuración.</block>
-  <block id="1f9cad256c1f5e6e0bf8e1f70171d493" category="sidebar">El plugin de SnapCenter para VMware vSphere (SCV) es un dispositivo virtual basado en Linux. Como independiente, ofrece operaciones de backup y restauración rápidas, eficientes con el espacio, consistentes con los fallos y consistentes con las máquinas virtuales para máquinas virtuales, almacenes de datos y VMDK. También funciona con SnapCenter Server para admitir las operaciones de backup y restauración basadas en aplicaciones en entornos VMware para plugins específicos de aplicaciones de SnapCenter. Esta biblioteca de documentación describe las versiones 6,0 del plugin de SnapCenter para VMware vSphere.</block>
   <block id="c0407ba9e12515280efc0fea9f89e131" category="sidebar">Restaurar backups</block>
-  <block id="1fe3b3d815ea6fb48fb7d036907904e3" category="sidebar">Complemento de SnapCenter para VMware vSphere 6,0</block>
   <block id="fd03aeb9f7de3aae10e07664eb1cd6c6" category="sidebar">Genere un paquete de soporte desde la interfaz gráfica de usuario del plugin de SnapCenter para VMware vSphere</block>
   <block id="b02541bab3f320c7517f41f638f6ef31" category="paragraph"><block ref="6f48ea8f284b5f5f2ad46612a3e37eec" category="inline-link-macro-rx"></block>.</block>
   <block id="a8873f8f7715ad49732b43f6bdd600b5" category="paragraph">Para obtener la información más actualizada sobre las versiones compatibles, consulte<block ref="64fc8efacd4fa13b8c1907c1db527b3d" category="inline-link-rx"></block> (IMT).</block>
@@ -2205,29 +2151,9 @@ Puede descargar la tabla Report en formato HTML o CSV. También es posible desca
   <block id="00b932dfc365b7b36023fc7e5a151179" category="paragraph">Los requisitos mínimos de software para la compatibilidad con NVMe over TCP y NVMe over FC son los siguientes:</block>
   <block id="f6599049db87ec18cb4b8b124bbae9bb" category="admonition">Durante una operación de restauración, es posible que se produzca el error<block ref="8bca5bf79dc6a0592d8b28b7fc9c19a9" prefix=" " category="inline-code"></block> o<block ref="9e17d1b629230b07cfa91237bf97bfc3" prefix=" " category="inline-code"></block> esto se produce cuando el plugin de SnapCenter para VMware vSphere intenta volver a firmar el clon. Debido a las restricciones de VMware, el plugin de SnapCenter para VMware vSphere no puede controlar el valor de refirma automática en las configuraciones avanzadas del host ESXi. Para el almacenamiento NVMe over TCP y NVMe over FC, SCV no puede agregar controladoras de forma dinámica cuando se añade un nuevo subsistema. Debe realizar la asignación necesaria antes de la operación de montaje.</block>
   <block id="c2ad807051aed38647dbaf48da9bc4e7" category="list-text">Para NVMe over TCP y NVMe over FC se necesita ONTAP 9.10,1 y posterior.</block>
-  <block id="ec1055ea33266617a541d92dfa6e5b67" category="inline-link">Notas de la versión del plugin de SnapCenter para VMware vSphere 6,0 y 6.0.1</block>
   <block id="2233cc73f35f4d66a36bbbeebab35281" category="doc">Notas de la versión del plugin de SnapCenter para VMware vSphere</block>
-  <block id="297142e178601173053624e9ef12f108" category="paragraph">Descubra las nuevas y mejoradas funciones del complemento SnapCenter para VMware vSphere 6.0.1 y 6,0.</block>
-  <block id="3b3c714cc3d97185d38b7de5a06604eb" category="paragraph">Para obtener detalles sobre problemas conocidos, limitaciones y problemas solucionados, consulte<block ref="1433bf204e910686ea87dd6be31fd4c0" category="inline-link-rx"></block>. Debe iniciar sesión con su cuenta de NetApp o crear una cuenta para acceder a las Notas de la versión.</block>
   <block id="c5dcd35af16918a17ee9c3a5c153f0af" category="inline-link">IMT</block>
   <block id="2d15261526cfe20309636c59ec64f54e" category="paragraph">Para acceder a la información más actualizada sobre las versiones compatibles, consulte la herramienta de matriz de interoperabilidad de NetApp <block ref="b3ca33d6c3d8c65c6db17cc2a6a779f0" category="inline-link-rx"></block>).</block>
-  <block id="ccbdf0b4f3977d9d972b8053561475b1" category="summary">Descubra las nuevas funcionalidades disponibles en el complemento SnapCenter para VMware vSphere 6,0.</block>
-  <block id="4ab6fdda3b84dfae82088c2bc01040ec" category="doc">Novedades del plugin de SnapCenter para VMware vSphere 6.0.1</block>
-  <block id="06933067aafd48425d67bcb01bba5cb6" category="cell">Actualizar</block>
-  <block id="42740cd9317367a2589caeffd362cff0" category="inline-link">Compatibilidad con NVMe sobre el protocolo FC</block>
-  <block id="50be082c76f5c49324bb5bd7608ae3b2" category="paragraph"><block ref="50be082c76f5c49324bb5bd7608ae3b2" category="inline-link-rx"></block></block>
-  <block id="5ba878c4a46b0a8571800aaa6e8445a7" category="paragraph">El plugin de SnapCenter para VMware vSphere 6.0.1 ahora admite el protocolo NVMe over FC para almacenes de datos VMFS con el fin de optimizar el rendimiento, reducir los costes y garantizar un rendimiento continuo.</block>
-  <block id="1c7703c1d060b65ce6fd3a75ba50400e" category="inline-link">Integración de herramientas de ONTAP para VMware vSphere 10.x con SCV 6.0.1</block>
-  <block id="0d1fedc1c92b2bac1ad8d29266340940" category="paragraph"><block ref="0d1fedc1c92b2bac1ad8d29266340940" category="inline-link-rx"></block></block>
-  <block id="704fc5c8ea6982e3179f495b7b832121" category="doc">Novedades del plugin de SnapCenter para VMware vSphere 6,0</block>
-  <block id="05355694c1b9a07fdbe4cd953d66f950" category="inline-link">Compatibilidad con el protocolo NVMe over TCP</block>
-  <block id="537b09dbac250171d06580c68b67b2f2" category="paragraph"><block ref="537b09dbac250171d06580c68b67b2f2" category="inline-link-rx"></block></block>
-  <block id="a629ec953583fe39117309ef9a508a81" category="paragraph">El plugin de SnapCenter para VMware vSphere 6,0 ahora admite el protocolo NVMe over TCP para almacenes de datos VMFS.</block>
-  <block id="ead1e4398d30de28a2a5ea2f82cb8d47" category="paragraph">No se necesita ningún hardware adicional para poner en marcha NVMe a través del protocolo TCP, lo que simplifica y resulta rentable para usted.</block>
-  <block id="b154808e6bcc13034e613c359731ad79" category="paragraph">Al igual que iSCSI, los almacenes de datos VMFS con el protocolo NVMe over TCP pueden usar cualquier NIC y switches ethernet y admitir todas las operaciones estándar, como backup, restauración, montaje, conexión y desconexión.</block>
-  <block id="4f53b479c6b47d73b1fdb28f399b1301" category="inline-link">Soporte para la sincronización activa de SnapMirror</block>
-  <block id="a3dde13a3e6b0437cbcc67d81b0b023f" category="paragraph"><block ref="a3dde13a3e6b0437cbcc67d81b0b023f" category="inline-link-rx"></block></block>
-  <block id="6884e6f09d7d01f963a72f6d4b4dee73" category="paragraph">La sincronización activa de SnapMirror solo se admite para almacenes de datos VMFS.</block>
   <block id="ee8f5755a6e1671a63e8da1209dc860f" category="paragraph">La versión del plugin de SnapCenter para VMware vSphere (SCV) a la que puede actualizar depende de la versión que esté ejecutando actualmente.</block>
   <block id="4181b34482469dce169449ef3b643b27" category="paragraph">La actualización al plugin de SnapCenter para VMware vSphere (SCV) 4,8 y posteriores solo se admite en VMware vCenter Server 7, la actualización 1 y versiones posteriores. Para el servidor de VMware vCenter antes de la actualización 1 de la versión 7, debe continuar utilizando SCV 4,7.</block>
   <block id="e369a7ee41a72fa8a44419a1129cc575" category="cell">Si está en la versión SCV…</block>
@@ -2244,8 +2170,78 @@ Puede descargar la tabla Report en formato HTML o CSV. También es posible desca
   <block id="8e07dd0a7cef005f474929f3ccd8ab15" category="paragraph">SnapCenter 5,0</block>
   <block id="07d190428eb856174f602dfb1555b388" category="paragraph">SnapCenter 4,9</block>
   <block id="7e35de6c484fe702e7c4fe21538ac2a4" category="paragraph">SnapCenter 4,8</block>
-  <block id="9fb9e3e27a3792a16059036c9b877598" category="sidebar">Novedades del plugin de SnapCenter para VMware vSphere 6.0.1</block>
-  <block id="43e9871fb2ac1e50ad02c9c15dce6a93" category="sidebar">Novedades del plugin de SnapCenter para VMware vSphere 6,0</block>
-  <block id="2c1653c7d21f34b83ac4f6c2e6d95617" category="paragraph">Las herramientas de ONTAP para VMware vSphere 10.x ayudan a configurar VMware vSphere Virtual Volumes. Con esta integración puede configurar, realizar backups y restaurar máquinas virtuales que residen en almacenes de datos vVols basados en NFS.</block>
-  <block id="260461e32230b11c5e5f1e46e498eb6d" category="paragraph">Ahora es posible utilizar el plugin de SnapCenter para VMware vSphere para configurar funciones de sincronización activa de SnapMirror, como objetivo de punto de recuperación cero (RPO), objetivo de tiempo de recuperación (RTO) y conmutación por error de aplicaciones transparente.</block>
+  <block id="2acd783e8dee0eed27b40328899eef19" category="inline-link">Aviso acerca del plugin de SnapCenter para VMware vSphere 6,1</block>
+  <block id="8ebd9207a610e17e383416d90951290e" category="paragraph"><block ref="8ebd9207a610e17e383416d90951290e" category="inline-link-rx"></block></block>
+  <block id="f8a96ad66100bda7d69f0d2cf5b27f72" category="admonition">El sistema de almacenamiento R2 de ASA no admite la función de nomenclatura _con Snapshot recientes.</block>
+  <block id="414f994a73d1f79098abf3d5d51e5555" category="list-text">Haga clic en *Siguiente* hasta llegar a la página *Resumen* y luego revise el resumen y haga clic en *Finalizar*.</block>
+  <block id="9329e69bb4e74e1c55c47a7b13b20c73" category="admonition">El backup de ASA R2 crea copias Snapshot de grupo de consistencia y aprovisiona el grupo de consistencia primario si el recurso dado no lo tiene ya.</block>
+  <block id="94e5f239a67b0bdbb293ad6d93a70fae" category="list-text">Introduzca la información requerida en cada página del asistente Create Resource Group, seleccione las máquinas virtuales y los almacenes de datos que se incluirán en el grupo de recursos y, a continuación, seleccione las políticas de backup que se aplicarán al grupo de recursos. Añada los detalles de la protección secundaria remota y especifique la programación de backups.</block>
+  <block id="47b5545e20c1c3ff97bf1931ed1bb71c" category="list-text">Equipos virtuales y almacenes de datos en ASA R2</block>
+  <block id="e2910993c5df37efecb77ead3d46c061" category="paragraph">No es posible combinar máquinas virtuales y almacenes de datos de ASA R2 con otras máquinas virtuales y almacenes de datos.</block>
+  <block id="29d5d806d07657990827260e1cb0e2f6" category="list-text">Crear una protección secundaria para un grupo de recursos</block>
+  <block id="d2c627ac86e99bf486f92df0e01e564d" category="paragraph">La protección secundaria se ocupa de crear una relación de replicación para los recursos añadidos en el grupo de recursos. Debe crear una relación de SnapMirror basada en grupo de consistencia en el clúster preferido y una SVM usando una política especificada del primario. La protección secundaria solo se admite para máquinas virtuales y almacenes de datos basados en el sistema ASA R2. La relación de iguales de clústeres y la relación entre iguales de SVM deben estar preconfiguradas. La protección secundaria únicamente permite aplicar normativas SnapMirror asíncronas. Debe proporcionar un sufijo de grupo de consistencia al crear la protección secundaria.</block>
+  <block id="1aa6cfe25429fc4eec3c516dcd2dc639" category="paragraph">La protección secundaria se ocupa de crear una relación de replicación para los recursos añadidos en el grupo de recursos.</block>
+  <block id="d225ffa0857e0c1621ca548327cac09f" category="admonition">El sistema de almacenamiento ASA R2 no admite el cambio de nombre de Snapshots y, como resultado, no se admiten las funciones de nomenclatura de SCV backup y _recent Snapshot.</block>
+  <block id="581b0ff55ddecb82a36105092c53ed37" category="cell">Seleccione una o más políticas de la lista. La protección secundaria se aplica a políticas nuevas y existentes en las que ha seleccionado tanto actualizaciones de SnapMirror como de SnapVault.</block>
+  <block id="4a9546a9033ba87fc7117a1294a5e336" category="list-text">En la página *Protección secundaria*, la lista de recursos seleccionados se muestra con su estado de protección. Para proteger los recursos no protegidos, seleccione el tipo de política de replicación, el sufijo del grupo de consistencia, el clúster de destino y la SVM de destino en el menú desplegable. Al crear un grupo de recursos, se crea un trabajo independiente para protección secundaria, y puede verlo en la ventana de supervisión del trabajo.</block>
+  <block id="a4ca5edd20d0b5d502ebece575681f58" category="cell">Campos</block>
+  <block id="8dd087319387caee893992e7d4ecc261" category="cell">Nombre de la política de replicación</block>
+  <block id="a7f3190e89f834e1d38e7cebabf3c23f" category="cell">Nombre de la política de SnapMirror. Solo se admiten las políticas secundarias *Asynchronous* y *Mirror and Vault*.</block>
+  <block id="839b3ef85841170c07a83d90446b7293" category="cell">Sufijo del grupo de consistencia</block>
+  <block id="8498712eae1f3fc8c3deb49a103330ab" category="cell">Una configuración de destino utilizada para adjuntar al grupo de coherencia primario para formar el nombre del grupo de consistencia de destino. Por ejemplo: Si el nombre del grupo de consistencia primario es sccg_2024-11-28_120918 e introduce _dest como sufijo, el grupo de consistencia secundario se creará como sccg_2024-11-28_120918_dest. El sufijo solo se aplica a los grupos de consistencia sin protección.</block>
+  <block id="3ab54d36af02d892dd7d414e434c3861" category="cell">Clúster de destino</block>
+  <block id="ef8896c7f223eacb1843ca55578ccd99" category="cell">Para todas las unidades de almacenamiento sin proteger, SCV muestra nombres de los clústeres entre iguales en el menú desplegable. Si el almacenamiento añadido a SCV se encuentra en el ámbito de SVM, debido a la limitación de ONTAP, se muestra el ID de clúster en lugar del nombre.</block>
+  <block id="17927681be29e47d557b71ca94c6f8cb" category="cell">SVM de destino</block>
+  <block id="66f217caf728d2deab852334afef97a6" category="cell">Para todas las unidades de almacenamiento sin proteger, SCV muestra nombres de SVM entre iguales. Cluster and SVM se eligen automáticamente cuando se selecciona una de las unidades de almacenamiento que forma parte del grupo de coherencia. Lo mismo se aplica a todas las demás unidades de almacenamiento del mismo grupo de consistencia.</block>
+  <block id="4e2041ff5ea66c23b660f1aa1270c0d4" category="cell">Recursos secundarios protegidos</block>
+  <block id="2c66ae4d8465ecaa0277c97c3f9e52cc" category="cell">Para todas las unidades de almacenamiento protegidas de los recursos que se añaden en la página de recursos, se muestran los detalles de las relaciones secundarias, incluidos el clúster, la SVM y el tipo de replicación.</block>
+  <block id="55d4ade9a708df3a3dea5a7b596b3bec" category="paragraph"><block ref="55d4ade9a708df3a3dea5a7b596b3bec" category="inline-image-macro-rx" type="image"></block></block>
+  <block id="219530a6f91e9e652edabda0d6abb52e" category="list-text">Revise el resumen y luego haga clic en *Finalizar*. A partir de SCV 6,1, los recursos de la protección secundaria para los sistemas ASA R2 se pueden ver en la página de resumen.</block>
+  <block id="1fbf8001bce3062cf570e802cd34a515" category="admonition">Para los clientes web HTML de direcciones IPv6, debe usar Chrome o Firefox.</block>
+  <block id="7763535bfb2dc82fb2cbf445d64a697c" category="paragraph">Seleccione los campos de dirección IPv4 o IPv6, o ambos, si corresponde. Si utiliza direcciones IPv4 e IPv6, debe especificar el DNS primario solo para una de ellas.</block>
+  <block id="858e1231bf7d2fa0b29910623e458a4d" category="section-title">Requisitos de espacio, ajuste de tamaño y escalado</block>
+  <block id="58836b9412219914161fb60855f74bae" category="cell">Recuento de CPU recomendado</block>
+  <block id="856e1714b1d49f0d567463f553ef9120" category="cell">8 núcleos</block>
+  <block id="2a9f9ccc193010032b655ecfc76e40c8" category="cell">RAM recomendada</block>
+  <block id="dde8b54fa4a91beedb7b736869c08569" category="cell">24GB</block>
+  <block id="f8bce6aa95f5621d608c29e258b620d2" category="cell">Tamaño máximo de pila del servicio vmcontrol en el aparato</block>
+  <block id="af5700014f646d2567efa6288d85ab2b" category="cell">8GB</block>
+  <block id="4fa7e925220267d7b768f4b3a78c6148" category="admonition">El sistema de almacenamiento R2 de ASA no admite cambiar el nombre de los backups.</block>
+  <block id="d106abcc28b08528e977427482cfc257" category="paragraph">Puede realizar cambios en varias categorías. En esta opción también se pueden editar recursos secundarios protegidos.</block>
+  <block id="875b0302744a0f026125fde0002031ee" category="cell">Clon de volumen crear clon de volumen mostrar volumen clon de volumen inicio división clon de volumen estado volumen división parada volumen crear volumen eliminar volumen destruir volumen clon crear archivo volumen archivo volumen mostrar archivo disco volumen sin conexión volumen en línea función gestionada volumen modificar qtree crear volumen qtree eliminar volumen qtree mostrar volumen restringir volumen mostrar volumen snapshot crear volumen snapshot eliminar volumen snapshot modificar-SnapLock-archivo snapshot expiración-tiempo volumen snapshot cambiar nombre snapshot restaurar volumen delta mostrar volumen snapshot mostrar volumen delta volumen snapshot mostrar volumen delta mostrar volumen delta volumen delta mostrar volumen delta volumen delta mostrar volumen delta</block>
+  <block id="8f63ee5bc3100343496937f88eb71b0f" category="cell">vserver cifs vserver compartir cifs crear vserver compartir cifs eliminar vserver cifs shadowcopy mostrar vserver compartir cifs mostrar vserver cifs mostrar vserver política de exportación vserver exportar política crear vserver política de exportación eliminar vserver regla de política de exportación crear vserver regla de política de exportación mostrar vserver política de exportación mostrar vserver iscsi vserver conexión iscsi mostrar vserver subsistema nvme controladora vserver subsistema vserver nvme</block>
+  <block id="5e7e64c339a65a35f9dd642d25809870" category="cell">Comandos de acceso total: Privilegios mínimos requeridos para ONTAP 9 y versiones posteriores.</block>
+  <block id="4e822e8bd084f0d55645c04096f9f2e8" category="cell">imagen de la unidad de almacenamiento del grupo de coherencia</block>
+  <block id="19899f4e43a0adc60e21e11b5620c400" category="list-text">En la página *Ajustes*, en la sección *Ajustes de red*, haz clic en *IPv4* o *IPv6* dirección, y luego haz clic en *Editar*.</block>
+  <block id="73bf8d0963d0fce608d5706a43357517" category="admonition">Si utiliza direcciones IPv4 e IPv6, no puede quitar ambas configuraciones de red. La red restante debe especificar los campos servidores DNS y Dominios de búsqueda.</block>
+  <block id="82483f0ce94e070521dde3173ea8f007" category="list-text">Va a ejecutar la dirección IPv4 y tiene dos direcciones IP para el host VMware vSphere de SnapCenter. Como resultado, la solicitud de trabajo se envía a una dirección IP que no reconoce el servidor SnapCenter. Para evitar este problema, agregue la dirección IP que desea utilizar de la siguiente manera:</block>
+  <block id="cab2abd3782f0d1cb3afdd1d41344792" category="cell">Ofrece todos los privilegios nativos de vCenter Server y específicos de SnapCenter necesarios para ejecutar todas las tareas del plugin de SnapCenter para VMware vSphere. A partir de la versión SCV 6,1, se añade un nuevo privilegio para crear la protección secundaria a este rol.</block>
+  <block id="3c25218c53c1fe4763ef556ebed0058e" category="cell">Ofrece todos los privilegios nativos de vCenter Server y específicos de SnapCenter necesarios para realizar backup de los objetos de vSphere (máquinas virtuales y almacenes de datos). El usuario también tiene acceso al privilegio de configuración. El usuario no puede restaurar backups. A partir de la versión SCV 6,1, se añade un nuevo privilegio para crear la protección secundaria a este rol.</block>
+  <block id="803b820f28def2648af601377cd8f65d" category="paragraph">Descubra las nuevas y mejoradas funciones disponibles en el complemento SnapCenter para VMware vSphere 6,1.</block>
+  <block id="f1e9602e9f3c53a3cefb7d07c096dbc2" category="inline-link">Notas de la versión del plugin de SnapCenter para VMware vSphere 6,1</block>
+  <block id="4a58337a4c5239462c0a728544f6bfeb" category="paragraph">Para obtener detalles sobre problemas conocidos, limitaciones y problemas solucionados, consulte<block ref="04c13539a5d154a6fc636a4d15810317" category="inline-link-rx"></block>. Debe iniciar sesión con su cuenta de NetApp o crear una cuenta para acceder a las Notas de la versión.</block>
+  <block id="14a88b79b7eae8723a8ca7d5fe6807fc" category="cell"><block ref="8877dc9fcfb6df8dad34589e1a225411" prefix="" category="inline-code"></block> crea un grupo de recursos con la política especificada. Pase el *ID de póliza* del paso 1 e introduzca los detalles de la directiva *frecuencia* además de todos los demás atributos requeridos. Es posible habilitar la protección secundaria mediante esta API DE REST.</block>
+  <block id="34b3c572ebc9bfec8d4ff1eb372fc521" category="list-text">Configurar la protección secundaria para ASA R2</block>
+  <block id="15ca3652a44eb871e28b0f7ed33ab5f8" category="list-text">Revise el resumen y luego haga clic en *Finalizar*.</block>
+  <block id="511a61be3395b836dbaacf9a77e28d9c" category="cell">Introduzca la ruta de uso compartido UNC que permite acceder al elemento invitado donde se restaurarán los archivos seleccionados. Ejemplo de dirección IPv4:<block ref="c1efda00eba14c667cfd89393b2be583" prefix=" " category="inline-code"></block> Dirección IPv6 Ejemplo:<block ref="f7a108079a0dc952ef09921776f4796f" prefix=" " category="inline-code"></block></block>
+  <block id="12cbe201763ebb8c3712b94674ec18dc" category="admonition">La actualización a SCV 6,1 solo es compatible con VMware vCenter Server 7 update 1 y versiones posteriores, para VMware vCenter Server antes de la actualización 7 1, debe continuar usando SCV 4,7. La actualización no provoca interrupciones en versiones no compatibles de VMware vCenter Server.</block>
+  <block id="7e876cb2f9911c683b816e2dcbbc43a3" category="cell">Actualice a SCV 6,1</block>
+  <block id="d86e4811939307b3183e2dfd4eb853b6" category="cell">Actualice a SCV 6,0 y SCV 6,1</block>
+  <block id="b0ef2ccf9ac61cfaed33ce8cd24eae39" category="list-text">Cambiar la configuración de la dirección IPv4/IPv6</block>
+  <block id="2fd5adf936b993ca4d80eea4c1f5d1e5" category="summary">Descubra las nuevas funcionalidades disponibles en el complemento SnapCenter para VMware vSphere 6,1.</block>
+  <block id="6ac456c08060bbfaa97a7dd6e787b943" category="doc">Novedades del plugin de SnapCenter para VMware vSphere 6,1</block>
+  <block id="21d5f6e174bd644ffb485588eaf88aa1" category="paragraph">*Soporte para VM y almacén de datos VMFS en sistemas ASA R2*</block>
+  <block id="4ff1c74f59c8af7628ad4bba73e7a214" category="paragraph">La versión del plugin de SnapCenter para VMware vSphere 6,1 ahora admite el aprovisionamiento de máquinas virtuales (VM) y almacenes de datos VMFS en sistemas ASA R2. Los sistemas R2 de ASA ofrecen una solución de hardware y software unificada que crea una experiencia simplificada específica para las necesidades de los clientes de SAN exclusivamente. Las funciones compatibles del plugin de SnapCenter para VMware vSphere 6,1 para máquinas virtuales, almacenes de datos y formato de disco de máquina virtual (VMDK) en los sistemas ASA R2 incluyen:</block>
+  <block id="58750fe248e0ff18b9fc2f1aef5f3790" category="list-text">Aprovisionamiento de grupos de consistencia para la protección primaria</block>
+  <block id="aa90edd6232295850b0461777246c50b" category="list-text">Backup basado en grupo de consistencia</block>
+  <block id="9a1901c6fb175880508a4835b0898446" category="list-text">Flujos de trabajo de clonado</block>
+  <block id="d4fc87c71eab8d183e02273ad78a7c04" category="list-text">Restaure los flujos de trabajo</block>
+  <block id="bfb1fb42df848164986651f570a11d61" category="list-text">Aprovisionamiento de protección secundaria cuando crea o modifica el grupo de recursos.</block>
+  <block id="386b235edd065e17ecd990587ac6f70d" category="admonition">La protección secundaria solo es compatible con ONTAP 9.16.1 y versiones posteriores</block>
+  <block id="5db6882763ebe6a093c82ca0da5652f2" category="paragraph">SCV 6,1</block>
+  <block id="d61532c65e483bb3822f5a0a1ae885f5" category="paragraph">SCV 6,0 y SCV 6,1</block>
+  <block id="dd3471364a418c5d14272ff6d6881150" category="paragraph">SnapCenter 6,1</block>
+  <block id="06f856f616715d0e20b174cd2c7fb47a" category="sidebar">El plugin de SnapCenter para VMware vSphere (SCV) es un dispositivo virtual basado en Linux. Como independiente, ofrece operaciones de backup y restauración rápidas, eficientes con el espacio, consistentes con los fallos y consistentes con las máquinas virtuales para máquinas virtuales, almacenes de datos y VMDK. También funciona con SnapCenter Server para admitir las operaciones de backup y restauración basadas en aplicaciones en entornos VMware para plugins específicos de aplicaciones de SnapCenter. Esta biblioteca de documentación describe las versiones 6,1 del plugin de SnapCenter para VMware vSphere.</block>
+  <block id="94e8421982a2fb673cf72156837a22d4" category="sidebar">Complemento de SnapCenter para VMware vSphere 6,1</block>
+  <block id="a90ceefdbe215fb84520872833bfb5a2" category="sidebar">Novedades del plugin de SnapCenter para VMware vSphere 6,1</block>
 </blocks>

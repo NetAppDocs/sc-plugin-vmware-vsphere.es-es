@@ -136,7 +136,7 @@ Se auditan las siguientes operaciones en la interfaz de usuario de la Consola de
 ** Cambie las credenciales de administrador
 ** Cambie la zona horaria
 ** Cambie el servidor NTP
-** Cambie la configuración de IPv4/IPv6
+** Cambiar la configuración de la dirección IPv4/IPv6
 
 
 * Configuración

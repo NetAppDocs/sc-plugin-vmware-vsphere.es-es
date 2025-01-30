@@ -1,0 +1,25 @@
+---
+permalink: scv_releasenotes_whats_new.html 
+sidebar: sidebar 
+keywords: 'what"s new, release notes, scv, 6.1' 
+summary: Descubra las nuevas funcionalidades disponibles en el complemento SnapCenter para VMware vSphere 6,1. 
+---
+= Novedades del plugin de SnapCenter para VMware vSphere 6,1
+:allow-uri-read: 
+
+
+[role="lead"]
+*Soporte para VM y almacén de datos VMFS en sistemas ASA R2*
+
+La versión del plugin de SnapCenter para VMware vSphere 6,1 ahora admite el aprovisionamiento de máquinas virtuales (VM) y almacenes de datos VMFS en sistemas ASA R2. Los sistemas R2 de ASA ofrecen una solución de hardware y software unificada que crea una experiencia simplificada específica para las necesidades de los clientes de SAN exclusivamente. Las funciones compatibles del plugin de SnapCenter para VMware vSphere 6,1 para máquinas virtuales, almacenes de datos y formato de disco de máquina virtual (VMDK) en los sistemas ASA R2 incluyen:
+
+* Aprovisionamiento de grupos de consistencia para la protección primaria
+* Backup basado en grupo de consistencia
+* Flujos de trabajo de clonado
+* Restaure los flujos de trabajo
+* Aprovisionamiento de protección secundaria cuando crea o modifica el grupo de recursos.
++
+
+NOTE: La protección secundaria solo es compatible con ONTAP 9.16.1 y versiones posteriores
+
+

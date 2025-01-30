@@ -48,41 +48,22 @@ detención de trabajo
 | Versión 
 
 
-| crear el clon de volumen
-show de clon de volumen
-inicio de división de clon de volumen
-detención de división de clon de volumen
-cree el volumen
-eliminar el volumen
-destrucción del volumen
-crear el archivo de volumen
-uso show-disk del archivo de volumen
-volumen sin conexión
-volumen en línea
-modificación del volumen
-crear el qtree de volúmenes
-eliminación de qtree de volumen
-modificación del qtree del volumen
-se muestra volume qtree
-restricción de volumen
-visualización de volumen
-crear snapshots de volumen
-eliminación de snapshots de volumen
-modificación de las copias de snapshot de volumen
-cambio de nombre de copias de snapshot de volumen
-restauración de copias snapshot de volumen
-archivo de restauración de snapshots de volumen
-visualización de copias de snapshot de volumen
-desmonte el volumen 
+| Clon de volumen crear clon de volumen mostrar volumen clon de volumen inicio división clon de volumen estado volumen división parada volumen crear volumen eliminar volumen destruir volumen clon crear archivo volumen archivo volumen mostrar archivo disco volumen sin conexión volumen en línea función gestionada volumen modificar qtree crear volumen qtree eliminar volumen qtree mostrar volumen restringir volumen mostrar volumen snapshot crear volumen snapshot eliminar volumen snapshot modificar-SnapLock-archivo snapshot expiración-tiempo volumen snapshot cambiar nombre snapshot restaurar volumen delta mostrar volumen snapshot mostrar volumen delta volumen snapshot mostrar volumen delta mostrar volumen delta volumen delta mostrar volumen delta volumen delta mostrar volumen delta 
 
 
-| vserver cifs vserver compartir cifs crear vserver compartir cifs eliminar vserver cifs shadowcopy mostrar vserver compartir cifs mostrar vserver cifs mostrar vserver política de exportación vserver política de exportación crear vserver política de exportación eliminar regla de política de exportación de vserver crear regla de política de exportación de vserver mostrar política de exportación de vserver mostrar vserver iscsi vserver conexión iscsi mostrar vserver subsistema vserver nvme controlador subsistema nvme de vserver controladora show subsistema nvme de vserver mapa subsistema nvme de vserver mapa show subsistema nvme de vserver mapa add subsistema nvme de vserver mapa remove subsistema nvme host show subsistema nvme de vserver host add subsistema nvme de vserver host remove subsistema de vserver nvme show subsistema de vserver nvme delete espacio de nombres de vserver nvme mostrar grupos de conmutación por error de interfaz de red 
+| vserver cifs vserver compartir cifs crear vserver compartir cifs eliminar vserver cifs shadowcopy mostrar vserver compartir cifs mostrar vserver cifs mostrar vserver política de exportación vserver exportar política crear vserver política de exportación eliminar vserver regla de política de exportación crear vserver regla de política de exportación mostrar vserver política de exportación mostrar vserver iscsi vserver conexión iscsi mostrar vserver subsistema nvme controladora vserver subsistema vserver nvme 
 |===
 |===
 | Comandos de solo lectura: Privilegios mínimos requeridos para ONTAP 8.3 y versiones posteriores 
 
 
 | identidad del clúster mostrar la interfaz de red mostrar vserver vserver peer vserver show 
+|===
+|===
+| Comandos de acceso total: Privilegios mínimos requeridos para ONTAP 9 y versiones posteriores. 
+
+
+| imagen de la unidad de almacenamiento del grupo de coherencia 
 |===
 Puede ignorar el comando _cluster identity show_ cluster level al crear un rol para asociarlo con el vServer de datos.
 

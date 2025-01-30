@@ -14,7 +14,7 @@ summary: Si utiliza el dispositivo virtual del plugin de SnapCenter para VMware 
 
 
 
-NOTE: La actualización a SCV 6,0 solo es compatible con VMware vCenter Server 7 update 1 y versiones posteriores, para VMware vCenter Server antes de la actualización 7 1, debe continuar usando SCV 4,7. La actualización no provoca interrupciones en versiones no compatibles de VMware vCenter Server.
+NOTE: La actualización a SCV 6,1 solo es compatible con VMware vCenter Server 7 update 1 y versiones posteriores, para VMware vCenter Server antes de la actualización 7 1, debe continuar usando SCV 4,7. La actualización no provoca interrupciones en versiones no compatibles de VMware vCenter Server.
 
 Si utiliza el dispositivo virtual del plugin de SnapCenter para VMware vSphere, puede actualizar a una versión más reciente. El proceso de actualización cancela el registro del plugin existente e implementa un plugin que solo es compatible con vSphere 7.0U1 y versiones posteriores.
 
@@ -28,7 +28,10 @@ Si utiliza el dispositivo virtual del plugin de SnapCenter para VMware vSphere, 
 | Si tiene la versión del plugin de SnapCenter para VMware vSphere (SCV)... | Puede actualizar directamente el plugin de SnapCenter para VMware vSphere al... 
 
 
-| SCV 5,0 | Actualice a SCV 6,0 
+| SCV 6,0 | Actualice a SCV 6,1 
+
+
+| SCV 5,0 | Actualice a SCV 6,0 y SCV 6,1 
 
 
 | SCV 4,9 | Actualice a SCV 5,0 y SCV 6,0 
@@ -47,6 +50,8 @@ TIP: Realice un backup del OVA del plugin de SnapCenter para VMware vSphere ante
 
 
 NOTE: No se admite el cambio de la configuración de red de estática a DHCP.
+
+Para obtener la información más actualizada sobre las versiones compatibles, consulte https://imt.netapp.com/matrix/imt.jsp?components=121034;&solution=1517&isHWU&src=IMT["Herramienta de matriz de interoperabilidad de NetApp"^] (IMT).
 
 .Pasos
 . Para preparar la actualización, deshabilite el plugin de SnapCenter para VMware vSphere.

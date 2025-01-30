@@ -44,5 +44,5 @@ Al hacer clic en *Siguiente*, el sistema comprueba primero que SnapCenter gestio
 
 
 . Repita el paso 2 para cada máquina virtual o almacén de datos que desee añadir.
-. Haga clic en *Siguiente* hasta que llegue a la página *Resumen* y, a continuación, revise el resumen y haga clic en *Finalizar*.
+. Haga clic en *Siguiente* hasta llegar a la página *Resumen* y luego revise el resumen y haga clic en *Finalizar*.
 
