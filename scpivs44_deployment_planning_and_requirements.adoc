@@ -14,7 +14,7 @@ summary: Debe conocer los requisitos de puesta en marcha antes de poner en march
 
 
 [role="lead"]
-Debe conocer los requisitos de puesta en marcha antes de poner en marcha el dispositivo virtual. Los requisitos de implementación se enumeran en las siguientes tablas.
+Debe estar familiarizado con los siguientes requisitos antes de empezar a implementar el plugin de SnapCenter para VMware vSphere (SCV).
 
 
 
@@ -22,21 +22,21 @@ Debe conocer los requisitos de puesta en marcha antes de poner en marcha el disp
 
 Antes de iniciar la implementación del plugin de SnapCenter para VMware vSphere (SCV), debe estar familiarizado con los requisitos del host.
 
-* El plugin de SnapCenter para VMware vSphere se implementa como máquina virtual Linux, independientemente de si utiliza el plugin para proteger datos en sistemas Windows o sistemas Linux.
+* El plugin de SnapCenter para VMware vSphere se implementa como máquina virtual Linux, independientemente de si se utiliza para proteger datos en sistemas Windows o Linux.
 * Debe implementar el plugin de SnapCenter para VMware vSphere en vCenter Server.
 +
-Las programaciones de backups se ejecutan en la zona horaria en la que se implementa el plugin de SnapCenter para VMware vSphere. VCenter informa los datos en la zona horaria en la que se encuentra el para vCenter. Por lo tanto, si el plugin de SnapCenter para VMware vSphere y vCenter están en zonas horarias diferentes, los datos de la consola del plugin de SnapCenter para VMware vSphere pueden no ser iguales a los datos de los informes.
+Las programaciones de backups se ejecutan en la zona horaria en la que se implementa el plugin de SnapCenter para VMware vSphere, y vCenter informa los datos en la zona horaria en la que se encuentra. Por lo tanto, si el plugin de SnapCenter para VMware vSphere y vCenter están en zonas horarias diferentes, los datos de la consola del plugin de SnapCenter para VMware vSphere pueden no ser iguales a los datos de los informes.
 
-* No debe implementar el plugin de SnapCenter para VMware vSphere en una carpeta cuyo nombre contenga caracteres especiales.
+* No debe implementar el plugin de SnapCenter para VMware vSphere en una carpeta con un nombre que contenga caracteres especiales.
 +
 El nombre de la carpeta no debe contener los siguientes caracteres especiales: $!@#%&()_+{}';.,*?"<>|
 
 * Debe implementar y registrar una instancia única y separada del plugin de SnapCenter para VMware vSphere para cada servidor de vCenter.
 +
-** Cada servidor de vCenter, ya sea en modo vinculado o no, debe emparejarse con una instancia independiente del plugin de SnapCenter para VMware vSphere.
+** Cada servidor vCenter, ya sea en modo vinculado o no, debe emparejarse con una instancia independiente del plugin de SnapCenter para VMware vSphere.
 ** Cada instancia del plugin de SnapCenter para VMware vSphere debe implementarse como máquina virtual Linux independiente.
 +
-Por ejemplo, si desea realizar backups de seis instancias diferentes de vCenter Server, debe implementar el plugin de SnapCenter para VMware vSphere en seis hosts y cada servidor de vCenter debe emparejarse con una instancia única del plugin de SnapCenter para VMware vSphere.
+Por ejemplo, supongamos que desea realizar backups de seis instancias diferentes de vCenter Server. En ese caso, debe poner en marcha el plugin de SnapCenter para VMware vSphere en seis hosts y cada servidor de vCenter debe emparejarse con una instancia única del plugin de SnapCenter para VMware vSphere.
 
 
 
@@ -88,7 +88,7 @@ Restaurar una máquina virtual completa cuando uno o más VMDK están en un alma
 | ONTAP | Uno de estos: SnapMirror o SnapVault (para la protección de datos secundarios independientemente del tipo de relación) 
 
 
-| Productos adicionales | Se requiere una licencia de vSphere Standard, Enterprise o Enterprise Plus para ejecutar operaciones de restauración, que utilizan Storage vMotion. Las licencias vSphere Essentials o Essentials Plus no incluyen Storage vMotion. 
+| Productos adicionales | VSphere Standard, Enterprise o Enterprise Plus Se requiere una licencia de vSphere para realizar operaciones de restauración mediante Storage vMotion. Las licencias de vSphere Essentials o Essentials Plus no incluyen Storage vMotion. 
 
 
 | Destinos primarios | SnapCenter Standard: Se requiere para realizar una protección basada en aplicaciones en VMware SnapRestore: Se necesita para realizar operaciones de restauración solo de máquinas virtuales y almacenes de datos de VMware FlexClone: Se utiliza únicamente para operaciones de montaje y conexión en máquinas virtuales y almacenes de datos de VMware 
@@ -145,9 +145,6 @@ Los requisitos mínimos de software para la compatibilidad con NVMe over TCP y N
 | Elemento | Requisitos 
 
 
-| De NetApp | Linux 
-
-
 | Recuento de CPU recomendado | 8 núcleos 
 
 
@@ -171,7 +168,7 @@ Los requisitos mínimos de software para la compatibilidad con NVMe over TCP y N
 
 
 | Puerto del plugin de SnapCenter para VMware vSphere  a| 
-8144 (HTTPS), bidireccional que el puerto se utiliza para las comunicaciones desde el cliente VMware vSphere y desde el servidor SnapCenter. 8080 bidireccional Este puerto se utiliza para gestionar dispositivos virtuales.
+8144 (HTTPS), bidireccional El puerto se utiliza para las comunicaciones entre el cliente VMware vSphere y SnapCenter Server. 8080 bidireccional Este puerto se utiliza para gestionar dispositivos virtuales.
 
 Nota: Se admite el puerto personalizado para añadir el host de SCV a SnapCenter.
 
@@ -180,13 +177,13 @@ Nota: Se admite el puerto personalizado para añadir el host de SCV a SnapCenter
 | Puerto de VMware vSphere vCenter Server | Se debe usar el puerto 443 si se protegen las máquinas virtuales de VVol. 
 
 
-| Puerto del clúster de almacenamiento o de la máquina virtual de almacenamiento | 443 (HTTPS), bidireccional 80 (HTTP), el puerto bidireccional que se utiliza para la comunicación entre el dispositivo virtual y la máquina virtual de almacenamiento, o el clúster que contiene la máquina virtual de almacenamiento. 
+| Puerto del clúster de almacenamiento o de la máquina virtual de almacenamiento | 443 (HTTPS), bidireccional 80 (HTTP), bidireccional el puerto se utiliza para establecer la comunicación entre el dispositivo virtual y la máquina virtual de almacenamiento o el clúster que contiene la máquina virtual de almacenamiento. 
 |===
 
 
 == Configuraciones compatibles
 
-Cada instancia de plugin solo admite una instancia de vCenter Server. Se admiten las instancias de vCenter en el modo vinculado. Varias instancias de complementos pueden admitir el mismo servidor SnapCenter como se muestra en la siguiente figura.
+Cada instancia de plugin solo admite una instancia de vCenter Server, que se encuentra en modo vinculado. Sin embargo, varias instancias de plugins pueden admitir el mismo servidor SnapCenter, como se muestra en la siguiente figura.
 
 image:scpivs44_image4.png["Representación gráfica de configuración admitida"]
 
@@ -194,7 +191,7 @@ image:scpivs44_image4.png["Representación gráfica de configuración admitida"]
 
 == Se requieren privilegios de RBAC
 
-La cuenta de administrador de vCenter debe tener los privilegios de vCenter requeridos, como se muestra en la siguiente tabla.
+La cuenta de administrador de vCenter debe tener la instancia de vCenter Privileges requerida en la siguiente tabla.
 
 |===
 | Para realizar esta operación… | Debe tener estos privilegios de vCenter... 
