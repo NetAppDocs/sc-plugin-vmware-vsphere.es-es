@@ -50,7 +50,7 @@ Siga los siguientes pasos para añadir la controladora NVMe al disco.
 . En el panel de navegación de la izquierda, haga clic con el botón derecho en una máquina virtual y seleccione *SnapCenter Plug-in for VMware vSphere* > *Attach virtual disk(s)*.
 . En la ventana *Attach Virtual Disk*, en la sección *Backup*, seleccione una copia de seguridad.
 +
-Puede filtrar la lista de backups seleccionando el icono de filtrar y eligiendo un intervalo de fechas y horas. Debe seleccionar también si desea visualizar los backups que contengan snapshots de VMware, si desea visualizar los backups montados y también la ubicación. Haga clic en *Aceptar*.
+Puede filtrar la lista de backups seleccionando el icono de filtrar y eligiendo un intervalo de fechas y horas. Debe seleccionar también si desea visualizar los backups que contengan snapshots de VMware, si desea visualizar los backups montados y también la ubicación. Haga clic en *OK*.
 
 . En la sección *Seleccionar discos*, seleccione uno o más discos que desee conectar y la ubicación desde la que desea conectar (principal o secundario).
 +

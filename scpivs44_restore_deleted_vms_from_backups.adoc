@@ -69,7 +69,7 @@ Puede buscar por un nombre de backup específico o un nombre de backup parcial y
 
 . En la página *Select Scope*, seleccione *entire virtual machine* en el campo *Restore scope*, luego seleccione la ubicación de restauración y, a continuación, introduzca la información del host ESXi de destino donde se debe montar la copia de seguridad.
 +
-El destino de la restauración puede ser cualquier host ESXi que se haya añadido a SnapCenter. Esta opción restaura el contenido del backup seleccionado en el que residió la máquina virtual, a partir de una snapshot con la fecha y hora especificadas. La casilla de verificación *Restart VM* se Marca si selecciona esta opción y la VM se encenderá.
+El destino de la restauración puede ser cualquier host ESXi que se haya añadido a SnapCenter. Esta opción restaura el contenido del backup seleccionado en el que residió la máquina virtual a partir de una snapshot con la fecha y hora especificadas. La casilla de verificación *Restart VM* se Marca si selecciona esta opción y la VM se encenderá.
 
 +
 Si va a restaurar una máquina virtual de un almacén de datos NFS en un host ESXi alternativo ubicado en un clúster de ESXi, una vez restaurada la máquina virtual, se registra en el host alternativo.

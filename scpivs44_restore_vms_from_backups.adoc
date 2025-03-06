@@ -49,7 +49,7 @@ Debe haber creado un backup de la máquina virtual con el plugin de SnapCenter p
 
 +
 
-NOTE: Las operaciones de restauración no pueden finalizar correctamente si existen copias Snapshot de la máquina virtual realizadas con otro software distinto al plugin de SnapCenter para VMware vSphere.
+NOTE: Las operaciones de restauración no pueden finalizar correctamente si hay snapshots de la máquina virtual realizadas con otro software distinto al plugin de SnapCenter para VMware vSphere.
 
 * El almacén de datos de destino debe estar listo.
 +
@@ -76,7 +76,7 @@ Compruebe que no se muestren errores de configuración de alta disponibilidad en
 .Acerca de esta tarea
 * Se cancela el registro de la máquina virtual y se vuelve a registrar
 +
-La operación de restauración de máquinas virtuales cancela el registro de la máquina virtual original, restaura la máquina virtual desde una snapshot de un backup y registra la máquina virtual restaurada con el mismo nombre y la misma configuración en el mismo servidor ESXi. Debe añadir manualmente las máquinas virtuales a grupos de recursos después de la restauración.
+La operación de restauración de máquinas virtuales cancela el registro de la máquina virtual original, restaura la máquina virtual desde una snapshot de backup y registra la máquina virtual restaurada con el mismo nombre y la misma configuración en el mismo servidor ESXi. Debe añadir manualmente las máquinas virtuales a grupos de recursos después de la restauración.
 
 * Restauración de almacenes de datos
 +

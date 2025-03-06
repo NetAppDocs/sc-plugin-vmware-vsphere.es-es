@@ -2,7 +2,7 @@
 sidebar: sidebar 
 permalink: scpivs44_how_restore_operations_are_performed.html 
 keywords:  
-summary: 'En el caso de los entornos VMFS, el plugin de SnapCenter para VMware vSphere utiliza operaciones de clonado y montaje con Storage VMotion para realizar las operaciones de restauración. En los entornos NFS, el plugin utiliza Single File SnapRestore (SFSR) nativo de ONTAP para proporcionar una mayor eficacia para la mayoría de las operaciones de restauración. Para máquinas virtuales de VVol, el plugin utiliza ONTAP Single File Snapshot Restore y SnapMirror Restore para operaciones de restauración.' 
+summary: 'En el caso de los entornos VMFS, el plugin de SnapCenter para VMware vSphere utiliza operaciones de clonado y montaje con Storage VMotion para realizar las operaciones de restauración. En los entornos NFS, el plugin utiliza Single File SnapRestore (SFSR) nativo de ONTAP para proporcionar una mayor eficacia para la mayoría de las operaciones de restauración. Para máquinas virtuales de VVol, el plugin utiliza una restauración de snapshots de archivo único de ONTAP y una restauración de SnapMirror para operaciones de restauración.' 
 ---
 = Cómo se realizan las operaciones de restauración
 :hardbreaks:
@@ -14,7 +14,7 @@ summary: 'En el caso de los entornos VMFS, el plugin de SnapCenter para VMware v
 
 
 [role="lead"]
-En el caso de los entornos VMFS, el plugin de SnapCenter para VMware vSphere utiliza operaciones de clonado y montaje con Storage VMotion para realizar las operaciones de restauración. En los entornos NFS, el plugin utiliza Single File SnapRestore (SFSR) nativo de ONTAP para proporcionar una mayor eficacia para la mayoría de las operaciones de restauración. Para las máquinas virtuales de VVol, el plugin utiliza ONTAP Single File Snapshot Restore (ONTAP SFSR) y SnapMirror Restore para las operaciones de restauración. En la siguiente tabla, se enumera cómo se ejecutan las operaciones de restauración.
+En el caso de los entornos VMFS, el plugin de SnapCenter para VMware vSphere utiliza operaciones de clonado y montaje con Storage VMotion para realizar las operaciones de restauración. En los entornos NFS, el plugin utiliza Single File SnapRestore (SFSR) nativo de ONTAP para proporcionar una mayor eficacia para la mayoría de las operaciones de restauración. Para máquinas virtuales VVOL, el plugin utiliza restauración de snapshots de archivo único de ONTAP (ONTAP SFSR) y restauración de SnapMirror para operaciones de restauración. En la siguiente tabla, se enumera cómo se ejecutan las operaciones de restauración.
 
 |===
 | Operaciones de restauración | De | Realizadas mediante 

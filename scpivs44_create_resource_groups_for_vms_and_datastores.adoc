@@ -84,9 +84,9 @@ Si se ejecuta en ONTAP 9,8 o ONTAP 9,9, después de una conmutación de sitios o
 +
 En ONTAP 9.8, los backups se cuelgan después de la conmutación de regreso. Este problema se ha solucionado en ONTAP 9.9.
 
-* Optimización de Snapshots
+* Optimización de snapshots
 +
-Para optimizar las copias Snapshot, debe agrupar las máquinas virtuales y los almacenes de datos que estén asociados con el mismo volumen en un solo grupo de recursos.
+Para optimizar las Snapshot, debe agrupar las máquinas virtuales y los almacenes de datos que estén asociados con el mismo volumen en un solo grupo de recursos.
 
 * Política de backup
 +
@@ -94,7 +94,7 @@ Si bien puede crear un grupo de recursos sin una política de backup, las operac
 
 +
 
-NOTE: Si tiene que seleccionar una política de backup con período de bloqueo de Snapshot, debe seleccionar ONTAP 9.12.1 o una versión posterior.
+NOTE: Si va a seleccionar una política de backup con período de bloqueo de snapshots, debe seleccionar ONTAP 9.12.1 o una versión posterior.
 
 * Comprobación de compatibilidad
 +
@@ -147,26 +147,22 @@ Esta es la forma más sencilla de crear un grupo de recursos. No obstante, tambi
 | Asunto del correo electrónico | Especifique el asunto para los correos electrónicos de notificación. 
 
 
-| Nombre de snapshot más reciente  a| 
+| Nombre de la snapshot más reciente  a| 
 Si desea que el sufijo “_recent” se agregue a la última instantánea, marque esta casilla. El sufijo “_Recent” reemplaza la fecha y la Marca de hora.
 
 
 NOTE: A. `_recent` el backup se crea para cada política que se asocia a un grupo de recursos. Por lo tanto, un grupo de recursos con varias políticas tendrá múltiples `_recent` completos. No cambie el nombre manualmente `_recent` completos.
 
 
-NOTE: El sistema de almacenamiento ASA R2 no admite el cambio de nombre de Snapshots y, como resultado, no se admiten las funciones de nomenclatura de SCV backup y _recent Snapshot.
+NOTE: El sistema de almacenamiento ASA R2 no admite el cambio de nombre de las snapshots y, como resultado, no se admiten las funciones de nombre de snapshots _recent de SCV.
 
 
 
-| Formato de instantánea personalizado  a| 
-Si desea usar un formato personalizado para los nombres de Snapshot, marque esta casilla e introduzca el formato del nombre.
+| Formato de snapshot personalizado  a| 
+Si desea usar un formato personalizado para los nombres de snapshots, marque esta casilla e introduzca el formato del nombre.
 
 *** De forma predeterminada, esta función está deshabilitada.
-*** Los nombres de Snapshot predeterminados usan el formato `<ResourceGroup>_<Date-TimeStamp>`
-Sin embargo, puede especificar un formato personalizado mediante las variables $ResourceGroup, $Policy, $hostname, $ScheduleType y $CustomText. Utilice la lista desplegable del campo de nombre personalizado para seleccionar las variables que desea utilizar y el orden en el que se utilizan.
-Si selecciona $CustomText, el formato del nombre es `<CustomName>_<Date-TimeStamp>`. Introduzca el texto personalizado en el cuadro adicional que se proporciona.
-[NOTA]:
-Si también selecciona el sufijo «_recent», debe asegurarse de que los nombres de Snapshot personalizados sean únicos en el almacén de datos, por lo tanto, debe añadir las variables $ResourceGroup y $Policy al nombre.
+*** Los nombres de instantáneas predeterminados usan el formato `<ResourceGroup>_<Date-TimeStamp>`, sin embargo, puede especificar un formato personalizado con las variables $ResourceGroup, $Policy, $hostname, $ScheduleType y $CustomText. Utilice la lista desplegable del campo de nombre personalizado para seleccionar las variables que desea utilizar y el orden en el que se utilizan. Si selecciona $CustomText, el formato del nombre es `<CustomName>_<Date-TimeStamp>`. Introduzca el texto personalizado en el cuadro adicional que se proporciona. [NOTA]: Si también selecciona el sufijo “_recent”, debe asegurarse de que los nombres de snapshot personalizados serán únicos en el almacén de datos, por lo tanto, debe agregar las variables $ResourceGroup y $Policy al nombre.
 *** Caracteres especiales para caracteres especiales en nombres, siga las mismas directrices que se indican para el campo Nombre.
 
 

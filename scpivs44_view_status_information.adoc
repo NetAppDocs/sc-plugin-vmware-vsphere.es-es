@@ -67,8 +67,7 @@ La cantidad total de cada tipo de objeto gestionado por el plugin de SnapCenter 
  a| 
 Reducida
  a| 
-El número total de snapshots, SnapVault y SnapMirror, generado y la cantidad de almacenamiento utilizado para snapshots principales y secundarias. El gráfico de líneas traza por separado el consumo de almacenamiento primario y secundario día a día durante un período de 90 días rotativas. La información de almacenamiento se actualiza una vez cada 24 horas a la 1:08 A.M.
-El ahorro de almacenamiento es la proporción de capacidad lógica (ahorro de Snapshot más almacenamiento consumido) con respecto a la capacidad física del almacenamiento primario. El gráfico de barras ilustra el ahorro en almacenamiento.
+El número total de snapshots, snapshots de SnapVault y SnapMirror, generado y la cantidad de almacenamiento utilizado para snapshots principales y secundarias. El gráfico de líneas traza por separado el consumo de almacenamiento primario y secundario día a día durante un período de 90 días rotativas. La información de almacenamiento se actualiza una vez cada 24 horas a las 1:08 A. M. El ahorro de almacenamiento es la proporción de capacidad lógica (ahorro de instantáneas y almacenamiento consumido) con respecto a la capacidad física del almacenamiento primario. El gráfico de barras ilustra el ahorro en almacenamiento.
 
 Pase el cursor por una línea del gráfico para ver los resultados detallados día a día.
 

@@ -14,15 +14,20 @@ summary: Cuando se está preparando para realizar un backup de una máquina virt
 
 
 [role="lead"]
-Cuando se está preparando para realizar un backup de una máquina virtual o un almacén de datos, puede ver todos los backups disponibles para ese recurso y los detalles de dichos backups.
+Cuando se prepara para realizar un backup de una máquina virtual o un almacén de datos o restaurarla, puede ver todos los backups disponibles de ese recurso y los detalles de dichos backups.
 
 .Acerca de esta tarea
-Explorar las carpetas de archivos de gran tamaño, por ejemplo, las carpetas de archivos de 10K, puede tardar uno o más minutos la primera vez. Las siguientes sesiones de exploración requieren menos tiempo.
+La exploración de carpetas de archivos grandes, como carpetas de archivos 10k, puede tardar uno o más minutos la primera vez. Las siguientes sesiones de exploración requieren menos tiempo.
 
 .Pasos
-. Haga clic en *Menú* y seleccione la opción de menú *hosts y clústeres*, a continuación, seleccione una máquina virtual, seleccione la ficha *Configurar* y, a continuación, haga clic en *copias de seguridad* en la sección *SnapCenter Plug-in for VMware vSphere*.
+. Inicie sesión en vCenter Server.
+. Navegue a la página *Inventory* y seleccione un almacén de datos o una VM.
+. En el panel de la derecha, seleccione *Configurar* > *Plugin SnapCenter para VMware vSphere* > *Copias de seguridad*.
 +
-image:scv50_image1.png["IU del cliente de vSphere"]
+image:backup-view.png["Vista Backups"]
 
-. Haga clic en el backup que desea ver.
++
+Si la opción *Activar bloqueo de instantánea secundaria* no está seleccionada durante la etapa de creación de la política, toma el valor establecido para la opción *Activar bloqueo de instantánea primaria* de forma predeterminada. En la lista de copias de seguridad, el guion en el campo *Secondary Snapshot Lock Expiration* indica que los períodos de bloqueo primario y secundario son los mismos.
+
+. Seleccione el backup que desee ver.
 

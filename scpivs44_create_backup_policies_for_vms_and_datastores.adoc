@@ -21,10 +21,10 @@ Debe crear políticas de backup antes de usar el plugin de SnapCenter para VMwar
 * Debe haber configurado las relaciones de almacenamiento secundario.
 +
 ** Si va a replicar snapshots en un almacenamiento secundario reflejado o en almacén, deben configurarse las relaciones y el administrador de SnapCenter debe haberle asignado las máquinas virtuales de almacenamiento tanto para el volumen de origen como para el volumen de destino.
-** A fin de transferir correctamente snapshots a un almacenamiento secundario para relaciones de reflejo de versión flexible en un almacén de datos NFS o VMFS, asegúrese de que el tipo de política de SnapMirror sea Asynchronous Mirror y que esté marcada la opción «all_source_snapshots».
-** Cuando el número de Snapshots en el almacenamiento secundario (reflejo-almacén) alcanza el límite máximo, se produce un error en la actividad para registrar el backup y aplicar la retención en la operación de backup: `This Snapshot is currently used as a reference Snapshot by one or more SnapMirror relationships. Deleting the Snapshot can cause future SnapMirror operations to fail.`
+** A fin de transferir correctamente snapshots a un almacenamiento secundario para relaciones de reflejo de versión flexible en un almacén de datos NFS o VMFS, asegúrese de que el tipo de política SnapMirror sea Asynchronous Mirror y que esté marcada la opción «all_source_snapshots».
+** Cuando el número de Snapshot en el almacenamiento secundario (reflejo-almacén) alcanza el límite máximo, se produce un error en la actividad para registrar el backup y aplicar la retención en la operación de backup: `This snapshot is currently used as a reference snapshot by one or more SnapMirror relationships. Deleting the snapshot can cause future SnapMirror operations to fail.`
 +
-Para corregir este problema, configure la normativa de retención de SnapMirror para el almacenamiento secundario y evite alcanzar el límite máximo de Snapshots.
+Para corregir este problema, configure la política de retención de SnapMirror para el almacenamiento secundario y evite alcanzar el límite máximo de instantáneas.
 
 +
 Para obtener información sobre cómo los administradores asignan recursos a los usuarios, consulte https://docs.netapp.com/us-en/snapcenter/concept/concept_types_of_role_based_access_control_in_snapcenter.html["Información de SnapCenter sobre el uso del control de acceso basado en roles"^].
@@ -56,7 +56,7 @@ La mayoría de los campos en estas páginas del asistente son claros y explicati
 .Pasos
 . En el panel de navegación izquierdo del plugin SCV, haga clic en *Policies*.
 . En la página *Policies*, selecciona *Create* para iniciar el asistente.
-. En la página *New Backup Policy*, seleccione la instancia de vCenter Server que utilizará la política y, a continuación, introduzca el nombre de la política y una descripción.
+. En la página *Nueva Política de Copia de Seguridad*, introduzca el nombre de la política y una descripción.
 +
 ** Modo vinculado
 +
@@ -75,7 +75,11 @@ Se permite el carácter de guion bajo (_).
 +
 La política especifica solamente la frecuencia de backup. La programación de protección específica para realizar el backup se define en el grupo de recursos. Por lo tanto, dos o más grupos de recursos pueden compartir la misma política y frecuencia de backup y, a su vez, tener diferentes programaciones de backup.
 
-. Seleccione la casilla de verificación *período de bloqueo* para habilitar el bloqueo de instantáneas. Puede seleccionar el período de bloqueo de instantáneas como días/meses/años.
+. Seleccione la casilla de verificación *período de bloqueo* para habilitar el bloqueo de instantáneas. Puede seleccionar los períodos de bloqueo de instantáneas principales y secundarias como días/meses/años.
++
+
+NOTE: Independientemente del valor de retención establecido en la política de ONTAP SnapMirror, la copia de Snapshot secundaria no se elimina antes del período de bloqueo de Snapshot secundario especificado.
+
 . Especifique la configuración de retención.
 +
 
@@ -114,8 +118,7 @@ NOTE: Esta opción es compatible para almacenes de datos en FlexGroup Volumes en
 
 
 | Etiqueta de Snapshot  a| 
-Especifique una etiqueta opcional y personalizada que se añadirá a las copias de Snapshot de SnapVault y de SnapMirror creadas con esta política.
-La etiqueta de Snapshot ayuda a distinguir las Snapshot creadas con esta política desde otras Snapshot del sistema de almacenamiento secundario.
+Especifique una etiqueta opcional y personalizada que se añadirá a las copias de Snapshot de SnapVault y SnapMirror creadas con esta política. La etiqueta de Snapshot ayuda a distinguir las Snapshot creadas con esta política desde otras Snapshot del sistema de almacenamiento secundario.
 
 
 NOTE: Se permite un máximo de 31 caracteres para las etiquetas de Snapshot.
@@ -136,7 +139,7 @@ Esta opción no es compatible con vVols. Para máquinas virtuales VVol, solo se 
 IMPORTANT: Para realizar backups consistentes de las máquinas virtuales, debe tener herramientas de VMware en ejecución en la máquina virtual. Si las herramientas de VMware no funcionan, se realiza un backup coherente con los fallos.
 
 
-NOTE: Al marcar la casilla de consistencia de máquina virtual, las operaciones de backup pueden tardar más y requerir más espacio de almacenamiento. En este caso, las máquinas virtuales primero se ponen en modo inactivo, después VMware ejecuta una Snapshot de consistencia de máquina virtual, SnapCenter procede con su operación de backup y, a continuación, se reanudan las operaciones de máquina virtual. La memoria invitada de la máquina virtual no se incluye en las Snapshots de consistencia de la máquina virtual.
+NOTE: Al marcar la casilla de consistencia de máquina virtual, las operaciones de backup pueden tardar más y requerir más espacio de almacenamiento. En este caso, las máquinas virtuales primero se ponen en modo inactivo, después VMware ejecuta una Snapshot de consistencia de máquina virtual, SnapCenter procede con su operación de backup y, a continuación, se reanudan las operaciones de máquina virtual. La memoria de invitado de la máquina virtual no está incluida en las instantáneas de consistencia de la máquina virtual.
 
 
 

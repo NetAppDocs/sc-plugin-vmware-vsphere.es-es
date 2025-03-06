@@ -41,11 +41,11 @@ Puede utilizar la interfaz gráfica de usuario de SnapCenter y los complementos 
 SnapCenter aprovecha de forma nativa el plugin de SnapCenter para VMware vSphere en todas las operaciones de protección de datos en VMDK, asignaciones de dispositivos sin formato (RDM) y almacenes de datos NFS. Una vez puesto en marcha el dispositivo virtual, el plugin se encarga de todas las interacciones con vCenter. El plugin de SnapCenter para VMware vSphere es compatible con todos los plugins basados en aplicaciones de SnapCenter.
 
 +
-SnapCenter no admite copias Snapshot únicas de bases de datos y máquinas virtuales. Los backups de máquinas virtuales y bases de datos deben programarse y ejecutarse por separado, lo cual crea copias de Snapshot independientes, incluso si las bases de datos y las máquinas virtuales están alojadas en el mismo volumen. Programar los backups de aplicaciones de la base de datos mediante la interfaz gráfica de usuario de SnapCenter; programar los backups de máquinas virtuales y almacenes de datos mediante la interfaz gráfica de usuario del cliente VMware vSphere.
+SnapCenter no admite copias Snapshot individuales de bases de datos y máquinas virtuales. Los backups de máquinas virtuales y bases de datos deben programarse y ejecutarse por separado, lo cual crea copias de Snapshot independientes, incluso si las bases de datos y las máquinas virtuales están alojadas en el mismo volumen. Programar los backups de aplicaciones de la base de datos mediante la interfaz gráfica de usuario de SnapCenter; programar los backups de máquinas virtuales y almacenes de datos mediante la interfaz gráfica de usuario del cliente VMware vSphere.
 
 * Se requieren herramientas de VMware para snapshots consistentes con equipos virtuales
 +
-Si las herramientas de VMware no están instaladas y en ejecución, el sistema de archivos no se detiene y se crea una snapshot coherente con el bloqueo.
+Si no hay herramientas de VMware instaladas y en ejecución, el sistema de archivos no se pone en modo inactivo y se crea una snapshot coherente con los fallos.
 
 * Se requiere VMware Storage vMotion para operaciones de restauración en entornos DE SAN (VMFS)
 +

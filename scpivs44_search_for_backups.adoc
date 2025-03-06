@@ -32,6 +32,6 @@ Puede buscar y encontrar un backup específico de una máquina virtual o de un a
 . Opcional: Haga clic con el botón derecho en una máquina virtual o almacén de datos, luego seleccione *SnapCenter Plug-in for VMware vSphere* en la lista desplegable y, a continuación, seleccione *Restaurar* en la lista desplegable secundaria.
 . En el asistente *Restaurar*, introduzca un nombre de búsqueda y haga clic en *Buscar*.
 +
-Puede filtrar la lista de backups seleccionando el icono de filtrar y seleccionando un intervalo de fechas y horas. Debe seleccionar también si desea visualizar los backups que contengan snapshots de VMware, si desea visualizar los backups montados y también la ubicación. Haga clic en *Aceptar*.
+Puede filtrar la lista de backups seleccionando el icono de filtrar y seleccionando un intervalo de fechas y horas. Debe seleccionar también si desea visualizar los backups que contengan snapshots de VMware, si desea visualizar los backups montados y también la ubicación. Haga clic en *OK*.
 
 

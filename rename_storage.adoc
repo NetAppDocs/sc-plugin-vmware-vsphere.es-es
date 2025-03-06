@@ -17,7 +17,7 @@ summary: Es posible cambiar el nombre del almacenamiento con la API de REST.
 Cuando se cambia el nombre del almacenamiento, se utilizan los flujos de trabajo utilizando los backups necesarios antes de que el nombre se restablezca. Con la introducción de la función de backup de cambio de nombre, a la que se puede acceder exclusivamente mediante la API DE REST, ahora es posible usar los backups realizados antes del cambio de nombre del almacenamiento. A continuación, se describen el flujo de trabajo y el uso de la API DE REST.
 
 
-NOTE: El sistema de almacenamiento R2 de ASA no admite la función de nomenclatura _con Snapshot recientes.
+NOTE: El sistema de almacenamiento R2 de ASA no admite la función de nomenclatura de instantáneas recientes.
 
 .Pasos
 . Añada o actualice la nueva conexión de almacenamiento, asegurando que el nuevo nombre del clúster o SVM se refleje en SCV.
