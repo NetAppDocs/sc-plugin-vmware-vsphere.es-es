@@ -60,12 +60,13 @@ No es posible restaurar un almacén de datos, pero sí es posible restaurar cual
 La operación de restauración puede fallar si no está disponible el nivel de almacenamiento de FabricPool donde se encuentra la máquina virtual.
 
 .Pasos
-. Seleccione *Menú* y seleccione la opción de menú *Almacenamiento*, luego seleccione un almacén de datos, luego seleccione la pestaña *Configurar* y luego seleccione *Copias de seguridad* en la sección *SnapCenter Plug-in for VMware vSphere*.
+. En vCenter Server, desplácese hasta *Inventory* > *datastores* y seleccione un almacén de datos.
+. Selecciona *Configurar* > *backups* en la sección Plugin de SnapCenter para VMware vSphere.
 . Haga doble clic en un backup para ver una lista con todas las máquinas virtuales que están incluidas en el backup.
 . Seleccione la VM eliminada de la lista de copias de seguridad y seleccione *Restaurar*.
 . En el asistente *Restaurar*, en la página *Seleccionar copia de seguridad*, seleccione la copia de seguridad desde la que desea restaurar.
 +
-Puede buscar por un nombre de backup específico o un nombre de backup parcial y también puede filtrar la lista de backups haciendo clic en el icono de filtro y seleccionando un intervalo de fechas y horas. Además, debe seleccionar si desea backups que contengan snapshots de VMware, si desea visualizar backups montados y la ubicación. Seleccione *OK* para volver al asistente.
+Puede buscar por un nombre de backup específico o un nombre de backup parcial y también puede filtrar la lista de backups seleccionando el icono de filtro y seleccionando un intervalo de fechas y horas. Además, debe seleccionar si desea backups que contengan snapshots de VMware, si desea visualizar backups montados y la ubicación. Seleccione *OK* para volver al asistente.
 
 . En la página *Select Scope*, seleccione *entire virtual machine* en el campo *Restore scope*, luego seleccione la ubicación de restauración y, a continuación, introduzca la información del host ESXi de destino donde se debe montar la copia de seguridad.
 +
