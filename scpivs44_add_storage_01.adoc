@@ -29,7 +29,7 @@ El complemento SnapCenter para VMware vSphere 4.5 y versiones posteriores admite
 Debe añadir clústeres de almacenamiento al plugin de SnapCenter para VMware vSphere y herramientas ONTAP para VMware vSphere para que la protección de datos de VVOL funcione.
 
 +
-Para obtener más información, consulte la documentación de las herramientas de ONTAP para VMware vSphere. Además, consulte la https://imt.netapp.com/matrix/imt.jsp?components=121034;&solution=1517&isHWU&src=IMT["Herramienta de matriz de interoperabilidad de NetApp"^] información más reciente sobre las versiones compatibles en las herramientas de ONTAP.
+Para obtener más información, consulte la documentación de las herramientas de ONTAP para VMware vSphere. Además, consulte la https://imt.netapp.com/matrix/imt.jsp?components=134348;&solution=1517&isHWU&src=IMT["Herramienta de matriz de interoperabilidad de NetApp"^] información más reciente sobre las versiones compatibles en las herramientas de ONTAP.
 
 
 
@@ -103,7 +103,7 @@ Si añade una máquina virtual de almacenamiento con un nombre que no puede reso
 
 | Envíe una notificación de AutoSupport sobre el fallo de la operación al sistema de almacenamiento | Marque la casilla si desea recibir una notificación de AutoSupport para los trabajos de protección de datos con errores. También tendrá que habilitar AutoSupport en la máquina virtual de almacenamiento y configurar los ajustes de correo electrónico de AutoSupport. 
 |===
-. Haga clic en *Agregar*.
+. Seleccione *Agregar*.
 +
 Si añadió un clúster de almacenamiento, todas las máquinas virtuales de almacenamiento de ese clúster se añadirán automáticamente. Los equipos virtuales de almacenamiento agregados automáticamente (a veces llamados "equipos virtuales de almacenamiento implícitos") se muestran en la página de resumen del clúster con un guión (-) en lugar de un nombre de usuario. Los nombres de usuario sólo se muestran para entidades de almacenamiento explícitas.
 

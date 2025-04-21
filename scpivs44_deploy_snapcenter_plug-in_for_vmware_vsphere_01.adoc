@@ -25,7 +25,7 @@ NOTE: Para los clientes web HTML de direcciones IPv6, debe usar Chrome o Firefox
 
 . Inicie sesión en la *página de inicio de sesión único de VMware vCenter*.
 . En el panel de navegación, haga clic con el botón derecho del ratón en cualquier objeto de inventario que sea un objeto primario válido de una máquina virtual, como un centro de datos, una carpeta, un clúster o un host, y seleccione *implementar plantilla OVF* para iniciar el asistente de implementación de VMware.
-. En la página *Seleccionar una plantilla OVF*, especifique la ubicación de `.ova` File (como se indica en la siguiente tabla) y haga clic en *Next*.
+. En la página *Seleccionar una plantilla OVF*, especifique la ubicación del `.ova` archivo (como se indica en la siguiente tabla) y seleccione *Siguiente*.
 +
 |===
 | En esta página del asistente… | Haga esto… 
@@ -59,14 +59,14 @@ En la sección *Configurar propiedades de red*, ingrese la información de la re
 
 
 
-| Listo para completar | Revise la página y haga clic en *Finalizar*. 
+| Listo para completar | Revisa la página y selecciona *Finalizar*. 
 |===
 +
 
 NOTE: Todos los hosts deben configurarse con direcciones IP (no se admiten los nombres de host FQDN). La operación de implementación no valida los datos antes de implementar.
 
-. Vaya a la máquina virtual donde se implementó el plugin de SnapCenter para VMware vSphere, haga clic en la pestaña *Resumen* y, a continuación, haga clic en el cuadro *Encendido* para iniciar el plugin de SnapCenter para VMware vSphere.
-. Mientras el complemento SnapCenter para VMware vSphere se está encendiendo, haga clic con el botón derecho en el complemento SnapCenter implementado para VMware vSphere, seleccione *Sistema operativo invitado* y, a continuación, haga clic en *Instalar herramientas de VMware*.
+. Vaya a la máquina virtual donde se implementó el plugin de SnapCenter para VMware vSphere, luego seleccione la pestaña *Resumen* y, a continuación, seleccione la casilla *Encendido* para iniciar el plugin de SnapCenter para VMware vSphere.
+. Mientras el complemento SnapCenter para VMware vSphere se está encendiendo, haga clic con el botón derecho en el complemento SnapCenter implementado para VMware vSphere, seleccione *Sistema operativo invitado* y, a continuación, seleccione *Instalar herramientas de VMware*.
 +
 Puede que la puesta en marcha tarde unos minutos en completarse. La implementación correcta se indica cuando se enciende el plugin de SnapCenter para VMware vSphere, las herramientas de VMware están instaladas y la pantalla le solicita que inicie sesión en el plugin de SnapCenter para VMware vSphere.
 
@@ -80,5 +80,5 @@ Utilice el formato `\https://<appliance-IP-address>:8080` Para acceder a la GUI 
 +
 Inicie sesión con el nombre de usuario y la contraseña de administrador establecidos en el momento de la implementación y el token de MFA generado con la consola de mantenimiento.
 
-. Inicie sesión en el cliente HTML5 de vCenter y, a continuación, haga clic en *Menú* en la barra de herramientas y, a continuación, seleccione *complemento SnapCenter para VMware vSphere*
+. Inicie sesión en el cliente de vCenter HTML5 y, a continuación, seleccione * Menú * en la barra de herramientas y, a continuación, seleccione * Plugin de SnapCenter para VMware vSphere *
 

@@ -26,12 +26,12 @@ Es posible desvincular políticas de un grupo de recursos del plugin de SnapCent
 Las instrucciones para desvincular políticas de los grupos de recursos del plugin de SnapCenter para VMware vSphere difieren de las instrucciones para los grupos de recursos de SnapCenter. En el caso de un grupo de recursos de cliente de VMware vSphere, es posible desvincular todas las políticas, lo que deja al grupo de recursos sin políticas. No obstante, para realizar cualquier operación de protección de datos en ese grupo de recursos, debe asociar al menos una política.
 
 .Pasos
-. En el panel de navegación izquierdo del plugin SCV, haga clic en *Resource Groups*, seleccione un grupo de recursos y haga clic en *Edit*.
+. En el panel de navegación izquierdo del plugin SCV, seleccione *Resource Groups*, luego seleccione un grupo de recursos y seleccione *Edit*.
 . En la página *Directivas* del asistente *Editar grupo de recursos*, desactive la Marca de verificación situada junto a las políticas que desee desvincular.
 +
 También puede añadir una política al grupo de recursos marcando la política.
 
-. Haga las modificaciones adicionales que necesite el grupo de recursos en el resto del asistente y haga clic en *Finalizar*.
+. Realice cualquier modificación adicional al grupo de recursos en el resto del asistente y, a continuación, seleccione * Finalizar *.
 
 
 
@@ -59,9 +59,9 @@ Los backups que superen el nuevo valor configurado se eliminarán cuando se real
 NOTE: Para modificar una programación de políticas del plugin de SnapCenter para VMware vSphere, debe modificar la programación del grupo de recursos del plugin.
 
 .Pasos
-. En el panel de navegación izquierdo del plugin SCV, haga clic en *Policies*, luego seleccione una política y haga clic en *Edit*.
+. En el panel de navegación izquierdo del plugin SCV, seleccione *Policies*, luego seleccione una política y seleccione *Edit*.
 . Modifique los campos de la política.
-. Cuando haya terminado, haga clic en *Actualizar*.
+. Cuando haya terminado, seleccione *Actualizar*.
 
 
 Los cambios se empezarán a aplicar cuando se realice el siguiente backup programado.
@@ -76,6 +76,6 @@ Si ya no requiere una política de backup configurada para el plugin de SnapCent
 Debe haber desvinculado la política de todos los grupos de recursos del dispositivo virtual para SnapCenter antes de proceder a su eliminación.
 
 .Pasos
-. En el panel de navegación izquierdo del plugin SCV, haga clic en *Policies*, luego seleccione una política y haga clic en *Remove*.
-. En el cuadro de diálogo de confirmación, haga clic en *Aceptar*.
+. En el panel de navegación izquierdo del plugin SCV, seleccione *Policies*, luego seleccione una política y seleccione *Remove*.
+. En el cuadro de diálogo de confirmación seleccione *OK*.
 

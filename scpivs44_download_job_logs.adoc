@@ -29,7 +29,7 @@ NOTE: El valor predeterminado para retener registros de trabajos es de 30 días;
 Es posible que deba desplazarse a la derecha para ver el icono.
 
 +
-También puede hacer doble clic en un trabajo para acceder a la ventana Detalles del trabajo y, a continuación, hacer clic en *Descargar registros de trabajos*.
+También puede hacer doble clic en un trabajo para acceder a la ventana Detalles del trabajo y luego seleccionar *Descargar registros de trabajo*.
 
 
 

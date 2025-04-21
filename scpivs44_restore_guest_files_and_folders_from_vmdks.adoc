@@ -73,9 +73,9 @@ Esta opción utiliza los ajustes de configuración del correo electrónico que s
 
 
 
-. Revise el resumen y luego haga clic en *Finalizar*.
+. Revisa el resumen y luego selecciona *Finalizar*.
 +
-Antes de hacer clic en *Finalizar*, puede volver a cualquier página del asistente y cambiar la información.
+Antes de seleccionar *Finalizar*, puedes volver a cualquier página del asistente y cambiar la información.
 
 . Espere hasta que concluya la operación de asociación.
 +
@@ -90,9 +90,9 @@ En la tabla Guest Session Monitor, puede ver información adicional de la sesió
 +
 Se asigna una letra a todas las particiones, incluidas las particiones reservadas del sistema. Si un VMDK tiene varias particiones, para seleccionar una unidad específica puede elegir la unidad en la lista desplegable del campo de unidad ubicado en la parte superior de la página Guest File Browse.
 
-. Haga clic en el icono *examinar archivos* para ver una lista de archivos y carpetas en el disco virtual.
+. Seleccione el icono *Examinar archivos* para ver una lista de archivos y carpetas en el disco virtual.
 +
-Al hacer doble clic en una carpeta para examinar su contenido y seleccionar archivos individuales, es posible que haya cierta latencia mientras se accede a la lista de archivos, dado que la operación de acceso se realiza en el tiempo de ejecución.
+Cuando se selecciona doble una carpeta para examinar su contenido y seleccionar archivos individuales, es posible que haya cierta latencia mientras se accede a la lista de archivos, dado que la operación de acceso se realiza en el tiempo de ejecución.
 
 +
 Para facilitar la búsqueda, puede aplicar filtros en la cadena de búsqueda. Los filtros distinguen mayúsculas de minúsculas y usan expresiones Perl sin espacios. La cadena de búsqueda predeterminada es `.`*. La siguiente tabla presenta varios ejemplos de expresiones de búsqueda Perl.
@@ -140,7 +140,7 @@ Para facilitar la búsqueda, puede aplicar filtros en la cadena de búsqueda. Lo
 +
 La página Guest File Browse muestra todos los archivos y las carpetas ocultos, además de todos los demás archivos y carpetas.
 
-. Seleccione uno o más archivos o carpetas que desee restaurar y, a continuación, haga clic en *Seleccionar ubicación de restauración*.
+. Seleccione uno o más archivos o carpetas que desee restaurar y, a continuación, seleccione *Seleccione Restaurar ubicación*.
 +
 Los archivos y las carpetas que se van a restaurar se enumeran en la tabla Selected File(s).
 
@@ -163,7 +163,7 @@ NOTE: Si la carpeta ya existe, el contenido de esa carpeta se fusiona con la car
 
 | Desconecte la sesión de invitado después de que la restauración se haya realizado correctamente | Seleccione esta opción si desea que la sesión de restauración de archivos invitados se elimine al concluir la operación de restauración. 
 |===
-. Haga clic en *Restaurar*.
+. Seleccione *Restaurar*.
 +
 Puede ver el progreso de la operación de restauración en Dashboard Job Monitor, o puede esperar a recibir la notificación por correo electrónico. El tiempo que tardará en enviarse la notificación por correo electrónico depende de la duración de la operación de restauración.
 

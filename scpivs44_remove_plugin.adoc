@@ -26,7 +26,7 @@ Si ya no necesita utilizar las funciones de protección de datos de SnapCenter, 
 +
 Cuando se implementa el plugin, se muestra la dirección IP del plugin de SnapCenter para VMware vSphere.
 
-. Haga clic en *Configuración* en el panel de navegación izquierdo y, a continuación, anule la selección de la opción Servicio en la sección *Detalles del complemento* para desactivar el plugin.
+. Seleccione *Configuración* en el panel de navegación izquierdo, y luego anule la selección de la opción Servicio en la sección *Detalles del plugin* para deshabilitar el plugin.
 . Inicie sesión en VMware vSphere.
 . En la pantalla del navegador de la izquierda, haga clic con el botón derecho en la instancia del complemento SnapCenter para VMware vSphere (el nombre del `.tar` archivo que se utilizó cuando se implementó el dispositivo virtual) y seleccione *Eliminar del disco*.
 . Si utilizó el plugin de SnapCenter para VMware vSphere para admitir otros plugins de SnapCenter para backups consistentes con las aplicaciones, inicie sesión en SnapCenter y quite el host de vSphere.

@@ -27,5 +27,5 @@ Si se intenta montar una copia de backup de un almacén de datos NFS en una máq
 
 IMPORTANT: Asegúrese de haber seleccionado el almacén de datos correcto para desmontar. De lo contrario, podría afectar al trabajo de producción.
 
-. En el cuadro de diálogo *Unmount Cloned Datastore*, seleccione un almacén de datos, seleccione la casilla de verificación *Unmount the cloned datastore* y, a continuación, haga clic en *Unmount*.
+. En el cuadro de diálogo *Unmount Cloned Datastore*, seleccione un almacén de datos, seleccione la casilla de verificación *Unmount the cloned datastore* y, a continuación, seleccione *Unmount*.
 

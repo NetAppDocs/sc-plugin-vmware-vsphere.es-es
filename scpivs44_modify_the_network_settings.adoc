@@ -29,18 +29,18 @@ Debe conocer la dirección IP y las credenciales de inicio de sesión de la inte
 +
 Utilice el formato `\https://<appliance-IP-address>:8080`
 
-. Haga clic en el icono Configuración de la barra de herramientas superior.
+. Seleccione el icono Configuración en la barra de herramientas superior.
 +
 image:scpivs44_image31.png["Interfaz gráfica de usuario de gestión del plugin de SnapCenter para VMware vSphere"]
 
-. En la página *Ajustes*, en la sección *Ajustes de red*, haz clic en *IPv4* o *IPv6* dirección, y luego haz clic en *Editar*.
+. En la página *Ajustes*, en la sección *Ajustes de red*, selecciona *IPv4* o *IPv6* y, a continuación, selecciona *Editar*.
 +
-Introduzca la nueva información y haga clic en *Guardar*.
+Introduce la nueva información y selecciona *Guardar*.
 
 . Si va a eliminar una configuración de red, haga lo siguiente:
 +
-** IPv4: En el campo *Dirección IP*, introduzca `0.0.0.0` Y, a continuación, haga clic en *Guardar*.
-** IPv6: En el campo *Dirección IP*: Introduzca `: :0` Y, a continuación, haga clic en *Guardar*.
+** IPv4: En el campo *Dirección IP*, ingrese `0.0.0.0` y luego seleccione *Guardar*.
+** IPv6: En el campo *Dirección IP*: Ingrese `: :0` y luego seleccione *Guardar*.
 
 
 

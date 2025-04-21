@@ -60,12 +60,12 @@ No es posible restaurar un almacén de datos, pero sí es posible restaurar cual
 La operación de restauración puede fallar si no está disponible el nivel de almacenamiento de FabricPool donde se encuentra la máquina virtual.
 
 .Pasos
-. Haga clic en *Menú* y seleccione la opción de menú *almacenamiento*, a continuación, seleccione un almacén de datos, seleccione la ficha *Configurar* y, a continuación, haga clic en *copias de seguridad* en la sección *complemento SnapCenter para VMware vSphere*.
+. Seleccione *Menú* y seleccione la opción de menú *Almacenamiento*, luego seleccione un almacén de datos, luego seleccione la pestaña *Configurar* y luego seleccione *Copias de seguridad* en la sección *SnapCenter Plug-in for VMware vSphere*.
 . Haga doble clic en un backup para ver una lista con todas las máquinas virtuales que están incluidas en el backup.
-. Seleccione la VM eliminada de la lista de copias de seguridad y haga clic en *Restaurar*.
+. Seleccione la VM eliminada de la lista de copias de seguridad y seleccione *Restaurar*.
 . En el asistente *Restaurar*, en la página *Seleccionar copia de seguridad*, seleccione la copia de seguridad desde la que desea restaurar.
 +
-Puede buscar por un nombre de backup específico o un nombre de backup parcial y también puede filtrar la lista de backups haciendo clic en el icono de filtro y seleccionando un intervalo de fechas y horas. Además, debe seleccionar si desea backups que contengan snapshots de VMware, si desea visualizar backups montados y la ubicación. Haga clic en *Aceptar* para volver al asistente.
+Puede buscar por un nombre de backup específico o un nombre de backup parcial y también puede filtrar la lista de backups haciendo clic en el icono de filtro y seleccionando un intervalo de fechas y horas. Además, debe seleccionar si desea backups que contengan snapshots de VMware, si desea visualizar backups montados y la ubicación. Seleccione *OK* para volver al asistente.
 
 . En la página *Select Scope*, seleccione *entire virtual machine* en el campo *Restore scope*, luego seleccione la ubicación de restauración y, a continuación, introduzca la información del host ESXi de destino donde se debe montar la copia de seguridad.
 +
@@ -75,5 +75,5 @@ El destino de la restauración puede ser cualquier host ESXi que se haya añadid
 Si va a restaurar una máquina virtual de un almacén de datos NFS en un host ESXi alternativo ubicado en un clúster de ESXi, una vez restaurada la máquina virtual, se registra en el host alternativo.
 
 . En la página *Seleccionar ubicación*, seleccione la ubicación de la copia de seguridad desde la que desea restaurar (principal o secundario).
-. Revise la página Resumen y, a continuación, haga clic en *Finalizar*.
+. Revise la página Resumen y luego seleccione *Finalizar*.
 

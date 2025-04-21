@@ -41,10 +41,10 @@ La operación de montaje puede fallar si no está disponible el nivel de almacen
 .Pasos
 . En la página de accesos directos del cliente de VMware vSphere, seleccione *Storage*.
 . Haga clic con el botón derecho en un almacén de datos y seleccione *SnapCenter Plug-in for VMware vSphere* > *Mount Backup*.
-. En la página *Mount Datastore*, seleccione una copia de seguridad y una ubicación de copia de seguridad (primaria o secundaria) y, a continuación, haga clic en *Finish*.
+. En la página *Mount Datastore*, seleccione una copia de seguridad y una ubicación de copia de seguridad (primaria o secundaria), y luego seleccione *Finish*.
 . Opcional: Para verificar si se montó el almacén de datos, haga lo siguiente:
 +
-.. Haga clic en *Menú* en la barra de herramientas y, a continuación, seleccione *almacenamiento* en la lista desplegable.
+.. Seleccione *Menú* en la barra de herramientas y luego seleccione *Almacenamiento* en la lista desplegable.
 .. En el panel de navegación de la izquierda, el almacén de datos que montó aparecerá en la parte superior de la lista.
 +
 Si ejecuta una operación de asociación o montaje en un volumen de destino de SnapVault que está protegido por programaciones de SnapVault y que funciona con ONTAP 8,3, puede ver una copia de Snapshot adicional en la pantalla de diálogo de la asociación o el montaje. Esto ocurre porque la operación de asociación o montaje clona el volumen de destino de SnapVault y ONTAP actualiza el volumen creando una nueva copia de Snapshot.

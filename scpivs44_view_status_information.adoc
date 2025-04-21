@@ -19,7 +19,7 @@ La información de estado se puede ver en la consola de cliente de vSphere. La i
 .Pasos
 . En la página de acceso directo del cliente de vCenter, seleccione SnapCenter Plug-in for VMware vSphere (SCV).
 . En el panel de navegación izquierdo de SCV, seleccione *Dashboard* > *Status*.
-. Vea la información sobre el estado de la información general o haga clic en un enlace para obtener más detalles, como se indica en la siguiente tabla.
+. Ver información general sobre el estado o seleccionar un enlace para obtener más detalles, como se indica en la siguiente tabla.
 +
 |===
 | Este mosaico del tablero de a bordo… | Muestra la siguiente información… 
@@ -30,8 +30,8 @@ Actividades laborales recientes
  a| 
 Las tres o cinco tareas más recientes de backup, restauración y montaje.
 
-** Haga clic en un ID de trabajo para ver más detalles acerca de ese trabajo.
-** Haga clic en *Ver todo* para ir a la ficha Monitor de trabajo para obtener más detalles sobre todos los trabajos.
+** Seleccione en un ID de trabajo para ver más detalles sobre ese trabajo.
+** Seleccione *Ver todo* para ir a la pestaña Monitor de trabajos para obtener más detalles sobre todos los trabajos.
 
 
 
@@ -48,7 +48,7 @@ Un recuento de cada tipo de trabajo (backup, restauración y montaje) realizado 
  a| 
 Resúmenes del estado de la protección de datos de equipos virtuales primarios y secundarios o almacenes de datos dentro de la ventana de tiempo seleccionada.
 
-** Haga clic en el menú desplegable para seleccionar *VMs* o *datastores*.
+** Seleccione el menú desplegable para seleccionar *VMs* o *datastores*.
 ** Para almacenamiento secundario, seleccione *SnapVault* o *SnapMirror*.
 ** Pase el cursor por una sección de un gráfico para ver el número de máquinas virtuales o almacenes de datos de esa categoría. En la categoría correctos, se incluye el backup más reciente de cada recurso.
 ** Puede cambiar la ventana de tiempo editando el archivo de configuración. El valor predeterminado es 7 días. Para obtener más información, consulte link:scpivs44_customize_your_configuration.html["Personalice la configuración"].

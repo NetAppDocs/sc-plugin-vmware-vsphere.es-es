@@ -31,7 +31,7 @@ Si desea utilizar una máquina virtual proxy para asociar un disco virtual para 
 | Añadir nuevas credenciales  a| 
 .. Seleccione *Agregar*.
 .. En el cuadro de diálogo *credenciales Run as*, introduzca las credenciales.
-.. Haga clic en *Seleccionar VM* y, a continuación, seleccione una VM en el cuadro de diálogo *Proxy VM*. Haga clic en *Guardar* para volver al cuadro de diálogo *Ejecutar como credenciales*.
+.. Seleccione *Seleccionar VM* y, a continuación, seleccione una VM en el cuadro de diálogo *Proxy VM*. Seleccione *Guardar* para volver al cuadro de diálogo *Ejecutar como Credenciales*.
 .. Introduzca las credenciales. En Nombre de usuario, debe introducir “Administrador”.
 
 
@@ -42,8 +42,8 @@ El plugin de SnapCenter para VMware vSphere utiliza las credenciales seleccionad
 +
 Las credenciales Run as deben ser del administrador de dominio predeterminado que proporciona Windows o el administrador local integrado. Los usuarios de grupo de trabajo pueden utilizar la cuenta de administrador local integrada.
 
-. En la sección *credenciales de proxy*, haga clic en *Agregar* para agregar una VM que se utilizará como proxy.
-. En el cuadro de diálogo *Proxy VM*, complete la información y, a continuación, haga clic en *Guardar*.
+. En la sección *Credenciales de proxy*, selecciona *Agregar* para agregar una VM para usarla como proxy.
+. En el cuadro de diálogo *Proxy VM*, complete la información y luego seleccione *Guardar*.
 
 
 

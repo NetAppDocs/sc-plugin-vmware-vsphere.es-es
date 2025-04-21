@@ -32,12 +32,12 @@ Debe conocer la dirección IP y las credenciales de inicio de sesión de la inte
 +
 Utilice el formato `\https://<appliance-IP-address>:8080`
 
-. Haga clic en el icono Configuración de la barra de herramientas superior.
+. Seleccione el icono Configuración en la barra de herramientas superior.
 +
 image:scpivs44_image28.jpg["Plugin de SnapCenter para VMware vSphere"]
 
-. En la página *Configuración*, en la sección *Fecha y hora*, haga clic en *Edición*.
-. Seleccione la nueva zona horaria y haga clic en *Guardar*.
+. En la página *Ajustes*, en la sección *Fecha y Hora*, selecciona *Editar*.
+. Seleccione la nueva zona horaria y seleccione *Guardar*.
 +
 La nueva zona horaria se utilizará para todos los backups realizados por el plugin de SnapCenter para VMware vSphere.
 

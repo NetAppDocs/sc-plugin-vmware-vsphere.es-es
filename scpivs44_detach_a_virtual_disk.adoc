@@ -17,10 +17,10 @@ summary: Una vez que haya asociado un disco virtual para restaurar archivos conc
 Una vez que haya asociado un disco virtual para restaurar archivos concretos, podrá desvincular el disco virtual de la máquina virtual principal.
 
 .Pasos
-. En la interfaz gráfica de usuario del cliente de VMware vSphere, haga clic en *Menú* en la barra de herramientas y, a continuación, seleccione *VMs and Templates* en la lista desplegable.
+. En la GUI del cliente VMware vSphere, seleccione *Menú* en la barra de herramientas y, a continuación, seleccione *VMs and Templates* en la lista desplegable.
 . En el panel de navegación de la izquierda, seleccione una máquina virtual.
 . En el panel de navegación de la izquierda, haga clic con el botón derecho en la máquina virtual, luego seleccione *SnapCenter Plug-in for VMware vSphere* en la lista desplegable y, a continuación, seleccione *Desasociar disco virtual* en la lista desplegable secundaria.
-. En la pantalla * Detach virtual disk*, seleccione uno o varios discos que desee desvincular, luego seleccione la casilla de verificación * Detach the selected disk(s)* y haga clic en *DETACH*.
+. En la pantalla *Desasociar disco virtual*, seleccione uno o más discos que desee desvincular, luego seleccione la casilla de verificación *Desasociar el disco(s) seleccionado(s)* y seleccione *DESASOCIAR*.
 +
 
 IMPORTANT: Asegúrese de seleccionar el disco virtual correcto. La selección de un disco incorrecto puede afectar al trabajo de producción.
@@ -31,7 +31,7 @@ Actualice la pantalla para que muestre información actualizada.
 
 . Compruebe si el disco virtual está desvinculado siguiendo estos pasos:
 +
-.. Haga clic en *Menú* en la barra de herramientas y, a continuación, seleccione *VMs and Templates* en la lista desplegable.
+.. Seleccione *Menú* en la barra de herramientas y luego seleccione *VMs and Templates* en la lista desplegable.
 .. En el panel de navegación de la izquierda, haga clic con el botón derecho en una VM y, a continuación, seleccione *Editar configuración* en la lista desplegable.
 .. En la ventana *Editar configuración*, expanda la lista de cada disco duro para ver la lista de archivos de disco.
 +

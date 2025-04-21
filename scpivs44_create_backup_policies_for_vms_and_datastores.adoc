@@ -54,7 +54,7 @@ NOTE: En una configuración de dispersión, el grupo de consistencia no es compa
 La mayoría de los campos en estas páginas del asistente son claros y explicativos. La siguiente información describe algunos de los campos que pueden requerir explicación.
 
 .Pasos
-. En el panel de navegación izquierdo del plugin SCV, haga clic en *Policies*.
+. En el panel de navegación izquierdo del plugin SCV, seleccione *Policies*.
 . En la página *Policies*, selecciona *Create* para iniciar el asistente.
 . En la página *Nueva Política de Copia de Seguridad*, introduzca el nombre de la política y una descripción.
 +
@@ -153,7 +153,7 @@ Especifique la ruta completa de scripts previos o scripts posteriores que desee 
 NOTE: Los scripts previos y posteriores deben encontrarse en la máquina virtual del dispositivo virtual. Para introducir varios scripts, presione *Enter* después de cada ruta de script para enumerar cada script en una línea diferente. No se permite el carácter ";".
 
 |===
-. Haga clic en *Agregar.*
+. Selecciona *Añadir.*
 +
 Puede verificar si la política se creó y revisar su configuración seleccionando la política en la página Policies.
 

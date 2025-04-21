@@ -29,7 +29,7 @@ Para obtener el permiso del usuario raíz para ejecutar el comando, use la sudo 
 
 .Pasos
 . En el cliente VMware vSphere, seleccione la máquina virtual donde se encuentra el plugin de SnapCenter para VMware vSphere.
-. En la pestaña *Resumen* del dispositivo virtual, haga clic en *Iniciar Consola Remota* para abrir una ventana de consola de mantenimiento.
+. En la pestaña *Resumen* del dispositivo virtual, seleccione *Iniciar Consola Remota* para abrir una ventana de consola de mantenimiento.
 +
 Inicie sesión con el nombre de usuario predeterminado de la consola de mantenimiento `maint` y la contraseña que ha establecido en el momento de la instalación.
 

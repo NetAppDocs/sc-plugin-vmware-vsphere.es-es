@@ -16,6 +16,6 @@ summary:
 [role="lead"]
 Siga las instrucciones que se indican a continuación para crear normativas de backup
 
-. En el panel de navegación izquierdo del plugin SCV, haga clic en *Policies* y, a continuación, seleccione *New Policy*.
-. En la página *Nueva política de copia de seguridad*, introduzca la información de configuración de la directiva y, a continuación, haga clic en *Agregar*.
+. En el panel de navegación izquierdo del plug-in SCV, seleccione *Policies* y luego seleccione *New Policy*.
+. En la página *Nueva política de copia de seguridad*, ingrese la información de configuración de la política y luego seleccione *Agregar*.
 

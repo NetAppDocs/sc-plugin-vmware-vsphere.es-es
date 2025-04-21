@@ -26,8 +26,8 @@ NOTE: Los grupos de recursos se denominan trabajos de backup en VSC.
 Es posible deshabilitar temporalmente el inicio de las operaciones programadas en un grupo de recursos. Más tarde, si se desea, se pueden habilitar las operaciones.
 
 .Pasos
-. En el panel de navegación izquierdo del plugin SCV, haga clic en *Resource Groups*, seleccione un grupo de recursos y haga clic en *Suspender* (o haga clic en *Reanudar*).
-. En el cuadro de confirmación, haga clic en *Aceptar* para confirmar.
+. En el panel de navegación izquierdo del plugin SCV, seleccione *Resource Groups*, seleccione un grupo de recursos y seleccione *Suspender* (o seleccione *Reanudar*).
+. En el cuadro de confirmación, seleccione *OK* para confirmar.
 
 
 .Después de terminar
@@ -49,12 +49,12 @@ Si desea modificar el nombre de un grupo de recursos, no utilice los siguientes 
 Se permite el carácter de guion bajo (_).
 
 .Pasos
-. En el panel de navegación izquierdo del plugin SCV, haga clic en *Resource Groups*, seleccione un grupo de recursos y haga clic en *Edit*.
-. En la lista de la izquierda del asistente *Editar grupo de recursos*, haga clic en la categoría que desee modificar e introduzca los cambios.
+. En el panel de navegación izquierdo del plugin SCV, seleccione *Resource Groups*, luego seleccione un grupo de recursos y seleccione *Edit*.
+. En la lista de la izquierda del asistente *Editar grupo de recursos*, seleccione la categoría que desea modificar e introduzca los cambios.
 +
 Puede realizar cambios en varias categorías. En esta opción también se pueden editar recursos secundarios protegidos.
 
-. Haga clic en *Siguiente* hasta que aparezca la página Resumen y, a continuación, haga clic en *Finalizar*.
+. Selecciona *Siguiente* hasta que veas la página Resumen y luego selecciona *Finalizar*.
 
 
 
@@ -70,6 +70,6 @@ Todas las operaciones de eliminación de grupos de recursos se realizan como eli
 NOTE: En una relación de SnapVault, no se puede eliminar la última instancia de Snapshot; por lo tanto, el grupo de recursos tampoco se puede eliminar. Antes de eliminar un grupo de recursos que forma parte de una relación de SnapVault, tiene que usar OnCommand System Manager o la interfaz de línea de comandos de ONTAP para quitar la relación de SnapVault. A continuación, debe eliminar la última copia de Snapshot.
 
 .Pasos
-. En el panel de navegación izquierdo del plugin SCV, haga clic en *Resource Groups*, seleccione un grupo de recursos y haga clic en *Delete*.
-. En el cuadro de confirmación *Eliminar grupo de recursos*, haga clic en *Aceptar* para confirmar.
+. En el panel de navegación izquierdo del plugin SCV, seleccione *Resource Groups*, luego seleccione un grupo de recursos y seleccione *Delete*.
+. En el cuadro de confirmación *Eliminar grupo de recursos*, selecciona *Aceptar* para confirmar.
 

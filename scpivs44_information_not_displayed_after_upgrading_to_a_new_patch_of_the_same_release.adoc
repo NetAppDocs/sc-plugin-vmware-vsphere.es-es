@@ -44,7 +44,7 @@ La caché se encuentra en las siguientes ubicaciones, según el tipo de sistema 
 +
 La dirección IP se muestra cuando implementa el plugin de SnapCenter para VMware vSphere.
 
-. Haga clic en *Configuración* en el panel de navegación de la izquierda y, a continuación, haga clic en la opción Servicio de la sección *Detalles del complemento* para desactivar el plugin.
+. Seleccione *Configuración* en el panel de navegación izquierdo y, a continuación, seleccione la opción Servicio en la sección *Detalles del plugin* para desactivar el plugin.
 +
 El servicio del plugin de SnapCenter para VMware vSphere está deshabilitado y la extensión deja de registrarse en vCenter.
 
@@ -54,7 +54,7 @@ El nombre de la carpeta cambia para cada versión.
 
 . Reinicie vCenter Server.
 . Inicie sesión en VMware vSphere Client.
-. Haga clic en *Configuración* en el panel de navegación de la izquierda y, a continuación, haga clic en la opción Servicio de la sección *Detalles del plug-in* para activar el plug-in.
+. Seleccione *Configuración* en el panel de navegación izquierdo y, a continuación, seleccione la opción Servicio en la sección *Detalles del plugin* para habilitar el plugin.
 +
 El servicio del plugin de SnapCenter para VMware vSphere está habilitado y la extensión se registra en vCenter.
 

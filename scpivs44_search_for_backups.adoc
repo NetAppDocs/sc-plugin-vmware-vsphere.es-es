@@ -17,21 +17,21 @@ summary: Puede buscar y encontrar un backup específico de una máquina virtual 
 Puede buscar y encontrar un backup específico de una máquina virtual o de un almacén de datos con la ayuda del asistente Restore. Después de ubicar el backup, puede restaurarlo.
 
 .Pasos
-. En la interfaz gráfica de usuario del cliente de VMware vSphere, haga clic en *Menú* en la barra de herramientas y, a continuación, realice una de las siguientes acciones:
+. En la GUI del cliente VMware vSphere, seleccione *Menú* en la barra de herramientas y, a continuación, realice una de las siguientes acciones:
 +
 |===
 | Para ver copias de seguridad para… | Haga lo siguiente… 
 
 
-| Equipos virtuales | Haga clic en la opción de menú *hosts and Clusters*, seleccione una máquina virtual, haga clic en la ficha *Configurar* y, a continuación, haga clic en *copias de seguridad* en la sección *complemento SnapCenter para VMware vSphere*. 
+| Equipos virtuales | Seleccione la opción de menú * Hosts y clústeres *, luego seleccione una VM, luego seleccione la pestaña * Configurar * y, a continuación, seleccione * Copias de seguridad * en la sección * SnapCenter Plug-in para VMware vSphere *. 
 
 
-| Almacenes de datos | Haga clic en la opción de menú *almacenamiento*, seleccione un almacén de datos, haga clic en la ficha *Configurar* y, a continuación, haga clic en *copias de seguridad* en la sección *SnapCenter Plug-in for VMware vSphere*. 
+| Almacenes de datos | Seleccione la opción de menú *Almacenamiento*, luego seleccione un almacén de datos, luego seleccione la pestaña *Configurar* y luego seleccione *Copias de seguridad* en la sección *SnapCenter Plug-in for VMware vSphere*. 
 |===
 . En el panel de navegación de la izquierda, expanda el centro de datos que contiene la máquina virtual o el almacén de datos.
 . Opcional: Haga clic con el botón derecho en una máquina virtual o almacén de datos, luego seleccione *SnapCenter Plug-in for VMware vSphere* en la lista desplegable y, a continuación, seleccione *Restaurar* en la lista desplegable secundaria.
-. En el asistente *Restaurar*, introduzca un nombre de búsqueda y haga clic en *Buscar*.
+. En el asistente de *Restaurar* introduce un nombre de búsqueda y selecciona *Buscar*.
 +
-Puede filtrar la lista de backups seleccionando el icono de filtrar y seleccionando un intervalo de fechas y horas. Debe seleccionar también si desea visualizar los backups que contengan snapshots de VMware, si desea visualizar los backups montados y también la ubicación. Haga clic en *OK*.
+Puede filtrar la lista de backups seleccionando el icono de filtrar y seleccionando un intervalo de fechas y horas. Debe seleccionar también si desea visualizar los backups que contengan snapshots de VMware, si desea visualizar los backups montados y también la ubicación. Seleccione *OK*.
 
 
