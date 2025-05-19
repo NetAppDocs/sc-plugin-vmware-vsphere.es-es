@@ -16,11 +16,9 @@ summary: En esta sección, se proporciona información sobre la licencia del plu
 [role="lead"]
 El plugin de SnapCenter para VMware vSphere es un producto gratuito si utiliza los siguientes sistemas de almacenamiento:
 
-* FAS
-* AFF
+* Clústeres de ONTAP en las instalaciones (sistemas FAS, AFF y ASA)
 * Cloud Volumes ONTAP
 * ONTAP Select
-* ASA
 
 
 Se recomienda, pero no es obligatorio, añadir licencias estándar de SnapCenter a destinos secundarios. Si las licencias estándar de SnapCenter están deshabilitadas en sistemas secundarios, no se puede usar SnapCenter después de realizar una operación de conmutación al nodo de respaldo. Sin embargo, se necesita una licencia de FlexClone en el almacenamiento secundario para realizar operaciones de montaje y conexión. Se requiere una licencia de SnapRestore para ejecutar operaciones de restauración.

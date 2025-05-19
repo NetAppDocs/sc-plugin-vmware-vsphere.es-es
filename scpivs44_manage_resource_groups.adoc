@@ -67,7 +67,7 @@ Es posible eliminar un grupo de recursos en vCenter si ya no es necesario proteg
 Todas las operaciones de eliminación de grupos de recursos se realizan como eliminaciones forzadas. La operación de eliminación desvincula todas las políticas del grupo de recursos de vCenter, elimina el grupo de recursos del plugin de SnapCenter para VMware vSphere y, además, borra todos los backups y las copias de Snapshot del grupo de recursos.
 
 
-NOTE: En una relación de SnapVault, no se puede eliminar la última instancia de Snapshot; por lo tanto, el grupo de recursos tampoco se puede eliminar. Antes de eliminar un grupo de recursos que forma parte de una relación de SnapVault, tiene que usar OnCommand System Manager o la interfaz de línea de comandos de ONTAP para quitar la relación de SnapVault. A continuación, debe eliminar la última copia de Snapshot.
+NOTE: En una relación de SnapVault, no se puede eliminar la última instancia de Snapshot; por lo tanto, el grupo de recursos tampoco se puede eliminar. Antes de eliminar un grupo de recursos que forma parte de una relación de SnapVault, tiene que usar System Manager o la interfaz de línea de comandos de ONTAP para quitar la relación de SnapVault. A continuación, debe eliminar la última copia de Snapshot.
 
 .Pasos
 . En el panel de navegación izquierdo del plugin SCV, seleccione *Resource Groups*, luego seleccione un grupo de recursos y seleccione *Delete*.

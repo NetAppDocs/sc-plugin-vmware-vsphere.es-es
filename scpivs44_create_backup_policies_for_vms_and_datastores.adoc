@@ -41,7 +41,7 @@ NOTE: La sincronización activa de SnapMirror solo se admite para almacenes de d
 Para proteger un almacén de datos VMFS en una implementación de sincronización activa de SnapMirror, como administrador de SnapCenter necesita:
 
 +
-** Configure clusters y mediador como se describe en el informe técnico: https://www.netapp.com/pdf.html?item=/media/21888-tr-4878.pdf["TR-4878: Sincronización activa con SnapMirror (anteriormente SMBC)"].
+** Configure clusters y mediador como se describe en el informe técnico: https://docs.netapp.com/us-en/ontap/snapmirror-active-sync/mediator-install-task.html["Configurar el mediador de ONTAP y los clústeres para la sincronización activa de snapmirror"].
 ** Añada el volumen asociado con el almacén de datos VMFS al grupo de coherencia y cree una relación de protección de datos mediante la política de protección _AutomatedFailOver_ o _AutomatedFailOverDuplex_ entre dos sistemas de almacenamiento de ONTAP. La política _AutomatedFailOverDuplex_ se admite a partir de la versión ONTAP 9.15.1.
 
 
@@ -87,7 +87,9 @@ IMPORTANT: Debe establecer el número de retención en 2 backups o un valor más
 
 +
 
-NOTE: El valor de retención máximo es de 1018 backups para recursos en ONTAP 9.4 o posterior, y 254 backups para recursos en ONTAP 9.3 o anterior. Se producirá un error en los backups si la retención se establece en un valor superior a la versión de ONTAP subyacente. Esto también se aplica a almacenes de datos de expansión. Si un almacén de datos con extensión incluye recursos en ONTAP 9.3 y versiones anteriores, y en ONTAP 9.4 y versiones posteriores, asegúrese de configurar el valor de retención por debajo de 254.
+NOTE: El valor de retención máxima es 1018 backups. Se producirá un error en los backups si la retención se establece en un valor superior a la versión de ONTAP subyacente. Esto también se aplica a almacenes de datos de expansión.
+
+
 
 . En los campos *replicación*, especifique el tipo de replicación al almacenamiento secundario, como se muestra en la siguiente tabla:
 +

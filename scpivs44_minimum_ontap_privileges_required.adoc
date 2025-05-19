@@ -28,7 +28,7 @@ Todos los plugins de SnapCenter requieren los siguientes privilegios mínimos.
 |===
 
 
-| Comandos de acceso total: Privilegios mínimos requeridos para ONTAP 8,3 y versiones posteriores. 
+| Comandos de acceso total: Número mínimo de ONTAP Privileges. 
 
 
 | event generate-autosupport-log 
@@ -54,13 +54,13 @@ detención de trabajo
 | vserver cifs vserver compartir cifs crear vserver compartir cifs eliminar vserver cifs shadowcopy mostrar vserver compartir cifs mostrar vserver cifs mostrar vserver política de exportación vserver exportar política crear vserver política de exportación eliminar vserver regla de política de exportación crear vserver regla de política de exportación mostrar vserver política de exportación mostrar vserver iscsi vserver conexión iscsi mostrar vserver subsistema nvme controladora vserver subsistema vserver nvme 
 |===
 |===
-| Comandos de solo lectura: Privilegios mínimos requeridos para ONTAP 8.3 y versiones posteriores 
+| Comandos de solo lectura: Número mínimo de ONTAP Privileges 
 
 
 | identidad del clúster mostrar la interfaz de red mostrar vserver vserver peer vserver show 
 |===
 |===
-| Comandos de acceso total: Privilegios mínimos requeridos para ONTAP 9 y versiones posteriores. 
+| Comandos de acceso total: Número mínimo de ONTAP Privileges 
 
 
 | imagen de la unidad de almacenamiento del grupo de coherencia 
@@ -74,15 +74,6 @@ NOTE: Puede ignorar los mensajes de advertencia acerca de los comandos de vServe
 
 == Información adicional sobre ONTAP
 
-* Si utiliza ONTAP 8.2.x:
-+
-Debe iniciar sesión como `vsadmin` En la máquina virtual de almacenamiento con los privilegios adecuados para las operaciones del plugin de SnapCenter para VMware vSphere.
-
-* Si utiliza ONTAP 8.3 y versiones posteriores:
-+
-Debe iniciar sesión como `vsadmin` o con un rol que tenga los privilegios mínimos indicados en las tablas anteriores.
-
-* Debe ser el administrador del clúster para crear y gestionar los roles de usuario. Puede asociar los usuarios con la máquina virtual de almacenamiento del clúster o con la máquina virtual de almacenamiento.
 * Necesita ONTAP 9.12.1 o versiones posteriores para usar la función de sincronización activa de SnapMirror.
 * Para utilizar la función Instantánea a prueba de manipulaciones (TPS):
 +

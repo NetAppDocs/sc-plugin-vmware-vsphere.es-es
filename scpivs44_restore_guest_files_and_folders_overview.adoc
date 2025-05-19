@@ -105,7 +105,6 @@ No es posible restaurar archivos y carpetas desde una máquina virtual que ejecu
 Si intenta restaurar desde un formato NTFS a un formato FAT, el descriptor de seguridad de NTFS no se copiará porque el sistema de archivos FAT no es compatible con los atributos de seguridad de Windows.
 
 * No es posible restaurar archivos invitados desde un VMDK clonado o un VMDK no inicializado.
-* No es posible restaurar desde backups secundarios si el backup se efectuó en un sistema con ONTAP 9.2 o una versión posterior y si estaba activada la opción de consistencia de VMware.
 * No es posible restaurar la estructura de directorio de un archivo.
 +
 Si se selecciona un archivo de un directorio anidado para restaurarse, el archivo no se restaura con la misma estructura de directorio. El árbol de directorios no se restaura, sólo el archivo. Si desea restaurar un árbol de directorios, puede copiar el propio directorio en la parte superior de la estructura.
