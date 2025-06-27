@@ -44,9 +44,7 @@ Puede quitar o añadir recursos a grupos de recursos en vCenter, desvincular o a
 .Acerca de esta tarea
 Si desea modificar el nombre de un grupo de recursos, no utilice los siguientes caracteres especiales en nombres de máquinas virtuales, almacenes de datos, políticas, backups o grupos de recursos:
 
-% & * $ # @ ! \ / : * ? " < > - | ; ' , .
-
-Se permite el carácter de guion bajo (_).
+% & * $ # @ ! \ / : * ? " < > - | ; ', y espacio. Se permite el carácter de guion bajo (_).
 
 .Pasos
 . En el panel de navegación izquierdo del plugin SCV, seleccione *Resource Groups*, luego seleccione un grupo de recursos y seleccione *Edit*.

@@ -64,7 +64,7 @@ En el modo vinculado, cada vCenter tiene un dispositivo virtual independiente. P
 
 ** Caracteres no admitidos
 +
-No utilice los siguientes caracteres especiales en máquinas virtuales, almacenes de datos, clústeres, políticas, backup o nombres de grupos de recursos: % & * $ # @ ! \ / : * ? " < > - | ; ' , .
+No utilice los siguientes caracteres especiales en máquinas virtuales, almacenes de datos, clústeres, políticas, backup o nombres de grupos de recursos: % & * $ # @ ! \ / : * ? " < > - | ; ', y espacio.
 
 +
 Se permite el carácter de guion bajo (_).

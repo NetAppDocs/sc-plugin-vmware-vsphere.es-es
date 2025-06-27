@@ -35,7 +35,7 @@ En el caso de los entornos VMFS, el plugin de SnapCenter para VMware vSphere uti
 | Máquinas virtuales y VMDK | Backups principales consistentes con las máquinas virtuales | Entornos NFS: Entornos VMFS de Single File SnapRestore de ONTAP: Clonado y montaje con Storage VMotion 
 
 
-| Máquinas virtuales y VMDK | Backups secundarios consistentes con las máquinas virtuales | Entornos NFS: Clonado y montaje con entornos VMFS de Storage VMotion: Clonado y montaje con Storage VMotion 
+| Máquinas virtuales y VMDK | Backups secundarios consistentes con las máquinas virtuales | Entornos NFS: ONTAP SnapMirror Restaurar entornos VMFS: Clonar y montar con Storage VMotion 
 
 
 | Máquinas virtuales VVol | Backups principales consistentes con los fallos | SnapRestore de archivo único de ONTAP para todos los protocolos 
