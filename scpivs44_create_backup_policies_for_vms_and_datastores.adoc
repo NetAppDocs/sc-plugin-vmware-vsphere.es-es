@@ -27,7 +27,7 @@ Debe crear políticas de backup antes de usar el plugin de SnapCenter para VMwar
 Para corregir este problema, configure la política de retención de SnapMirror para el almacenamiento secundario y evite alcanzar el límite máximo de instantáneas.
 
 +
-Para obtener información sobre cómo los administradores asignan recursos a los usuarios, consulte https://docs.netapp.com/us-en/snapcenter/concept/concept_types_of_role_based_access_control_in_snapcenter.html["Información de SnapCenter sobre el uso del control de acceso basado en roles"^].
+Para obtener información sobre cómo los administradores asignan recursos a los usuarios, consulte https://docs.netapp.com/us-en/snapcenter/get-started/rbac-snapcenter.html["Información de SnapCenter sobre el uso del control de acceso basado en roles"^] .
 
 
 
