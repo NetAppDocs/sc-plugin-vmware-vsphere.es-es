@@ -35,7 +35,7 @@ Haga doble clic en cualquier trabajo para generar un informe detallado para ese 
 
 . Opcional: En la ficha Informes, seleccione *Descargar* y seleccione el formato (HTML o CSV).
 +
-También es posible seleccionar el icono de descarga para descargar registros de plugins.
+Puede seleccionar el icono de descarga para descargar los registros del complemento.
 
 
 

@@ -17,7 +17,7 @@ summary: Una vez que haya asociado un disco virtual para restaurar archivos conc
 Una vez que haya asociado un disco virtual para restaurar archivos concretos, podrá desvincular el disco virtual de la máquina virtual principal.
 
 .Pasos
-. En la GUI del cliente VMware vSphere, seleccione *Menú* en la barra de herramientas y, a continuación, seleccione *VMs and Templates* en la lista desplegable.
+. En la interfaz de usuario del cliente VMware vSphere, seleccione *Menú* en la barra de herramientas y, a continuación, seleccione *Máquinas virtuales y plantillas* en la lista desplegable.
 . En el panel de navegación de la izquierda, seleccione una máquina virtual.
 . En el panel de navegación de la izquierda, haga clic con el botón derecho en la máquina virtual, luego seleccione *SnapCenter Plug-in for VMware vSphere* en la lista desplegable y, a continuación, seleccione *Desasociar disco virtual* en la lista desplegable secundaria.
 . En la pantalla *Desasociar disco virtual*, seleccione uno o más discos que desee desvincular, luego seleccione la casilla de verificación *Desasociar el disco(s) seleccionado(s)* y seleccione *DESASOCIAR*.

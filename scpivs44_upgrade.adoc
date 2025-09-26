@@ -14,7 +14,7 @@ summary: Si utiliza el dispositivo virtual del plugin de SnapCenter para VMware 
 
 
 
-NOTE: La actualización a SCV 6,1 solo es compatible con VMware vCenter Server 7 update 1 y versiones posteriores, para VMware vCenter Server antes de la actualización 7 1, debe continuar usando SCV 4,7. La actualización no provoca interrupciones en versiones no compatibles de VMware vCenter Server.
+NOTE: La actualización a SCV 6.2 solo es compatible con VMware vCenter Server 7 actualización 1 y versiones posteriores; para VMware vCenter Server anterior a la versión 7 actualización 1, debe continuar usando SCV 4.7.  La actualización es disruptiva en versiones no compatibles del servidor VMware vCenter.
 
 Si utiliza el dispositivo virtual del plugin de SnapCenter para VMware vSphere, puede actualizar a una versión más reciente. El proceso de actualización cancela el registro del plugin existente e implementa un plugin que solo es compatible con vSphere 7.0U1 y versiones posteriores.
 
@@ -28,7 +28,10 @@ Si utiliza el dispositivo virtual del plugin de SnapCenter para VMware vSphere, 
 | Si tiene la versión del plugin de SnapCenter para VMware vSphere (SCV)... | Puede actualizar directamente el plugin de SnapCenter para VMware vSphere al... 
 
 
-| SCV 6,0 | Actualice a SCV 6,1 
+| SCV 6,1 | Actualización a SCV 6.2 
+
+
+| SCV 6,0 | Actualización a SCV 6.1 y SCV 6.2 
 
 
 | SCV 5,0 | Actualice a SCV 6,0 y SCV 6,1 
@@ -56,7 +59,7 @@ Para obtener la información más actualizada sobre las versiones compatibles, c
 .Pasos
 . Para preparar la actualización, deshabilite el plugin de SnapCenter para VMware vSphere.
 +
-.. Inicie sesión en la interfaz gráfica de usuario de gestión del plugin de SnapCenter para VMware vSphere. La dirección IP se muestra cuando implementa el plugin de SnapCenter para VMware vSphere.
+.. Inicie sesión en la interfaz de usuario de administración del SnapCenter Plug-in for VMware vSphere .  La dirección IP se muestra cuando se implementa el SnapCenter Plug-in for VMware vSphere.
 .. Seleccione *Configuración* en el panel de navegación izquierdo, y luego seleccione la opción *Servicio* en la sección Detalles del plugin para deshabilitar el plugin.
 
 
@@ -70,7 +73,7 @@ Para obtener la información más actualizada sobre las versiones compatibles, c
 . Instale la actualización.
 +
 .. En el explorador, desplácese hasta VMware vSphere vCenter.
-.. En la interfaz gráfica de usuario de vCenter, seleccione *vSphere client (HTML)*.
+.. En la interfaz de usuario de vCenter, seleccione *cliente vSphere (HTML)*.
 .. Inicie sesión en la página *VMware vCenter Single Sign-On*.
 .. En el panel del navegador, seleccione la VM que desea actualizar y, a continuación, seleccione la pestaña *Resumen*.
 .. En el panel *Objetos relacionados*, seleccione en cualquier almacén de datos de la lista y luego seleccione la pestaña *Resumen*.

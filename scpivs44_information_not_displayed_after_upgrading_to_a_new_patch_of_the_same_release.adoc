@@ -40,7 +40,7 @@ La caché se encuentra en las siguientes ubicaciones, según el tipo de sistema 
 
 == Solución alternativa si ya ha actualizado antes de borrar la caché
 
-. Inicie sesión en la interfaz gráfica de usuario de gestión del plugin de SnapCenter para VMware vSphere.
+. Inicie sesión en la interfaz de usuario de administración del SnapCenter Plug-in for VMware vSphere .
 +
 La dirección IP se muestra cuando implementa el plugin de SnapCenter para VMware vSphere.
 

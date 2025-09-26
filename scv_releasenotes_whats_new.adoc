@@ -1,29 +1,22 @@
 ---
 permalink: scv_releasenotes_whats_new.html 
 sidebar: sidebar 
-keywords: 'what"s new, release notes, scv, 6.1' 
-summary: Descubra las nuevas funcionalidades disponibles en el complemento SnapCenter para VMware vSphere 6,1. 
+keywords: 'what"s new, release notes, scv, 6.2' 
+summary: Obtenga información sobre las nuevas capacidades disponibles en el SnapCenter Plug-in for VMware vSphere 6.2. 
 ---
-= Novedades del plugin de SnapCenter para VMware vSphere 6,1
+= Novedades del SnapCenter Plug-in for VMware vSphere 6.2
 :allow-uri-read: 
 
 
 [role="lead"]
-*Soporte para VM y almacén de datos VMFS en sistemas ASA R2*
+Obtenga información sobre las nuevas capacidades disponibles en el SnapCenter Plug-in for VMware vSphere 6.2.
 
-La versión del plugin de SnapCenter para VMware vSphere 6,1 admite el aprovisionamiento de máquinas virtuales (VM) y almacén de datos VMFS en sistemas ASA R2. Los sistemas R2 de ASA ofrecen una solución de hardware y software unificada que crea una experiencia simplificada específica para las necesidades de los clientes de SAN exclusivamente. Las funciones compatibles del plugin de SnapCenter para VMware vSphere 6,1 para máquinas virtuales, almacenes de datos y formato de disco de máquina virtual (VMDK) en los sistemas ASA R2 incluyen:
+La versión 6.2 del SnapCenter Plug-in for VMware vSphere agrega compatibilidad con la copia de seguridad y la recuperación de máquinas virtuales (VM) en almacenes de datos VMFS para sistemas ASA r2 que ejecutan ONTAP 9.17.1 o posterior.  Con esta versión, puede realizar las siguientes operaciones para máquinas virtuales, almacenes de datos y formato de disco de máquina virtual (VMDK) en sistemas ASA r2:
 
-* Aprovisionamiento de grupos de consistencia para la protección primaria
-* Backup basado en grupo de consistencia
-* Flujos de trabajo de clonado
-* Restaure los flujos de trabajo
-* Aprovisionamiento de protección secundaria cuando crea o modifica el grupo de recursos.
-+
+* Grupos de consistencia de provisión para protección primaria
+* Realizar copias de seguridad basadas en grupos de consistencia
+* Utilice grupos de consistencia jerárquicos (disponibles con ONTAP 9.17.1 y versiones posteriores)
+* Ejecutar flujos de trabajo de clonación
+* Realizar flujos de trabajo de restauración
+* Proporcionar protección secundaria al crear o modificar grupos de recursos (disponible con ONTAP 9.16.1 y versiones posteriores)
 
-NOTE: La protección secundaria solo es compatible con ONTAP 9.16.1 y versiones posteriores
-
-
-
-*Soporte para instantáneas secundarias a prueba de manipulaciones (TPS)*
-
-El complemento de SnapCenter para VMware vSphere ofrece compatibilidad con TPS secundario, lo que garantiza que las copias Snapshot secundarias queden protegidas contra la eliminación o alteración de atacantes de ransomware o administradores malintencionados y que dichas copias estén disponibles incluso después de un ataque.

@@ -17,7 +17,7 @@ summary: Puede buscar y encontrar un backup específico de una máquina virtual 
 Puede buscar y encontrar un backup específico de una máquina virtual o de un almacén de datos con la ayuda del asistente Restore. Después de ubicar el backup, puede restaurarlo.
 
 .Pasos
-. En la GUI del cliente VMware vSphere, seleccione *Menú* en la barra de herramientas y, a continuación, realice una de las siguientes acciones:
+. En la interfaz de usuario del cliente VMware vSphere, seleccione *Menú* en la barra de herramientas y luego realice una de las siguientes acciones:
 +
 |===
 | Para ver copias de seguridad para… | Haga lo siguiente… 

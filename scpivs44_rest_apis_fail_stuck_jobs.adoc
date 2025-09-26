@@ -24,5 +24,5 @@ Utilice la siguiente API DE REST en la sección Jobs para cambiar los trabajos q
 | API REST | Comentarios 
 
 
-| `/4.1/jobs/{id}/failJobs` | Cuando se pasan los identificadores de los trabajos que se encuentran bloqueados en un estado en ejecución, `failJobs` marca esos trabajos como fallidos. Para identificar trabajos que están bloqueados en un estado en ejecución, use la GUI de monitor de trabajos para ver el estado de cada trabajo y su ID. 
+| `/4.1/jobs/{id}/failJobs` | Cuando pasas los identificadores de trabajos que están bloqueados en un estado de ejecución, `failJobs` marca esos trabajos como fallidos.  Para identificar trabajos que están estancados en un estado de ejecución, utilice la interfaz de usuario del monitor de trabajos para ver el estado de cada trabajo y su ID. 
 |===

@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: scpivs44_overview_of_different_snapcenter_guis.html 
 keywords:  
-summary: El plugin de SnapCenter para VMware vSphere es un plugin independiente que es diferente de otros plugins de SnapCenter. Debe utilizar la interfaz gráfica de usuario del cliente de VMware vSphere en vCenter para todas las operaciones de backup y restauración de máquinas virtuales, VMDK y almacenes de datos. 
+summary: El SnapCenter Plug-in for VMware vSphere es un complemento independiente que es diferente de otros complementos de SnapCenter .  Debe utilizar la interfaz de usuario del cliente VMware vSphere en vCenter para todas las operaciones de copia de seguridad y restauración de máquinas virtuales, VMDK y almacenes de datos. 
 ---
-= Descripción general de las distintas GUI de SnapCenter
+= Descripción general de las diferentes interfaces de usuario de SnapCenter
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -14,31 +14,31 @@ summary: El plugin de SnapCenter para VMware vSphere es un plugin independiente 
 
 
 [role="lead"]
-En el entorno de SnapCenter, es necesario usar la interfaz gráfica de usuario adecuada para realizar operaciones de protección de datos y gestión.
+En su entorno de SnapCenter , debe utilizar la interfaz de usuario adecuada para realizar operaciones de administración y protección de datos.
 
-El plugin de SnapCenter para VMware vSphere es un plugin independiente que es diferente de otros plugins de SnapCenter. Debe utilizar la interfaz gráfica de usuario del cliente de VMware vSphere en vCenter para todas las operaciones de backup y restauración de máquinas virtuales, VMDK y almacenes de datos. También se usa la consola de la interfaz gráfica de usuario del cliente web para supervisar la lista de máquinas virtuales protegidas y sin proteger. Para el resto de operaciones de plugins de SnapCenter (plugins basados en aplicaciones), como backup y restauración y supervisión de trabajos, se usa la interfaz gráfica de usuario de SnapCenter.
+El SnapCenter Plug-in for VMware vSphere es un complemento independiente que es diferente de otros complementos de SnapCenter .  Debe utilizar la interfaz de usuario del cliente VMware vSphere en vCenter para todas las operaciones de copia de seguridad y restauración de máquinas virtuales, VMDK y almacenes de datos.  También puede utilizar la interfaz de usuario del cliente web Dashboard para supervisar la lista de máquinas virtuales protegidas y no protegidas.  Para todas las demás operaciones de complementos de SnapCenter (complementos basados ​​en aplicaciones), como copias de seguridad, restauraciones y monitoreo de trabajos, utilice la interfaz de usuario de SnapCenter .
 
-Para proteger máquinas virtuales y almacenes de datos, se usa la interfaz de cliente de VMware vSphere. La interfaz gráfica de usuario del cliente web se integra con la tecnología Snapshot de NetApp en el sistema de almacenamiento. De esta forma, es posible realizar backup de máquinas virtuales y almacenes de datos en segundos y restaurar máquinas virtuales sin desconectar el host ESXi.
+Para proteger las máquinas virtuales y los almacenes de datos, utilice la interfaz de cliente VMware vSphere.  La interfaz de usuario del cliente web se integra con la tecnología de instantáneas de NetApp en el sistema de almacenamiento.  Esto le permite realizar copias de seguridad de máquinas virtuales y almacenes de datos en segundos y restaurar máquinas virtuales sin desconectar un host ESXi.
 
-También hay una interfaz gráfica de usuario de gestión para realizar operaciones administrativas en el plugin de SnapCenter para VMware vSphere.
+También hay una interfaz de usuario de administración para realizar operaciones administrativas en el SnapCenter Plug-in for VMware vSphere.
 
-La siguiente tabla muestra las operaciones que realiza la interfaz gráfica de usuario de SnapCenter.
+La siguiente tabla muestra las operaciones que realiza la interfaz de usuario de SnapCenter .
 
 |===
-| Utilice esta GUI… | Para ejecutar estas operaciones... | Y acceder a estos backups... 
+| Utilice esta interfaz de usuario… | Para ejecutar estas operaciones... | Y acceder a estos backups... 
 
 
-| Interfaz gráfica de usuario de SnapCenter vSphere Client | Backup de máquinas virtuales y almacenes de datos conectar y desvincular el montaje de almacén de datos y desmontar máquinas virtuales y la restauración de archivos invitados y carpetas de VMDK | Backups de máquinas virtuales y almacenes de datos mediante la interfaz gráfica de usuario del cliente de VMware vSphere. 
+| Interfaz de usuario del cliente vSphere de SnapCenter | Backup de máquinas virtuales y almacenes de datos conectar y desvincular el montaje de almacén de datos y desmontar máquinas virtuales y la restauración de archivos invitados y carpetas de VMDK | Copias de seguridad de máquinas virtuales y almacenes de datos mediante la interfaz de usuario del cliente VMware vSphere. 
 
 
-| Interfaz gráfica de usuario de SnapCenter | Backup y restauración de bases de datos y aplicaciones en máquinas virtuales, incluida la protección de bases de datos para Microsoft SQL Server, Microsoft Exchange y Oracle. Clon de la base de datos | Backups realizados desde la interfaz gráfica de usuario de SnapCenter. 
+| Interfaz de usuario de SnapCenter | Backup y restauración de bases de datos y aplicaciones en máquinas virtuales, incluida la protección de bases de datos para Microsoft SQL Server, Microsoft Exchange y Oracle. Clon de la base de datos | Copias de seguridad realizadas mediante la interfaz de usuario de SnapCenter . 
 
 
-| Interfaz gráfica de usuario de gestión del plugin de SnapCenter para VMware vSphere | Modificar la configuración de red generar un paquete de soporte Modificar la configuración del servidor NTP Deshabilitar/habilitar el plugin | N.A. 
+| SnapCenter Plug-in for VMware vSphere | Modificar la configuración de red generar un paquete de soporte Modificar la configuración del servidor NTP Deshabilitar/habilitar el plugin | N.A. 
 
 
-| Interfaz gráfica de usuario de vCenter | Añadir roles de SCV a usuarios de vCenter Active Directory Añadir acceso a recursos para usuarios o grupos | N.A. 
+| Interfaz de usuario de vCenter | Añadir roles de SCV a usuarios de vCenter Active Directory Añadir acceso a recursos para usuarios o grupos | N.A. 
 |===
-Para las operaciones de backup y restauración consistentes con las máquinas virtuales, se debe usar la interfaz gráfica de usuario del cliente VMware vSphere. Si bien es posible realizar algunas operaciones con las herramientas de VMware, por ejemplo, montar o cambiar el nombre de un almacén de datos, estas operaciones no se registrarán en el repositorio de SnapCenter y no se reconocerán.
+Para realizar operaciones de copia de seguridad y restauración consistentes con VM, debe utilizar la interfaz de usuario del cliente VMware vSphere.  Si bien es posible realizar algunas operaciones utilizando herramientas de VMware, por ejemplo, montar o cambiar el nombre de un almacén de datos, esas operaciones no se registrarán en el repositorio de SnapCenter y no se reconocerán.
 
-SnapCenter no admite copias Snapshot individuales de bases de datos y máquinas virtuales. Los backups de máquinas virtuales y bases de datos deben programarse y ejecutarse por separado, lo cual crea copias de Snapshot independientes incluso si las bases de datos y las máquinas virtuales están alojadas en el mismo volumen. Los backups basados en aplicaciones deben programarse desde la interfaz gráfica de usuario de SnapCenter. Los backups consistentes con las máquinas virtuales deben programarse desde la interfaz gráfica de usuario del cliente de VMware vSphere.
+SnapCenter no admite instantáneas individuales de bases de datos y máquinas virtuales juntas.  Las copias de seguridad de las máquinas virtuales y las bases de datos deben programarse y ejecutarse de forma independiente, lo que crea instantáneas separadas incluso si las bases de datos y las máquinas virtuales están alojadas en el mismo volumen.  Las copias de seguridad basadas en aplicaciones deben programarse mediante la interfaz de usuario de SnapCenter ; las copias de seguridad consistentes con máquinas virtuales deben programarse mediante la interfaz de usuario del cliente VMware vSphere.

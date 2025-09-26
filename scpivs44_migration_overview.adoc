@@ -54,7 +54,7 @@ El cmdlet hace lo siguiente:
 ** Crea programaciones de backup para backups posteriores a la migración.
 ** Desinstala el plugin de SnapCenter para VMware vSphere existente del host de Windows.
 +
-Si el plugin de SnapCenter para VMware vSphere está instalado en el host de SnapCenter Server y la protección está configurada para el repositorio de SnapCenter, el proceso de migración también desinstala el paquete de plugins basado en Windows que contiene el plugin de SnapCenter para VMware vSphere y el plugin de SnapCenter para Windows, y, a continuación, reinstala la versión más reciente del plugin de SnapCenter para Windows para admitir la protección de repositorios. El tipo de host de la interfaz gráfica de usuario de SnapCenter cambia de "vsphere" a "Windows".
+Si el SnapCenter Plug-in for VMware vSphere está instalado en el host de SnapCenter Server y la protección está configurada para el repositorio de SnapCenter , el proceso de migración también desinstala el paquete de complemento basado en Windows que contiene el SnapCenter Plug-in for VMware vSphere y el complemento de SnapCenter para Windows, y luego reinstala la última versión del complemento de SnapCenter para Windows para admitir la protección del repositorio.  El tipo de host en la interfaz de usuario de SnapCenter cambia de “vsphere” a “Windows”.
 
 ** Quita el host de vSphere y los grupos de recursos de Windows SnapCenter Server.
 ** Activa los trabajos de backup en el plugin de SnapCenter para VMware vSphere basado en Linux.

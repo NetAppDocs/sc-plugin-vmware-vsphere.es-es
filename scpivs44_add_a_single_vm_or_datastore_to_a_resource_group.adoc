@@ -20,7 +20,7 @@ Puede añadir rápidamente una sola máquina virtual o un almacén de datos a cu
 Puede añadir almacenes de datos SAN y NAS, pero no VSAN o VVOL.
 
 .Pasos
-. En la GUI del cliente vSphere, seleccione *Menú* en la barra de herramientas y desplácese a la máquina virtual o al almacén de datos que desee agregar.
+. En la interfaz de usuario del cliente vSphere, seleccione *Menú* en la barra de herramientas y navegue hasta la máquina virtual o el almacén de datos que desea agregar.
 . En el panel de navegación de la izquierda, haga clic con el botón derecho en la máquina virtual o el almacén de datos, seleccione *SnapCenter Plug-in for VMware vSphere* > *Add to Resource Group* en la lista desplegable secundaria.
 +
 En primer lugar, el sistema comprueba que SnapCenter gestiona y es compatible con el sistema de almacenamiento en el que se encuentra la VM seleccionada y, a continuación, muestra la página *Agregar al grupo de recursos*. Si el mensaje `SnapCenter Compatibility Error` Se muestra, la máquina virtual seleccionada no es compatible con SnapCenter y, primero, debe añadir la máquina virtual de almacenamiento adecuada a SnapCenter.

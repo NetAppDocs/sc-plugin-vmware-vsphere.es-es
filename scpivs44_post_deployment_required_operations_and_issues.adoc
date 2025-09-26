@@ -43,7 +43,7 @@ Si es un usuario de SnapCenter nuevo, debe añadir máquinas virtuales de almace
 
 Para corregir cualquiera de estos problemas, haga lo siguiente:
 
-. Borre la caché del explorador y luego compruebe si la interfaz gráfica de usuario funciona correctamente.
+. Borre la memoria caché del navegador y luego verifique si la interfaz de usuario funciona correctamente.
 +
 Si el problema persiste, reinicie el servicio del cliente de VMware vSphere
 
@@ -57,7 +57,7 @@ Si el problema persiste, reinicie el servicio del cliente de VMware vSphere
 Si no se utilizan las credenciales de administrador, es posible recibir un error de autenticación después de implementar el plugin de SnapCenter para VMware vSphere o después de migrar. Si se encuentra con un error de autenticación, debe reiniciar el servicio.
 
 .Pasos
-. Inicie sesión en la interfaz gráfica de usuario de gestión del plugin de SnapCenter para VMware vSphere con el formato `\https://<appliance-IP-address>:8080`. Use el nombre de usuario de administrador, la contraseña y los detalles del token de MFA para iniciar sesión. El token MFA se puede generar desde la consola de mantenimiento.
+. Inicie sesión en la interfaz de usuario de administración del SnapCenter Plug-in for VMware vSphere usando el formato `\https://<appliance-IP-address>:8080` .  Utilice el nombre de usuario de administrador, la contraseña y los detalles del token MFA para iniciar sesión.  El token MFA se puede generar desde la consola de mantenimiento.
 . Reinicie el servicio.
 
 
@@ -73,7 +73,7 @@ Si desea realizar flujos de trabajo de aplicación en VMDK en SnapCenter (flujos
 
 
 .Acerca de esta tarea
-* Para registrar el plugin de SnapCenter para VMware vSphere en SnapCenter Server, se utiliza la interfaz gráfica de usuario de SnapCenter con el fin de añadir un host de tipo "vsphere".
+* Puede registrar el SnapCenter Plug-in for VMware vSphere con SnapCenter Server mediante la interfaz de usuario de SnapCenter para agregar un host de tipo “vSphere”.
 +
 El puerto 8144 está predefinido para la comunicación dentro del plugin de SnapCenter para VMware vSphere.
 
@@ -84,7 +84,7 @@ Puede registrar varias instancias del plugin de SnapCenter para VMware vSphere e
 
 
 .Pasos
-. En el panel de navegación izquierdo de la GUI de SnapCenter, seleccione *HOSTS*.
+. En el panel de navegación izquierdo de la interfaz de usuario de SnapCenter , seleccione *Hosts*.
 . Compruebe que la ficha *Managed hosts* está seleccionada en la parte superior y, a continuación, busque el nombre de host del dispositivo virtual y compruebe que se resuelve desde el servidor SnapCenter.
 . Seleccione *Agregar* para iniciar el asistente.
 . En el cuadro de diálogo *Agregar hosts*, especifique el host que desea agregar al servidor SnapCenter como se indica en la siguiente tabla:

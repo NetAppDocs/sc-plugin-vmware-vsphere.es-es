@@ -35,7 +35,7 @@ Para configurar RBAC en vCenter Server, el administrador de vSphere debe ejecuta
 * Configurar los permisos de vCenter Server para el objeto raíz (también denominado carpeta raíz). Posteriormente, es posible refinar la seguridad aplicando restricciones a entidades secundarias que no necesitan los mismos permisos.
 * Asignar los roles de SCV a usuarios de Active Directory.
 +
-Como mínimo, todos los usuarios deben poder ver los objetos de vCenter. Sin este privilegio, los usuarios no tienen acceso a la interfaz gráfica de usuario del cliente de VMware vSphere.
+Como mínimo, todos los usuarios deben poder ver los objetos de vCenter.  Sin este privilegio, los usuarios no pueden acceder a la interfaz de usuario del cliente VMware vSphere.
 
 
 

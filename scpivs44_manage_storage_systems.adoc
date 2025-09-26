@@ -25,7 +25,7 @@ Es posible usar el cliente de VMware vSphere para modificar las configuraciones 
 Si modifica una máquina virtual de almacenamiento que se agregó automáticamente como parte de un clúster (lo que a veces se denomina equipo virtual de almacenamiento implícito), entonces ese equipo virtual de almacenamiento cambia a un equipo virtual de almacenamiento explícito y se puede eliminar por separado sin cambiar el resto de los equipos virtuales de almacenamiento de ese clúster. En la página Storage Systems, el nombre de usuario se muestra como N/A cuando el método de autenticación se realiza a través del certificado; los nombres de usuario solo se muestran para las máquinas virtuales de almacenamiento explícitas en la lista de clústeres y tienen el indicador ExplicitSVM establecido en true. Todas las máquinas virtuales de almacenamiento siempre se enumeran en el clúster asociado.
 
 
-IMPORTANT: Si añadió máquinas virtuales de almacenamiento para operaciones de protección de datos basadas en aplicaciones mediante la interfaz gráfica de usuario de SnapCenter, tendrá que usar la misma interfaz gráfica de usuario para modificar dichas máquinas virtuales de almacenamiento.
+IMPORTANT: Si agregó máquinas virtuales de almacenamiento para operaciones de protección de datos basadas en aplicaciones mediante la interfaz de usuario de SnapCenter , debe usar la misma interfaz de usuario para modificar esas máquinas virtuales de almacenamiento.
 
 .Pasos
 . En el panel de navegación izquierdo del plug-in SCV, seleccione *Sistemas de almacenamiento*.
@@ -40,7 +40,7 @@ IMPORTANT: Si añadió máquinas virtuales de almacenamiento para operaciones de
 Se puede usar el cliente de VMware vSphere para quitar máquinas virtuales de almacenamiento del inventario en vCenter.
 
 
-NOTE: Si añadió máquinas virtuales de almacenamiento para operaciones de protección de datos basadas en aplicaciones mediante la interfaz gráfica de usuario de SnapCenter, tendrá que usar la misma interfaz gráfica de usuario para modificar dichas máquinas virtuales de almacenamiento.
+NOTE: Si agregó máquinas virtuales de almacenamiento para operaciones de protección de datos basadas en aplicaciones mediante la interfaz de usuario de SnapCenter , debe usar la misma interfaz de usuario para modificar esas máquinas virtuales de almacenamiento.
 
 .Antes de empezar
 Es necesario desmontar todos los almacenes de datos que haya en la máquina virtual de almacenamiento antes de quitarla.

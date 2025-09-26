@@ -28,7 +28,11 @@ Se admiten scripts Perl y shell. Los scripts de shell deben comenzar por `!/bin/
 
 El plugin de SnapCenter para VMware vSphere ejecuta los scripts previos y posteriores. Por lo tanto, los scripts deben encontrarse en el OVA del plugin de SnapCenter para VMware vSphere, con permisos ejecutables.
 
-Por ejemplo: * Puede haber una ruta DE scripts PERL `/support/support/script.pl`* Una ruta de comandos de shell puede ser `/support/support/script.sh`
+Por ejemplo:
+
+* Una ruta de script PERL podría ser `/support/support/script.pl`
+* Una ruta de script de shell podría ser `/support/support/script.sh`
+
 
 La ruta de acceso del script se valida en el momento en que se ejecuta el script.
 
@@ -64,7 +68,11 @@ Los scripts posteriores se ejecutan en la fase POST_BACKUP de la operación, una
 
 NOTE: Si el script posterior falla, el backup se completa correctamente y se envía un mensaje de advertencia.
 
-Compruebe lo siguiente para verificar que los valores de la secuencia de comandos están llenos: * Para secuencias DE comandos PERL: `/support/support/log_env.log`* Para scripts de shell: `/support/support/log_file.log`
+Verifique lo siguiente para verificar que los valores del script estén completos:
+
+* Para scripts PERL: `/support/support/log_env.log`
+* Para scripts de shell: `/support/support/log_file.log`
+
 
 
 

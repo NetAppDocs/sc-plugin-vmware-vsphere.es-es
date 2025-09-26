@@ -16,9 +16,9 @@ summary: Una vez que ya no se necesita el acceso a los archivos del almacén de 
 [role="lead"]
 Una vez que ya no se necesita el acceso a los archivos del almacén de datos, es posible desmontar un backup.
 
-Si un backup se muestra como montado en la interfaz gráfica de usuario del cliente de VMware vSphere, pero no aparece en la pantalla de desmontaje de backup, se debe usar la API DE REST `/backup/{backup-Id}/cleanup` para limpiar los almacenes de datos desvinculados y luego vuelva a intentar realizar el procedimiento de desmontaje.
+Si una copia de seguridad aparece como montada en la interfaz de usuario del cliente VMware vSphere, pero no aparece en la pantalla de desmontaje de copia de seguridad, entonces debe usar la API REST. `/backup/{backup-Id}/cleanup` para limpiar los almacenes de datos fuera de límites y luego intentar el procedimiento de desmontaje nuevamente.
 
-Si se intenta montar una copia de backup de un almacén de datos NFS en una máquina virtual de almacenamiento (SVM) con el volumen raíz en una relación de reflejo de distribución de cargas, es posible que se encuentre con el error `You may have reached the maximum number of NFS volumes configured in the vCenter. Check the vSphere Client for any error messages.` Para evitar este problema, cambie la configuración del número máximo de volúmenes. Para ello, vaya a *ESX* > *Manage* > *Settings* > *Advance System Settings* y cambie el valor NFS.MaxVolumes. El valor máximo es 256.
+Si intenta montar una copia de seguridad de un almacén de datos NFS en una máquina virtual de almacenamiento (SVM) con el volumen raíz en una relación de espejo de uso compartido de carga, es posible que encuentre el error `You might have reached the maximum number of NFS volumes configured in the vCenter. Check the vSphere Client for any error messages.` Para evitar este problema, cambie la configuración de volúmenes máximos navegando a *ESX* > *Administrar* > *Configuración* > *Configuración avanzada del sistema* y cambiando el valor NFS.MaxVolumes.  El valor máximo es 256.
 
 .Pasos
 . En la página de accesos directos del cliente de VMware vSphere, seleccione *Storage*.

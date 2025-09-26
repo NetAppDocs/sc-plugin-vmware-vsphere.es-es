@@ -17,7 +17,7 @@ summary: Es posible modificar los ajustes de red configurados en el plugin de Sn
 Es posible modificar los ajustes de red configurados en el plugin de SnapCenter para VMware vSphere. El plugin utiliza estos ajustes para acceder a vCenter.
 
 .Antes de empezar
-Debe conocer la dirección IP y las credenciales de inicio de sesión de la interfaz gráfica de usuario de gestión del plugin de SnapCenter para VMware vSphere. También debe anotar el token MFA generado desde la consola de mantenimiento.
+Debe conocer la dirección IP y las credenciales de inicio de sesión para la interfaz de usuario de administración del SnapCenter Plug-in for VMware vSphere .  También debes anotar el token MFA generado desde la consola de mantenimiento.
 
 * La dirección IP se mostró cuando se implementó el plugin de SnapCenter para VMware vSphere.
 * Use las credenciales de inicio de sesión que se proporcionan durante la implementación del plugin de SnapCenter para VMware vSphere o como se modifican posteriormente.
@@ -25,13 +25,13 @@ Debe conocer la dirección IP y las credenciales de inicio de sesión de la inte
 
 
 .Pasos
-. Inicie sesión en la interfaz gráfica de usuario de gestión del plugin de SnapCenter para VMware vSphere.
+. Inicie sesión en la interfaz de usuario de administración del SnapCenter Plug-in for VMware vSphere .
 +
 Utilice el formato `\https://<appliance-IP-address>:8080`
 
 . Seleccione el icono Configuración en la barra de herramientas superior.
 +
-image:scpivs44_image31.png["Interfaz gráfica de usuario de gestión del plugin de SnapCenter para VMware vSphere"]
+image:scpivs44_image31.png["SnapCenter Plug-in for VMware vSphere"]
 
 . En la página *Ajustes*, en la sección *Ajustes de red*, selecciona *IPv4* o *IPv6* y, a continuación, selecciona *Editar*.
 +

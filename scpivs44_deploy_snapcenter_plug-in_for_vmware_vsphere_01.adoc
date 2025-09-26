@@ -71,11 +71,11 @@ NOTE: Todos los hosts deben configurarse con direcciones IP (no se admiten los n
 Puede que la puesta en marcha tarde unos minutos en completarse. La implementación correcta se indica cuando se enciende el plugin de SnapCenter para VMware vSphere, las herramientas de VMware están instaladas y la pantalla le solicita que inicie sesión en el plugin de SnapCenter para VMware vSphere.
 
 +
-La pantalla muestra la dirección IP donde se implementó el plugin de SnapCenter para VMware vSphere. Anote la dirección IP. Necesita iniciar sesión en la interfaz gráfica de usuario de gestión del plugin de SnapCenter para VMware vSphere si desea realizar cambios en la configuración del plugin de SnapCenter para VMware vSphere.
+La pantalla muestra la dirección IP donde está implementado el SnapCenter Plug-in for VMware vSphere .  Tome nota de la dirección IP.  Debe iniciar sesión en la interfaz de usuario de administración del SnapCenter Plug-in for VMware vSphere si desea realizar cambios en la configuración del SnapCenter Plug-in for VMware vSphere .
 
-. Inicie sesión en la interfaz gráfica de usuario de gestión del plugin de SnapCenter para VMware vSphere mediante la dirección IP que se muestra en la pantalla de puesta en marcha con las credenciales proporcionadas en el asistente de puesta en marcha y, a continuación, compruebe en la consola que el plugin de SnapCenter para VMware vSphere se haya conectado correctamente a vCenter y esté habilitado.
+. Inicie sesión en la interfaz de usuario de administración del SnapCenter Plug-in for VMware vSphere usando la dirección IP que se muestra en la pantalla de implementación y las credenciales que proporcionó en el asistente de implementación; luego, verifique en el Panel de control que el SnapCenter Plug-in for VMware vSphere esté conectado correctamente a vCenter y esté habilitado.
 +
-Utilice el formato `\https://<appliance-IP-address>:8080` Para acceder a la GUI de gestión.
+Utilice el formato `\https://<appliance-IP-address>:8080` para acceder a la interfaz de usuario de gestión.
 
 +
 Inicie sesión con el nombre de usuario y la contraseña de administrador establecidos en el momento de la implementación y el token de MFA generado con la consola de mantenimiento.

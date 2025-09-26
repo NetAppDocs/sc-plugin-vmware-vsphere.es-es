@@ -18,6 +18,6 @@ El plugin de SnapCenter para VMware vSphere ofrece un nivel adicional de control
 
 El control de acceso basado en roles de SnapCenter y ONTAP se aplica únicamente a los trabajos coherentes con las aplicaciones (aplicación a través de VMDK) del servidor de SnapCenter. Si se utiliza el plugin de SnapCenter para VMware vSphere para admitir trabajos consistentes con la aplicación SnapCenter, debe asignar el rol SnapCenterAdmin; no puede cambiar los permisos del rol SnapCenterAdmin.
 
-El plugin de SnapCenter para VMware vSphere incluye roles de vCenter predefinidos. Para ejecutar operaciones de SnapCenter, es necesario usar la interfaz gráfica de usuario de vCenter para añadir estos roles a los usuarios de vCenter Active Directory.
+El SnapCenter Plug-in for VMware vSphere se entrega con roles de vCenter predefinidos.  Debe utilizar la interfaz de usuario de vCenter para agregar estos roles a los usuarios de Active Directory de vCenter para realizar operaciones de SnapCenter .
 
 Es posible crear y modificar roles, así como añadir acceso a recursos para los usuarios en cualquier momento. Sin embargo, cuando se configura el plugin de SnapCenter para VMware vSphere por primera vez, es necesario añadir al menos algunos usuarios o grupos de Active Directory a roles, y luego otorgar acceso a recursos a esos usuarios o grupos.

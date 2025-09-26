@@ -14,7 +14,7 @@ summary: Para realizar operaciones de restauración de backups de máquinas virt
 
 
 [role="lead"]
-Para realizar operaciones de restauración de backups de máquinas virtuales mediante las API DE REST del plugin de SnapCenter para VMware vSphere, debe seguir la secuencia prescrita de las llamadas de API de REST.
+Para restaurar copias de seguridad de máquinas virtuales con el SnapCenter Plug-in for VMware vSphere , siga la secuencia requerida de llamadas a la API REST como se describe a continuación.
 
 Para cada API REST, añada `\https://<server>:<port>` En la parte frontal de la API DE REST para formar un extremo completo.
 

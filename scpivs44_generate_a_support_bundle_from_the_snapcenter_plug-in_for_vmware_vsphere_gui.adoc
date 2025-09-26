@@ -2,9 +2,9 @@
 sidebar: sidebar 
 permalink: scpivs44_generate_a_support_bundle_from_the_snapcenter_plug-in_for_vmware_vsphere_gui.html 
 keywords:  
-summary: Puede generar un paquete de soporte desde la interfaz gráfica de usuario del plugin de SnapCenter para VMware vSphere. 
+summary: Puede generar un paquete de soporte desde la interfaz de usuario del SnapCenter Plug-in for VMware vSphere . 
 ---
-= Genere un paquete de soporte desde la interfaz gráfica de usuario del plugin de SnapCenter para VMware vSphere
+= Genere un paquete de soporte desde la interfaz de usuario del SnapCenter Plug-in for VMware vSphere
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
@@ -15,7 +15,7 @@ summary: Puede generar un paquete de soporte desde la interfaz gráfica de usuar
 
 .Antes de empezar
 [role="lead"]
-Para iniciar sesión en la interfaz gráfica de usuario de gestión del plugin de SnapCenter para VMware vSphere, debe conocer la dirección IP y las credenciales de inicio de sesión. También debe anotar el token MFA generado desde la consola de mantenimiento.
+Para iniciar sesión en la interfaz de usuario de administración del SnapCenter Plug-in for VMware vSphere , debe conocer la dirección IP y las credenciales de inicio de sesión.  También debes anotar el token MFA generado desde la consola de mantenimiento.
 
 * La dirección IP se mostró cuando se implementó el plugin de SnapCenter para VMware vSphere.
 * Use las credenciales de inicio de sesión que se proporcionan durante la implementación del plugin de SnapCenter para VMware vSphere o como se modifican posteriormente.
@@ -23,7 +23,7 @@ Para iniciar sesión en la interfaz gráfica de usuario de gestión del plugin d
 
 
 .Pasos
-. Inicie sesión en la interfaz gráfica de usuario del plugin de SnapCenter para VMware vSphere.
+. Inicie sesión en la interfaz de usuario del SnapCenter Plug-in for VMware vSphere .
 +
 Utilice el formato `\https://<OVA-IP-address>:8080`.
 

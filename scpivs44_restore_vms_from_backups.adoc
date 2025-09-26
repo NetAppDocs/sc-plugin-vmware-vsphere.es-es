@@ -97,7 +97,7 @@ Aunque una snapshot de consistencia de VMware arroje un fallo para una máquina 
 
 
 .Pasos
-. En la GUI del cliente VMware vSphere, seleccione *Menú* en la barra de herramientas y, a continuación, seleccione *VMs and Templates* en la lista desplegable.
+. En la interfaz de usuario del cliente VMware vSphere, seleccione *Menú* en la barra de herramientas y, a continuación, seleccione *Máquinas virtuales y plantillas* en la lista desplegable.
 +
 
 NOTE: Si va a restaurar una máquina virtual eliminada, las credenciales de la máquina virtual de almacenamiento que se añadieron al plugin de SnapCenter para VMware vSphere deben ser `vsadmin` o una cuenta de usuario que tenga todos los mismos privilegios que `vsadmin`el .
