@@ -32,6 +32,7 @@ La implementación del plugin de SnapCenter para VMware vSphere crea los siguien
 
 Para configurar RBAC en vCenter Server, el administrador de vSphere debe ejecutar los siguientes pasos:
 
+* Puede asociar usuarios con roles predefinidos en permisos globales.
 * Configurar los permisos de vCenter Server para el objeto raíz (también denominado carpeta raíz). Posteriormente, es posible refinar la seguridad aplicando restricciones a entidades secundarias que no necesitan los mismos permisos.
 * Asignar los roles de SCV a usuarios de Active Directory.
 +
