@@ -29,7 +29,7 @@ El complemento SnapCenter para VMware vSphere 4.5 y versiones posteriores admite
 Debe añadir clústeres de almacenamiento al plugin de SnapCenter para VMware vSphere y herramientas ONTAP para VMware vSphere para que la protección de datos de VVOL funcione.
 
 +
-Para obtener más información, consulte la documentación de las herramientas de ONTAP para VMware vSphere. Además, consulte la https://imt.netapp.com/matrix/imt.jsp?components=134348;&solution=1517&isHWU&src=IMT["Herramienta de matriz de interoperabilidad de NetApp"^] información más reciente sobre las versiones compatibles en las herramientas de ONTAP.
+Para obtener más información, consulte la documentación de las ONTAP tools for VMware vSphere . Además, consulte https://imt.netapp.com/imt/imt.jsp?components=180121;&solution=1517&isHWU&src=IMT["Herramienta de matriz de interoperabilidad de NetApp"^] para obtener la información más reciente sobre las versiones compatibles con las herramientas ONTAP .
 
 
 

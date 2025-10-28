@@ -41,7 +41,7 @@ IMPORTANT: No se deben añadir máquinas virtuales que estén en estado inaccesi
 .Antes de empezar
 Las herramientas de ONTAP para VMware deben ponerse en marcha antes de crear un grupo de recursos que contenga máquinas virtuales de VVol.
 
-Para obtener más información, consulte la documentación de las ONTAP tools for VMware vSphere .  Para versiones compatibles, visite https://imt.netapp.com/matrix/imt.jsp?components=134348;&solution=1517&isHWU&src=IMT["Herramienta de matriz de interoperabilidad de NetApp"^] .
+Para obtener más información, consulte la documentación de las ONTAP tools for VMware vSphere . Para versiones compatibles, visite https://imt.netapp.com/imt/imt.jsp?components=180121;&solution=1517&isHWU&src=IMT["Herramienta de matriz de interoperabilidad de NetApp"^] .
 
 .Acerca de esta tarea
 * Puede agregar o eliminar recursos de un grupo de recursos en cualquier momento.
@@ -229,7 +229,7 @@ NOTE: Si la operación de inactividad falla para cualquiera de las máquinas vir
 
 == Gestione los fallos de comprobación de compatibilidad
 
-SnapCenter realiza comprobaciones de compatibilidad cuando se intenta crear un grupo de recursos. Consulte siempre https://imt.netapp.com/matrix/imt.jsp?components=134348;&solution=1517&isHWU&src=IMT["Herramienta de matriz de interoperabilidad de NetApp (IMT)"^] la información más reciente sobre el soporte de SnapCenter. Estos pueden ser los motivos de la incompatibilidad:
+SnapCenter realiza comprobaciones de compatibilidad cuando intenta crear un grupo de recursos. Consulte siempre https://imt.netapp.com/imt/imt.jsp?components=180121;&solution=1517&isHWU&src=IMT["Herramienta de matriz de interoperabilidad de NetApp (IMT)"^] para obtener la información más reciente sobre el soporte de SnapCenter . Las razones de incompatibilidad podrían ser:
 
 * Un dispositivo PCI compartido está conectado a una máquina virtual.
 * La dirección IP preferida no está configurada en SnapCenter.

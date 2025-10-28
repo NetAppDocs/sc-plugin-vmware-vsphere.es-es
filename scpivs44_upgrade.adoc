@@ -54,7 +54,7 @@ TIP: Realice un backup del OVA del plugin de SnapCenter para VMware vSphere ante
 
 NOTE: No se admite el cambio de la configuración de red de estática a DHCP.
 
-Para obtener la información más actualizada sobre las versiones compatibles, consulte https://imt.netapp.com/matrix/imt.jsp?components=134348;&solution=1517&isHWU&src=IMT["Herramienta de matriz de interoperabilidad de NetApp"^] (IMT).
+Para obtener la información más reciente sobre las versiones compatibles, consulte https://imt.netapp.com/imt/imt.jsp?components=180121;&solution=1517&isHWU&src=IMT["Herramienta de matriz de interoperabilidad de NetApp"^] (IMT).
 
 .Pasos
 . Para preparar la actualización, deshabilite el plugin de SnapCenter para VMware vSphere.
