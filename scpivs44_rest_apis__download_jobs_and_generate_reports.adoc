@@ -4,7 +4,7 @@ permalink: scpivs44_rest_apis__download_jobs_and_generate_reports.html
 keywords:  
 summary: Para generar informes y descargar registros para trabajos de cliente de VMware vSphere mediante la API DE REST del plugin de SnapCenter para VMware vSphere, debe usar las llamadas de API de REST para VMware vSphere. 
 ---
-= API DE REST para descargar trabajos y generar informes
+= API de REST para descargar trabajos y generar informes en el SCV
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

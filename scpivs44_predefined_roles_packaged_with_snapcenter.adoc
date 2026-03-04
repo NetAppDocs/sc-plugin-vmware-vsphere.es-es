@@ -4,7 +4,7 @@ permalink: scpivs44_predefined_roles_packaged_with_snapcenter.html
 keywords:  
 summary: Para simplificar el uso del control de acceso basado en roles de vCenter Server, el plugin de SnapCenter para VMware vSphere ofrece un conjunto de roles predefinidos que permiten que los usuarios ejecuten tareas de SnapCenter. También hay un rol de solo lectura que permite a los usuarios ver la información de SnapCenter, pero no ejecutar tareas. 
 ---
-= Roles predefinidos del plugin de SnapCenter para VMware vSphere
+= Funciones predefinidas incluidas con el SCV
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

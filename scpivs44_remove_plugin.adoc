@@ -4,7 +4,7 @@ permalink: scpivs44_remove_plugin.html
 keywords:  
 summary: Si ya no necesita utilizar las funciones de protección de datos de SnapCenter, debe deshabilitar el plugin de SnapCenter para VMware vSphere para cancelar el registro en vCenter, luego quitar el plugin de SnapCenter para VMware vSphere de vCenter y, a continuación, eliminar manualmente los archivos restantes. 
 ---
-= Quite el plugin de SnapCenter para VMware vSphere
+= Elimina el SnapCenter Plug-in for VMware vSphere
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

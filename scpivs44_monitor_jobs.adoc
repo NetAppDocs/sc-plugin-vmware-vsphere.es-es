@@ -4,7 +4,7 @@ permalink: scpivs44_monitor_jobs.html
 keywords:  
 summary: Después de ejecutar una operación de protección de datos mediante el cliente VMware vSphere, es posible supervisar el estado del trabajo y ver sus detalles desde la pestaña Job Monitor en Dashboard. 
 ---
-= Supervisar trabajos
+= Supervisa los trabajos en el SnapCenter Plug-in for VMware vSphere
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

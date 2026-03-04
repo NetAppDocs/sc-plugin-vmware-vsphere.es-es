@@ -4,7 +4,7 @@ permalink: scpivs44_rest_api_workflow__restore_vmdks.html
 keywords:  
 summary: Para realizar operaciones de restauración para VMDK mediante las API DE REST del plugin de SnapCenter para VMware vSphere, debe seguir la secuencia prescrita de llamadas de API de REST. 
 ---
-= Flujo de trabajo de API de REST para restaurar VMDK
+= Flujo de trabajo de API de REST para restaurar VMDKs usando el SCV
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -4,7 +4,7 @@ permalink: scpivs44_deployment_workflow_for_new_users.html
 keywords:  
 summary: Puede usar este flujo de trabajo si no utilizó SnapCenter antes y no posee backups de SnapCenter. 
 ---
-= Flujo de trabajo de puesta en marcha para nuevos usuarios
+= Flujo de trabajo de implementación para nuevos usuarios de SnapCenter
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

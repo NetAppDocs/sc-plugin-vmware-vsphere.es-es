@@ -4,7 +4,7 @@ permalink: scpivs44_restore_vmdks_from_backups.html
 keywords:  
 summary: Puede restaurar VMDK existentes, eliminados o desvinculados desde un backup primario o secundario de máquinas virtuales tradicionales o de VVol. 
 ---
-= Restaurar VMDK desde backups
+= Restaura VMDK desde copias de seguridad usando el SCV
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

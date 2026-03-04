@@ -4,7 +4,7 @@ permalink: scpivs44_modify_the_time_zones.html
 keywords:  
 summary: Cuando se configura una programación de copia de seguridad para un grupo de recursos del SnapCenter Plug-in for VMware vSphere , la programación se establece automáticamente para la zona horaria en la que se implementa el SnapCenter Plug-in for VMware vSphere .  Puede modificar esa zona horaria mediante la interfaz de usuario de administración o la consola de mantenimiento del SnapCenter Plug-in for VMware vSphere . 
 ---
-= Modifique las zonas horarias para los backups
+= Modifica los husos horarios de las copias de seguridad en el SCV
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

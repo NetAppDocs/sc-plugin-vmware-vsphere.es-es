@@ -4,7 +4,7 @@ permalink: scpivs44_restore_a_specific_backup_of_the_mysql_database.html
 keywords:  
 summary: 'Puede utilizar la consola de mantenimiento para restaurar un backup específico de la base de datos de MySQL (también denominada base de datos NSM) para el dispositivo virtual del plugin de SnapCenter para VMware vSphere.' 
 ---
-= Restaurar un backup específico de la base de datos de MySQL
+= Restaura una copia de seguridad específica de la base de datos MySQL de SCV
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

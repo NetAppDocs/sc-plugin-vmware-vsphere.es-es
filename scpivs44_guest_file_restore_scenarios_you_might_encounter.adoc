@@ -4,7 +4,7 @@ permalink: scpivs44_guest_file_restore_scenarios_you_might_encounter.html
 keywords:  
 summary: Al intentar restaurar un archivo invitado, puede encontrar situaciones en las que la sesión de restauración de archivos invitados está vacía, falla en la operación de asociación de disco para restauración de archivos invitados, o los backups no se desvinculan después de abandonar la sesión de restauración de archivos invitados. 
 ---
-= Situaciones en las que se puede encontrar la restauración de archivos invitados
+= Escenarios de restauración de archivos de invitado en el SCV
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

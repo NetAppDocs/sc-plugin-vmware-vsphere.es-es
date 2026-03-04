@@ -4,7 +4,7 @@ permalink: scpivs44_access_reports.html
 keywords:  
 summary: Es posible solicitar informes de uno o varios trabajos de en la consola. 
 ---
-= Acceder a informes
+= Accede a los informes en el SnapCenter Plug-in for VMware vSphere
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

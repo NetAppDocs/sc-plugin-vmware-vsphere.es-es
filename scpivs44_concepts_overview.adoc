@@ -4,7 +4,7 @@ permalink: scpivs44_concepts_overview.html
 keywords:  
 summary: 'El complemento de SnapCenter para VMware vSphere es un dispositivo virtual independiente (formato de dispositivo virtual abierto) que ofrece servicios de protección de datos para máquinas virtuales y almacenes de datos, y es compatible con servicios de protección de datos para plugins basados en aplicaciones de SnapCenter. Este documento describe cómo poner en marcha y utilizar el plugin de SnapCenter para VMware vSphere, e incluye información de inicio rápido.' 
 ---
-= Información general del producto
+= Conoce el SnapCenter Plug-in para VMware vSphere
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

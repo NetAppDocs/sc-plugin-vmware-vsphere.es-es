@@ -4,7 +4,7 @@ permalink: scpivs44_rest_api_workflow__restore_deleted_vms.html
 keywords:  
 summary: Para realizar operaciones de restauración de backups de máquinas virtuales mediante las API DE REST del plugin de SnapCenter para VMware vSphere, debe seguir la secuencia prescrita de las llamadas de API de REST. 
 ---
-= Flujo de trabajo de API de REST para restaurar máquinas virtuales eliminadas
+= Flujo de trabajo de REST API para restaurar máquinas virtuales eliminadas usando el SCV
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -4,7 +4,7 @@ permalink: scpivs44_modify_the_network_settings.html
 keywords:  
 summary: Es posible modificar los ajustes de red configurados en el plugin de SnapCenter para VMware vSphere. El plugin utiliza estos ajustes para acceder a vCenter. 
 ---
-= Modifique los ajustes de red
+= Modifica la configuración de red del SCV
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

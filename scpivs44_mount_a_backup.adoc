@@ -4,7 +4,7 @@ permalink: scpivs44_mount_a_backup.html
 keywords:  
 summary: Es posible montar un almacén de datos tradicional desde un backup si se desea tener acceso a los archivos del backup. Es posible montar el backup en el mismo host ESXi donde se creó el backup o en un host ESXi alternativo que tenga el mismo tipo de configuración de máquina virtual y de host. Un almacén de datos puede montarse varias veces en un host. 
 ---
-= Montar un backup
+= Monta una copia de seguridad usando el SnapCenter Plug-in for VMware vSphere
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

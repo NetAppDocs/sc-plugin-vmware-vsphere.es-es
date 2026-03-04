@@ -4,7 +4,7 @@ permalink: scpivs44_ontap_rbac_features_in_snapcenter.html
 keywords:  
 summary: 'El plugin de SnapCenter para VMware vSphere funciona con el control de acceso basado en roles de vCenter Server, de SnapCenter (cuando es necesario para admitir operaciones basadas en aplicaciones) y el control de acceso basado en roles de ONTAP para determinar qué tareas de SnapCenter puede ejecutar un usuario específico en un sistema de almacenamiento específico.' 
 ---
-= Funciones de control de acceso basado en roles de ONTAP del plugin de SnapCenter para VMware vSphere
+= Funciones de control de acceso basado en roles (RBAC) de ONTAP en el SnapCenter Plug-in para VMware vSphere
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

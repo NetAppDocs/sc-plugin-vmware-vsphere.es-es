@@ -4,7 +4,7 @@ permalink: scpivs44_upgrade_to_a_new_patch.html
 keywords:  
 summary: Si va a actualizar a una nueva revisión de la misma versión, debe borrar la caché del plugin de SnapCenter para VMware vSphere en vCenter Web Server y reiniciar el servidor antes de la actualización o el registro. 
 ---
-= Actualice a un nuevo parche de la misma versión del plugin de SnapCenter para VMware vSphere
+= Actualiza a un nuevo parche de la misma versión del SCV
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

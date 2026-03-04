@@ -4,7 +4,7 @@ permalink: scpivs44_manage_policies.html
 keywords:  
 summary: Puede crear, modificar, ver, desvincular y eliminar políticas de backup para el plugin de SnapCenter para VMware vSphere. Las políticas son necesarias para realizar operaciones de protección de datos. 
 ---
-= Gestionar políticas
+= Administra políticas en el SnapCenter Plug-in for VMware vSphere
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -4,7 +4,7 @@ permalink: scpivs44_restart_the_vmware_vsphere_web_client_service.html
 keywords:  
 summary: Si el cliente VMware vSphere de SnapCenter comienza a comportarse de forma incorrecta, es posible que deba borrar la memoria caché del explorador. Si el problema persiste, reinicie el servicio del cliente web. 
 ---
-= Reinicie el servicio del cliente de VMware vSphere
+= Reinicia el servicio cliente de VMware vSphere para el SCV
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

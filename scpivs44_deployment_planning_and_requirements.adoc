@@ -4,7 +4,7 @@ permalink: scpivs44_deployment_planning_and_requirements.html
 keywords:  
 summary: Debe conocer los requisitos de puesta en marcha antes de poner en marcha el dispositivo virtual. 
 ---
-= Planificación y requisitos de la puesta en marcha
+= Planificación del despliegue y requisitos para el SCV
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

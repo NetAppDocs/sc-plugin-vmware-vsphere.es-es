@@ -4,7 +4,7 @@ permalink: scpivs44_add_multiple_vms_and_datastores_to_a_resource_group.html
 keywords:  
 summary: Puede añadir varios recursos a un grupo de recursos existente mediante el asistente SnapCenter VMware vSphere Client Edit Resource Group. 
 ---
-= Añadir varias máquinas virtuales y almacenes de datos a un grupo de recursos
+= Agrega varias máquinas virtuales y almacenes de datos a un grupo de recursos en el SCV
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

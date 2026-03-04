@@ -4,7 +4,7 @@ permalink: scpivs44_deploy_snapcenter_plug-in_for_vmware_vsphere.html
 keywords:  
 summary: Para utilizar las funciones de SnapCenter con el fin de proteger máquinas virtuales, almacenes de datos y bases de datos consistentes con las aplicaciones en máquinas virtualizadas, se debe implementar el plugin de SnapCenter para VMware vSphere. 
 ---
-= Ponga en marcha el plugin de SnapCenter para VMware vSphere
+= Implementa el SnapCenter Plug-in for VMware vSphere
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

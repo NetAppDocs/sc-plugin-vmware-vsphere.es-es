@@ -4,7 +4,7 @@ permalink: scpivs44_restore_vms_from_backups.html
 keywords:  
 summary: Al restaurar una máquina virtual, es posible sobrescribir el contenido existente con la copia de backup que seleccione, o bien realizar una copia de ella. 
 ---
-= Restaurar máquinas virtuales desde backups
+= Restaura máquinas virtuales desde copias de seguridad usando el SCV
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

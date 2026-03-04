@@ -4,7 +4,7 @@ permalink: scpivs44_view_vm_and_datastore_backups.html
 keywords:  
 summary: Cuando se está preparando para realizar un backup de una máquina virtual o un almacén de datos, puede ver todos los backups disponibles para ese recurso y los detalles de dichos backups. 
 ---
-= Ver backups de máquinas virtuales y almacenes de datos
+= Ver copias de seguridad de VM y datastore en el SCV
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

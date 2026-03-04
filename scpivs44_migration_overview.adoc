@@ -4,7 +4,7 @@ permalink: scpivs44_migration_overview.html
 keywords:  
 summary:  
 ---
-= Información general sobre la migración
+= Migra metadatos desde SnapCenter basado en Windows para VMware vSphere
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

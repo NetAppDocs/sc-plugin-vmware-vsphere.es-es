@@ -4,7 +4,7 @@ permalink: scpivs44_set_up_proxy_vms_for_restore_operations.html
 keywords:  
 summary: Si desea utilizar una máquina virtual proxy para asociar un disco virtual para operaciones de restauración de archivos invitados, antes de iniciar la operación de restauración debe configurar la máquina virtual proxy. Aunque una máquina virtual proxy se puede configurar en cualquier momento, probablemente sea más práctico hacerlo en cuanto concluya la implementación del plugin. 
 ---
-= Configure máquinas virtuales proxy para operaciones de restauración
+= Configura máquinas virtuales proxy para operaciones de restauración en el SCV
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -4,7 +4,7 @@ permalink: scpivs44_detach_a_virtual_disk.html
 keywords:  
 summary: Una vez que haya asociado un disco virtual para restaurar archivos concretos, podrá desvincular el disco virtual de la máquina virtual principal. 
 ---
-= Desvincular un disco virtual
+= Desconecta un disco virtual en el SnapCenter Plug-in for VMware vSphere
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

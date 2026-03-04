@@ -4,7 +4,7 @@ permalink: scpivs44_download_job_logs.html
 keywords:  
 summary: Puede descargar los registros de los trabajos en la pestaña Job Monitor en la consola del cliente VMware vSphere de SnapCenter. 
 ---
-= Descargar registros de trabajos
+= Descarga los registros de trabajos de SnapCenter Plug-in for VMware vSphere
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

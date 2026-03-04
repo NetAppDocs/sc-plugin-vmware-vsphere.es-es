@@ -4,7 +4,7 @@ permalink: scpivs44_modify_storage_timeout.html
 keywords:  
 summary: Aunque los backups se hayan ejecutado correctamente en el pasado, es posible que comiencen a fallar durante el periodo que el plugin de SnapCenter para VMware vSphere deba esperar a que el sistema de almacenamiento supere el tiempo de espera configurado. Si se produce esta condición, es posible aumentar el tiempo de espera configurado. 
 ---
-= Modifique el tiempo de espera del almacenamiento configurado
+= Modifica el tiempo de espera de almacenamiento en el SCV
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

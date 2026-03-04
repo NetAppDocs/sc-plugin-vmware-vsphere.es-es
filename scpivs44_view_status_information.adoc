@@ -4,7 +4,7 @@ permalink: scpivs44_view_status_information.html
 keywords:  
 summary: La información de estado se puede ver en la consola de cliente de vSphere. La información de estado se actualiza una vez por hora. 
 ---
-= Ver información de estado
+= Ver información de estado en el SnapCenter Plug-in for VMware vSphere
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -4,7 +4,7 @@ permalink: scpivs44_rest_apis_overview.html
 keywords:  
 summary: Es posible usar las API DE REST del plugin de SnapCenter para VMware vSphere para realizar operaciones de protección de datos comunes. El plugin tiene páginas web de Swagger diferentes de las páginas web de Windows SnapCenter Swagger. 
 ---
-= Descripción general
+= Conoce las API de REST en el SnapCenter Plug-in for VMware vSphere
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

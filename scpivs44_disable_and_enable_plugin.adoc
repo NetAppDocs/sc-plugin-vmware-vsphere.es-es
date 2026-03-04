@@ -4,7 +4,7 @@ permalink: scpivs44_disable_and_enable_plugin.html
 keywords:  
 summary: Si ya no necesita las funciones de protección de datos de SnapCenter, debe cambiar la configuración del plugin de SnapCenter para VMware vSphere. Por ejemplo, si se implementa el plugin en un entorno de prueba, es posible que deba deshabilitar las funciones de SnapCenter en ese entorno y habilitarlas en un entorno de producción. 
 ---
-= Deshabilite y habilite el plugin de SnapCenter para VMware vSphere
+= Desactiva y activa el SnapCenter Plug-in for VMware vSphere
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

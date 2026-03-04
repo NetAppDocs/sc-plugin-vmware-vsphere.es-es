@@ -4,7 +4,7 @@ permalink: scpivs44_unmount_a_backup.html
 keywords:  
 summary: Una vez que ya no se necesita el acceso a los archivos del almacén de datos, es posible desmontar un backup. 
 ---
-= Desmontar un backup
+= Desmonta una copia de seguridad usando el SnapCenter Plug-in for VMware vSphere
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

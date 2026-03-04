@@ -4,7 +4,7 @@ permalink: scpivs44_create_resource_groups_for_vms_and_datastores.html
 keywords:  
 summary: Un grupo de recursos es el contenedor para máquinas virtuales, almacenes de datos, etiquetas de vSphere y carpetas de máquinas virtuales de vSphere que desea proteger. 
 ---
-= Crear grupos de recursos
+= Crea grupos de recursos para máquinas virtuales y almacenes de datos en el SCV
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

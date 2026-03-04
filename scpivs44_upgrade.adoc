@@ -4,7 +4,7 @@ permalink: scpivs44_upgrade.html
 keywords:  
 summary: Si utiliza el dispositivo virtual del plugin de SnapCenter para VMware vSphere, puede actualizar a una versión más reciente. 
 ---
-= Actualice desde una versión anterior del plugin de SnapCenter para VMware vSphere
+= Actualiza desde una versión anterior del SCV
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

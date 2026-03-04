@@ -4,7 +4,7 @@ permalink: rename_storage.html
 keywords:  
 summary: Es posible cambiar el nombre del almacenamiento con la API de REST. 
 ---
-= Restaurar copia de seguridad de almacenamiento renombrado
+= Restaura copias de seguridad desde un almacenamiento renombrado usando el SCV
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

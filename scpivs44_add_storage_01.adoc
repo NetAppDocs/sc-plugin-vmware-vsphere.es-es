@@ -4,7 +4,7 @@ permalink: scpivs44_add_storage_01.html
 keywords:  
 summary: Añadir almacenamiento permite que el plugin de SnapCenter para VMware vSphere reconozca y gestione operaciones de backup y restauración en vCenter. 
 ---
-= Añada almacenamiento
+= Añade sistemas de almacenamiento al SnapCenter Plug-in for VMware vSphere
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

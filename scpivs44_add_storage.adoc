@@ -4,7 +4,7 @@ permalink: scpivs44_add_storage.html
 keywords:  
 summary:  
 ---
-= Añada almacenamiento
+= Añade sistemas de almacenamiento al SnapCenter Plug-in for VMware vSphere
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -4,7 +4,7 @@ permalink: scpivs44_create_and_import_certificates.html
 keywords:  
 summary: 'El plugin de SnapCenter para VMware vSphere utiliza el cifrado SSL para una comunicación segura con el explorador del cliente. Si bien esto permite el cifrado de datos en todo el cable, la creación de un certificado autofirmado nuevo o el uso de la infraestructura de la entidad de certificación (CA) propia o de una CA de terceros garantiza que el certificado sea único para el entorno.' 
 ---
-= Crear e importar certificados
+= Crear e importar certificados para el SCV
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

@@ -4,7 +4,7 @@ permalink: scpivs44_protect_data_overview.html
 keywords:  
 summary: Todas las operaciones de backup se ejecutan en grupos de recursos, que pueden contener cualquier combinación de uno o más almacenes de datos y máquinas virtuales. Es posible realizar un backup bajo demanda o según una programación de protección definida. 
 ---
-= Flujo de trabajo de protección de datos
+= Flujo de trabajo de protección de datos para el SnapCenter Plug-in for VMware vSphere
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

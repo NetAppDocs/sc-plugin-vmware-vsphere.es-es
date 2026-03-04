@@ -4,7 +4,7 @@ permalink: scpivs44_register_snapcenter_plugin_vmware_vsphere_with_snapcenter_se
 keywords:  
 summary: 'Si desea realizar flujos de trabajo de aplicación en VMDK en SnapCenter (flujos de trabajo de protección basados en aplicaciones para bases de datos y sistemas de archivos virtualizados), debe registrar el plugin de SnapCenter para VMware vSphere en SnapCenter Server.' 
 ---
-= Registre el plugin de SnapCenter para VMware vSphere con SnapCenter Server
+= Registra el SCV en SnapCenter Server
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

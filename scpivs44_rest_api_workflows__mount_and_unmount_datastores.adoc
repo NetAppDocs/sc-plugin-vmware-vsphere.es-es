@@ -4,7 +4,7 @@ permalink: scpivs44_rest_api_workflows__mount_and_unmount_datastores.html
 keywords:  
 summary: Para realizar operaciones de montaje y desmontaje para backups de almacén de datos con las API DE REST del plugin de SnapCenter para VMware vSphere, debe seguir la secuencia prescrita de llamadas de API de REST. 
 ---
-= Flujos de trabajo de la API DE REST para montar y desmontar almacenes de datos
+= Flujos de trabajo de REST API para montar y desmontar almacenes de datos en el SCV
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

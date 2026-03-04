@@ -4,7 +4,7 @@ permalink: scpivs44_rest_api_workflows__modify_built-in_schedules.html
 keywords:  
 summary: Para modificar las programaciones integradas para trabajos de cliente de VMware vSphere mediante las API DE REST del plugin de SnapCenter para VMware vSphere, debe seguir la secuencia prescrita de las llamadas de API de REST. 
 ---
-= Flujo de trabajo de API DE REST para modificar las programaciones integradas
+= Flujo de trabajo de API de REST para modificar los horarios integrados en el SCV
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 

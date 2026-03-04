@@ -4,7 +4,7 @@ permalink: scpivs44_prescripts_and_postscripts.html
 keywords:  
 summary: Es posible usar scripts previos y posteriores como parte de las operaciones de protección de datos. Estos scripts permiten la automatización antes o después del trabajo de protección de datos. 
 ---
-= Scripts previos y posteriores
+= Prescripts y postscripts para el SCV
 :hardbreaks:
 :allow-uri-read: 
 :nofooter: 
