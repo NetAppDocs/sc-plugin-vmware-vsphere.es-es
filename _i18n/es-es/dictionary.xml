@@ -1595,7 +1595,6 @@ La <block ref="205a43536d4d7a501f66e7fd657c91ca" category="inline-link-macro-rx"
   <block id="b35ffcf16c6223a1d7e9f879b2315a05" category="list-text">En la navegación de la izquierda seleccione *Guest File Restore*.</block>
   <block id="14287ce8c2228d3505c31799833a864f" category="paragraph">El plugin de SnapCenter para VMware vSphere utiliza las credenciales seleccionadas para iniciar sesión en la máquina virtual seleccionada.</block>
   <block id="110328d238985c18e0a7947b09b1ff0f" category="summary">El plugin de SnapCenter para VMware vSphere utiliza el cifrado SSL para una comunicación segura con el explorador del cliente. Si bien esto permite el cifrado de datos en todo el cable, la creación de un certificado autofirmado nuevo o el uso de la infraestructura de la entidad de certificación (CA) propia o de una CA de terceros garantiza que el certificado sea único para el entorno.</block>
-  <block id="6886be2ac69a368a307204ccfa1e00d9" category="paragraph">Consulte<block ref="bf84a7958c466b4ea912f7e396459ac9" category="inline-link-rx"></block> si desea obtener más información.</block>
   <block id="e90ae72a4d203cde9c1d660d983bec13" category="list-text">La sincronización activa de SnapMirror permite que los servicios empresariales continúen funcionando incluso si se produce un fallo completo del sitio, lo que permite a las aplicaciones conmutar por error de forma transparente mediante una copia secundaria.</block>
   <block id="c2bc8f54778a0e6f72a8fa3f9c96aae7" category="admonition">La sincronización activa de SnapMirror solo se admite para almacenes de datos VMFS.</block>
   <block id="cae2d1284a0f6ccabe57939c8b8ad176" category="paragraph">Para proteger un almacén de datos VMFS en una implementación de sincronización activa de SnapMirror, como administrador de SnapCenter necesita:</block>
@@ -2304,4 +2303,5 @@ La <block ref="205a43536d4d7a501f66e7fd657c91ca" category="inline-link-macro-rx"
   <block id="6aa30740f7e61daa6dbeb98d1762ef2e" category="inline-link">Accede al servicio NetApp Backup and Recovery</block>
   <block id="938c2a8ffc581d610f5a993251309046" category="list-text"><block ref="938c2a8ffc581d610f5a993251309046" category="inline-link-rx"></block></block>
   <block id="36fabaf7f4604c508ea56a9df930fef3" category="section-title">Protege tu entorno VMware usando NetApp Backup and Recovery</block>
+  <block id="04bc8505634cea728bd42022dbbe2763" category="paragraph">Consulta<block ref="3cc65228ae073aa630520717edc687a9" category="inline-link-rx"></block> para más información.</block>
 </blocks>
