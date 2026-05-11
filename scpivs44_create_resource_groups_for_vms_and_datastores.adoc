@@ -47,7 +47,7 @@ Para obtener más información, consulte la documentación de las ONTAP tools fo
 * Puede agregar o eliminar recursos de un grupo de recursos en cualquier momento.
 * Para realizar una copia de seguridad de un solo recurso, como una máquina virtual, cree un grupo de recursos que contenga solo ese recurso.
 * Para realizar una copia de seguridad de varios recursos, cree un grupo de recursos que incluya todos los recursos que desea proteger.
-* Para volúmenes FlexGroup en entornos NetApp MetroCluster, si estás usando ONTAP 9.8 o 9.9, reinicia el servicio SnapCenter Plug-in for VMware vSphere y resincroniza las relaciones SnapMirror después de una conmutación de sitios o conmutación inversa antes de hacer copias de seguridad de los grupos de recursos. En ONTAP 9.8, las copias de seguridad pueden quedarse colgadas después de una conmutación inversa; esto se resuelve en ONTAP 9.9.
+* Para volúmenes FlexGroup en entornos MetroCluster, si estás utilizando ONTAP 9.8 o 9.9, reinicia el servicio SnapCenter Plug-in for VMware vSphere y resincroniza las relaciones SnapMirror después de una conmutación de sitios o conmutación inversa antes de hacer una copia de seguridad de los grupos de recursos. En ONTAP 9.8, las copias de seguridad pueden quedarse colgadas después de una conmutación inversa; esto se resuelve en ONTAP 9.9.
 * Para obtener un rendimiento óptimo de las instantáneas, agrupe las máquinas virtuales y los almacenes de datos del mismo volumen en un solo grupo de recursos.
 * Puede crear un grupo de recursos sin una política de respaldo, pero la protección de datos requiere al menos una política.  Seleccione una política existente o cree una nueva durante la creación del grupo de recursos.
 +
