@@ -216,7 +216,7 @@ sidebar:
       url: "/scpivs44_modify_the_time_zones.html"
     - title: Modificar las credenciales de inicio de sesión
       url: "/scpivs44_modify_the_logon_credentials.html"
-    - title: Modificar las credenciales de inicio de sesión de vCenter
+    - title: Actualiza las credenciales de vCenter configuradas en SCV
       url: "/scpivs44_modify_the_vcenter_logon_credentials.html"
     - title: Modifique la configuración de red
       url: "/scpivs44_modify_the_network_settings.html"

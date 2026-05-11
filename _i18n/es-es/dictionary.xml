@@ -1329,7 +1329,6 @@
   <block id="f04e1cf825b6adbdd02179d720a3d56e" category="sidebar">Gestione su configuración</block>
   <block id="d175eac72dbff1925f585004c7748333" category="sidebar">Modificar zonas horarias</block>
   <block id="39431018d345c4625ee6755997cbf0d6" category="sidebar">Modificar las credenciales de inicio de sesión</block>
-  <block id="6a92d475ead3e7f8d1055d94b7ec26fa" category="sidebar">Modificar las credenciales de inicio de sesión de vCenter</block>
   <block id="4d82de788a9432bc467645d5849b54d6" category="sidebar">Modifique la configuración de red</block>
   <block id="e8c19d50a62ef0c84239952feb395afa" category="sidebar">Cree el archivo scbr.override</block>
   <block id="e83ed49b67b001041250970bfbe7efab" category="sidebar">Propiedades de configuración que se pueden anular</block>
@@ -2227,7 +2226,6 @@ La <block ref="205a43536d4d7a501f66e7fd657c91ca" category="inline-link-macro-rx"
   <block id="e285884386e2062ad98e8deecfd04560" category="doc">Modifica las credenciales de inicio de sesión de SnapCenter Plug-in for VMware vSphere</block>
   <block id="4dc305a364ab194377cea35093fafc91" category="doc">Modifica la configuración de red del SCV</block>
   <block id="5db02314d963fe8a8fa75d43311a04f3" category="doc">Modifica los husos horarios de las copias de seguridad en el SCV</block>
-  <block id="3cefaebf21784290ec70bd0954b54ab9" category="doc">Modifica las credenciales de inicio de sesión de vCenter para el SCV</block>
   <block id="34895ac2b07a353b62fe3587b973f9aa" category="doc">Supervisa los trabajos en el SnapCenter Plug-in for VMware vSphere</block>
   <block id="b03c3bad2790d92ae4869f34a2b1b13c" category="doc">Monta una copia de seguridad usando el SnapCenter Plug-in for VMware vSphere</block>
   <block id="cc66b31e4a27a920d55087e0b904f14e" category="doc">Funciones de control de acceso basado en roles (RBAC) de ONTAP en el SnapCenter Plug-in para VMware vSphere</block>
@@ -2299,8 +2297,9 @@ La <block ref="205a43536d4d7a501f66e7fd657c91ca" category="inline-link-macro-rx"
   <block id="938c2a8ffc581d610f5a993251309046" category="list-text"><block ref="938c2a8ffc581d610f5a993251309046" category="inline-link-rx"></block></block>
   <block id="36fabaf7f4604c508ea56a9df930fef3" category="section-title">Protege tu entorno VMware usando NetApp Backup and Recovery</block>
   <block id="04bc8505634cea728bd42022dbbe2763" category="paragraph">Consulta<block ref="3cc65228ae073aa630520717edc687a9" category="inline-link-rx"></block> para más información.</block>
-  <block id="b60052c3864c4fab5da0f6b383192ef3" category="summary">Actualiza las credenciales de inicio de sesión de vCenter que usa SnapCenter Plug-in for VMware vSphere (SCV). Usa esta tarea después de un cambio de credenciales de vCenter y, para las copias de seguridad de vVol, vuelve a registrar ONTAP tools for VMware vSphere.</block>
   <block id="74650e169a790c0e2cab1222243cfea0" category="list-text">Para volúmenes FlexGroup en entornos MetroCluster, si estás utilizando ONTAP 9.8 o 9.9, reinicia el servicio SnapCenter Plug-in for VMware vSphere y resincroniza las relaciones SnapMirror después de una conmutación de sitios o conmutación inversa antes de hacer una copia de seguridad de los grupos de recursos. En ONTAP 9.8, las copias de seguridad pueden quedarse colgadas después de una conmutación inversa; esto se resuelve en ONTAP 9.9.</block>
-  <block id="00759daaffda87f838af0da06a84529c" category="paragraph">Usa esta tarea para actualizar las credenciales de inicio de sesión de vCenter configuradas en SnapCenter Plug-in para VMware vSphere. Estas credenciales se usan para acceder a vCenter. Si la contraseña de vCenter cambia, desregistra ONTAP tools para VMware vSphere y luego vuelve a registrar ONTAP tools con la nueva contraseña para que las copias de seguridad de vVol sigan funcionando.</block>
   <block id="76752ff072d438537747c49941f2e4a9" category="paragraph">En configuraciones de MetroCluster:</block>
+  <block id="0f6f81c54b2b5420fb1a6022ed399ea3" category="summary">Actualiza las credenciales de inicio de sesión de vCenter configuradas en SCV. Cuando cambie la credencial de vCenter, actualízala en SCV para que vCenter siga registrada en SCV.</block>
+  <block id="023b1b7df19ea2584c5a257d5d7a36fb" category="doc">Actualiza las credenciales de vCenter configuradas en SCV</block>
+  <block id="2b4de7524492b82672c6bb6e1f6c142a" category="paragraph">Usa esta tarea para actualizar las credenciales de inicio de sesión de vCenter configuradas en SnapCenter Plug-in for VMware vSphere. SCV usa estas credenciales para acceder a vCenter. Cuando cambie la credencial de vCenter, actualízala en SCV para que vCenter siga registrada en SCV. Para las copias de seguridad de vVol, anula el registro de ONTAP tools for VMware vSphere y luego vuelve a registrar ONTAP tools con la nueva contraseña para que las copias de seguridad sigan funcionando.</block>
 </blocks>
