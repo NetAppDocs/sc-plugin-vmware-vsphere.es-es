@@ -51,19 +51,19 @@ detención de trabajo
 | Clon de volumen crear clon de volumen mostrar volumen clon de volumen inicio división clon de volumen estado volumen división parada volumen crear volumen eliminar volumen destruir volumen clon crear archivo volumen archivo volumen mostrar archivo disco volumen sin conexión volumen en línea función gestionada volumen modificar qtree crear volumen qtree eliminar volumen qtree mostrar volumen restringir volumen mostrar volumen snapshot crear volumen snapshot eliminar volumen snapshot modificar-SnapLock-archivo snapshot expiración-tiempo volumen snapshot cambiar nombre snapshot restaurar volumen delta mostrar volumen snapshot mostrar volumen delta volumen snapshot mostrar volumen delta mostrar volumen delta volumen delta mostrar volumen delta volumen delta mostrar volumen delta 
 
 
-| vserver cifs vserver compartir cifs crear vserver compartir cifs eliminar vserver cifs shadowcopy mostrar vserver compartir cifs mostrar vserver cifs mostrar vserver política de exportación vserver exportar política crear vserver política de exportación eliminar vserver regla de política de exportación crear vserver regla de política de exportación mostrar vserver política de exportación mostrar vserver iscsi vserver conexión iscsi mostrar vserver subsistema nvme controladora vserver subsistema vserver nvme 
+| vserver cifs vserver export-policy vserver export-policy create vserver export-policy delete vserver export-policy rule create vserver export-policy rule show vserver export-policy show vserver iscsi vserver nvme subsystem controller vserver nvme subsystem controller show vserver nvme subsystem create vserver nvme subsystem delete vserver nvme subsystem host vserver nvme subsystem host show vserver nvme subsystem host add vserver nvme subsystem host remove vserver nvme subsystem map vserver nvme subsystem map show vserver nvme subsystem map add vserver nvme subsystem map remove vserver nvme subsystem modify vserver nvme subsystem show vserver nvme namespace create vserver nvme namespace delete vserver nvme namespace modify vserver nvme namespace show interfaz de red 
 |===
 |===
 | Comandos de solo lectura: Número mínimo de ONTAP Privileges 
 
 
-| identidad del clúster mostrar la interfaz de red mostrar vserver vserver peer vserver show 
+| mostrar identidad del clúster mostrar interfaz de red mostrar vserver 
 |===
 |===
 | Comandos de acceso total: Número mínimo de ONTAP Privileges 
 
 
-| imagen de la unidad de almacenamiento del grupo de coherencia 
+| grupo de consistencia de vserver 
 |===
 Puede ignorar el comando _cluster identity show_ cluster level al crear un rol para asociarlo con el vServer de datos.
 

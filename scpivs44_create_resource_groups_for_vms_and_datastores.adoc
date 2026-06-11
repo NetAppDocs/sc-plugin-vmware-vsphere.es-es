@@ -77,7 +77,7 @@ La protección secundaria permite la replicación de los recursos en el grupo de
 | Para este campo… | Haga esto… 
 
 
-| VCenter Server | Seleccione una instancia de vCenter Server. 
+| VCenter Server | Selecciona un servidor vCenter. 
 
 
 | Nombre | Introduzca un nombre para el grupo de recursos.  No utilice los siguientes caracteres especiales en los nombres de máquinas virtuales, almacenes de datos, políticas, copias de seguridad o grupos de recursos: % & * $ # @ !  \ / : * ?  " < > - [barra vertical] ; ' , y espacio.  Se permite un carácter de subrayado (_).  Los nombres de máquinas virtuales o almacenes de datos con caracteres especiales se truncan, lo que dificulta la búsqueda de una copia de seguridad específica.  En el modo vinculado, cada vCenter mantiene su propio SnapCenter Plug-in for VMware vSphere .  Como resultado, puede utilizar los mismos nombres de grupos de recursos en diferentes vCenters. 

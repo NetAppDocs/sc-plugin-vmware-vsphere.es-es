@@ -14,7 +14,7 @@ summary: Si utiliza el dispositivo virtual del plugin de SnapCenter para VMware 
 
 
 
-NOTE: La actualización a SCV 6.2 solo es compatible con VMware vCenter Server 7 actualización 1 y versiones posteriores; para VMware vCenter Server anterior a la versión 7 actualización 1, debe continuar usando SCV 4.7.  La actualización es disruptiva en versiones no compatibles del servidor VMware vCenter.
+NOTE: La actualización a SCV 6.2 solo es compatible con VMware vCenter Server 7 update 1 y versiones posteriores, para VMware vCenter Server anteriores a la versión 7 update 1, debes seguir usando SCV 4.7. La actualización es disruptiva en las versiones no compatibles de VMware vCenter Server.
 
 Si utiliza el dispositivo virtual del plugin de SnapCenter para VMware vSphere, puede actualizar a una versión más reciente. El proceso de actualización cancela el registro del plugin existente e implementa un plugin que solo es compatible con vSphere 7.0U1 y versiones posteriores.
 
