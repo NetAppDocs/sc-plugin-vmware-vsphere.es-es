@@ -18,12 +18,14 @@ Es posible usar scripts previos y posteriores como parte de las operaciones de p
 
 
 
+[[supported-script-types]]
 == Tipos de scripts compatibles
 
 Se admiten scripts Perl y shell. Los scripts de shell deben comenzar por `!/bin/bash`. (`!/bin/sh` no es compatible).
 
 
 
+[[script-path-location]]
 == Ubicación de la ruta del script
 
 El plugin de SnapCenter para VMware vSphere ejecuta los scripts previos y posteriores. Por lo tanto, los scripts deben encontrarse en el OVA del plugin de SnapCenter para VMware vSphere, con permisos ejecutables.
@@ -38,6 +40,7 @@ La ruta de acceso del script se valida en el momento en que se ejecuta el script
 
 
 
+[[where-to-specify-scripts]]
 == Dónde especificar scripts
 
 Los scripts se especifican en las políticas de backup. Cuando se inicia una tarea de backup, la política asocia automáticamente el script con los recursos que se incluirán en el backup.
@@ -46,6 +49,7 @@ Para especificar varios scripts, presione *Enter* después de cada ruta de scrip
 
 
 
+[[when-scripts-are-executed]]
 == Cuándo se ejecutan los scripts
 
 Los scripts se ejecutan según el valor configurado para BACKUP_PHASE.
@@ -76,6 +80,7 @@ Verifique lo siguiente para verificar que los valores del script estén completo
 
 
 
+[[environment-variables-passed-to-scripts]]
 == Variables de entorno que se transmiten a los scripts
 
 Es posible usar las variables de entorno que se muestran en la siguiente tabla en los scripts.
@@ -114,12 +119,14 @@ SUSPENDED`
 |===
 
 
+[[script-timeouts]]
 == Tiempo de espera de scripts
 
 El tiempo de espera de los scripts de backup es de 15 minutos y no puede modificarse.
 
 
 
+[[example-perl-script-1]]
 == Ejemplo de script PERL #1
 
 El siguiente ejemplo de script PERL imprime las variables de entorno cuando se ejecuta una copia de seguridad.
@@ -138,6 +145,7 @@ El siguiente ejemplo de script PERL imprime las variables de entorno cuando se e
 
 
 
+[[example-perl-script-2]]
 == Ejemplo de script PERL #2
 
 En el siguiente ejemplo se imprime información acerca de la copia de seguridad.
@@ -167,6 +175,7 @@ En el siguiente ejemplo se imprime información acerca de la copia de seguridad.
 
 
 
+[[example-shell-script]]
 == Ejemplo de script de shell
 
 

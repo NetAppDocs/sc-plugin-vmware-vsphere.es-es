@@ -24,6 +24,7 @@ Si no se borra la caché del plugin, en las siguientes situaciones no se muestra
 
 
 
+[[steps-for-clearing-the-cache]]
 == Pasos para borrar la caché
 
 . Localice el `vsphere-client-serenity` a continuación, busque la `com.netapp.scv.client-<release-number>` y elimínelo.

@@ -1302,7 +1302,6 @@
   <block id="ae40a6aa6dbafd02a1a6877c0cd95c90" category="admonition">No se admite el cambio de la configuración de red de estática a DHCP.</block>
   <block id="a115e2512005f81c492d368a9613ee58" category="list-text">Para preparar la actualización, deshabilite el plugin de SnapCenter para VMware vSphere.</block>
   <block id="47ad474a6a92b78b6ce74b61fe8b6bbb" category="list-text">Descargue la actualización<block ref="1ba589501f1cc472dfdecac1bd09a624" prefix=" " category="inline-code"></block> archivo.</block>
-  <block id="b41450a0b1e390fd09941d73050688f9" category="list-text">Inicie sesión en el sitio de soporte de NetApp <block ref="5a6885c3943ab3435f9bf287b1025062" category="inline-link-rx"></block>.</block>
   <block id="7dfb2dcb3c7621537351eac0e0c6d1af" category="list-text">Descargue la actualización del plugin de SnapCenter para VMware vSphere<block ref="1ba589501f1cc472dfdecac1bd09a624" prefix=" " category="inline-code"></block> archivar en cualquier ubicación.</block>
   <block id="f5b0696bfd02863abb2d114ef575a203" category="list-text">Instale la actualización.</block>
   <block id="1ced0a64a9eacafaada35a9482d31c57" category="list-text">En el explorador, desplácese hasta VMware vSphere vCenter.</block>
@@ -2357,4 +2356,9 @@ La <block ref="205a43536d4d7a501f66e7fd657c91ca" category="inline-link-macro-rx"
   <block id="20ceb481fbc8f4970bcc1d340df1f4e3" category="paragraph">Si SCV no se conecta tras el cambio de credenciales, reinicia el servicio del cliente de VMware vSphere. Si SCV sigue sin conectarse, ve a <block ref="f2a6ad7f72b7a890165a515940ad8314" category="inline-link-macro-rx"></block>.</block>
   <block id="570c179f2910eb222c034a71d4857354" category="admonition">La actualización a SCV 6.2 solo es compatible con VMware vCenter Server 7 update 1 y versiones posteriores, para VMware vCenter Server anteriores a la versión 7 update 1, debes seguir usando SCV 4.7. La actualización es disruptiva en las versiones no compatibles de VMware vCenter Server.</block>
   <block id="430ae1961340ee0cb232fabeaa98e220" category="paragraph">La actualización a SnapCenter Plug-in for VMware vSphere (SCV) 4.8 y versiones posteriores solo es compatible con VMware vCenter Server 7 update 1 y versiones posteriores. Para VMware vCenter Server anterior a la versión 7 update 1, debes seguir usando SCV 4.7.</block>
+  <block id="e7cf50365f6cd8b8191b1582a763572f" category="inline-link-macro">SnapCenter Plug-in para VMware vSphere planificación de la implementación y requisitos</block>
+  <block id="e265dbaceed2be137ef9239c0c28ca81" category="admonition">Antes de realizar la actualización, comprueba que tu entorno cumpla los requisitos del sistema. Consulta <block ref="a0e1882159016587140942a1478a5aea" category="inline-link-macro-rx"></block> para obtener más información.</block>
+  <block id="be0cdd104110166e130ddd84d1c1fc51" category="paragraph">Para obtener la información más reciente sobre las versiones compatibles, consulta <block ref="c4b2de34dedab2af97f29b6fccd6575c" category="inline-link-macro-rx"></block>.</block>
+  <block id="8c41baf1ca98e1184f48c4721d44d431" category="inline-link-macro">Sitio de soporte de NetApp</block>
+  <block id="9eeb0054bc82844b2782a42bddf7c681" category="list-text">Inicia sesión en <block ref="fe673711457a0919d053a9db0146aa49" category="inline-link-macro-rx"></block>.</block>
 </blocks>

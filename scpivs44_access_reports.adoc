@@ -41,6 +41,7 @@ Puede seleccionar el icono de descarga para descargar los registros del compleme
 
 
 
+[[types-of-reports-from-the-vmware-vsphere-client]]
 == Tipos de informes desde VMware vSphere Client
 
 El cliente de VMware vSphere para SnapCenter ofrece opciones de informes personalizables para obtener detalles sobre el estado de los trabajos de protección de datos y los recursos del plugin. Solo puede generar informes para la protección principal.

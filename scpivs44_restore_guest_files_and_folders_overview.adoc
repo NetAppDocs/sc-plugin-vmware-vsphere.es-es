@@ -18,6 +18,7 @@ Puede restaurar archivos o carpetas invitados desde un disco de máquina virtual
 
 
 
+[[guest-restore-workflow]]
 == Flujo de trabajo de restauración de invitados
 
 Las operaciones de restauración del sistema operativo invitado incluyen los siguientes pasos:
@@ -48,6 +49,7 @@ Restaure los archivos o las carpetas seleccionados en una ubicación específica
 
 
 
+[[prerequisites-for-restoring-guest-files-and-folders]]
 == Requisitos previos para restaurar archivos y carpetas invitados
 
 Antes de restaurar uno o más archivos o carpetas desde un VMDK en un sistema operativo invitado de Windows, debe conocer todos los requisitos.
@@ -89,6 +91,7 @@ No es posible restaurar archivos ni carpetas desde una máquina virtual que ejec
 
 
 
+[[guest-file-restore-limitations]]
 == Limitaciones de la restauración de archivos invitados
 
 Antes de restaurar un archivo o una carpeta desde un sistema operativo invitado, debe saber qué no admite la función.

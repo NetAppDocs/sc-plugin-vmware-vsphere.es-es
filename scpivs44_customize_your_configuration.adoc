@@ -20,6 +20,7 @@ La `scbr.override` Los entornos del plugin de SnapCenter para VMware vSphere uti
 
 
 
+[[create-the-scbr-override-configuration-file]]
 == Cree el archivo de configuración scbr.override
 
 . Vaya a. `/opt/netapp/scvservice/standalone_aegis/etc/scbr/scbr.override-template`.
@@ -28,6 +29,7 @@ La `scbr.override` Los entornos del plugin de SnapCenter para VMware vSphere uti
 
 
 
+[[properties-you-can-override]]
 == Propiedades que se pueden anular
 
 * De forma predeterminada, la plantilla utiliza el símbolo hash para comentar las propiedades de configuración. Para utilizar una propiedad para modificar un valor de configuración, debe quitar `#` caracteres.

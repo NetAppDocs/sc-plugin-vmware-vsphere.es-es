@@ -20,6 +20,7 @@ Para cada API REST, añada `\https://<server>:<port>` En la parte frontal de la 
 
 
 
+[[to-mount-datastores-follow-this-workflow]]
 == Para montar almacenes de datos, siga este flujo de trabajo:
 
 |===
@@ -46,6 +47,7 @@ availableEsxHosts` | `Get the list of Available Esxi Hosts` Obtiene la lista de 
 |===
 
 
+[[to-unmount-datastores-follow-this-workflow]]
 == Para desmontar los almacenes de datos, siga este flujo de trabajo:
 
 |===

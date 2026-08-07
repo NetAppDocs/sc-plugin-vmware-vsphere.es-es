@@ -19,7 +19,11 @@ NOTE: La actualización a SCV 6.2 solo es compatible con VMware vCenter Server 7
 Si utiliza el dispositivo virtual del plugin de SnapCenter para VMware vSphere, puede actualizar a una versión más reciente. El proceso de actualización cancela el registro del plugin existente e implementa un plugin que solo es compatible con vSphere 7.0U1 y versiones posteriores.
 
 
+CAUTION: Antes de realizar la actualización, comprueba que tu entorno cumpla los requisitos del sistema. Consulta link:scpivs44_deployment_planning_and_requirements.html["SnapCenter Plug-in para VMware vSphere planificación de la implementación y requisitos"] para obtener más información.
 
+
+
+[[upgrade-paths]]
 == Rutas de actualización
 
 |===
@@ -54,7 +58,7 @@ TIP: Realice un backup del OVA del plugin de SnapCenter para VMware vSphere ante
 
 NOTE: No se admite el cambio de la configuración de red de estática a DHCP.
 
-Para obtener la información más reciente sobre las versiones compatibles, consulte https://imt.netapp.com/imt/imt.jsp?components=180121;&solution=1517&isHWU&src=IMT["Herramienta de matriz de interoperabilidad de NetApp"^] (IMT).
+Para obtener la información más reciente sobre las versiones compatibles, consulta link:https://imt.netapp.com/imt/imt.jsp?components=180121;&solution=1517&isHWU&src=IMT["Herramienta de matriz de interoperabilidad de NetApp (IMT)"^].
 
 .Pasos
 . Para preparar la actualización, deshabilite el plugin de SnapCenter para VMware vSphere.
@@ -65,7 +69,7 @@ Para obtener la información más reciente sobre las versiones compatibles, cons
 
 . Descargue la actualización `.iso` archivo.
 +
-.. Inicie sesión en el sitio de soporte de NetApp .
+.. Inicia sesión en link:https://mysupport.netapp.com/products/index.html["Sitio de soporte de NetApp"^].
 .. En la lista de productos, seleccione *SnapCenter Plug-in para VMware vSphere* y, a continuación, seleccione el botón *DESCARGAR LA VERSIÓN MÁS RECIENTE*.
 .. Descargue la actualización del plugin de SnapCenter para VMware vSphere `.iso` archivar en cualquier ubicación.
 

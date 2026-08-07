@@ -18,6 +18,7 @@ Para poder realizar un backup de las máquinas virtuales o los almacenes de dato
 
 
 
+[[modify-storage-vms]]
 == Modificación de las máquinas virtuales de almacenamiento
 
 Es posible usar el cliente de VMware vSphere para modificar las configuraciones de los clústeres y las máquinas virtuales de almacenamiento que están registradas en el plugin de SnapCenter para VMware vSphere y que se usan para operaciones de protección de datos de máquinas virtuales.
@@ -35,6 +36,7 @@ IMPORTANT: Si agregó máquinas virtuales de almacenamiento para operaciones de 
 
 
 
+[[remove-storage-vms]]
 == Quitar las máquinas virtuales de almacenamiento
 
 Se puede usar el cliente de VMware vSphere para quitar máquinas virtuales de almacenamiento del inventario en vCenter.

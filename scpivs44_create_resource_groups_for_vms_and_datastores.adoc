@@ -227,6 +227,7 @@ NOTE: Si la operación de inactividad falla para cualquiera de las máquinas vir
 
 
 
+[[manage-compatibility-check-failures]]
 == Gestione los fallos de comprobación de compatibilidad
 
 SnapCenter realiza comprobaciones de compatibilidad cuando intenta crear un grupo de recursos. Consulte siempre https://imt.netapp.com/imt/imt.jsp?components=180121;&solution=1517&isHWU&src=IMT["Herramienta de matriz de interoperabilidad de NetApp (IMT)"^] para obtener la información más reciente sobre el soporte de SnapCenter . Las razones de incompatibilidad podrían ser:

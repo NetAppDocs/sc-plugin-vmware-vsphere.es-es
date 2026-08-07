@@ -20,6 +20,7 @@ Para cada API REST, añada `\https://<server>:<port>` En la parte frontal de la 
 
 
 
+[[use-the-following-rest-apis-in-the-jobs-section-to-get-detailed-information-on-jobs]]
 == Use las siguientes API DE REST en la sección Jobs para obtener información detallada sobre los trabajos:
 
 |===
@@ -33,6 +34,7 @@ Para cada API REST, añada `\https://<server>:<port>` En la parte frontal de la 
 |===
 
 
+[[use-the-following-rest-api-in-the-jobs-section-to-download-job-logs]]
 == Use la siguiente API DE REST en la sección Jobs para descargar registros de trabajos:
 
 |===
@@ -43,6 +45,7 @@ Para cada API REST, añada `\https://<server>:<port>` En la parte frontal de la 
 |===
 
 
+[[use-the-following-rest-apis-in-the-reports-section-to-generate-reports]]
 == Utilice las siguientes API DE REST de la sección Reports para generar informes:
 
 |===

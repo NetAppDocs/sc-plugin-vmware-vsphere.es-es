@@ -38,6 +38,7 @@ La caché se encuentra en las siguientes ubicaciones, según el tipo de sistema 
 
 
 
+[[workaround-if-you-already-upgraded-before-clearing-the-cache]]
 == Solución alternativa si ya ha actualizado antes de borrar la caché
 
 . Inicie sesión en la interfaz de usuario de administración del SnapCenter Plug-in for VMware vSphere .

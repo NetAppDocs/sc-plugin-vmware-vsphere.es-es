@@ -21,6 +21,7 @@ NOTE: Los grupos de recursos se denominan trabajos de backup en VSC.
 
 
 
+[[suspend-and-resume-operations-on-resource-groups]]
 == Suspender y reanudar las operaciones en grupos de recursos
 
 Pausar operaciones programadas en un grupo de recursos.  Habilítelos nuevamente cuando sea necesario.
@@ -37,6 +38,7 @@ Después de reanudar las operaciones de backup, el estado del trabajo cambia a. 
 
 
 
+[[modify-resource-groups]]
 == Modificar grupos de recursos
 
 Puede quitar o añadir recursos a grupos de recursos en vCenter, desvincular o asociar políticas, y modificar programaciones u otras opciones de grupos de recursos.
@@ -57,6 +59,7 @@ Puede realizar cambios en varias categorías. En esta opción también se pueden
 
 
 
+[[delete-resource-groups]]
 == Eliminar grupos de recursos
 
 Elimine un grupo de recursos en vCenter si no necesita proteger los recursos.  Elimine todos los grupos de recursos antes de eliminar el SnapCenter Plug-in for VMware vSphere.

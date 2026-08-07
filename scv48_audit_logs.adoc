@@ -63,6 +63,7 @@ Los eventos se clasifican en tres categorías principales:
 
 
 
+[[data-protection-events]]
 == Eventos de protección de datos
 
 Los recursos de SCV son:
@@ -102,6 +103,7 @@ En la siguiente tabla, se enumeran las operaciones que se pueden realizar en cad
 |===
 
 
+[[maintenance-console-events]]
 == Eventos de la consola de mantenimiento
 
 Las operaciones administrativas de la consola de mantenimiento se auditan. Las opciones de la consola de mantenimiento disponibles son:
@@ -127,6 +129,7 @@ Las operaciones administrativas de la consola de mantenimiento se auditan. Las o
 
 
 
+[[admin-console-events]]
 == Eventos de la consola de administración
 
 Se auditan las siguientes operaciones en la interfaz de usuario de la Consola de administración:
@@ -149,6 +152,7 @@ Se auditan las siguientes operaciones en la interfaz de usuario de la Consola de
 
 
 
+[[configure-syslog-servers]]
 == Configurar los servidores de syslog
 
 Los registros de auditoría se almacenan en el dispositivo y se verifican periódicamente para comprobar que están completos. El reenvío de eventos le permite obtener eventos del equipo de origen o de reenvío y almacenarlos en un equipo centralizado, que es el servidor de syslog. Los datos se cifran en tránsito entre el origen y el destino.
@@ -176,6 +180,7 @@ Esta tarea permite configurar el servidor de syslog.
 
 
 
+[[change-audit-log-settings]]
 == Cambiar la configuración del registro de auditoría
 
 Es posible cambiar las configuraciones predeterminadas de los ajustes de registro.

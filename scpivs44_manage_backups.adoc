@@ -18,6 +18,7 @@ Puede cambiar el nombre y eliminar backups realizados por el plugin de SnapCente
 
 
 
+[[rename-backups]]
 == Cambiar el nombre de los backups
 
 Es posible cambiar el nombre de los backups del plugin de SnapCenter para VMware vSphere si se desea usar un nombre que mejore la búsqueda.
@@ -39,6 +40,7 @@ No utilice los siguientes caracteres especiales en nombres de equipos virtuales,
 
 
 
+[[delete-backups]]
 == Eliminar backups
 
 Es posible eliminar backups del plugin de SnapCenter para VMware vSphere si ya no es necesario el backup para otras operaciones de protección de datos. Puede eliminar un backup o varios a la vez.

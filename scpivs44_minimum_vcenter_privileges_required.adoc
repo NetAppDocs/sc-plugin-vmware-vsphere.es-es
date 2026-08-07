@@ -18,12 +18,14 @@ Antes de iniciar la implementación del plugin de SnapCenter para VMware vSphere
 
 
 
+[[required-privileges-for-vcenter-admin-role]]
 == Privilegios requeridos para la función de administrador de vCenter
 
 Datastore.AllocateSpace Datastore.Browse Datastore.Delete Datastore.FileManagement Datastore.Move Datastore.Rename Extension.Register Extension.Unregister Extension.Update Host.Config.AdvancedConfig Host.Config.Resources Host.Config.Host.Config.Config.Storage Host.Local.CreateVM Host.Local.DeleteVM Host.Local.ReconfigVM Network.Assign Resource.VirtualMachine.VirtualMachine.VirtualMachine.VirtualMachine.VirtualMachine.VirtualMachine.VirtualMachine.VirtualMachine.VirtualMachine.VirtualMachine.VirtualMachine.VirtualMachine.VirtualMachine.VirtualMachine.VirtualMachine.VirtualMachine.VirtualMachine.VirtualMachine.VirtualMachine.VirtualMachine.VirtualMachine.VirtualMachine.VirtualMachine.VirtualMachine.VirtualMachine.VirtualMachine.VirtualMachine.VirtualMachine.VirtualMachine.VirtualMachine.VirtualMachine.VirtualMachine.VirtualMachine.VirtualMachine.VirtualMachine.VirtualMachine.VirtualMachine.VirtualMachine.VirtualMachine.VirtualMachine.VirtualMachine.VirtualMachine.Virtual
 
 
 
+[[required-privileges-specific-to-snapcenter-plug-in-for-vmware-vcenter]]
 == Privilegios requeridos específicos del plugin de SnapCenter para VMware vCenter
 
 |===
